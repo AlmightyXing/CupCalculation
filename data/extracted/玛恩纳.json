@@ -1,0 +1,123 @@
+{
+  "name": "玛恩纳",
+  "stats": {
+    "hp": 3906,
+    "atk": 355,
+    "def": 502,
+    "res": 15,
+    "atk_interval": 1.2
+  },
+  "features": {
+    "name": "解放者",
+    "description": "通常不攻击且阻挡数为0，技能未开启时40秒内攻击力逐渐提升至最高+200%且技能结束时重置攻击力。技能未开启期间阻挡数×0（最终乘算）。技能期间可以且优先攻击自身阻挡的单位（即使目标处于攻击范围外或为飞行单位）。攻击力加成效果每1秒更新一次。",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 2.0,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "游侠",
+      "description": "攻击敌人时攻击力提升至110%。周围存在3名及以上敌人时改为提升至115%且受到的伤害减少15%。攻击敌人时攻击力提升至113%（+3%）。周围存在3名及以上敌人时改为提升至118%（+3%）且受到的伤害减少15%。",
+      "parsed_effects": {
+        "atk_change": 0.03,
+        "multiplier": 1.15,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.15,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "无动于衷",
+      "description": "在场时，自身嘲讽等级1更容易受到攻击，所有卡西米尔干员被攻击时反弹相当于玛恩纳攻击力18%（+3%）的真实伤害。反弹伤害的来源为玛恩纳，该伤害为预计算的真实普通伤害。反弹效果会直接选中伤害来源，但仅对阵营为敌方的来源造成伤害。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "未声张的怒火",
+      "skill_type": "决战",
+      "initial_sp": 15,
+      "sp_cost": 15,
+      "duration": 30,
+      "description": "攻击造成相当于200%攻击力的物理伤害，防御力+60%。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 2.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "未宽解的悲哀",
+      "skill_type": "决战",
+      "initial_sp": 10,
+      "sp_cost": 10,
+      "duration": 20,
+      "description": "攻击间隔延长(+0.3)，攻击范围扩大，攻击造成相当于190%攻击力的二连击。技能期间若击倒敌人，技能结束时特性效果不重置，可主动关闭（期间可随时停止技能）。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.9
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.3,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "未照耀的荣光",
+      "skill_type": "决战",
+      "initial_sp": 20,
+      "sp_cost": 20,
+      "duration": 27,
+      "description": "攻击范围扩大，特性提升至2倍（每击倒一名敌人时特性倍率-10%），攻击对5个目标造成相当于180%攻击力的物理伤害。范围内所有敌人受到卡西米尔干员攻击时额外附带玛恩纳12%攻击力的真实伤害。附加伤害为光环效果，不受视野影响。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.8
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}

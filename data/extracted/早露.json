@@ -1,0 +1,129 @@
+{
+  "name": "早露",
+  "stats": {
+    "hp": 1351,
+    "atk": 856,
+    "def": 100,
+    "res": 0,
+    "atk_interval": 2.4
+  },
+  "features": {
+    "name": "攻城手",
+    "description": "优先攻击重量最重的敌人",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 1.0,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "深入骨髓",
+      "description": "精英2 X模组3级：攻击重量较重（重量等级大于等于3）的敌人时，无视其防御力的60%，并额外造成60%攻击力的物理伤害",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 60.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      },
+      "extra_damage_effect": {
+        "type": "物理",
+        "multiplier": 0.6
+      }
+    },
+    "talent2": {
+      "name": "学生楷模",
+      "description": "精英2 Y模组3级：编入队伍时，所有【乌萨斯学生自治团】干员攻击力直接乘算里属于叠加，并非叠乘12%+12%，每有一名【乌萨斯学生自治团】干员处于技能期间时，【乌萨斯学生自治团】干员的攻击力额外+15%（最多额外[注 1]+45%）",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "攻击力强化·γ型",
+      "skill_type": "决战",
+      "initial_sp": 15,
+      "sp_cost": 30,
+      "duration": 30,
+      "description": "攻击力直接乘算里属于叠加，并非叠乘100%+100%",
+      "damage": [],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      },
+      "multiplier_change": 2.0
+    },
+    {
+      "name": "分裂射击",
+      "skill_type": "决战",
+      "initial_sp": 45,
+      "sp_cost": 65,
+      "duration": 60,
+      "description": "攻击力直接乘算里属于叠加，并非叠乘90%+90%，可以额外攻击一个敌人",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.9
+        },
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.9
+        }
+      ],
+      "parsed_effects": {
+        "hits": 2,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      },
+      "multiplier_change": 1.9
+    },
+    {
+      "name": "雪崩击",
+      "skill_type": "决战",
+      "initial_sp": 15,
+      "sp_cost": 8,
+      "duration": 8,
+      "description": "攻击力直接乘算里属于叠加，并非叠乘25%+25%，立即向至多4个重量最重的敌人发射束缚叉枪；技能持续时间内所有目标受到束缚术语: 束缚无法移动效果，每秒受到一次攻击",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.25
+        }
+      ],
+      "parsed_effects": {
+        "hits": 8,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      },
+      "multiplier_change": 1.25
+    }
+  ]
+}

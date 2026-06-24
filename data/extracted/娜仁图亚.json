@@ -1,0 +1,133 @@
+{
+  "name": "娜仁图亚",
+  "stats": {
+    "hp": 2500,
+    "atk": 324,
+    "def": 252,
+    "res": 231,
+    "atk_interval": 1.0
+  },
+  "features": {
+    "name": "回环射手",
+    "description": "持有回旋投射物时才能够攻击。必须回收全部回旋投掷物才可以进行攻击。",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 1.0,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "我见，我得",
+      "description": "在场时，每次攻击到敌人偷取目标的基础属性作为自身加成，目标减少和自身加成的属性不超过指定上限。本质上为独立的目标属性减少与自身属性增加的两个效果。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "婀娜虚影",
+      "description": "获得35%的物理与法术闪避，周围8格内敌人的物理与法术命中率降低20%。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "旋刃",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 5,
+      "duration": 0,
+      "description": "可以在下列状态和初始状态间切换：攻击距离-1，回旋投射物造成相当于攻击力190%的物理伤害，并且可以在敌人间重复弹射（最多弹跳3次）",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.9
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "恶魇",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 15,
+      "duration": 30,
+      "description": "每次攻击造成相当于攻击力250%的物理伤害并使目标停顿术语: 停顿移动速度降低80%1秒，投射物命中目标后会在短暂突进后折返，返回时对穿过的所有敌人造成一次相当于攻击力200%的物理伤害",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 2.5
+        },
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 2.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "吞日",
+      "skill_type": "决战",
+      "initial_sp": 11,
+      "sp_cost": 12,
+      "duration": 20,
+      "description": "每次攻击发射3个回旋投射物（每个造成相当于攻击力140%的物理伤害），投射物全部回收时娜仁图亚对周围8格内至多3名敌人造成一次相当于攻击力120%的物理伤害并使其停顿术语: 停顿移动速度降低80%1秒",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.4
+        },
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.2
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}

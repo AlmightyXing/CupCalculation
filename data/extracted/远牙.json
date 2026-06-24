@@ -1,0 +1,117 @@
+{
+  "name": "远牙",
+  "stats": {
+    "hp": 1522,
+    "atk": 1196,
+    "def": 163,
+    "res": 0,
+    "atk_interval": 2.7
+  },
+  "features": {
+    "name": "神射手",
+    "description": "优先攻击攻击范围内防御力最低的敌方单位",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 1.0,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "凝神",
+      "description": "最近3秒内未受伤害时，攻击力直接乘算里属于叠加，并非叠乘15%+15%，攻击速度7+7",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "屏息",
+      "description": "技能开启时不容易成为敌人的目标，且攻击无视目标的物理闪避",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "迅捷打击·γ型",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 0,
+      "duration": 35,
+      "description": "攻击力直接乘算里属于叠加，并非叠乘45%+45%，攻击速度直接乘算里属于叠加，并非叠乘45+45",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "同盟支援",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 0,
+      "duration": 35,
+      "description": "可以攻击到范围外被阻挡的敌方单位，攻击速度110+110",
+      "damage": [],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "光羽箭",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 0,
+      "duration": 20,
+      "description": "攻击范围改为前方无限长的直线，攻击力直接乘算里属于叠加，并非叠乘140%+140%，攻击原本范围以外的目标时，造成的伤害提高至140%",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.4
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}

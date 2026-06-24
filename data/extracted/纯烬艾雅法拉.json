@@ -1,0 +1,100 @@
+{
+  "name": "纯烬艾雅法拉",
+  "stats": {
+    "hp": 1639,
+    "atk": 469,
+    "def": 119,
+    "res": 20,
+    "atk_interval": 2.85
+  },
+  "features": {
+    "name": "行医",
+    "description": "恢复友方单位生命，并回复相当于攻击力50%的元素损伤术语: 元素损伤包括神经损伤、侵蚀损伤、灼燃损伤、凋亡损伤※最大元素值默认为1000，受到附加元素损伤的伤害时先结算伤害后结算元素损伤（可以回复未受伤友方单位的元素损伤术语: 元素损伤包括神经损伤、侵蚀损伤、灼燃损伤、凋亡损伤※最大元素值默认为1000，受到附加元素损伤的伤害时先结算伤害后结算元素损伤）普通攻击同时会回复目标全种类的元素值。",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 0.5,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "氤氲",
+      "description": "普通治疗使目标每秒额外受到一次治疗量和元素损伤术语: 元素损伤包括神经损伤、侵蚀损伤、灼燃损伤、凋亡损伤※最大元素值默认为1000，受到附加元素损伤的伤害时先结算伤害后结算元素损伤回复量为10%的增益治疗，持续6秒（最多叠加3层）。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 0.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "火山灰疗愈",
+      "description": "攻击范围内的友方单位生命上限直接乘算里属于叠加，并非叠乘8%+8%（+2%），且受到的元素损伤术语: 元素损伤包括神经损伤、侵蚀损伤、灼燃损伤、凋亡损伤※最大元素值默认为1000，受到附加元素损伤的伤害时先结算伤害后结算元素损伤降低14%。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 14.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "无声润物",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 60,
+      "duration": 0,
+      "description": "攻击力直接乘算里属于叠加，并非叠乘40%+40%，每次可额外治疗一名单位，攻击范围内所有友方单位每秒回复纯烬艾雅法拉攻击力8%的元素损伤术语: 元素损伤包括神经损伤、侵蚀损伤、灼燃损伤、凋亡损伤※最大元素值默认为1000，受到附加元素损伤的伤害时先结算伤害后结算元素损伤。",
+      "damage": [
+        {
+          "type": "元素",
+          "atk_change": 0.08,
+          "multiplier": 1.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "云霭荫佑",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 28,
+      "duration": 12,
+      "description": "立即对攻击范围内所有友方单位进行一次治疗，并生成一个持续12秒的范围损伤屏障术语: 损伤屏障可以吸收一定数值的元素损伤，为范围内的友方单位吸收相当于攻击力500%的元素损伤术语: 元素损伤包括神经损伤、侵蚀损伤、灼燃损伤、凋亡损伤※最大元素值默认为1000，受到附加元素损伤的伤害时先结算伤害后结算元素损伤。",
+      "damage": [
+        {
+          "type": "元素",
+          "atk_change": 5.0,
+          "multiplier": 1.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}

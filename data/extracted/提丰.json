@@ -1,0 +1,123 @@
+{
+  "name": "提丰",
+  "stats": {
+    "hp": 1702,
+    "atk": 1045,
+    "def": 113,
+    "res": 0,
+    "atk_interval": 2.4
+  },
+  "features": {
+    "name": "攻城手",
+    "description": "优先攻击重量最重的敌人",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 1.0,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "锐如兽牙",
+      "description": "连续攻击时逐渐无视敌人的防御力，最高无视其防御力的60%（每次攻击提升12%的无视防御比例），10秒内未攻击则失去加成",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.6,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "重如沼泥",
+      "description": "技能期间对每个敌人前两次造成伤害时，攻击力提升至230%并使目标停顿移动速度降低80%3秒",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 2.3,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "迅捷打击·γ型",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 35,
+      "duration": 35,
+      "description": "（Rank Ⅲ）攻击力直接乘算里属于叠加，并非叠乘45%+45%，攻击速度45%+45%",
+      "damage": [
+        {
+          "type": "未知",
+          "atk_change": 0.0,
+          "multiplier": 1.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "冰原秩序",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 20,
+      "duration": 20,
+      "description": "（Rank Ⅲ）每次攻击发射两支箭矢（优先攻击不同目标），并有40%概率晕眩目标1秒",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.5
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "永恒狩猎",
+      "skill_type": "决战",
+      "initial_sp": 0,
+      "sp_cost": 25,
+      "duration": 41,
+      "description": "立刻标记攻击范围内的一名目标，攻击间隔3.1大幅增大(+3.1)，攻击变为对标记目标发射一轮箭雨；箭雨会随机攻击标记目标周围的敌人，共造成5次相当于攻击力175%的物理伤害并使目标晕眩0.4秒",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.75
+        }
+      ],
+      "parsed_effects": {
+        "hits": 5,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}

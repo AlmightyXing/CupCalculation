@@ -1,0 +1,110 @@
+{
+  "name": "维什戴尔",
+  "stats": {
+    "hp": 1888,
+    "atk": 687,
+    "def": 256,
+    "res": 15,
+    "atk_interval": 2.1
+  },
+  "features": {
+    "name": "投掷手",
+    "description": "攻击对小范围的地面敌人造成两次物理伤害（第二次为余震，伤害降低至攻击力的一半）",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 0.5,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "天赋（基于精英2 X模组3级）",
+      "description": "攻击时对主目标的攻击力提升至125%并为其附着残影，残影受到维什戴尔的余震影响时有15%概率爆炸，对周围所有敌人造成185%（+10%）攻击力的物理伤害并使其晕眩。",
+      "parsed_effects": {
+        "atk_change": 0.25,
+        "multiplier": 1.85,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "死魂灵的余息",
+      "description": "部署完成时召唤一个魂灵之影，在魂灵之影周围时获得迷彩异常效果：无法被敌对方的部分能力和部分弹道选中；会因隐匿免疫而失效，但在因隐匿免疫而失效的情况下依旧能被检测到。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "定点清算",
+      "skill_type": "挂机",
+      "initial_sp": 0,
+      "sp_cost": 0,
+      "duration": 0,
+      "description": "下次攻击额外造成2次余震并使所有目标晕眩术语: 晕眩无法移动、阻挡、攻击及使用技能1.5秒，此次攻击的溅射范围略微扩大且余震伤害变为攻击力的120%。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.0
+        },
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.2
+        }
+      ],
+      "parsed_effects": {
+        "hits": 2,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "饱和复仇",
+      "skill_type": "决战",
+      "initial_sp": 15,
+      "sp_cost": 15,
+      "duration": 25,
+      "description": "攻击力+35%，攻击间隔缩短(-0.7)，可同时攻击3名敌人过载术语: 过载技能持续拥有两段计量槽，技能进行到一半时触发额外效果... （附带超载阶段额外的伤害）。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.35,
+          "multiplier": 1.0
+        },
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 3.2
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": -0.7,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}

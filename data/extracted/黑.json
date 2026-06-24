@@ -1,0 +1,123 @@
+{
+  "name": "黑",
+  "stats": {
+    "hp": 1833,
+    "atk": 840,
+    "def": 225,
+    "res": 0,
+    "atk_interval": 1.0
+  },
+  "features": {
+    "name": "重射手",
+    "description": "高精度的近距离射击",
+    "parsed_effects": {
+      "atk_change": 0.0,
+      "multiplier": 1.0,
+      "increase": 1.0,
+      "atk_interval_change": 0.0,
+      "percentage_armor_penetration": 0.0,
+      "fixed_armor_penetration": 0.0,
+      "percentage_resistance_reduction": 0.0,
+      "fixed_resistance_reduction": 0.0
+    }
+  },
+  "talents": {
+    "talent1": {
+      "name": "尖锐箭头",
+      "description": "攻击时，20%几率当次攻击的攻击力提升至170%，并使命中目标的防御力75%下降25%，持续5秒。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.0,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    "talent2": {
+      "name": "交叉火力",
+      "description": "场上存在黑和另外至少一名【狙击】干员时，所有【狙击】干员的攻击力直接乘算里属于叠加，并非叠乘15%+15%（+2%）。",
+      "parsed_effects": {
+        "atk_change": 0.0,
+        "multiplier": 1.15,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  },
+  "skills": [
+    {
+      "name": "强弩",
+      "skill_type": "挂机",
+      "initial_sp": 0,
+      "sp_cost": 0,
+      "duration": 4,
+      "description": "下一次攻击的攻击力提高至190%，且天赋发动概率提高至70%。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 1.9
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "暮眼锐瞳",
+      "skill_type": "决战",
+      "initial_sp": 16,
+      "sp_cost": 30,
+      "duration": 36,
+      "description": "攻击力直接乘算里属于叠加，并非叠乘100%+100%，天赋的发动概率提高至45%。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 2.0
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    },
+    {
+      "name": "战术的终结",
+      "skill_type": "决战",
+      "initial_sp": 9,
+      "sp_cost": 29,
+      "duration": 28,
+      "description": "攻击范围改为前方4格，攻击间隔0.4略微增大(+0.4)，攻击力直接乘算里属于叠加，并非叠乘140%+140%，天赋的发动概率提高至100%。",
+      "damage": [
+        {
+          "type": "物理",
+          "atk_change": 0.0,
+          "multiplier": 2.4
+        }
+      ],
+      "parsed_effects": {
+        "hits": 1,
+        "atk_interval_change": 0.0,
+        "percentage_armor_penetration": 0.0,
+        "fixed_armor_penetration": 0.0,
+        "percentage_resistance_reduction": 0.0,
+        "fixed_resistance_reduction": 0.0
+      }
+    }
+  ]
+}
