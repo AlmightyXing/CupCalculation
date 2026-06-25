@@ -140,6 +140,10 @@
 |manual_dps_rank|Number(int)|角色决战DPS排名|
 |manual_hps|Number(int)|角色决战HPS|
 |manual_hps_rank|Number(int)|角色决战HPS排名|
+|manual_damage_total|Number(int)|角色决战总伤害|
+|manual_damage_total_rank|Number(int)|角色决战总伤害排名|
+|manual_heal_total|Number(int)|角色决战总治疗量|
+|manual_heal_total_rank|Number(int)|角色决战总治疗量排名|
 |update_time|Date|数据最新更新日期|
 
 ---
