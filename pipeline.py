@@ -43,7 +43,7 @@ def run_pipeline(
     print(f"  共加载 {len(chars)} 位干员\n")
 
     if not chars:
-        print("✗ 未找到干员 JSON 文件，请将干员数据放入 data/processed/ 目录")
+        print("  [ERROR] 未找到干员 JSON 文件，请将干员数据放入 data/processed/ 目录")
         return
 
     # Step 2：LLM 解析（可跳过）
@@ -103,7 +103,7 @@ def run_pipeline(
         json.dumps(output_data, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"  ✓ 结果已保存到 {output_file}\n")
+    print(f"  [OK] 结果已保存到 {output_file}\n")
 
     # 打印简报
     print("【综合排行榜（前20名）】")
@@ -127,7 +127,7 @@ def run_single(json_path: Path) -> None:
 
     results = calculate_operator_stats(char)
     if not results:
-        print("\n  ⚠ 无已解析的技能（skill_params 为空），请先运行 LLM 解析")
+        print("\n  [WARNING] 无已解析的技能（skill_params 为空），请先运行 LLM 解析")
         return
 
     print("\n计算结果：")

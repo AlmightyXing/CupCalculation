@@ -1,0 +1,53 @@
+{
+    "character_id": "char_103_angel",
+    "name": "银灰",
+    "nickname": [],
+    "character": {
+        "character_type": "领主",
+        "character_description": "可以进行远程攻击，但此时攻击力降低至80%"
+    },
+    "base_hp": 2560,
+    "base_atk": 713,
+    "base_def": 397,
+    "base_res": 10,
+    "atk_time": 1.3,
+    "confidence_hp": 0,
+    "confidence_atk": 50,
+    "confidence_def": 50,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "领袖",
+            "talent_decription": "攻击力+10%，编入队伍时所有可部署单位的再部署时间-10%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "鹰眼视觉",
+            "talent_decription": "攻击范围内敌人的隐匿效果失效"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "强力击·γ型",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提高至290%"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "雪境生存法则",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "可以在下列状态和初始状态间切换：攻击范围缩小，防御力+100%，每秒恢复最大生命的6.0%"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "真银斩",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "防御力-70%，攻击力+200%，攻击范围扩大，同时攻击至多6个目标（视为近距离攻击）"
+        }
+    ]
+}
