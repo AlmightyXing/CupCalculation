@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_pepe",
+    "name": "佩佩",
+    "nickname": [],
+    "character": {
+        "character_type": "撼地者",
+        "character_description": "攻击使目标周围的其他敌人受到相当于攻击力50%的群体物理伤害"
+    },
+    "base_hp": 2851,
+    "base_atk": 1290,
+    "base_def": 387,
+    "base_res": 0,
+    "atk_time": 1.8,
+    "confidence_hp": 70,
+    "confidence_atk": 0,
+    "confidence_def": 45,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "往昔传承",
+            "talent_decription": "技能期间每击倒1名敌人，技能结束时获得1点技力，至多回复14点"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "弥漫莲香",
+            "talent_decription": "在场时，所有【近卫】干员的攻击力+16%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "盖戳！",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击造成相当于攻击力290%的物理伤害，处于异常状态时可以释放技能并清除异常状态，可充能2次"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "阻遏混乱锤",
+            "skill_type": "manual",
+            "duration": 18,
+            "description": "攻击范围扩大，攻击力+90%，攻击速度+80，随机攻击范围内的目标，每次使用时，使后续开启技能的攻击速度额外+40，最多叠加2层"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "时光震荡",
+            "skill_type": "manual",
+            "duration": 40,
+            "description": "攻击间隔略微增大(+0.2)，攻击力+240%，攻击使命中的目标晕眩0.8秒，对主目标提升至1.5秒，每次攻击后使溅射范围扩大且攻击力额外+25%，最多叠加4层"
+        }
+    ]
+}

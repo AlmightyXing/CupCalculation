@@ -1,0 +1,53 @@
+{
+    "character_id": "char_102_surtr",
+    "name": "史尔特尔",
+    "nickname": [],
+    "character": {
+        "character_type": "术战者",
+        "character_description": "攻击造成法术伤害"
+    },
+    "base_hp": 2916,
+    "base_atk": 672,
+    "base_def": 414,
+    "base_res": 15,
+    "atk_time": 1.25,
+    "confidence_hp": 0,
+    "confidence_atk": 100,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "熔火",
+            "talent_description": "无视攻击目标20法术抗性"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "余烬",
+            "talent_description": "受到致命伤害时持续使生命值不低于1，8秒后强制退出战场"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "烈焰魔剑",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提升至310%，如果将目标击倒则立即恢复所有技力"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "熔核巨影",
+            "skill_type": "manual",
+            "duration": 18,
+            "description": "攻击力+120%，攻击距离+1，攻击目标数+1，仅攻击到一个敌人时对其攻击力提升至160%"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "黄昏",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "立即恢复所有生命；攻击力+330%，攻击距离+2，攻击目标数+3，生命上限+5000，逐渐失去生命（60秒后到达最大生命20%/秒）；持续时间无限"
+        }
+    ]
+}

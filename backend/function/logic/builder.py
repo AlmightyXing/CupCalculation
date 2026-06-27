@@ -107,8 +107,10 @@ def scan_and_build():
             with open(json_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 
-            profession = data.get("character_type", "")
-            char_id = data.get("character_id", "")
+            char_info = data.get("character", {})
+            profession = char_info.get("character_type", "")
+            # 优先使用文件名作为唯一的标识 ID
+            char_id = json_file.stem
             name = data.get("name", "")
             
             if not profession or not char_id:

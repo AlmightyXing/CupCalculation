@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_kaltsit_esperanta",
+    "name": "凯尔希·思衡托",
+    "nickname": [],
+    "character": {
+        "character_type": "守望者",
+        "character_description": "恢复友方单位生命，并且可以起飞"
+    },
+    "base_hp": 1620,
+    "base_atk": 510,
+    "base_def": 276,
+    "base_res": 0,
+    "atk_time": 2.85,
+    "confidence_hp": 500,
+    "confidence_atk": 0,
+    "confidence_def": 30,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "遗尘守望",
+            "talent_decription": "生命上限和防御力+25%，阻挡数+1，阻挡范围扩大(0.23倍)，部署后生命修复单元升空，自身起飞"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "医者丰碑",
+            "talent_decription": "其他友方干员进入自身攻击范围时立刻获得1层护盾并额外获得一次每秒回复50点生命值的增益治疗，持续30秒（不可叠加），增益治疗对【罗德岛】干员的效果翻倍"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "应急肃正防线",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "攻击力+90%，攻击速度+50，所有其他起飞的友方干员阻挡范围扩大(0.23倍)"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "保护性拒止",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "攻击范围扩大，攻击力+150%，攻击变为射出医疗单元（优先选择敌人），击中时对目标周围所有敌人造成相当于攻击力380%的真实伤害，使其停顿5秒并回复目标周围所有友方干员相当于攻击力200%的生命，攻击装有10发弹药，可以随时停止技能"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "破梏重生",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "立刻获得战术锚点，攻击力+150%，攻击间隔大幅缩小(-1.55)，额外治疗1个目标，部署战术锚点后，自身移动至该位置，并使攻击范围内最多2名友方干员可以部署至自身攻击范围的另一位置"
+        }
+    ]
+}

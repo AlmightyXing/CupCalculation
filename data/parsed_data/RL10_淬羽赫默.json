@@ -1,0 +1,53 @@
+{
+    "character_id": "char_102_skadi",
+    "name": "淬羽赫默",
+    "nickname": [],
+    "character": {
+        "character_type": "护佑者",
+        "character_description": "攻击造成法术伤害，技能开启后改为治疗友方单位（治疗量相当于75%攻击力）"
+    },
+    "base_hp": 1927,
+    "base_atk": 467,
+    "base_def": 184,
+    "base_res": 25,
+    "atk_time": 1.6,
+    "confidence_hp": 350,
+    "confidence_atk": 55,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "无声砥柱",
+            "talent_decription": "使攻击范围内的友军获得10%的庇护，友军的生命越低该效果越强（低于30%生命时获得最大24%的庇护）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "丰润羽翼",
+            "talent_decription": "攻击范围内生命低于50%的友军每秒恢复相当于淬羽赫默攻击力5%的生命，【莱茵生命】干员的恢复效果翻倍"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "进取之心",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "攻击力+80%"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "俯瞰视界",
+            "skill_type": "manual",
+            "duration": 12,
+            "description": "攻击速度+60，技能期间可以使用一个辅助无人机；无人机投入战场后使周围友军享受3倍的第一天赋效果，技能结束或淬羽赫默离场时销毁"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "无畏者协议",
+            "skill_type": "manual",
+            "duration": 60,
+            "description": "攻击力+30%，第一天赋效果提升至1.8倍；技能期间仅一次，攻击范围内的一名干员受到致命伤时，使其生命值在10秒内不低于1；同一次作战中最多使用2次，可主动关闭（期间可随时停止技能）"
+        }
+    ]
+}

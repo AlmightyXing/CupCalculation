@@ -1,0 +1,53 @@
+{
+    "character_id": "char_201_moostima",
+    "name": "莫斯提马",
+    "nickname": [],
+    "character": {
+        "character_type": "扩散术师",
+        "character_description": "攻击造成群体法术伤害"
+    },
+    "base_hp": 1831,
+    "base_atk": 834,
+    "base_def": 132,
+    "base_res": 20,
+    "atk_time": 2.9,
+    "confidence_hp": 0,
+    "confidence_atk": 105,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "技力光环·术师",
+            "talent_decription": "在场时所有【术师】干员的技力自然回复速度+0.4/秒（同类效果取最高）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "主观缓时",
+            "talent_decription": "攻击范围内的敌人移动速度-15%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "攻击力强化·γ型",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击力+100%"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "荒时之锁",
+            "skill_type": "manual",
+            "duration": 7,
+            "description": "攻击范围内的敌人全部晕眩，且每秒受到攻击力140%的法术伤害"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "序时之匙",
+            "skill_type": "manual",
+            "duration": 27,
+            "description": "攻击范围扩大，攻击变为向外扩散的波纹，攻击力+170%，第二天赋的效果提升至3倍，小力度地击退攻击目标"
+        }
+    ]
+}

@@ -21,14 +21,16 @@ def get_all_6star_operators():
         response.raise_for_status()
         data = response.json()
         
-        six_stars = []
+        six_stars = {}
         for k, v in data.items():
             if v.get('rarity') == 'TIER_6' and v.get('isNotObtainable') == False:
                 # 过滤掉一些特殊的前缀如阿米娅可能被标记，但6星一般都是标准干员
-                six_stars.append(v['name'])
+                display_num = v.get('displayNumber')
+                if display_num is None:
+                    display_num = 'UNKNOWN'
+                six_stars[v['name']] = display_num
         
-        # 去重并排序
-        return sorted(list(set(six_stars)))
+        return six_stars
     except Exception as e:
         print(f"获取干员列表失败: {e}")
         return []
@@ -43,8 +45,9 @@ def batch_process():
     operators = get_all_6star_operators()
     print(f"共发现 {len(operators)} 名 6星干员。")
     
-    for i, op_name in enumerate(operators):
-        print(f"\n[{i+1}/{len(operators)}] 开始处理干员：{op_name}")
+    for i, (op_name, display_num) in enumerate(operators.items()):
+        safe_name = op_name.encode(sys.stdout.encoding or 'utf-8', errors='replace').decode(sys.stdout.encoding or 'utf-8')
+        print(f"\n[{i+1}/{len(operators)}] 开始处理干员：{safe_name}")
         
         # 如果已经存在清洗过的 JSON，可以考虑跳过
         # 由于我们目前需要完整跑一次，可以强制覆盖或只跑未存在的
@@ -70,8 +73,11 @@ def batch_process():
             time.sleep(2) 
             json_data = clean_operator_text_to_json(op_name, raw_text)
             
-            char_id = json_data.get("character_id", op_name)
-            output_path = parsed_dir / f"{char_id}.json"
+            import re
+            op_name_safe = re.sub(r'[\\\\/*?:"<>|]', '_', op_name)
+            display_num_safe = re.sub(r'[\\\\/*?:"<>|]', '_', display_num)
+            output_name = f"{display_num_safe}_{op_name_safe}"
+            output_path = parsed_dir / f"{output_name}.json"
             
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
@@ -79,7 +85,8 @@ def batch_process():
             print(f"[{op_name}] 处理成功，已保存至 {output_path}")
             
         except Exception as e:
-            print(f"[{op_name}] 处理期间发生错误: {e}")
+            safe_name_err = op_name.encode(sys.stdout.encoding or 'utf-8', errors='replace').decode(sys.stdout.encoding or 'utf-8')
+            print(f"[{safe_name_err}] 处理期间发生错误: {e}")
             
 if __name__ == "__main__":
     # 为了演示与测试，默认开启

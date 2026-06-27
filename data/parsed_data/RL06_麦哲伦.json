@@ -1,0 +1,53 @@
+{
+    "character_id": "char_103_magallan",
+    "name": "麦哲伦",
+    "nickname": [],
+    "character": {
+        "character_type": "召唤师",
+        "character_description": "攻击造成法术伤害，可以使用召唤物协助作战"
+    },
+    "base_hp": 1103,
+    "base_atk": 469,
+    "base_def": 140,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 300,
+    "confidence_atk": 40,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "支援无人机·龙腾",
+            "talent_decription": "可以使用5个不阻挡敌人的无人机（最多同时部署3个），功能随技能选择而改变"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "光学折射配件",
+            "talent_decription": "无人机在部署后的20秒内处于隐匿状态（不会成为敌方远程单位的攻击目标）"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "高效制冷模块",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "被动效果：使自身和无人机攻击范围内的敌方单位每3秒停顿1秒；主动开启：停顿变为束缚2.5秒，技能结束时回收所有无人机"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "激光开采模块",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "被动效果：无人机可以部署在近战位，进行单体法术攻击；主动开启：麦哲伦和她的无人机攻击速度+150，无人机变为群体攻击，技能结束时回收所有无人机"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "武装打击模块",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "被动效果：无人机可以部署在远程位，进行群体物理攻击；主动开启：麦哲伦和她的无人机攻击力+150%，无人机攻击的爆炸范围扩大，技能结束时回收所有无人机"
+        }
+    ]
+}

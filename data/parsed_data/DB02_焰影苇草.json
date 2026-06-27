@@ -1,0 +1,53 @@
+{
+    "character_id": "char_1024_reed2",
+    "name": "焰影苇草",
+    "nickname": [],
+    "character": {
+        "character_type": "咒愈师",
+        "character_description": "攻击造成法术伤害，攻击敌人时为攻击范围内一名友方干员治疗相当于50%伤害的生命值"
+    },
+    "base_hp": 1583,
+    "base_atk": 550,
+    "base_def": 84,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 50,
+    "confidence_def": 30,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "灼痕",
+            "talent_description": "造成伤害时有30%概率对敌人施加灼痕效果：攻击力-20%、30%的【法术脆弱】，不可叠加持续6秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "映耀",
+            "talent_description": "治疗其他友方单位时，焰影苇草同时享受50%的治疗量"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "迅捷打击·γ型",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "攻击力+45%，攻击速度+45"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "枯荣共息",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "优先使两名部署在地面的干员获得三颗火球，效果如下：每1.5秒对一名敌人造成相当于焰影苇草240%攻击力的法术伤害并仅对该干员触发焰影苇草特性"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "生命火种",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "同时攻击两名敌人，攻击力+60%，第一天赋触发几率提升至100%，技能期间附带灼痕效果的敌人每秒受到60%焰影苇草攻击力的法术伤害、被击倒时对周围敌人造成140%焰影苇草攻击力的法术伤害并施加灼痕效果，灼痕效果持续至技能结束"
+        }
+    ]
+}

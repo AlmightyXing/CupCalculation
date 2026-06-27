@@ -1,0 +1,53 @@
+{
+    "character_id": "char_103_angel",
+    "name": "安洁莉娜",
+    "nickname": [],
+    "character": {
+        "character_type": "凝滞师",
+        "character_description": "攻击造成法术伤害，并对敌人造成短暂的停顿"
+    },
+    "base_hp": 1385,
+    "base_atk": 542,
+    "base_def": 120,
+    "base_res": 25,
+    "atk_time": 1.9,
+    "confidence_hp": 0,
+    "confidence_atk": 75,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "加速力场",
+            "talent_decription": "在场时全场友方单位攻速+7"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "兼职工作",
+            "talent_decription": "技能未开启时，全场友方单位每秒回复20点生命"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "秘杖·速充模式",
+            "skill_type": "auto",
+            "duration": 35,
+            "description": "攻击力+110%，技能自动开启"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "秘杖·微粒模式",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击间隔极大幅度缩短(*0.15)，但每次攻击只能造成相当于攻击力45%的法术伤害，技能未开启时无法普通攻击"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "秘杖·反重力模式",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "全场所有敌人失重，攻击范围扩大，攻击力+150%，可以攻击5个敌人，技能未开启时无法普通攻击"
+        }
+    ]
+}

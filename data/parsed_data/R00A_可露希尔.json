@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_closure",
+    "name": "可露希尔",
+    "nickname": [],
+    "character": {
+        "character_type": "战术家",
+        "character_description": "可以在攻击范围内选择一次战术点来召唤援军，自身攻击援军阻挡的敌人时攻击力提升至150%"
+    },
+    "base_hp": 1762,
+    "base_atk": 480,
+    "base_def": 131,
+    "base_res": 0,
+    "atk_time": 1.0,
+    "confidence_hp": 0,
+    "confidence_atk": 60,
+    "confidence_def": 20,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "精准投放",
+            "talent_decription": "可以在战术点召唤指挥中心协助作战，其被击败后会在15秒后自动刷新；战术点效果范围随携带技能变化，效果范围内的友方单位视为自身的援军"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "极限调度",
+            "talent_decription": "携带可露希尔时，部署费用下限降低3，【罗德岛】干员攻击力+4%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "递归策略",
+            "skill_type": "auto",
+            "duration": 8,
+            "description": "立即使自身的援军获得1层护盾（不叠加），技能持续时间内逐渐获得3点部署费用；部署后每使用过一次技能，获得的部署费用+1（最多提升至7点）"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "模型扩展",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "立即获得10点部署费用，持续时间内逐渐获得15点部署费用，自身的援军防御力+60%，阻挡数+1，自身攻击力+80%，同时攻击2个目标且能攻击到自身援军阻挡的敌人；在战术点效果范围内部署干员时，立即返还部署费用的40%"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "Q.E.D.",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "技能持续时间内逐渐获得18点部署费用，攻击间隔缩短(-0.5)，锁定自身和援军原本攻击范围内的敌人进行攻击，造成可露希尔250%攻击力的物理伤害并施加持续3秒的6%迟钝效果（可叠加，最高60%），每攻击9次后攻击目标数+1（最多触发6次）"
+        }
+    ]
+}

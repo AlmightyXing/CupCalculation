@@ -1,0 +1,53 @@
+{
+    "character_id": "char_102_logos",
+    "name": "逻各斯",
+    "nickname": [],
+    "character": {
+        "character_type": "中坚术师",
+        "character_description": "攻击造成法术伤害"
+    },
+    "base_hp": 1663,
+    "base_atk": 671,
+    "base_def": 119,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 90,
+    "confidence_atk": 0,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "语汇演化",
+            "talent_decription": "对一个目标发起攻击时，有40%几率额外对攻击范围内一个随机目标造成相当于攻击力60%的法术伤害并使其停顿0.8秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "剜魂具辞",
+            "talent_decription": "攻击使目标在5秒内法术抗性-10且受到的法术伤害提高150点"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "殁亡",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "攻击范围扩大，攻击力+100%，使攻击范围内生命值低于逻各斯攻击力150%的敌人立刻倒下、并对另一个随机目标造成与倒下单位生命值相等的法术伤害"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "提喻",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "法术抗性+70，攻击改为锁定一个目标对其每0.5秒造成一次相当于攻击力75%的法术伤害，对相同目标的伤害逐渐提高至3倍并使其移动速度逐渐降低至40%(锁定5秒后达到上限)，被打断或目标倒下时重新索敌且效果重置"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "延异视阈",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击范围扩大，攻击力+300%，同时攻击4个目标，使攻击范围内敌方子弹的飞行速度大幅降低、并在技能结束时将其全部清除"
+        }
+    ]
+}

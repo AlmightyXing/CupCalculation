@@ -1,0 +1,53 @@
+{
+    "character_id": "char_285_blackk",
+    "name": "黑键",
+    "nickname": [],
+    "character": {
+        "character_type": "秘术师",
+        "character_description": "攻击造成法术伤害，在找不到攻击目标时可以将攻击能量储存起来之后一齐发射（最多3个）"
+    },
+    "base_hp": 1678,
+    "base_atk": 1400,
+    "base_def": 135,
+    "base_res": 20,
+    "atk_time": 3.0,
+    "confidence_hp": 0,
+    "confidence_atk": 150,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "强弱法",
+            "talent_decription": "储存的攻击能量造成的伤害提升至135%，可额外储存1份只用于攻击精英或领袖敌人的攻击能量"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "倚音",
+            "talent_decription": "若攻击目标周围没有其他敌人，攻击对其额外造成相当于攻击力15%的法术伤害"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "渐快急板",
+            "skill_type": "manual",
+            "duration": 5,
+            "description": "攻击范围改变，攻击间隔0.17超大幅度缩短(*0.17)，每次攻击造成相当于攻击力50%的法术伤害"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "荒芜回响",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "消耗所有攻击能量，在攻击范围内的可放置地块召唤消耗能量数+1个旧日残影（持续30秒），残影在敌人接近时激活，对周围的敌人造成攻击力245%的法术伤害并以中等力度拖拽敌人至自身中心"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "寂静之声",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击速度+80，攻击力+65%，只以精英或领袖敌人为攻击目标，第一天赋的伤害加成提升至原本的140%可主动关闭技能（期间可随时停止技能）"
+        }
+    ]
+}

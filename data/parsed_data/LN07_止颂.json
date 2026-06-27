@@ -1,0 +1,53 @@
+{
+    "character_id": "char_325_lessing",
+    "name": "止颂",
+    "nickname": [],
+    "character": {
+        "character_type": "无畏者",
+        "character_description": "能够阻挡一个敌人"
+    },
+    "base_hp": 3682,
+    "base_atk": 1044,
+    "base_def": 277,
+    "base_res": 0,
+    "atk_time": 1.5,
+    "confidence_hp": 200,
+    "confidence_atk": 85,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "苦痛专注",
+            "talent_decription": "阻挡时，受到来自非自身阻挡敌人的物理和法术伤害降低35%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "痛楚砺刃",
+            "talent_decription": "受到伤害后，攻击力+12%，持续15秒（不可叠加）"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "强力击·γ型",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提高至290%"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "虔修对决",
+            "skill_type": "auto",
+            "duration": 24,
+            "description": "部署后，第一天赋效果提升至2.2倍，攻击力+60%，攻击变为2连击"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "苦修破誓",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "自身免疫异常状态，生命值+110%，攻击被阻挡目标时，造成相当于攻击力220%的物理伤害；干员处于异常状态时可以释放技能并清除异常状态，但会对自身造成600点法术伤害"
+        }
+    ]
+}

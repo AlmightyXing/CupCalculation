@@ -1,0 +1,53 @@
+{
+    "character_id": "char_102_skadi",
+    "name": "黑",
+    "nickname": [],
+    "character": {
+        "character_type": "重射手",
+        "character_description": "高精度的近距离射击"
+    },
+    "base_hp": 1833,
+    "base_atk": 840,
+    "base_def": 225,
+    "base_res": 0,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 100,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "破甲箭头",
+            "talent_decription": "攻击时，20%几率当次攻击的攻击力提升至160%，并使命中目标的防御力下降20%，持续5秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "交叉火力",
+            "talent_decription": "场上存在黑和另外至少一名【狙击】干员时，所有【狙击】干员的攻击力+8%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "强弩",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下一次攻击的攻击力提高至220%，且天赋发动概率提高至80%"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "暮眼锐瞳",
+            "skill_type": "manual",
+            "duration": 40,
+            "description": "攻击力+130%，天赋的发动概率提高至50%"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "战术的终结",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "攻击范围改为前方4格，攻击间隔略微增大(+0.4)，攻击力+180%，天赋的发动概率提高至100%"
+        }
+    ]
+}

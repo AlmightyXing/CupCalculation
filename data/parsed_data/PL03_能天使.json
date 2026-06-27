@@ -1,0 +1,53 @@
+{
+    "character_id": "char_140_red",
+    "name": "能天使",
+    "nickname": [],
+    "character": {
+        "character_type": "速射手",
+        "character_description": "优先攻击空中单位"
+    },
+    "base_hp": 1673,
+    "base_atk": 540,
+    "base_def": 161,
+    "base_res": 0,
+    "atk_time": 1.0,
+    "confidence_hp": 90,
+    "confidence_atk": 0,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "快速弹匣",
+            "talent_decription": "攻击速度+12"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "天使的祝福",
+            "talent_decription": "攻击力+6%，生命上限+10%。置入战场后这个效果会同样赋予给一名随机友方单位"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "冲锋模式",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击变为3连射，每次射击造成相当于攻击力145%的伤害"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "扫射模式",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "攻击变为4连射，每次射击造成相当于攻击力125%的伤害"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "过载模式",
+            "skill_type": "auto",
+            "duration": 15,
+            "description": "攻击变为5连射，攻击间隔一定程度缩短(-0.22)，攻击力提升至110%"
+        }
+    ]
+}

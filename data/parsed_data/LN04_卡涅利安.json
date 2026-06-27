@@ -1,0 +1,53 @@
+{
+    "character_id": "char_326_carnel",
+    "name": "卡涅利安",
+    "nickname": [],
+    "character": {
+        "character_type": "阵法术师",
+        "character_description": "通常时不攻击且防御力和法术抗性大幅度提升，技能开启时攻击造成群体法术伤害"
+    },
+    "base_hp": 2106,
+    "base_atk": 846,
+    "base_def": 228,
+    "base_res": 15,
+    "atk_time": 2.0,
+    "confidence_hp": 0,
+    "confidence_atk": 80,
+    "confidence_def": 30,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "生命之餐",
+            "talent_decription": "开启技能时立即恢复40%最大生命值；蓄力时效果翻倍"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "蓄势待发",
+            "talent_decription": "技力超过上限时，技力自然回复速度+0.6/秒"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "沙暴守卫",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "攻击力+60%，防御力+100%；蓄力额外效果：特性效果在技能期间继续生效"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "沙缚镣锁",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "攻击间隔大幅度缩短(-1.1)，每次攻击对目标造成0.3秒停顿；蓄力额外效果：攻击力+20%且停顿变为束缚0.6秒"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "食噬之印",
+            "skill_type": "manual",
+            "duration": 21,
+            "description": "攻击范围扩大，攻击力逐渐增至+280%；蓄力额外效果：每次攻击使目标受到来自卡涅利安的伤害提升20%（最多叠加5次），持续至技能结束"
+        }
+    ]
+}

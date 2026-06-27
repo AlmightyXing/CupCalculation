@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_chen2",
+    "name": "赤刃明霄陈",
+    "nickname": [],
+    "character": {
+        "character_type": "术战者",
+        "character_description": "攻击造成法术伤害"
+    },
+    "base_hp": 2910,
+    "base_atk": 670,
+    "base_def": 425,
+    "base_res": 15,
+    "atk_time": 1.25,
+    "confidence_hp": 0,
+    "confidence_atk": 100,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "形意洞照",
+            "talent_decription": "攻击力+13%，攻击速度+13，造成的物理和法术伤害变为弱点伤害"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "寒暑觉知",
+            "talent_decription": "未受到伤害时，每7秒随机治疗自身一定（攻击力的30%~160%）生命值，并闪避下次物理与法术攻击"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "赤霄·奔夜",
+            "skill_type": "manual",
+            "duration": 18,
+            "description": "攻击力+120%，攻击变为二连击，攻击使目标敌人特殊能力失效持续至技能结束"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "赤霄·绝影-驰",
+            "skill_type": "manual",
+            "duration": 6,
+            "description": "对周围最近的1名敌人发动10次斩击，每次造成攻击力480%的法术伤害，敌人被击倒时转移至目标周围最近的其他敌人并使剩余攻击次数+1；斩击结束时，若目标未被击倒且其位置可部署则移动至该位置，否则返回原位置。接下来攻击力+300%，获得60%物理和法术闪避"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "赤霄·天喟",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "技能开启时向前释放一道可转向的剑气，对穿过的敌人造成相当于其当前生命值6%的法术伤害（至少造成自身攻击力580%的法术伤害）；攻击范围扩大，每次攻击对最多4名地面敌人造成3次攻击力210%的法术伤害"
+        }
+    ]
+}

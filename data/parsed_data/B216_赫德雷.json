@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_heidi",
+    "name": "赫德雷",
+    "nickname": [],
+    "character": {
+        "character_type": "重剑手",
+        "character_description": "同时攻击阻挡的所有敌人"
+    },
+    "base_hp": 5988,
+    "base_atk": 1576,
+    "base_def": 0,
+    "base_res": 0,
+    "atk_time": 2.5,
+    "confidence_hp": 500,
+    "confidence_atk": 80,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "及锋而试",
+            "talent_decription": "攻击敌人时攻击力提升至110%，若目标处于晕眩、束缚则改为提升至140%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "余火之氅",
+            "talent_decription": "使自身与身后一格的友军获得18%的庇护"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "重锋不熄",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击造成相当于攻击力260%的物理伤害，并回复自身25%的生命"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "余烬重荷",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "被动效果：攻击力+40%；主动触发可以在下列状态和初始状态间切换：攻击间隔略微增大(+0.5)，阻挡数+1，攻击使目标晕眩1秒"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "死境硝烟",
+            "skill_type": "manual",
+            "duration": 70,
+            "description": "每秒流失100点生命，并使自身攻击过和攻击过自身的敌人每秒受到200点真实伤害；攻击距离+1，生命上限+60%，攻击力+120%，每次攻击回复自身5%的生命且有25%概率使目标晕眩5秒"
+        }
+    ]
+}

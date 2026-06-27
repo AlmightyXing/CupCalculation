@@ -1,0 +1,53 @@
+{
+    "character_id": "char_285_lumen",
+    "name": "流明",
+    "nickname": [],
+    "character": {
+        "character_type": "疗养师",
+        "character_description": "拥有较大治疗范围，但在治疗较远目标时治疗量变为80%"
+    },
+    "base_hp": 1825,
+    "base_atk": 540,
+    "base_def": 111,
+    "base_res": 10,
+    "atk_time": 2.85,
+    "confidence_hp": 0,
+    "confidence_atk": 45,
+    "confidence_def": 30,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "凡人之愿",
+            "talent_description": "治疗的目标获得4秒抵抗，若目标生命值高于75%则改为6秒抵抗"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "应急处理",
+            "talent_description": "攻击范围内的友方受到异常状态时，立刻治疗目标相当于流明攻击力80%的生命，该效果有12秒冷却时间"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "沐雨",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击使目标和周围的友军每秒受到相当于55%流明攻击力的治疗效果，持续5秒"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "沛霖",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "立刻恢复攻击范围内最多3名友方单位相当于攻击力260%的生命；蓄力额外效果：并解除目标所受的异常状态"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "灯火不灭",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "攻击力+55%，攻击速度+30，优先治疗处于异常状态中的单位；只在治疗异常状态中的单位时会消耗子弹，使该次治疗量提升至攻击力的200%并解除目标所受的异常状态；攻击装有8发子弹，打完后技能结束（期间可随时停止技能）"
+        }
+    ]
+}

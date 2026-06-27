@@ -1,0 +1,53 @@
+{
+    "character_id": "char_325_ash",
+    "name": "灰烬",
+    "nickname": [],
+    "character": {
+        "character_type": "速射手",
+        "character_description": "优先攻击空中单位"
+    },
+    "base_hp": 1689,
+    "base_atk": 534,
+    "base_def": 169,
+    "base_res": 0,
+    "atk_time": 1.0,
+    "confidence_hp": 90,
+    "confidence_atk": 90,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "辅助装备",
+            "talent_decription": "部署后立即对攻击范围内一个敌人投掷闪光弹，使其和周围敌人晕眩4秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "突击手",
+            "talent_decription": "首次部署时部署费用-3，并在部署后立即获得17技力"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "支援射击",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "攻击力+15%，攻击变为2连击"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "突击战术",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "立即触发第一天赋，攻击间隔大幅度缩短(-80%)，且攻击被晕眩目标时攻击力提高至250%，攻击装有31发子弹，打完后技能结束（期间可随时停止技能）"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "攻坚榴弹",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "向前发射破墙弹，对沿途敌人造成300%的物理伤害并向后较大力度推动；爆炸对周围造成400%的物理伤害（从低地撞到高台直接爆炸且造成800%的物理伤害）；每次部署只能释放2次"
+        }
+    ]
+}

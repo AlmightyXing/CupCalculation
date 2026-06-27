@@ -1,0 +1,53 @@
+{
+    "character_id": "char_325_mlynar",
+    "name": "缪尔赛思",
+    "nickname": [],
+    "character": {
+        "character_type": "战术家",
+        "character_description": "可以在攻击范围内选择一次战术点来召唤援军，自身攻击援军阻挡的敌人时攻击力提升至150%"
+    },
+    "base_hp": 1813,
+    "base_atk": 497,
+    "base_def": 117,
+    "base_res": 0,
+    "atk_time": 1.0,
+    "confidence_hp": 0,
+    "confidence_atk": 40,
+    "confidence_def": 40,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "净水即生命",
+            "talent_decription": "可召唤流形来复制待部署干员的大部分（90%）属性（生命上限、攻击、防御、法抗、阻挡数、攻击间隔、攻击范围、伤害类型、根据近/远程位获得特殊特性）协助作战，其被击败后会在25秒后自动刷新"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "开源节流",
+            "talent_decription": "携带时【莱茵生命】干员部署费用-2，首名【莱茵生命】干员部署费用额外-1"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "渐进性润化",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "期间逐渐回复13点费用，自身与流形攻击力+50%，攻击速度+50"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "生态耦合",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "立即获得15点费用，自身与流形攻击力+50%，若流形为近战复制体时，每秒回复5%的生命值，获得25%的庇护，若为远程复制体时，攻击变为二连击，随机攻击范围内的目标"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "浅层非熵适应",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "立即获得15点费用，自身与流形攻击力+50%，若流形为近战复制体时每2秒对周围八格敌人向自己中心小力度地拖拽并使所有阻挡的单位持续晕眩，若为远程复制体时刷新所有流形且攻击附带持续1.5秒的束缚"
+        }
+    ]
+}

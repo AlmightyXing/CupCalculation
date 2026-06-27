@@ -1,0 +1,53 @@
+{
+    "character_id": "char_325_mlynar",
+    "name": "引星棘刺",
+    "nickname": [],
+    "character": {
+        "character_type": "炼金师",
+        "character_description": "可以投掷炼金单元协助作战"
+    },
+    "base_hp": 1173,
+    "base_atk": 501,
+    "base_def": 106,
+    "base_res": 30,
+    "atk_time": 1.5,
+    "confidence_hp": 200,
+    "confidence_atk": 40,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "心相",
+            "talent_decription": "攻击力+10%，攻击范围内存在其他干员时，自身投掷的炼金单元持续时间延长3秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "视界",
+            "talent_decription": "在场时，所有友方单位攻击速度+5，敌方单位攻击速度-5；位于连续6格或以上直线道路的友方和敌方单位受到的效果翻倍"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "度算浪波",
+            "skill_type": "auto",
+            "duration": 8,
+            "description": "向友方单位投掷一个炼金单元，在8秒内使落点和周围8格的友方单位防御力+100，每秒回复相当于攻击力20%的生命值"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "解构涌潮",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "投掷一个炼金单元，在15秒内使落点周围的地面敌人受到的治疗和回复效果降低50%，每秒受到相当于攻击力180%的法术伤害，友方单位每秒恢复相当于攻击力18%的生命；炼金单元能在15秒内缓慢沿投掷方向移动且影响范围持续扩大 可充能2次"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "“我的海疆”",
+            "skill_type": "manual",
+            "duration": 23,
+            "description": "被动效果：攻击范围扩大 主动开启：向阻挡数最低的4名干员投掷炼金单元，在23秒内使围绕区域内的敌人攻击力-15%，防御力-35%，法术抗性-35%（不叠加），每秒受到攻击力210%的法术伤害，效果逐渐提升（15秒后达到最大，攻击力-30%，防御力-50%，法术抗性-50%，每秒伤害390%）"
+        }
+    ]
+}

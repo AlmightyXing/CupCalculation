@@ -1,0 +1,53 @@
+{
+    "character_id": "char_140_ceobe",
+    "name": "刻俄柏",
+    "nickname": [],
+    "character": {
+        "character_type": "中坚术师",
+        "character_description": "攻击造成法术伤害"
+    },
+    "base_hp": 1565,
+    "base_atk": 667,
+    "base_def": 128,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 90,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "剥壳",
+            "talent_description": "攻击时对目标额外造成相当于其防御力40%的法术伤害"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "独行长路",
+            "talent_description": "当周围四格内没有其他友方单位时，攻击力+8%，攻击速度+8"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "“很冰的斧”",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提升至210%，优先攻击没有被阻挡的目标，并令目标束缚3秒，可充能3次"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "“很热的刀”",
+            "skill_type": "manual",
+            "duration": 40,
+            "description": "攻击间隔超大幅度缩短(*0.33)，优先攻击防御力最高的目标"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "“很重的枪”",
+            "skill_type": "manual",
+            "duration": 60,
+            "description": "攻击范围扩大，攻击力+210%，伤害类型变为物理，优先攻击防御力最低的目标，并令其失去特殊能力5秒"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_narantuya",
+    "name": "娜仁图亚",
+    "nickname": [],
+    "character": {
+        "character_type": "回环射手",
+        "character_description": "持有回旋投射物时才能够攻击（投射物需要时间回收）"
+    },
+    "base_hp": 2500,
+    "base_atk": 675,
+    "base_def": 170,
+    "base_res": 0,
+    "atk_time": 1.0,
+    "confidence_hp": 0,
+    "confidence_atk": 90,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "“我见，我得”",
+            "talent_decription": "在场时，每次攻击到敌人偷取其25点攻击力（最高250点）与20点防御力（最高200点）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "婀娜虚影",
+            "talent_decription": "获得35%的物理与法术闪避，周围8格内敌人的物理与法术命中率-20%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "旋刃",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "可以在下列状态和初始状态间切换：攻击距离-1，回旋投射物造成相当于攻击力190%的物理伤害，并且可以在敌人间重复弹射（最多弹跳3次）"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "恶魇",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "每次攻击造成相当于攻击力250%的物理伤害并使目标停顿1秒，投射物命中目标后会在短暂突进后折返，返回时对穿过的所有敌人造成一次相当于攻击力200%的物理伤害"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "吞日",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "每次攻击发射3个回旋投射物（每个造成相当于攻击力175%的物理伤害），投射物全部回收时娜仁图亚对周围8格内至多3名敌人造成一次相当于攻击力160%的物理伤害并使其停顿1秒"
+        }
+    ]
+}

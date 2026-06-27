@@ -64,6 +64,7 @@ def clean_operator_text_to_json(operator_name: str, raw_text: str) -> dict:
         ],
         response_format={"type": "json_object"},
         temperature=0.0,
+        timeout=60,
     )
     
     raw_json = response.choices[0].message.content

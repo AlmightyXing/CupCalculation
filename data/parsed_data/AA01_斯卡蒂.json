@@ -1,0 +1,53 @@
+{
+    "character_id": "char_140_skadi",
+    "name": "斯卡蒂",
+    "nickname": [],
+    "character": {
+        "character_type": "无畏者",
+        "character_description": "能够阻挡一个敌人"
+    },
+    "base_hp": 3866,
+    "base_atk": 1015,
+    "base_def": 263,
+    "base_res": 0,
+    "atk_time": 1.5,
+    "confidence_hp": 0,
+    "confidence_atk": 80,
+    "confidence_def": 40,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "深海掠食者",
+            "talent_description": "编入队伍时，所有【深海猎人】干员的攻击力+14%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "迅捷出击",
+            "talent_description": "自身再部署时间-10秒"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "迅捷打击·γ型",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "攻击力+45%，攻击速度+45"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "跃浪击",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "部署后30秒内攻击力+170%"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "涌潮悲歌",
+            "skill_type": "manual",
+            "duration": 50,
+            "description": "攻击力、防御力和生命上限各+130%"
+        }
+    ]
+}

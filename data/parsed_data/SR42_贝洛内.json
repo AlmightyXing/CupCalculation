@@ -1,0 +1,53 @@
+{
+    "character_id": "char_???_belone",
+    "name": "贝洛内",
+    "nickname": [],
+    "character": {
+        "character_type": "斗士",
+        "character_description": "能够阻挡一个敌人"
+    },
+    "base_hp": 2625,
+    "base_atk": 605,
+    "base_def": 355,
+    "base_res": 0,
+    "atk_time": 0.78,
+    "confidence_hp": 60,
+    "confidence_atk": 0,
+    "confidence_def": 30,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "家族手段",
+            "talent_decription": "攻击使目标在10秒内防御力降低7%（最多叠加5次），并且目标剩余生命值比例越低自身对其造成的伤害越高，在剩余20%以下生命值时伤害提高到最高128%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "街头直觉",
+            "talent_decription": "获得40%的物理和法术闪避，部署后提高到80%并在20秒内逐渐衰减"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "家主的余裕",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击对目标造成两次相当于攻击力250%的物理伤害"
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "军师的手段",
+            "skill_type": "manual",
+            "duration": 22,
+            "description": "攻击范围扩大，攻击速度+80，每次攻击对3名目标造成相当于攻击力200%的物理伤害；技能期间第一天赋使目标防御力降低的效果改为最多叠加8次，并且叠满后对目标造成持续的停顿效果"
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "清算",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击力+170%，攻击速度+50，攻击时有50%的几率造成相当于攻击力185%的物理伤害；技能开启后立即选取自身周围一定范围内的一名地面目标，若其所在位置可部署，自身会移动至目标所在位置进行攻击；自身攻击的精英、领袖敌人被击倒，或自身持续1秒未进行攻击时，会立即重新选取目标；受到致命伤害时不撤退但会结束技能，技能结束后返回初始位置"
+        }
+    ]
+}

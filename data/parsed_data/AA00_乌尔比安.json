@@ -1,0 +1,20 @@
+{
+    "character_id": "char_325_mlynar",
+    "name": "乌尔比安",
+    "nickname": [],
+    "character": {
+        "character_type": "解放者",
+        "character_description": "乌尔比安技能结束时返回该位置，并且其他干员不能部署"
+    },
+    "base_hp": 3500,
+    "base_atk": 777,
+    "base_def": 650,
+    "base_res": 50,
+    "atk_time": 1.0,
+    "confidence_hp": 0,
+    "confidence_atk": 0,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [],
+    "skills": []
+}
