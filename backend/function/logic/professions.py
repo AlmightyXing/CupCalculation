@@ -90,3 +90,13 @@ class Trapmaster(Operator):
         # 此处可以根据游戏设定设置该职业的默认攻击间隔等
         self.attack_interval = 1.0 
         self.block_count = 1
+
+class Swordmaster(Operator):
+    """
+    职业：剑豪
+    """
+    def __init__(self, data: dict):
+        super().__init__(data)
+        self.attack_interval = 1.3
+        self.block_count = 2
+
