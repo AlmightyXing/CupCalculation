@@ -12,6 +12,10 @@ class Cb05山(UnknownProfession):
         # TODO: 根据 self.raw_data 中的天赋实现逻辑
         pass
         
-    def calculate_dps(self, enemy, skill_index: int = -1):
-        # TODO: 实现具体技能的特殊 DPS 计算逻辑
-        return super().calculate_dps(enemy, skill_index)
+    def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
+        # TODO: 覆写基类普攻期望（处理特殊破甲、连击等）
+        return super().calculate_normal_hit(enemy, target_count)
+
+    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> float:
+        # TODO: 覆写基类技能总伤计算，返回对应技能单次爆发的总伤害
+        return super().calculate_skill_damage(enemy, skill_index, target_count)
