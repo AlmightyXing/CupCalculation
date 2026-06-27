@@ -37,21 +37,22 @@ class Ii07艾丽妮(Swordmaster):
         根据规则，忽略父类特性的连击描述，视为攻击一次。
         引入了艾丽妮特殊的天赋破甲计算。
         """
-        return self._calc_hit(self.final_base_atk, enemy) * target_count
+        return self._calc_hit(self.final_base_atk, enemy)
 
-    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> float:
-        """
-        覆写基类技能总伤计算，仅需关注技能本身的倍率。
-        """
+    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        actual_atk_interval = self.attack_interval * 100 / self.attack_speed
+        
         if skill_index == 0:
             # 技能 1 (起风)：2次200%攻击力的物理伤害
             atk_val = self.final_base_atk * 2.0
-            return self._calc_hit(atk_val, enemy) * 2 * target_count
+            total_damage = self._calc_hit(atk_val, enemy) * 2
+            return {"total_damage": total_damage, "dps": total_damage / actual_atk_interval}
             
         elif skill_index == 1:
             # 技能 2 (裂潮)：1次400%攻击力的物理伤害
             atk_val = self.final_base_atk * 4.0
-            return self._calc_hit(atk_val, enemy) * target_count
+            total_damage = self._calc_hit(atk_val, enemy)
+            return {"total_damage": total_damage, "dps": total_damage / actual_atk_interval}
             
         elif skill_index == 2:
             # 技能 3 (判决)：1次300%攻击力 + 12次250%攻击力
@@ -61,6 +62,7 @@ class Ii07艾丽妮(Swordmaster):
             dmg1 = self._calc_hit(hit1_atk, enemy)
             dmg2 = self._calc_hit(hit2_atk, enemy) * 12
             
-            return (dmg1 + dmg2) * target_count
+            total_damage = dmg1 + dmg2
+            return {"total_damage": total_damage, "dps": total_damage / actual_atk_interval}
             
         return super().calculate_skill_damage(enemy, skill_index, target_count)

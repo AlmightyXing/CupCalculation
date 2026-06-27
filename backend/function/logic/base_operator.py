@@ -42,17 +42,19 @@ class Operator:
         else:
             return calculate_arts_damage(atk_val, enemy.current_res) * target_count
 
-    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> float:
+    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> Dict[str, float]:
         """
-        模板方法：由子类必须覆写，返回对应技能（skill_index）单次施放的爆发总伤。
+        模板方法：由子类必须覆写，返回对应技能（skill_index）单次施放的总伤和DPS。
+        返回格式: {"total_damage": float, "dps": float}
         """
-        return 0.0
+        return {"total_damage": 0.0, "dps": 0.0}
 
-    def calculate_dps(self, enemy: 'Enemy', skill_index: int = -1, target_count: int = 1) -> Dict[str, float]:
+    def calculate_dps(self, enemy, skill_index: int = -1, target_count: int = 1) -> Dict[str, float]:
         """
         全局统一的主接口。集中实现周期回转与DPS结算算法。
-        不要在子类中轻易覆写此方法，除非有极为特殊的机制。
         """
+        # 强制 target_count 为 1
+        target_count = 1
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == -1:
@@ -61,16 +63,38 @@ class Operator:
             return {"dps": dps, "total_damage": total_damage}
             
         # 调用子类提供的技能总伤逻辑
-        skill_dmg = self.calculate_skill_damage(enemy, skill_index, target_count)
+        skill_res = self.calculate_skill_damage(enemy, skill_index, target_count)
+        skill_dmg = skill_res.get("total_damage", 0.0)
+        skill_dps = skill_res.get("dps", 0.0)
         
         # --- 全局周期 DPS 演算逻辑 ---
         if skill_index >= len(self.skills):
-            return {"total_damage": skill_dmg}
+            return {"total_damage": skill_dmg, "dps": skill_dps}
             
         skill_info = self.skills[skill_index]
+        skill_type = skill_info.get("skill_type", "manual")
+        duration = skill_info.get("duration", 0)
+        if duration is None:
+            duration = 0
+            
         consume_sp = skill_info.get("consume_sp")
         
-        if consume_sp is not None:
+        # Manual 技能只计算释放期间
+        if skill_type == "manual":
+            return {
+                "total_damage": skill_dmg,
+                "dps": skill_dps
+            }
+            
+        # Auto 技能处理
+        if skill_type == "auto":
+            # 如果没有消耗SP或者无限持续时间，按永续处理
+            if consume_sp is None or duration <= 0:
+                return {
+                    "total_damage": skill_dmg,
+                    "dps": skill_dps
+                }
+                
             is_atk_sp = skill_info.get("attack_supplement", False)
             is_auto_sp = skill_info.get("auto_supplement", False)
             
@@ -87,10 +111,6 @@ class Operator:
                 charge_time = 0
                 normal_attacks_dmg = 0
                 
-            duration = skill_info.get("duration")
-            if duration is None:
-                duration = actual_atk_interval
-                
             cycle_time = charge_time + duration
             cycle_dmg = normal_attacks_dmg + skill_dmg
             cycle_dps = cycle_dmg / cycle_time if cycle_time > 0 else 0
@@ -99,10 +119,11 @@ class Operator:
                 "total_damage": skill_dmg,
                 "cycle_total_damage": cycle_dmg,
                 "cycle_time": cycle_time,
-                "cycle_dps": cycle_dps
+                "cycle_dps": cycle_dps,
+                "dps": skill_dps
             }
             
-        return {"total_damage": skill_dmg}
+        return {"total_damage": skill_dmg, "dps": skill_dps}
 
     def __str__(self):
         return f"[{self.profession}] {self.name} (ATK: {self.base_atk})"
