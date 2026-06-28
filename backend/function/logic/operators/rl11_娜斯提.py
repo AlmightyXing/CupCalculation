@@ -1,4 +1,5 @@
 from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.formulas import calculate_physical_damage
 
 class Rl11娜斯提(UnknownProfession):
     """
@@ -6,16 +7,62 @@ class Rl11娜斯提(UnknownProfession):
     """
     def __init__(self, data: dict):
         super().__init__(data)
+        
+        # 获取信赖属性并加到基础面板上
+        self.trust_atk = self.raw_data.get("confidence_atk", 0)
+        self.final_base_atk = self.base_atk + self.trust_atk
+        
         self.apply_talents()
         
     def apply_talents(self):
-        # TODO: 根据 self.raw_data 中的天赋实现逻辑
+        # 天赋 0: 前方施工 (影响装置数量和效果，不直接影响娜斯提自身伤害)
+        # 天赋 1: 注意安全 (提供庇护和技力回复，不直接影响娜斯提自身伤害)
+        # 娜斯提的天赋不直接提供攻击力、攻击速度或特殊伤害机制的加成，
+        # 因此此方法中没有直接修改娜斯提自身伤害计算的逻辑。
         pass
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # TODO: 覆写基类普攻期望（处理特殊破甲、连击等）
+        # 娜斯提的天赋不影响普攻伤害计算方式（无特殊破甲、连击等），
+        # 因此直接调用基类的普攻计算即可。
+        # 假设 UnknownProfession 已经正确实现了基于 final_base_atk 的物理伤害计算。
         return super().calculate_normal_hit(enemy, target_count)
 
-    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> float:
-        # TODO: 覆写基类技能总伤计算，返回对应技能单次爆发的总伤害
+    def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        actual_atk_interval = self.attack_interval * 100 / self.attack_speed
+        
+        if skill_index == 0:
+            # 技能 1 (拱卫):
+            # 描述中 "装置使前方干员防御力提升攻击力+80%，防御力+80%，同时攻击阻挡的所有敌人"
+            # 考虑到计算娜斯提自身伤害，我们假设 "攻击力+80%" 作用于娜斯提自身，且她持续攻击。
+            # 持续时间: 40秒
+            duration = 40
+            atk_buff_ratio = 0.80
+            
+            # 计算强化后的攻击力
+            enhanced_atk = self.final_base_atk * (1 + atk_buff_ratio)
+            
+            # 计算单次强化普攻伤害
+            single_hit_damage = calculate_physical_damage(enhanced_atk, enemy.current_def)
+            
+            # 计算技能持续期间的普攻次数
+            num_hits = duration / actual_atk_interval
+            
+            total_damage = num_hits * single_hit_damage
+            dps = single_hit_damage / actual_atk_interval
+            
+            return {"total_damage": total_damage, "dps": dps}
+            
+        elif skill_index == 1:
+            # 技能 2 (执行):
+            # 描述中明确提到 "停止攻击"
+            # 因此，娜斯提自身在此技能期间不造成伤害。
+            return {"total_damage": 0.0, "dps": 0.0}
+            
+        elif skill_index == 2:
+            # 技能 3 (栖脚地):
+            # 描述中 "攻击力+160%，防御力+160%" 是对高台装置或其上干员的增益，不作用于娜斯提自身。
+            # 娜斯提自身在此技能期间不获得伤害增益，且技能本身无爆发伤害。
+            return {"total_damage": 0.0, "dps": 0.0}
+            
+        # 如果技能索引不匹配，调用基类方法
         return super().calculate_skill_damage(enemy, skill_index, target_count)

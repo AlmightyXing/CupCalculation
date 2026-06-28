@@ -128,11 +128,11 @@ def extract_python_code(markdown_text: str) -> str:
         return match.group(1).strip()
     return markdown_text.strip()
 
-def build_logic_for_operator(target_id: str):
+def build_logic_for_operator(target_id: str) -> bool:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("错误: 未找到 GEMINI_API_KEY。请在 .env 文件中设置。")
-        return
+        return False
         
     client = genai.Client(api_key=api_key)
     
@@ -140,7 +140,7 @@ def build_logic_for_operator(target_id: str):
     json_path = PARSED_DIR / f"{target_id}.json"
     if not json_path.exists():
         print(f"找不到对应的 JSON 文件: {json_path}")
-        return
+        return False
         
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -149,7 +149,7 @@ def build_logic_for_operator(target_id: str):
     py_path = OPERATORS_DIR / f"{target_id.lower()}.py"
     if not py_path.exists():
         print(f"找不到对应的 Python 文件: {py_path}")
-        return
+        return False
         
     with open(py_path, "r", encoding="utf-8") as f:
         stub_code = f.read()
@@ -162,18 +162,22 @@ def build_logic_for_operator(target_id: str):
         stub_code=stub_code
     )
     
-    response = client.models.generate_content(
-        model='gemini-2.5-flash',
-        contents=user_prompt,
-        config=types.GenerateContentConfig(
-            system_instruction=SYSTEM_PROMPT,
-            temperature=0.0
-        ),
-    )
+    try:
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=user_prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=SYSTEM_PROMPT,
+                temperature=0.0
+            ),
+        )
+    except Exception as e:
+        print(f"调用 API 失败: {e}")
+        return False
     
     if not response.text:
         print("模型未返回任何结果。")
-        return
+        return False
         
     final_code = extract_python_code(response.text)
     
@@ -182,6 +186,7 @@ def build_logic_for_operator(target_id: str):
         f.write(final_code)
         
     print(f"成功更新 {py_path.name}！")
+    return True
 
 
 if __name__ == "__main__":

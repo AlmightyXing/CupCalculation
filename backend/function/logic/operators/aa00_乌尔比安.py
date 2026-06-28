@@ -1,5 +1,5 @@
 from backend.function.logic.professions import Liberator
-from backend.function.logic.formulas import calculate_physical_damage
+from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
 class Aa00乌尔比安(Liberator):
     """
