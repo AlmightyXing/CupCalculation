@@ -1,8 +1,8 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import RingHealer
 # 夜莺是群愈师，她的普攻和技能均不造成伤害，因此无需导入伤害计算公式。
 # from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Fo03夜莺(UnknownProfession):
+class Fo03夜莺(RingHealer):
     """
     干员：夜莺
     """

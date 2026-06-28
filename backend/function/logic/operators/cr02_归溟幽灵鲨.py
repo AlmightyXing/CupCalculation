@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # 归溟幽灵鲨的职业是傀儡师，如果存在对应的Puppeteer类，应替换此项
+from backend.function.logic.professions import Dollkeeper
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Cr02归溟幽灵鲨(UnknownProfession):
+class Cr02归溟幽灵鲨(Dollkeeper):
     """
     干员：归溟幽灵鲨
     """
@@ -26,8 +26,9 @@ class Cr02归溟幽灵鲨(UnknownProfession):
         pass
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 归溟幽灵鲨的普攻没有特殊机制（如无视防御、连击等），直接计算物理伤害
-        return calculate_physical_damage(self.final_base_atk, enemy.current_def)
+        # 归溟幽灵鲨的普攻没有特殊机制（如无视防御、连击等），直接调用父类的普攻计算
+        # Dollkeeper (傀儡师) 没有覆写 calculate_normal_hit，因此会调用 Operator 的默认物理伤害计算
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于计算DPS和总伤

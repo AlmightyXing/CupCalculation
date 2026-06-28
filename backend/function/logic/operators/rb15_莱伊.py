@@ -1,4 +1,4 @@
-from backend.function.logic.professions import Hunter # 莱伊的职业类型为“猎手”
+from backend.function.logic.professions import Hunter
 from backend.function.logic.formulas import calculate_physical_damage
 
 class Rb15莱伊(Hunter):
@@ -13,7 +13,7 @@ class Rb15莱伊(Hunter):
         self.final_base_atk = self.base_atk + self.trust_atk
         
         # 干员特性：攻击时需要消耗子弹且攻击力提升至120%
-        # 这是一个常驻的攻击力乘区，应用于所有攻击
+        # 这是猎手职业的常驻攻击力乘区，应用于所有攻击
         self.character_trait_atk_multiplier = 1.2
         
         self.apply_talents()
@@ -41,13 +41,14 @@ class Rb15莱伊(Hunter):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 计算普攻时的有效攻击力：
         # 1. final_base_atk (基础攻击力 + 信赖攻击力)
-        # 2. character_trait_atk_multiplier (干员特性：攻击力提升至120%)
+        # 2. character_trait_atk_multiplier (干员特性：攻击力提升至120%) - 此为猎手职业特性
         # 3. talent_2_atk_boost_ratio (天赋2：入神，最多3层24%攻击力提升)
         
         effective_atk = self.final_base_atk \
                        * self.character_trait_atk_multiplier \
                        * (1 + self.talent_2_atk_boost_ratio)
                        
+        # 调用内部方法计算最终伤害，该方法会应用天赋1的最终伤害加成
         return self._calc_hit(effective_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -55,6 +56,7 @@ class Rb15莱伊(Hunter):
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         # 计算技能生效前的基础攻击力，包含干员特性和天赋2的加成
+        # 这里的 character_trait_atk_multiplier 确保了猎手职业的120%攻击力加成被计入
         base_atk_for_skill_calc = self.final_base_atk \
                                  * self.character_trait_atk_multiplier \
                                  * (1 + self.talent_2_atk_boost_ratio)

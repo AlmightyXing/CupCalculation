@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender # 假设“守护者”对应 Defender 职业
+from backend.function.logic.professions import Guardian
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Kz09瑕光(Defender):
+class Kz09瑕光(Guardian):
     """
     干员：瑕光
     """

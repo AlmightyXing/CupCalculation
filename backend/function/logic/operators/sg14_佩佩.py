@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Guard # "撼地者"是近卫干员的一个分支职业
+from backend.function.logic.professions import Earthshaker
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Sg14佩佩(Guard):
+class Sg14佩佩(Earthshaker):
     """
     干员：佩佩
     """

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # 假设巫役职业继承自UnknownProfession
-from backend.function.logic.formulas import calculate_arts_damage # 酒神攻击造成法术伤害，需要引入法术伤害计算公式
+from backend.function.logic.professions import IncantationMedic
+from backend.function.logic.formulas import calculate_arts_damage
 
-class Ct01酒神(UnknownProfession):
+class Ct01酒神(IncantationMedic):
     """
     干员：酒神
     """
@@ -32,6 +32,7 @@ class Ct01酒神(UnknownProfession):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 酒神的普攻造成法术伤害
+        # 巫役特性：攻击造成法术伤害
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

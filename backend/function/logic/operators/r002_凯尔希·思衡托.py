@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Watcher
 from backend.function.logic.formulas import calculate_physical_damage, calculate_true_damage
 
-class R002凯尔希_思衡托(UnknownProfession):
+class R002凯尔希_思衡托(Watcher):
     """
     干员：凯尔希·思衡托
     """
@@ -9,8 +9,10 @@ class R002凯尔希_思衡托(UnknownProfession):
         super().__init__(data)
         
         # 获取信赖属性并加到基础面板上
+        # super().__init__ 已经初始化了 self.final_base_atk = self.base_atk
+        # 这里将信赖攻击力加到其上
         self.trust_atk = self.raw_data.get("confidence_atk", 0)
-        self.final_base_atk = self.base_atk + self.trust_atk
+        self.final_base_atk += self.trust_atk
         
         self.apply_talents()
         
@@ -24,12 +26,13 @@ class R002凯尔希_思衡托(UnknownProfession):
         pass
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 凯尔希的普攻为物理伤害，无特殊机制
-        return calculate_physical_damage(self.final_base_atk, enemy.current_def)
+        # 凯尔希作为医疗干员，普攻为治疗，不造成伤害。
+        # 在DPS模拟中，普攻伤害计为0。
+        return 0.0
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于计算DPS
-        actual_atk_interval = self.attack_interval * 100 / self.attack_speed
+        # Watcher 职业的 attack_interval 默认为 2.85
         
         if skill_index == 0:
             # 技能 1 (应急肃正防线)：攻击力+90%，攻击速度+50，持续35秒
@@ -46,6 +49,7 @@ class R002凯尔希_思衡托(UnknownProfession):
             skill_actual_atk_interval = self.attack_interval * 100 / enhanced_aspd
             
             # 计算单次普攻伤害（物理伤害）
+            # 假设此技能使凯尔希的攻击变为物理伤害
             single_hit_dmg = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
             # 计算技能持续期间的攻击次数
@@ -94,12 +98,13 @@ class R002凯尔希_思衡托(UnknownProfession):
             skill_attack_interval = self.attack_interval - attack_interval_reduction
             # 确保攻击间隔不为负或过小，设定一个最小值以避免除以零或负数
             if skill_attack_interval <= 0:
-                skill_attack_interval = 0.1 
+                skill_attack_interval = 0.1 # 设定一个合理的最小值
             
             # 实际攻击间隔 = (新的攻击间隔) * 100 / 攻击速度
             skill_actual_atk_interval = skill_attack_interval * 100 / self.attack_speed
             
             # 计算单次普攻伤害（物理伤害）
+            # 假设此技能使凯尔希的攻击变为物理伤害
             single_hit_dmg = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
             # 计算技能持续期间的攻击次数

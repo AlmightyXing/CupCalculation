@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Executor
 from backend.function.logic.formulas import calculate_physical_damage
 
-class R109傀影(UnknownProfession):
+class R109傀影(Executor):
     """
     干员：傀影
     """
@@ -27,9 +27,11 @@ class R109傀影(UnknownProfession):
         计算单次普攻命中时的期望物理伤害。
         傀影的普攻为纯物理伤害，无特殊机制。
         """
+        # Executor职业本身没有特殊的普攻倍率，因此直接计算物理伤害即可。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # 实际攻击间隔会受到攻速加成影响
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:
@@ -53,6 +55,7 @@ class R109傀影(UnknownProfession):
             total_damage = damage_per_buffed_hit * 10
             
             # DPS为强化普攻的单次伤害除以实际攻击间隔
+            # 此处DPS表示单次强化攻击的瞬时DPS，而非技能持续期间的平均DPS
             dps = damage_per_buffed_hit / actual_atk_interval
             
             return {"total_damage": total_damage, "dps": dps}
@@ -67,7 +70,7 @@ class R109傀影(UnknownProfession):
             # 计算爆发伤害
             total_damage = calculate_physical_damage(burst_atk_val, enemy.current_def)
             
-            # DPS为爆发伤害除以实际攻击间隔（瞬发技能的DPS计算方式）
+            # DPS为爆发伤害除以实际攻击间隔（瞬发技能的DPS计算方式，假设替代一次普攻）
             dps = total_damage / actual_atk_interval
             
             return {"total_damage": total_damage, "dps": dps}

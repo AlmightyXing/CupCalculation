@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Sniper # '炮手'通常归类为狙击干员，这里使用Sniper作为基类
+from backend.function.logic.professions import Artilleryman
 from backend.function.logic.formulas import calculate_physical_damage
 
-class B214W(Sniper):
+class B214W(Artilleryman):
     """
     干员：W
     """
@@ -36,7 +36,8 @@ class B214W(Sniper):
         return calculate_physical_damage(atk_val * damage_multiplier, enemy.current_def)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # W的普攻造成群体物理伤害，但计算时仍按单个目标计算。
+        # W的普攻造成群体物理伤害，但 calculate_normal_hit 方法通常计算单次命中对单个目标的伤害。
+        # Artilleryman 父类特性是群体伤害，但没有额外的伤害倍率，因此无需 super() 调用来叠加倍率。
         # 普攻本身不附带眩晕，因此不享受“落井下石”天赋加成。
         return self._calc_hit(self.final_base_atk, enemy, is_enemy_stunned=False)
 
@@ -48,6 +49,7 @@ class B214W(Sniper):
             # 这是一个瞬发伤害技能。伤害发生时，目标尚未被此技能眩晕，因此不享受“落井下石”加成。
             atk_val = self.final_base_atk * 3.5
             total_damage = self._calc_hit(atk_val, enemy, is_enemy_stunned=False)
+            # DPS计算对于瞬发技能可能需要考虑技能CD，此处沿用原逻辑
             return {"total_damage": total_damage, "dps": total_damage / actual_atk_interval}
             
         elif skill_index == 1:
@@ -56,6 +58,7 @@ class B214W(Sniper):
             # 这是一个瞬发伤害技能（地雷爆炸）。伤害发生时，目标尚未被此技能眩晕，因此不享受“落井下石”加成。
             atk_val = self.final_base_atk * 2.8
             total_damage = self._calc_hit(atk_val, enemy, is_enemy_stunned=False)
+            # DPS计算对于瞬发技能可能需要考虑技能CD，此处沿用原逻辑
             return {"total_damage": total_damage, "dps": total_damage / actual_atk_interval}
             
         elif skill_index == 2:
@@ -65,6 +68,7 @@ class B214W(Sniper):
             # 严格按照规则，只计算单个炸弹对单个目标的伤害，不乘以目标数。
             atk_val = self.final_base_atk * 3.1
             total_damage = self._calc_hit(atk_val, enemy, is_enemy_stunned=False)
+            # DPS计算对于瞬发技能可能需要考虑技能CD，此处沿用原逻辑
             return {"total_damage": total_damage, "dps": total_damage / actual_atk_interval}
             
         return super().calculate_skill_damage(enemy, skill_index, target_count)

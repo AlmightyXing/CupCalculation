@@ -1,7 +1,7 @@
-from backend.function.logic.professions import MysticCaster # 妮芙是本源术师，对应 MysticCaster
+from backend.function.logic.professions import PrimalCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class R182妮芙(MysticCaster):
+class R182妮芙(PrimalCaster):
     """
     干员：妮芙
     """
@@ -40,6 +40,7 @@ class R182妮芙(MysticCaster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 妮芙是本源术师，普攻造成法术伤害。
+        # PrimalCaster 父类没有覆写 calculate_normal_hit，因此这里直接实现法术伤害计算。
         # self.final_base_atk 已经包含了信赖和天赋2的攻击力加成。
         # 天赋1是每秒元素伤害，不计入单次普攻命中伤害。
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
@@ -94,6 +95,8 @@ class R182妮芙(MysticCaster):
             total_damage = calculate_arts_damage(skill_atk_val, enemy.current_res)
             
             # 瞬发技能的DPS计算方式
+            # 对于瞬发技能，DPS通常表示为总伤害除以一个标准攻击间隔，或者不计算DPS只返回总伤害。
+            # 这里沿用原代码的计算方式。
             dps = total_damage / actual_atk_interval
             
             # 天赋1的伤害效果提高是后续影响，不计入瞬发技能本身的 total_damage 和 dps。
@@ -118,7 +121,7 @@ class R182妮芙(MysticCaster):
             # 假设目标处于爆发期间以计算最大伤害。元素伤害无视防御和法术抗性。
             dmg_per_hit = skill_atk_val
             
-            # 技能期间普攻造成的DPS (不乘以目标数)
+            # 技能期间普攻造成的DPS (不乘以目标数，因为目标数是特性，这里只算单次命中伤害)
             dps_from_hits = dmg_per_hit / skill_actual_atk_interval
             
             # 来自天赋1的额外元素DPS (基于强化后的攻击力，假设目标处于爆发期间)

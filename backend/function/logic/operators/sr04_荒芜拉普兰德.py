@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import MechAccordCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Sr04荒芜拉普兰德(UnknownProfession):
+class Sr04荒芜拉普兰德(MechAccordCaster):
     """
     干员：荒芜拉普兰德
     """
@@ -51,6 +51,7 @@ class Sr04荒芜拉普兰德(UnknownProfession):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 荒芜拉普兰德的普攻由浮游单元造成法术伤害。
         # 普攻时，浮游单元数量为 self.floating_unit_count (已包含天赋和S1被动)。
+        # 父类MechAccordCaster的calculate_normal_hit是简化计算，这里提供更详细的计算。
         single_unit_damage = self._calc_arts_hit_per_unit(self.final_base_atk, enemy)
         total_damage = self.floating_unit_count * single_unit_damage
         return total_damage

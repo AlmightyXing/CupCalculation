@@ -1,7 +1,7 @@
-from backend.function.logic.professions import DreadnoughtGuard
+from backend.function.logic.professions import Dreadnought
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Aa01斯卡蒂(DreadnoughtGuard):
+class Aa01斯卡蒂(Dreadnought):
     """
     干员：斯卡蒂
     """
@@ -25,8 +25,8 @@ class Aa01斯卡蒂(DreadnoughtGuard):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 斯卡蒂的普攻没有特殊的伤害类型、无视防御或多段伤害机制
-        # 因此直接使用标准物理伤害计算
-        return calculate_physical_damage(self.final_base_atk, enemy.current_def)
+        # Dreadnought基类没有覆写此方法，因此直接调用super()即可获得默认物理伤害计算
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于计算技能期间的攻击次数和DPS

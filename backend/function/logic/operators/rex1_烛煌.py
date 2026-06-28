@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # Assuming UnknownProfession is the correct base as per skeleton
+from backend.function.logic.professions import PrimalCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Rex1烛煌(UnknownProfession):
+class Rex1烛煌(PrimalCaster):
     """
     干员：烛煌
     """
@@ -28,14 +28,15 @@ class Rex1烛煌(UnknownProfession):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         """
         计算单次普攻命中时的期望伤害（法术伤害）
+        烛煌作为本源术师，普攻造成法术伤害。
         """
-        # 烛煌的普攻造成法术伤害
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于计算DPS
         # 注意：技能可能会修改攻击间隔，因此这里先获取基础值，技能内部再根据情况调整
         # self.attack_interval 是基础攻击间隔 (atk_time)，self.attack_speed 是攻速百分比 (默认为100)
+        # PrimalCaster的attack_interval为1.6
         base_actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:

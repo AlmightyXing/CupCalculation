@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster
+from backend.function.logic.professions import CurseHealer
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Db02焰影苇草(Caster):
+class Db02焰影苇草(CurseHealer):
     """
     干员：焰影苇草
     """
@@ -42,6 +42,8 @@ class Db02焰影苇草(Caster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 焰影苇草的普攻造成法术伤害，并考虑天赋“灼痕”的概率触发法术脆弱
+        # CurseHealer特性为“攻击造成法术伤害”，因此这里直接计算法术伤害是正确的。
+        # CurseHealer本身没有对普攻伤害进行额外乘算或多段攻击的特性，所以无需super().calculate_normal_hit()
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

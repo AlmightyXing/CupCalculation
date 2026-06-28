@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Vanguard
+from backend.function.logic.professions import Pioneer
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Gg01推进之王(Vanguard):
+class Gg01推进之王(Pioneer):
     """
     干员：推进之王
     """
@@ -23,8 +23,8 @@ class Gg01推进之王(Vanguard):
         # 此天赋影响技力回复，不直接影响伤害或面板属性，故在伤害计算中忽略。
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 推进之王没有特殊的普攻机制（如无视防御、法术伤害等），直接计算物理伤害
-        return calculate_physical_damage(self.final_base_atk, enemy.current_def)
+        # 推进之王没有特殊的普攻机制（如无视防御、法术伤害等），直接调用父类计算物理伤害
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 计算实际攻击间隔，用于DPS计算

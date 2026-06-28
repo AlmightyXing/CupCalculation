@@ -29,7 +29,8 @@ class Lm21林(PhalanxCaster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 阵法术师的特性是“通常时不攻击”，只在技能开启时攻击。
-        return 0.0
+        # 父类 PhalanxCaster 已经实现了此逻辑，返回 0.0
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取技能数据
@@ -37,7 +38,7 @@ class Lm21林(PhalanxCaster):
         skill_duration = skill_data.get("duration") # duration可以为null (永续技能)
 
         # 基础攻击间隔和当前攻速
-        base_attack_interval = self.attack_interval # 来自JSON的atk_time
+        base_attack_interval = self.attack_interval # 来自父类 PhalanxCaster 的 attack_interval
         current_attack_speed = self.attack_speed # 默认100，可能被天赋或技能修改
 
         # 默认的实际攻击间隔 (在没有技能修改攻击间隔或攻速的情况下)

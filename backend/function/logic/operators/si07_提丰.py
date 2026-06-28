@@ -1,7 +1,8 @@
-from backend.function.logic.professions import SiegeSniper
-from backend.function.logic.formulas import calculate_physical_damage
+from backend.function.logic.base_operator import Operator
+from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
+from backend.function.logic.professions import Besieger # Corrected import
 
-class Si07提丰(SiegeSniper):
+class Si07提丰(Besieger): # Corrected inheritance
     """
     干员：提丰
     """
@@ -32,11 +33,13 @@ class Si07提丰(SiegeSniper):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻直接享受天赋1的50%无视防御
+        # Besieger父类没有特殊的普攻逻辑，因此直接计算提丰的普攻伤害即可
         return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取基础攻击速度和实际攻击间隔
         base_attack_speed = self.attack_speed
+        # Besieger的attack_interval为2.4，这里会正确继承
         actual_atk_interval = self.attack_interval * 100 / base_attack_speed
         
         if skill_index == 0:

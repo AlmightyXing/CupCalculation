@@ -1,8 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
-# 浊心斯卡蒂的特性是“不攻击”，且其技能伤害（S3）为真实伤害，
-# 因此无需导入 calculate_physical_damage 或 calculate_arts_damage。
+from backend.function.logic.professions import Bard
+from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Cr01浊心斯卡蒂(UnknownProfession):
+class Cr01浊心斯卡蒂(Bard):
     """
     干员：浊心斯卡蒂
     """

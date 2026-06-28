@@ -53,6 +53,7 @@ class Jc07锏(Swordmaster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 锏的普通攻击连续造成两次伤害
+        # 父类Swordmaster已实现普攻两连击，但Jc07锏有特殊天赋，因此覆写并自行计算两次伤害
         return self._calc_hit(self.final_base_atk, enemy) * 2
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster
+from backend.function.logic.professions import IncantationMedic
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Lt22塑心(Caster):
+class Lt22塑心(IncantationMedic):
     """
     干员：塑心
     """

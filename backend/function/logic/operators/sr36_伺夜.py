@@ -1,4 +1,4 @@
-from backend.function.logic.professions import Tactician # 假设“战术家”对应 Tactician 职业类
+from backend.function.logic.professions import Tactician
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
 class Sr36伺夜(Tactician):
@@ -14,6 +14,7 @@ class Sr36伺夜(Tactician):
         
         # 职业特性：自身攻击援军阻挡的敌人时攻击力提升至150%
         # 为计算最大伤害潜力，我们假设敌人总是被狼群阻挡，因此此特性常驻。
+        # 注意：此乘数会在 _calc_hit 方法中应用，确保不会与父类重复计算。
         self.atk_multiplier_on_blocked = 1.5 
         
         self.apply_talents()
@@ -44,6 +45,7 @@ class Sr36伺夜(Tactician):
             float: 单次命中造成的期望伤害。
         """
         # 职业特性：自身攻击援军阻挡的敌人时攻击力提升至150%
+        # 此处将战术家的150%攻击力提升特性与伺夜的天赋结合计算。
         actual_atk_for_formula = base_atk_for_hit * self.atk_multiplier_on_blocked
         
         if is_arts:
@@ -53,7 +55,8 @@ class Sr36伺夜(Tactician):
             return calculate_physical_damage(actual_atk_for_formula, enemy.current_def, def_ignore_flat=self.def_ignore_flat)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 普攻为物理伤害
+        # 普攻为物理伤害。
+        # 此处直接调用 _calc_hit 方法，该方法已包含了战术家的150%攻击力提升特性和伺夜的天赋2无视防御。
         return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Guard # "无畏者" (Dreadnought) 属于近卫干员，这里使用其基类 Guard
+from backend.function.logic.professions import Dreadnought
 from backend.function.logic.formulas import calculate_physical_damage, calculate_true_damage
 
-class Kz01耀骑士临光(Guard):
+class Kz01耀骑士临光(Dreadnought):
     """
     干员：耀骑士临光
     """
@@ -29,6 +29,7 @@ class Kz01耀骑士临光(Guard):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻为物理伤害，受“破晓”天赋影响
+        # Dreadnought父类没有特殊的普攻逻辑，因此直接实现耀骑士临光的普攻逻辑即可。
         return self._calc_physical_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

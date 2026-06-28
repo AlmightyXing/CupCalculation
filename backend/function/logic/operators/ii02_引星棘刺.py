@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Alchemist
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Ii02引星棘刺(UnknownProfession):
+class Ii02引星棘刺(Alchemist):
     """
     干员：引星棘刺
     """

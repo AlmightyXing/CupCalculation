@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Guard # 帕拉斯是教官，属于近卫(Guard)子职业
+from backend.function.logic.professions import Instructor
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Mn04帕拉斯(Guard):
+class Mn04帕拉斯(Instructor):
     """
     干员：帕拉斯
     """

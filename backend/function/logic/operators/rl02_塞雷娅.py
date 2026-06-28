@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender
+from backend.function.logic.professions import Guardian
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Rl02塞雷娅(Defender):
+class Rl02塞雷娅(Guardian):
     """
     干员：塞雷娅
     """
@@ -37,6 +37,7 @@ class Rl02塞雷娅(Defender):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 塞雷娅的普攻为物理伤害，无特殊机制（如无视防御、连击等）。
         # 使用经过信赖和天赋加成后的最终基础攻击力。
+        # Guardian父类没有覆写calculate_normal_hit，因此直接计算物理伤害即可。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

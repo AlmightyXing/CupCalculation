@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # 假设秘术师职业继承自 UnknownProfession
+from backend.function.logic.professions import MysticCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Us53维伊(UnknownProfession):
+class Us53维伊(MysticCaster):
     """
     干员：维伊
     """
@@ -32,18 +32,25 @@ class Us53维伊(UnknownProfession):
         
     def _calc_arts_hit(self, atk_val: float, enemy) -> float:
         """
-        计算单次命中时的期望法术伤害。
+        计算单次命中时的期望法术伤害，不包含秘术师的能量储存倍率。
         维伊的攻击造成法术伤害。
         """
         return calculate_arts_damage(atk_val, enemy.current_res)
 
+    def _get_mystic_caster_base_hit_damage(self, atk_val: float, enemy) -> float:
+        """
+        封装秘术师职业的普攻特性：攻击造成法术伤害，并包含能量储存的2.1倍率。
+        """
+        # 秘术师的普攻特性是储存能量后一齐发射，父类定义为2.1倍率
+        return self._calc_arts_hit(atk_val * 2.1, enemy)
+
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 维伊的普攻造成法术伤害
-        return self._calc_arts_hit(self.final_base_atk, enemy)
+        # 维伊的普攻造成法术伤害，并继承秘术师的能量储存机制
+        return self._get_mystic_caster_base_hit_damage(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取基础攻击间隔和攻击速度，以便在技能计算中进行修改
-        # self.attack_interval 来自 JSON 的 atk_time
+        # self.attack_interval 来自 JSON 的 atk_time，在 super().__init__ 中被 MysticCaster 设置为 3.0
         # self.attack_speed 默认为 100，可能被天赋修改
         original_atk_interval = self.attack_interval
         original_attack_speed = self.attack_speed
@@ -61,8 +68,8 @@ class Us53维伊(UnknownProfession):
             # 技能期间攻击力不变
             skill_atk_val = original_final_base_atk
             
-            # 单次普攻伤害
-            single_hit_damage = self._calc_arts_hit(skill_atk_val, enemy)
+            # 单次普攻伤害，需要包含秘术师的能量储存倍率
+            single_hit_damage = self._get_mystic_caster_base_hit_damage(skill_atk_val, enemy)
             
             # 技能持续时间
             duration = self.skills[skill_index]["duration"]
@@ -93,8 +100,8 @@ class Us53维伊(UnknownProfession):
             # 强化后的攻击力
             skill_atk_val = original_final_base_atk * atk_buff_ratio
             
-            # 单次普攻伤害
-            single_hit_damage = self._calc_arts_hit(skill_atk_val, enemy)
+            # 单次普攻伤害，需要包含秘术师的能量储存倍率
+            single_hit_damage = self._get_mystic_caster_base_hit_damage(skill_atk_val, enemy)
             
             # 技能持续时间
             duration = self.skills[skill_index]["duration"]
@@ -127,7 +134,7 @@ class Us53维伊(UnknownProfession):
             skill_atk_val = original_final_base_atk
             
             # 单次攻击（发射一个转置能量）的总伤害
-            # 每次跳跃造成165%攻击力伤害，跳跃3次
+            # 每次跳跃造成165%攻击力伤害，跳跃3次。此处的伤害倍率是技能特有的，不叠加秘术师的2.1倍率。
             single_attack_total_damage = self._calc_arts_hit(skill_atk_val * 1.65, enemy) * 3
             
             # DPS = 单次攻击总伤害 / 实际攻击间隔 + 天赋DoT

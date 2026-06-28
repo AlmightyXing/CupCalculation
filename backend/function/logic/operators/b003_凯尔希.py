@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Medic
+from backend.function.logic.professions import Physician
 from backend.function.logic.formulas import calculate_physical_damage, calculate_true_damage
 
-class B003凯尔希(Medic):
+class B003凯尔希(Physician):
     """
     干员：凯尔希
     """

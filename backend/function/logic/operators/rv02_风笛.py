@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Vanguard
+from backend.function.logic.professions import Charger
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Rv02风笛(Vanguard):
+class Rv02风笛(Charger):
     """
     干员：风笛
     """
@@ -41,6 +41,8 @@ class Rv02风笛(Vanguard):
         return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # 假设 self.attack_speed 默认为 100 (100%攻击速度)
+        # 实际攻击间隔 = 基础攻击间隔 * (100 / 当前攻击速度百分比)
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:
@@ -51,11 +53,11 @@ class Rv02风笛(Vanguard):
             
             # 技能期间的强化攻击力
             buffed_atk = self.final_base_atk * skill_atk_multiplier
-            # 技能期间的强化攻击速度
-            buffed_atk_speed = self.attack_speed + skill_atk_speed_bonus
+            # 技能期间的强化攻击速度百分比 (假设 self.attack_speed 初始为 100)
+            buffed_atk_speed_percentage = self.attack_speed + skill_atk_speed_bonus
             
             # 计算技能期间的实际攻击间隔
-            skill_actual_atk_interval = self.attack_interval * 100 / buffed_atk_speed
+            skill_actual_atk_interval = self.attack_interval * 100 / buffed_atk_speed_percentage
             
             # 计算技能期间的攻击次数
             num_hits = skill_duration / skill_actual_atk_interval
@@ -100,6 +102,7 @@ class Rv02风笛(Vanguard):
             modified_attack_interval = self.attack_interval * (1 + attack_interval_increase_ratio)
             
             # 技能期间的实际攻击间隔 (攻击速度未变，但基础攻击间隔变了)
+            # 假设没有额外的攻击速度百分比加成，所以直接使用修改后的攻击间隔
             skill_actual_atk_interval = modified_attack_interval * 100 / self.attack_speed
             
             # 技能期间的攻击次数 (指攻击动作的次数)

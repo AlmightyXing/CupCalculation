@@ -1,7 +1,6 @@
-from backend.function.logic.professions import Medic # 假设Medic是治疗职业的基类
-# 如果Medic类不存在，请根据实际情况修改为 Operator 或 UnknownProfession
+from backend.function.logic.professions import Therapist
 
-class Ii09流明(Medic):
+class Ii09流明(Therapist):
     """
     干员：流明
     """
@@ -28,6 +27,7 @@ class Ii09流明(Medic):
         # 疗养师特性：拥有较大治疗范围，但在治疗较远目标时治疗量变为80%。
         # 在计算单次普攻期望时，我们通常假设为最佳情况（即治疗近距离目标，治疗量为100%攻击力）。
         # 这里的“伤害”对于治疗干员来说，实际指“治疗量”。
+        # 由于Therapist父类没有覆写calculate_normal_hit来返回治疗量，这里直接返回治疗量。
         return self.final_base_atk
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

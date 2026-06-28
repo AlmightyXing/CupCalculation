@@ -1,16 +1,15 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Artificer
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Rl11娜斯提(UnknownProfession):
+class Rl11娜斯提(Artificer):
     """
     干员：娜斯提
     """
     def __init__(self, data: dict):
         super().__init__(data)
         
-        # 获取信赖属性并加到基础面板上
-        self.trust_atk = self.raw_data.get("confidence_atk", 0)
-        self.final_base_atk = self.base_atk + self.trust_atk
+        # trust_atk 和 final_base_atk 的计算已在基类 Operator 的 __init__ 方法中处理，
+        # Artificer 继承 Operator，并调用了 super().__init__(data)，因此此处无需重复计算。
         
         self.apply_talents()
         
@@ -23,11 +22,12 @@ class Rl11娜斯提(UnknownProfession):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 娜斯提的天赋不影响普攻伤害计算方式（无特殊破甲、连击等），
-        # 因此直接调用基类的普攻计算即可。
-        # 假设 UnknownProfession 已经正确实现了基于 final_base_atk 的物理伤害计算。
+        # Artificer 类本身没有覆写 calculate_normal_hit，因此会调用 Operator 的默认物理伤害计算。
+        # 确保父类的特性（如 Artificer 的攻击间隔）已通过 super().__init__ 继承。
         return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # Artificer 的 attack_interval 为 1.5，已通过 super().__init__ 继承。
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:

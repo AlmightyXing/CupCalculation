@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Geek
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Pl08新约能天使(UnknownProfession):
+class Pl08新约能天使(Geek):
     """
     干员：新约能天使
     """
@@ -26,6 +26,7 @@ class Pl08新约能天使(UnknownProfession):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 新约能天使的普攻没有特殊描述，按标准物理伤害计算
+        # 父类Geek没有特殊的普攻逻辑，因此直接计算即可
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -102,6 +103,7 @@ class Pl08新约能天使(UnknownProfession):
             dps = damage_per_attack_cycle / actual_atk_interval
             
         else:
+            # 父类Geek没有特殊的技能伤害逻辑，直接调用super()即可
             return super().calculate_skill_damage(enemy, skill_index, target_count)
 
         return {"total_damage": total_damage, "dps": dps}

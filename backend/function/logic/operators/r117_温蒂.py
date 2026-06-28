@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Specialist
+from backend.function.logic.professions import Pusher
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class R117温蒂(Specialist):
+class R117温蒂(Pusher):
     """
     干员：温蒂
     """
@@ -24,6 +24,7 @@ class R117温蒂(Specialist):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 温蒂普攻为物理伤害，无特殊机制（如破甲、连击等）
         # "同时攻击阻挡的所有敌人" - 严禁在代码中乘以任何目标数，所以按单个目标计算
+        # Pusher父类没有覆写calculate_normal_hit，所以直接计算物理伤害即可。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

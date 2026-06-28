@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender
+from backend.function.logic.professions import Juggernaut
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Sr35斥罪(Defender):
+class Sr35斥罪(Juggernaut):
     """
     干员：斥罪
     """
@@ -26,6 +26,7 @@ class Sr35斥罪(Defender):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 斥罪的普攻是物理伤害，没有特殊天赋加成普攻伤害。
+        # Juggernaut父类没有覆写 calculate_normal_hit，因此直接使用物理伤害计算。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -88,7 +89,7 @@ class Sr35斥罪(Defender):
             enhanced_atk = self.final_base_atk * skill_atk_multiplier
             
             # 攻击间隔增大：在基础攻击间隔上增加0.9
-            # self.attack_interval 是干员的基础攻击间隔
+            # self.attack_interval 是干员的基础攻击间隔 (继承自Juggernaut为1.6)
             skill_base_atk_interval = self.attack_interval + 0.9
             # 技能期间的实际攻击间隔 = (基础攻击间隔 + 增大值) * 100 / 攻击速度
             skill_actual_atk_interval = skill_base_atk_interval * 100 / self.attack_speed

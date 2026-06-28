@@ -1,4 +1,4 @@
-from backend.function.logic.professions import Spreadshooter # 假日威龙陈的职业是散射手
+from backend.function.logic.professions import Spreadshooter
 from backend.function.logic.formulas import calculate_physical_damage
 
 class R112假日威龙陈(Spreadshooter):
@@ -42,10 +42,12 @@ class R112假日威龙陈(Spreadshooter):
         return calculate_physical_damage(effective_atk, effective_def)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 普攻默认目标在前方一横排，享受150%攻击力加成
-        return self._calc_single_hit_damage(self.final_base_atk, enemy, apply_profession_bonus=True)
+        # 普攻默认目标在前方一横排，享受150%攻击力加成。
+        # 散射手父类已实现此逻辑，直接调用父类方法即可。
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # 实际攻击间隔需要考虑攻击速度加成
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:
@@ -102,4 +104,5 @@ class R112假日威龙陈(Spreadshooter):
             
             return {"total_damage": total_damage, "dps": dps}
             
+        # 如果没有匹配的技能，调用父类的默认技能伤害计算（通常返回0或抛出错误）
         return super().calculate_skill_damage(enemy, skill_index, target_count)

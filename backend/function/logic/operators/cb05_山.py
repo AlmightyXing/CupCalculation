@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Fighter
+from backend.function.logic.professions import Brawler
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Cb05山(Fighter):
+class Cb05山(Brawler):
     """
     干员：山
     """
@@ -45,10 +45,12 @@ class Cb05山(Fighter):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻使用最终基础攻击力，并考虑天赋1的默认触发概率
+        # Brawler父类没有特殊的普攻逻辑，因此直接使用_calc_hit计算干员自身特性
         return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，考虑攻速加成
+        # self.attack_interval 会自动继承 Brawler 的 0.78
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:

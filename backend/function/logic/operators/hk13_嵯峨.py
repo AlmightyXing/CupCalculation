@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Vanguard
+from backend.function.logic.professions import Pioneer
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Hk13嵯峨(Vanguard):
+class Hk13嵯峨(Pioneer):
     """
     干员：嵯峨
     """
@@ -26,9 +26,9 @@ class Hk13嵯峨(Vanguard):
         # 根据规则，只考虑对提高伤害有帮助的天赋。因此，此处不进行数值修改。
         pass
         
-    def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 嵯峨的普攻为物理伤害，无特殊天赋修改普攻伤害。
-        return calculate_physical_damage(self.final_base_atk, enemy.current_def)
+    # 嵯峨的普攻为物理伤害，无特殊天赋修改普攻伤害。
+    # Pioneer（尖兵）职业本身没有特殊的普攻伤害特性，因此继承Operator的默认物理伤害计算即可。
+    # 此处无需覆写 calculate_normal_hit 方法。
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于计算瞬发技能的DPS或永续技能的DPS

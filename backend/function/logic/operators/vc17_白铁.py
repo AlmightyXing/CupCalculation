@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Operator
+from backend.function.logic.professions import Artificer
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Vc17白铁(Operator):
+class Vc17白铁(Artificer):
     """
     干员：白铁
     """
@@ -26,6 +26,7 @@ class Vc17白铁(Operator):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 白铁的普攻没有特殊机制，直接计算物理伤害
+        # Artificer (工匠) 职业本身没有普攻伤害倍率，因此直接计算即可。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

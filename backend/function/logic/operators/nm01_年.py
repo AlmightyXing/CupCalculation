@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender
+from backend.function.logic.professions import Protector
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Nm01年(Defender):
+class Nm01年(Protector):
     """
     干员：年
     """
@@ -24,7 +24,7 @@ class Nm01年(Defender):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 年的普攻是物理伤害，没有特殊机制（如无视防御、法术伤害转换等）
-        # 直接使用物理伤害计算公式
+        # Protector基类没有覆写calculate_normal_hit，因此直接使用物理伤害计算公式即可。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -66,4 +66,5 @@ class Nm01年(Defender):
             
             return {"total_damage": total_damage, "dps": dps}
             
+        # 如果没有匹配的技能，则调用父类的默认处理
         return super().calculate_skill_damage(enemy, skill_index, target_count)

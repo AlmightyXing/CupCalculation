@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender
+from backend.function.logic.professions import ArtsProtector
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Lm23斩业星熊(Defender):
+class Lm23斩业星熊(ArtsProtector):
     """
     干员：斩业星熊
     """

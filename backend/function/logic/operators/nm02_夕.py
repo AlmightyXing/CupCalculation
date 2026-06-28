@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster # "扩散术师" 属于术师职业，使用 Caster 作为基类
+from backend.function.logic.professions import SplashCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Nm02夕(Caster):
+class Nm02夕(SplashCaster):
     """
     干员：夕
     """
@@ -27,6 +27,7 @@ class Nm02夕(Caster):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 夕是扩散术师，造成法术伤害。
         # 普攻无特殊机制，直接计算法术伤害。
+        # SplashCaster父类没有覆写calculate_normal_hit，因此这里直接计算法术伤害是正确的。
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

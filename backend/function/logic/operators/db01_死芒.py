@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster
+from backend.function.logic.professions import Ritualist
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Db01死芒(Caster):
+class Db01死芒(Ritualist):
     """
     干员：死芒
     """

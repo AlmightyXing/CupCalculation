@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Centurion
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Rf22百炼嘉维尔(UnknownProfession):
+class Rf22百炼嘉维尔(Centurion):
     """
     干员：百炼嘉维尔
     """
@@ -35,8 +35,8 @@ class Rf22百炼嘉维尔(UnknownProfession):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 百炼嘉维尔是强攻手，造成物理伤害。
-        # 普攻无特殊机制（如无视防御、法术伤害等）。
-        # 严禁乘以目标数。
+        # 强攻手特性“同时攻击阻挡的所有敌人”影响的是目标数量，而非单次攻击的伤害倍率。
+        # 因此，单次普攻的伤害计算与基类Operator的物理伤害计算一致。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -85,6 +85,8 @@ class Rf22百炼嘉维尔(UnknownProfession):
         enhanced_atk_val = self.final_base_atk * skill_atk_multiplier
         
         # 计算单次强化普攻的伤害
+        # 强攻手特性“同时攻击阻挡的所有敌人”影响的是目标数量，而非单次攻击的伤害倍率。
+        # 因此，单次强化普攻的伤害计算与基类Operator的物理伤害计算一致。
         single_hit_damage = calculate_physical_damage(enhanced_atk_val, enemy.current_def)
         
         # 计算技能期间的总伤害和DPS

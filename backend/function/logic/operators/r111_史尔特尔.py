@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Operator # 史尔特尔是术战者，但为通用性，继承自Operator基类
+from backend.function.logic.professions import ArtsFighter
 from backend.function.logic.formulas import calculate_arts_damage
 
-class R111史尔特尔(Operator):
+class R111史尔特尔(ArtsFighter):
     """
     干员：史尔特尔
     """
@@ -33,6 +33,7 @@ class R111史尔特尔(Operator):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 史尔特尔的普攻造成法术伤害，并享受天赋的法术抗性无视
+        # ArtsFighter的特性是攻击造成法术伤害，此方法已体现
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

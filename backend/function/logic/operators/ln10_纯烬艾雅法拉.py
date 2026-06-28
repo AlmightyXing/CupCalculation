@@ -1,8 +1,8 @@
-from backend.function.logic.professions import Medic
+from backend.function.logic.professions import WanderingMedic
 # 纯烬艾雅法拉作为行医，其普攻和技能主要为治疗和提供增益，不对敌方单位造成伤害。
 # 因此，无需导入 calculate_physical_damage 或 calculate_arts_damage。
 
-class Ln10纯烬艾雅法拉(Medic):
+class Ln10纯烬艾雅法拉(WanderingMedic):
     """
     干员：纯烬艾雅法拉
     """

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Fighter # "斗士" (Fighter) 是近卫的一个分支，这里假设存在 Fighter 类
+from backend.function.logic.professions import Brawler
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Sr42贝洛内(Fighter):
+class Sr42贝洛内(Brawler):
     """
     干员：贝洛内
     """
@@ -56,6 +56,7 @@ class Sr42贝洛内(Fighter):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻时，天赋1防御力降低效果按默认最大层数（5层）计算
+        # Brawler父类没有特殊的普攻逻辑（如多段伤害），因此直接计算贝洛内的单次攻击伤害即可。
         return self._calc_hit(self.final_base_atk, enemy, def_reduction_stacks=self.talent1_max_stacks_normal)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import MysticCaster
+from backend.function.logic.professions import CurseHealer
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Sg15缇缇(MysticCaster):
+class Sg15缇缇(CurseHealer):
     """
     干员：缇缇
     """
@@ -41,6 +41,7 @@ class Sg15缇缇(MysticCaster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻使用最终基础攻击力，并应用天赋1效果
+        # CurseHealer特性为“攻击造成法术伤害”，因此直接计算法术伤害
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

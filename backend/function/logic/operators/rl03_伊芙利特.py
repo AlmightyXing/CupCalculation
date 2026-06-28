@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import BlastCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Rl03伊芙利特(UnknownProfession):
+class Rl03伊芙利特(BlastCaster):
     """
     干员：伊芙利特
     """
@@ -39,6 +39,8 @@ class Rl03伊芙利特(UnknownProfession):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 伊芙利特造成法术伤害，并应用其天赋1
+        # BlastCaster特性是群体法术伤害，但单次命中伤害计算逻辑与普通法术伤害一致，
+        # 仅影响目标数量，不影响单次伤害倍率。
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

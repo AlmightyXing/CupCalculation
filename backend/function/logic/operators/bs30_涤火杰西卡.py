@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Sentinel
+from backend.function.logic.professions import SentinelDefender
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Bs30涤火杰西卡(Sentinel):
+class Bs30涤火杰西卡(SentinelDefender):
     """
     干员：涤火杰西卡
     """
@@ -21,6 +21,7 @@ class Bs30涤火杰西卡(Sentinel):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 涤火杰西卡普攻为物理伤害，无特殊机制（如无视防御、连击等）
+        # SentinelDefender 自身没有覆写此方法，因此直接计算物理伤害即可
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

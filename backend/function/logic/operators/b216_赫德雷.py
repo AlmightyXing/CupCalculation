@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # "重剑手" (Heavyweight) profession is not explicitly mapped in the provided context, using UnknownProfession.
+from backend.function.logic.professions import Crusher
 from backend.function.logic.formulas import calculate_physical_damage
 
-class B216赫德雷(UnknownProfession):
+class B216赫德雷(Crusher):
     """
     干员：赫德雷
     """
@@ -27,6 +27,7 @@ class B216赫德雷(UnknownProfession):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 根据规则，对于有条件触发的伤害提升天赋，在普攻计算中应考虑其最大伤害潜力。
         # 因此，假设目标处于晕眩/束缚状态，触发天赋1的140%攻击力提升。
+        # 重剑手父类没有覆写 calculate_normal_hit，因此直接计算即可，无需 super()。
         atk_val = self.final_base_atk * self.talent_1_stun_multiplier
         return calculate_physical_damage(atk_val, enemy.current_def)
 
@@ -37,6 +38,7 @@ class B216赫德雷(UnknownProfession):
             # 技能 1 (重锋不熄)：下次攻击造成相当于攻击力260%的物理伤害，并回复自身25%的生命
             # 这是一个单次爆发伤害技能。
             # 伤害计算时，考虑天赋1的最大伤害潜力（140%攻击力）。
+            # 重剑手父类没有覆写 calculate_skill_damage，因此直接计算即可，无需 super()。
             atk_val = self.final_base_atk * self.talent_1_stun_multiplier * 2.60
             total_damage = calculate_physical_damage(atk_val, enemy.current_def)
             

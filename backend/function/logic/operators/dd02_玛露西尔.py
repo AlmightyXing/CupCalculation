@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster
+from backend.function.logic.professions import SplashCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Dd02玛露西尔(Caster):
+class Dd02玛露西尔(SplashCaster):
     """
     干员：玛露西尔
     """
@@ -35,6 +35,7 @@ class Dd02玛露西尔(Caster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 玛露西尔是扩散术师，造成法术伤害
+        # SplashCaster的特性是攻击造成群体法术伤害，这里计算对单个目标的伤害
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

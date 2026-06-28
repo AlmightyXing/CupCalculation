@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Reaper
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class R169隐德来希(UnknownProfession):
+class R169隐德来希(Reaper):
     """
     干员：隐德来希
     """

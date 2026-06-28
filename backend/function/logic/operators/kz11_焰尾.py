@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Vanguard
+from backend.function.logic.professions import Pioneer
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Kz11焰尾(Vanguard):
+class Kz11焰尾(Pioneer):
     """
     干员：焰尾
     """
@@ -35,6 +35,7 @@ class Kz11焰尾(Vanguard):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻伤害 = 单次命中伤害 * (天赋1二连击乘数)
+        # Pioneer基类没有特殊的calculate_normal_hit逻辑，所以直接计算物理伤害并应用天赋乘数。
         single_hit_dmg = self._calc_single_physical_hit(self.final_base_atk, enemy)
         return single_hit_dmg * self.talent_1_double_hit_multiplier
 

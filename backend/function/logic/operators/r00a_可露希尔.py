@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # 假设“战术家”职业对应 UnknownProfession
+from backend.function.logic.professions import Tactician
 from backend.function.logic.formulas import calculate_physical_damage
 
-class R00a可露希尔(UnknownProfession):
+class R00a可露希尔(Tactician):
     """
     干员：可露希尔
     """
@@ -13,8 +13,8 @@ class R00a可露希尔(UnknownProfession):
         self.final_base_atk = self.base_atk + self.trust_atk
         
         # 战术家职业特性：攻击援军阻挡的敌人时攻击力提升至150%
-        # 在计算伤害时，我们假设总是攻击援军阻挡的敌人以达到最大期望伤害
-        self.profession_atk_multiplier = 1.5 
+        # 此特性已在父类 Tactician 的 calculate_normal_hit 方法中体现。
+        # 对于技能伤害，需要手动将此1.5倍率乘入计算。
         
         self.apply_talents()
         
@@ -26,24 +26,18 @@ class R00a可露希尔(UnknownProfession):
         # 降低部署费用和为【罗德岛】干员提供攻击力加成，不影响可露希尔自身的伤害数值。
         pass
         
-    def _calc_hit(self, base_atk_for_hit: float, enemy) -> float:
-        """
-        计算单次命中时的期望物理伤害，考虑战术家职业特性。
-        base_atk_for_hit 是已经包含了技能倍率等加成的攻击力，
-        在此基础上再乘以职业特性加成。
-        """
-        # 战术家职业特性：攻击援军阻挡的敌人时攻击力提升至150%
-        effective_atk_after_profession_bonus = base_atk_for_hit * self.profession_atk_multiplier
-        return calculate_physical_damage(effective_atk_after_profession_bonus, enemy.current_def)
-
-    def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 普攻伤害，使用最终基础攻击力
-        return self._calc_hit(self.final_base_atk, enemy)
+    # calculate_normal_hit 方法已由父类 Tactician 提供，并包含了1.5倍率。
+    # 因此，此处无需覆写。
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取干员的基础实际攻击间隔
-        actual_atk_interval = self.attack_interval * 100 / self.attack_speed
+        # attack_speed 是百分比，所以需要除以100
+        actual_atk_interval = self.attack_interval * (100 / self.attack_speed)
         
+        # 战术家职业特性：攻击援军阻挡的敌人时攻击力提升至150%
+        # 此倍率需要应用于技能期间的每次攻击。
+        profession_atk_multiplier = 1.5
+
         if skill_index == 0:
             # 技能 1 (递归策略)：
             # 持续时间8秒。该技能提供护盾和部署费用，不直接提供伤害加成。
@@ -62,9 +56,9 @@ class R00a可露希尔(UnknownProfession):
             skill_atk_buff_multiplier = 1.0 + 0.80
             
             # 计算强化后的单次普攻伤害
-            # _calc_hit 内部会再乘以职业特性 1.5
-            enhanced_base_atk = self.final_base_atk * skill_atk_buff_multiplier
-            single_hit_damage = self._calc_hit(enhanced_base_atk, enemy)
+            # 技能攻击力 = 最终基础攻击力 * 技能倍率 * 职业特性倍率
+            enhanced_atk_for_damage = self.final_base_atk * skill_atk_buff_multiplier * profession_atk_multiplier
+            single_hit_damage = calculate_physical_damage(enhanced_atk_for_damage, enemy.current_def)
             
             # 计算技能期间能打出的普攻次数
             num_hits = duration / actual_atk_interval
@@ -87,15 +81,15 @@ class R00a可露希尔(UnknownProfession):
                 skill_attack_interval = 0.1 # 设置一个最小值
             
             # 重新计算技能期间的实际攻击间隔
-            actual_atk_interval_skill = skill_attack_interval * 100 / self.attack_speed
+            actual_atk_interval_skill = skill_attack_interval * (100 / self.attack_speed)
             
             # 攻击力倍率：基础攻击力 * 250%
             skill_atk_multiplier = 2.5
             
             # 计算强化后的单次普攻伤害
-            # _calc_hit 内部会再乘以职业特性 1.5
-            enhanced_base_atk = self.final_base_atk * skill_atk_multiplier
-            single_hit_damage = self._calc_hit(enhanced_base_atk, enemy)
+            # 技能攻击力 = 最终基础攻击力 * 技能倍率 * 职业特性倍率
+            enhanced_atk_for_damage = self.final_base_atk * skill_atk_multiplier * profession_atk_multiplier
+            single_hit_damage = calculate_physical_damage(enhanced_atk_for_damage, enemy.current_def)
             
             # 计算技能期间能打出的普攻次数
             num_hits = duration / actual_atk_interval_skill

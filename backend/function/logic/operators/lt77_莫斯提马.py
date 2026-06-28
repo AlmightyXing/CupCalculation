@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster # 莫斯提马是术师，使用Caster基类
+from backend.function.logic.professions import SplashCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Lt77莫斯提马(Caster):
+class Lt77莫斯提马(SplashCaster):
     """
     干员：莫斯提马
     """
@@ -25,6 +25,8 @@ class Lt77莫斯提马(Caster):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 莫斯提马是扩散术师，攻击造成群体法术伤害。
+        # 父类 SplashCaster 默认不覆写 calculate_normal_hit，会继承 Operator 的物理伤害计算。
+        # 因此，莫斯提马需要明确覆写以确保造成法术伤害。
         # 计算单次普攻命中时的期望法术伤害。
         # 严禁在代码中乘以任何目标数。
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)

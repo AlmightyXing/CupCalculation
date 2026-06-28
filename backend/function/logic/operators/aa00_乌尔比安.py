@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Liberator
+from backend.function.logic.professions import Crusher
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Aa00乌尔比安(Liberator):
+class Aa00乌尔比安(Crusher):
     """
     干员：乌尔比安
     """
@@ -26,7 +26,8 @@ class Aa00乌尔比安(Liberator):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 乌尔比安的普攻没有特殊机制（如暴击、破甲等），直接使用基类计算。
         # 根据规则，此方法返回单次普攻对一个目标的伤害。
-        # Liberator职业特性“同时攻击阻挡的所有敌人”已由基类处理 target_count，但此方法返回的是单目标伤害。
+        # Crusher职业特性“同时攻击阻挡的所有敌人”已由基类处理 target_count，但此方法返回的是单目标伤害。
+        # Crusher本身不修改单次普攻的伤害倍率，因此直接调用super()即可。
         return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -53,7 +54,7 @@ class Aa00乌尔比安(Liberator):
             boosted_atk = self.final_base_atk * (1 + 1.60) # 攻击力+160%
             
             # 计算强化后的单次普攻伤害 (对一个目标)
-            # 即使Liberator职业特性是多目标，根据规则，这里计算的是对单个目标的伤害
+            # 即使Crusher职业特性是多目标，根据规则，这里计算的是对单个目标的伤害
             boosted_normal_hit_damage = calculate_physical_damage(boosted_atk, enemy.current_def)
             
             # 永续技能 total_damage 为 0，dps 为强化后的单次普攻伤害 / 实际攻击间隔

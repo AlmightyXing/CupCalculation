@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster # 铃兰攻击造成法术伤害，属于Caster职业
+from backend.function.logic.professions import DecelBinder
 from backend.function.logic.formulas import calculate_arts_damage
 
-class R172铃兰(Caster):
+class R172铃兰(DecelBinder):
     """
     干员：铃兰
     """
@@ -22,7 +22,7 @@ class R172铃兰(Caster):
         # 此天赋为光环效果，不直接影响铃兰自身的伤害计算，故在此处忽略。
         
         # 天赋 2：画地为牢 (攻击范围内被停顿的敌人在下一瞬间起还会受到等长时间的20%的脆弱效果)
-        # 铃兰的攻击自带停顿效果，因此此天赋的脆弱效果对铃兰自身造成的伤害是常驻的。
+        # 铃兰的攻击自带停顿效果（凝滞师特性），因此此天赋的脆弱效果对铃兰自身造成的伤害是常驻的。
         self.fragile_effect_ratio = 0.20
         
     def _calc_arts_hit(self, atk_val: float, enemy, current_fragile_ratio: float) -> float:
@@ -36,6 +36,7 @@ class R172铃兰(Caster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻造成法术伤害，并考虑天赋2的脆弱效果
+        # 凝滞师特性为攻击造成法术伤害，此处的覆写符合职业特性。
         return self._calc_arts_hit(self.final_base_atk, enemy, self.fragile_effect_ratio)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -92,8 +93,3 @@ class R172铃兰(Caster):
             dps = 0.0
             
         return {"total_damage": total_damage, "dps": dps}
-        
-        # Fallback to superclass method if skill_index is not handled
-        # This ensures that if a skill_index is not explicitly defined,
-        # the base class's default behavior (likely returning 0 damage/dps) is used.
-        return super().calculate_skill_damage(enemy, skill_index, target_count)

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession # 遥的职业是“护佑者”，若有对应基类可替换
+from backend.function.logic.professions import Abjurer # 遥的职业是“护佑者”，已替换为对应基类
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Hk15遥(UnknownProfession):
+class Hk15遥(Abjurer):
     """
     干员：遥
     职业：护佑者 (攻击造成法术伤害，技能开启后改为治疗友方单位（治疗量相当于75%攻击力）)
@@ -9,9 +9,9 @@ class Hk15遥(UnknownProfession):
     def __init__(self, data: dict):
         super().__init__(data)
         
-        # 获取信赖属性并加到基础面板上
-        self.trust_atk = self.raw_data.get("confidence_atk", 0)
-        self.final_base_atk = self.base_atk + self.trust_atk
+        # final_base_atk 等基础属性应由 Operator 基类处理，此处无需重复计算
+        # self.trust_atk = self.raw_data.get("confidence_atk", 0)
+        # self.final_base_atk = self.base_atk + self.trust_atk
         
         self.apply_talents()
         
@@ -24,7 +24,7 @@ class Hk15遥(UnknownProfession):
         pass
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 遥的普攻造成法术伤害
+        # 遥的普攻造成法术伤害，这与 Abjurer 的特性一致
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

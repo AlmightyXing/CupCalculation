@@ -31,13 +31,14 @@ class Ln04卡涅利安(PhalanxCaster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 阵法术师通常时不攻击，因此普攻伤害为0
-        return 0.0
+        # 此行为与父类 PhalanxCaster 的 calculate_normal_hit 方法一致
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 阵法术师的攻击间隔在技能开启时才生效
         # 实际攻击间隔会根据攻速和技能效果调整
         
-        # 默认攻击间隔 (self.attack_interval是基准攻击间隔)
+        # 默认攻击间隔 (self.attack_interval是基准攻击间隔，来自 PhalanxCaster)
         base_atk_interval = self.attack_interval
         current_attack_speed = self.attack_speed
         
@@ -101,7 +102,8 @@ class Ln04卡涅利安(PhalanxCaster):
             dps = (single_hit_base_damage * 2.0) / actual_atk_interval # 假设满层2.0倍率
             
         else:
-            # 如果技能索引不匹配，调用基类方法
+            # 如果技能索引不匹配，调用基类方法。
+            # PhalanxCaster 的 calculate_normal_hit 返回 0，因此基类的 calculate_skill_damage 也会返回 0。
             return super().calculate_skill_damage(enemy, skill_index, target_count)
             
         return {"total_damage": total_damage, "dps": dps}

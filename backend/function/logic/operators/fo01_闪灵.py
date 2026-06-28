@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Medic
+from backend.function.logic.professions import Physician
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Fo01闪灵(Medic):
+class Fo01闪灵(Physician):
     """
     干员：闪灵
     """
@@ -24,9 +24,10 @@ class Fo01闪灵(Medic):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         """
         计算单次普攻命中时的期望伤害。
-        闪灵的普攻为物理伤害，没有特殊机制（如无视防御、多段伤害等）。
+        闪灵作为医师，其普攻为治疗，不直接对敌人造成伤害。
+        因此，对敌人造成的伤害为0。
         """
-        return calculate_physical_damage(self.final_base_atk, enemy.current_def)
+        return 0.0
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         """

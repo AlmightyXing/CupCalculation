@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Heavyguard
+from backend.function.logic.professions import Protector
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Lm05星熊(Heavyguard):
+class Lm05星熊(Protector):
     """
     干员：星熊
     """
@@ -20,7 +20,8 @@ class Lm05星熊(Heavyguard):
         pass
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 星熊普攻无特殊机制，直接计算物理伤害
+        # 星熊普攻无特殊机制，直接计算物理伤害。
+        # Protector父类没有覆写calculate_normal_hit，因此直接计算物理伤害是符合预期的。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -72,4 +73,5 @@ class Lm05星熊(Heavyguard):
             
             return {"total_damage": total_damage, "dps": dps}
             
+        # 如果没有匹配的技能，调用父类的默认处理
         return super().calculate_skill_damage(enemy, skill_index, target_count)

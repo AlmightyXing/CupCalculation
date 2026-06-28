@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender
+from backend.function.logic.professions import PrimalProtector
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Nm06余(Defender):
+class Nm06余(PrimalProtector):
     """
     干员：余
     """
@@ -46,6 +46,8 @@ class Nm06余(Defender):
         计算单次普攻命中时的期望伤害。
         余的普攻默认为物理伤害。
         """
+        # PrimalProtector 自身没有特殊的普攻逻辑，继承自Operator，为单次物理伤害。
+        # 此处直接计算或调用super()效果相同。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

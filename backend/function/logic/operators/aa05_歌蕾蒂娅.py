@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Specialist
+from backend.function.logic.professions import Hookmaster
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Aa05歌蕾蒂娅(Specialist):
+class Aa05歌蕾蒂娅(Hookmaster):
     """
     干员：歌蕾蒂娅
     """
@@ -40,6 +40,8 @@ class Aa05歌蕾蒂娅(Specialist):
             raise ValueError(f"Unsupported damage type: {damage_type}")
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
+        # Hookmaster (父类) 没有特殊的普攻逻辑，直接继承自 Operator。
+        # 因此，歌蕾蒂娅的普攻逻辑直接应用其天赋即可。
         return self._calc_hit(self.final_base_atk, enemy, damage_type="physical")
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Operator # 假设Operator是所有干员的基类
-from backend.function.logic.formulas import calculate_physical_damage
+from backend.function.logic.professions import Flinger
+from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class B00w维什戴尔(Operator):
+class B00w维什戴尔(Flinger):
     """
     干员：维什戴尔
     """
@@ -14,6 +14,7 @@ class B00w维什戴尔(Operator):
         
         # 维什戴尔的职业特性：攻击对小范围的地面敌人造成两次物理伤害
         # (第一次为主攻击，第二次为余震，伤害降低至攻击力的一半)
+        # Flinger父类已实现此特性，但维什戴尔有天赋加成，因此在calculate_normal_hit中重新实现并考虑天赋
         self.main_hit_multiplier = 1.0
         self.aftershock_multiplier = 0.5
         
@@ -49,6 +50,7 @@ class B00w维什戴尔(Operator):
         effective_atk_for_main_target = self.final_base_atk * self.talent1_main_target_atk_multiplier
         
         # 普攻基础伤害 (主攻击 + 余震)
+        # Flinger父类特性：攻击对小范围的地面敌人造成两次物理伤害（第二次为余震，伤害降低至攻击力的一半）
         main_hit_damage = self._calc_hit(effective_atk_for_main_target * self.main_hit_multiplier, enemy)
         aftershock_damage = self._calc_hit(effective_atk_for_main_target * self.aftershock_multiplier, enemy)
         
@@ -75,7 +77,7 @@ class B00w维什戴尔(Operator):
             # 维什戴尔对主目标的有效攻击力 (考虑天赋1的115%加成)
             effective_atk_for_main_target = self.final_base_atk * self.talent1_main_target_atk_multiplier
             
-            # 主攻击伤害 (倍率不变)
+            # 主攻击伤害 (倍率不变，继承Flinger的1.0倍)
             main_hit_damage = self._calc_hit(effective_atk_for_main_target * self.main_hit_multiplier, enemy)
             
             # 余震伤害：1 (基础) + 2 (额外) = 3次余震，每次120%攻击力
@@ -116,10 +118,9 @@ class B00w维什戴尔(Operator):
             effective_atk_for_skill = self.final_base_atk * skill_atk_multiplier * self.talent1_main_target_atk_multiplier
             
             # 过载模式：4连发，每发80%攻击力
+            # 此模式下不产生“余震”，因此不触发天赋1的爆炸
             single_hit_damage = self._calc_hit(effective_atk_for_skill * 0.8, enemy)
             damage_per_attack_cycle = single_hit_damage * 4
-            
-            # 天赋1的爆炸伤害：过载模式下攻击不产生“余震”，因此不触发爆炸
             
             # 计算技能持续期间的攻击次数
             num_attacks = duration / actual_atk_interval_skill2
@@ -154,10 +155,10 @@ class B00w维什戴尔(Operator):
             # (最终基础攻击力 * 技能攻击力加成 * 攻击时攻击力提升) * 天赋1对主目标的攻击力提升
             effective_atk_for_skill = (self.final_base_atk * skill_atk_multiplier * attack_time_multiplier) * self.talent1_main_target_atk_multiplier
             
-            # 主攻击伤害
+            # 主攻击伤害 (继承Flinger的1.0倍)
             main_hit_damage_per_shot = self._calc_hit(effective_atk_for_skill * self.main_hit_multiplier, enemy)
             
-            # 余震伤害 (余震倍率0.5)
+            # 余震伤害 (继承Flinger的0.5倍)
             aftershock_damage_per_shot = self._calc_hit(effective_atk_for_skill * self.aftershock_multiplier, enemy)
             
             # 天赋1：残影爆炸伤害 (100%概率，150%攻击力)

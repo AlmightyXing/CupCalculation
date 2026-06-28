@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import SentinelDefender
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Lt32信仰搅拌机(UnknownProfession):
+class Lt32信仰搅拌机(SentinelDefender):
     """
     干员：信仰搅拌机
     """
@@ -27,9 +27,12 @@ class Lt32信仰搅拌机(UnknownProfession):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 信仰搅拌机的普攻是物理伤害，没有特殊机制（如无视防御、法术伤害等）
         # 哨戒铁卫可以进行远程攻击，但伤害计算方式与近战物理伤害相同
+        # 由于SentinelDefender父类没有覆写calculate_normal_hit，这里直接计算物理伤害即可
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # 实际攻击间隔 = 基础攻击间隔 * (100 / 攻击速度百分比)
+        # 假设self.attack_speed在Operator基类中初始化为100，并通过天赋进行加法修正
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:
@@ -39,7 +42,7 @@ class Lt32信仰搅拌机(UnknownProfession):
             single_hit_damage = calculate_physical_damage(atk_val, enemy.current_def)
             total_damage = single_hit_damage * 3 # 三连击
             
-            # 瞬发技能的DPS计算方式
+            # 瞬发技能的DPS计算方式，通常是总伤害除以技能触发的攻击间隔
             dps = total_damage / actual_atk_interval
             
             return {"total_damage": total_damage, "dps": dps}

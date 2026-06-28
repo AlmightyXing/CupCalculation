@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import ArtsFighter
 from backend.function.logic.formulas import calculate_arts_damage, calculate_true_damage
 
-class Vc00维娜·维多利亚(UnknownProfession):
+class Vc00维娜·维多利亚(ArtsFighter):
     """
     干员：维娜·维多利亚
     """
@@ -28,6 +28,8 @@ class Vc00维娜·维多利亚(UnknownProfession):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 维娜·维多利亚是“术战者”，攻击造成法术伤害。
+        # ArtsFighter父类特性即为攻击造成法术伤害，但父类未覆写calculate_normal_hit，
+        # 因此此处需要显式覆写以确保计算法术伤害。
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -76,7 +78,7 @@ class Vc00维娜·维多利亚(UnknownProfession):
             reinforced_atk = self.final_base_atk * skill_atk_multiplier
             
             # 攻击间隔缩短：-0.25
-            # 原始攻击间隔 self.attack_interval 为 1.25
+            # 原始攻击间隔 self.attack_interval 为 1.25 (来自ArtsFighter)
             skill_attack_interval_base = self.attack_interval - 0.25 # 1.25 - 0.25 = 1.0
             
             # 计算技能期间的实际攻击间隔

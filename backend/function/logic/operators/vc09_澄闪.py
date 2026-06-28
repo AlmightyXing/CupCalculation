@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Caster # 澄闪是驭械术师，属于术师分支
+from backend.function.logic.professions import MechAccordCaster
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Vc09澄闪(Caster):
+class Vc09澄闪(MechAccordCaster):
     """
     干员：澄闪
     """
@@ -26,16 +26,18 @@ class Vc09澄闪(Caster):
         
         # 天赋 2：精准导流
         # 自身与浮游单元无视敌人15点法术抗性
-        self.res_ignore_flat = 15
+        self.res_ignore_ratio = 15
         
     def _calc_arts_hit(self, atk_val: float, enemy) -> float:
         """
         计算单次命中时的期望法术伤害（考虑精准导流天赋的无视法抗）
         """
-        return calculate_arts_damage(atk_val, enemy.current_res, res_ignore_flat=self.res_ignore_flat)
+        return calculate_arts_damage(atk_val, enemy.current_res, res_ignore_ratio=self.res_ignore_ratio)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 澄闪的普攻由浮游单元造成，且攻击同一敌人伤害提升至最高110%攻击力
+        # 注意：父类MechAccordCaster的calculate_normal_hit中2.1的系数是本体100% + 浮游单元110%的简化总和。
+        # 澄闪的特性描述更倾向于只有浮游单元攻击，且最高110%，因此此处覆写以体现其具体机制。
         atk_val = self.final_base_atk * self.floaty_unit_max_atk_ratio
         return self._calc_arts_hit(atk_val, enemy)
 

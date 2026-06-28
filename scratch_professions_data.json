@@ -1,0 +1,232 @@
+{
+  "Liberator": {
+    "zh_name": "重剑手",
+    "description": "同时攻击阻挡的所有敌人",
+    "atk_time": 2.5
+  },
+  "DreadnoughtGuard": {
+    "zh_name": "无畏者",
+    "description": "能够阻挡一个敌人",
+    "atk_time": 1.5
+  },
+  "Specialist": {
+    "zh_name": "钩索师",
+    "description": "技能可以使敌人产生位移，可以放置于远程位",
+    "atk_time": 1.8
+  },
+  "Lord": {
+    "zh_name": "领主",
+    "description": "可以进行远程攻击，但此时攻击力降低至80%",
+    "atk_time": 1.3
+  },
+  "Fighter": {
+    "zh_name": "武者",
+    "description": "不成为其他角色的治疗目标，每次攻击到敌人后回复自身70生命",
+    "atk_time": 1.2
+  },
+  "Medic": {
+    "zh_name": "医师",
+    "description": "恢复友方单位生命",
+    "atk_time": 2.85
+  },
+  "Operator": {
+    "zh_name": "投掷手",
+    "description": "攻击对小范围的地面敌人造成两次物理伤害（第二次为余震，伤害降低至攻击力的一半）",
+    "atk_time": 2.1
+  },
+  "Sniper": {
+    "zh_name": "炮手",
+    "description": "攻击造成群体物理伤害",
+    "atk_time": 2.8
+  },
+  "IntelligenceOfficer": {
+    "zh_name": "情报官",
+    "description": "再部署时间减少，可使用远程攻击",
+    "atk_time": 1.0
+  },
+  "UnknownProfession": {
+    "zh_name": "重剑手",
+    "description": "同时攻击阻挡的所有敌人",
+    "atk_time": 2.5
+  },
+  "Sentinel": {
+    "zh_name": "哨戒铁卫",
+    "description": "能够阻挡三个敌人，可以进行远程攻击",
+    "atk_time": 1.2
+  },
+  "CoreCaster": {
+    "zh_name": "中坚术师",
+    "description": "攻击造成法术伤害",
+    "atk_time": 1.6
+  },
+  "Caster": {
+    "zh_name": "塑灵术师",
+    "description": "攻击造成法术伤害，可以通过击倒敌人生成召唤物，可攻击到自身召唤物阻挡的敌人",
+    "atk_time": 1.6
+  },
+  "Vanguard": {
+    "zh_name": "尖兵",
+    "description": "能够阻挡两个敌人",
+    "atk_time": 1.05
+  },
+  "Ambusher": {
+    "zh_name": "伏击客",
+    "description": "对攻击范围内所有敌人造成伤害；拥有50%的物理和法术闪避且不容易成为敌人的攻击目标",
+    "atk_time": 3.5
+  },
+  "Swordmaster": {
+    "zh_name": "剑豪",
+    "description": "普通攻击连续造成两次伤害",
+    "atk_time": 1.3
+  },
+  "Supporter": {
+    "zh_name": "削弱者",
+    "description": "攻击造成法术伤害",
+    "atk_time": 1.6
+  },
+  "Strategist": {
+    "zh_name": "策士",
+    "description": "能够阻挡两个敌人，可以支援待部署区的我方单位",
+    "atk_time": 1.2
+  },
+  "PhalanxCaster": {
+    "zh_name": "阵法术师",
+    "description": "通常时不攻击且防御力和法术抗性大幅度提升，技能开启时攻击造成群体法术伤害",
+    "atk_time": 2.0
+  },
+  "Guard": {
+    "zh_name": "无畏者",
+    "description": "能够阻挡一个敌人",
+    "atk_time": 1.5
+  },
+  "Defender": {
+    "zh_name": "守护者",
+    "description": "技能可以治疗友方单位",
+    "atk_time": 1.2
+  },
+  "Deadeye": {
+    "zh_name": "神射手",
+    "description": "优先攻击攻击范围内防御力最低的敌方单位",
+    "atk_time": 2.7
+  },
+  "Heavyguard": {
+    "zh_name": "铁卫",
+    "description": "能够阻挡三个敌人",
+    "atk_time": 1.2
+  },
+  "Merchant": {
+    "zh_name": "行商",
+    "description": "再部署时间减少，撤退时不返还部署费用，在场时每3秒消耗3点部署费用（不足时自动撤退）",
+    "atk_time": 1.0
+  },
+  "MysticCaster": {
+    "zh_name": "秘术师",
+    "description": "攻击造成法术伤害，在找不到攻击目标时可以将攻击能量储存起来之后一齐发射（最多3个）",
+    "atk_time": 3.0
+  },
+  "Dreadnought": {
+    "zh_name": "无畏者",
+    "description": "能够阻挡一个敌人",
+    "atk_time": 1.5
+  },
+  "ArtsFighter": {
+    "zh_name": "术战者",
+    "description": "攻击造成法术伤害",
+    "atk_time": 1.25
+  },
+  "Marksman": {
+    "zh_name": "速射手",
+    "description": "优先攻击空中单位",
+    "atk_time": 1.0
+  },
+  "Artilleryman": {
+    "zh_name": "炮手",
+    "description": "攻击造成群体物理伤害",
+    "atk_time": 2.8
+  },
+  "Reaper": {
+    "zh_name": "收割者",
+    "description": "无法被友方角色治疗，攻击造成群体伤害，每攻击到一个敌人回复自身50生命，最大生效数等于阻挡数",
+    "atk_time": 1.3
+  },
+  "Executor": {
+    "zh_name": "处决者",
+    "description": "再部署时间大幅度减少，可以且优先攻击自身阻挡的单位（即使目标处于攻击范围外或为飞行单位）。",
+    "atk_time": 0.93
+  },
+  "HeavyShooter": {
+    "zh_name": "重射手",
+    "description": "高精度的近距离射击",
+    "atk_time": 1.6
+  },
+  "Summoner": {
+    "zh_name": "召唤师",
+    "description": "攻击造成法术伤害，可以使用召唤物协助作战",
+    "atk_time": 1.6
+  },
+  "Trapmaster": {
+    "zh_name": "陷阱师",
+    "description": "可以使用陷阱来协助作战，但陷阱无法放置于敌人已在的格子中",
+    "atk_time": 0.85
+  },
+  "Spreadshooter": {
+    "zh_name": "散射手",
+    "description": "攻击范围内的所有敌人，对自己前方一横排的敌人攻击力提升至150%",
+    "atk_time": 2.3
+  },
+  "Hunter": {
+    "zh_name": "猎手",
+    "description": "攻击时需要消耗子弹且攻击力提升至120%，不攻击时会缓慢地装填子弹（最多8发）",
+    "atk_time": 1.6
+  },
+  "SourceCaster": {
+    "zh_name": "本源术师",
+    "description": "攻击造成法术伤害，可以造成元素伤害",
+    "atk_time": 1.6
+  },
+  "StrongAttacker": {
+    "zh_name": "强攻手",
+    "description": "同时攻击阻挡的所有敌人",
+    "atk_time": 1.2
+  },
+  "Thrower": {
+    "zh_name": "投掷手",
+    "description": "攻击对小范围的地面敌人造成两次物理伤害（第二次为余震，伤害降低至攻击力的一半）",
+    "atk_time": 2.1
+  },
+  "Tactician": {
+    "zh_name": "战术家",
+    "description": "可以在攻击范围内选择一次战术点来召唤援军，自身攻击援军阻挡的敌人时攻击力提升至150%",
+    "atk_time": 1.0
+  },
+  "StasisSpecialist": {
+    "zh_name": "凝滞师",
+    "description": "攻击造成法术伤害，并对敌人造成短暂的停顿",
+    "atk_time": 1.9
+  },
+  "Duelist": {
+    "zh_name": "决战者",
+    "description": "只有阻挡敌人时才能够回复技力",
+    "atk_time": 1.6
+  },
+  "ChainCaster": {
+    "zh_name": "链术师",
+    "description": "攻击造成法术伤害，且会在4个敌人间跳跃，每次跳跃伤害降低15%并造成短暂停顿(0.5s)",
+    "atk_time": 2.3
+  },
+  "SiegeSniper": {
+    "zh_name": "攻城手",
+    "description": "优先攻击重量最重的敌人",
+    "atk_time": 2.4
+  },
+  "Earthshaker": {
+    "zh_name": "撼地者",
+    "description": "攻击使目标周围的其他敌人受到相当于攻击力50%的群体物理伤害",
+    "atk_time": 1.8
+  },
+  "StandardBearer": {
+    "zh_name": "执旗手",
+    "description": "技能发动期间阻挡数变为0",
+    "atk_time": 1.3
+  }
+}

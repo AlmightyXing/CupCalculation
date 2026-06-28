@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Summoner
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Re10电弧(UnknownProfession):
+class Re10电弧(Summoner):
     """
     干员：电弧
     """
@@ -30,7 +30,7 @@ class Re10电弧(UnknownProfession):
         return calculate_arts_damage(atk_val, enemy_res, res_ignore_ratio=res_ignore_ratio)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 电弧的攻击造成法术伤害
+        # 电弧的攻击造成法术伤害 (符合召唤师特性)
         return self._calc_arts_hit(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

@@ -27,7 +27,8 @@ class Kj02圣聆初雪(PhalanxCaster):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 圣聆初雪的职业特性是“通常时不攻击”，因此普攻伤害为0
-        return 0.0
+        # PhalanxCaster父类已实现此特性，此处保持一致
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于计算DPS

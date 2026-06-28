@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Geek
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Lm20阿(UnknownProfession):
+class Lm20阿(Geek):
     """
     干员：阿
     """
@@ -35,9 +35,11 @@ class Lm20阿(UnknownProfession):
         return self.prob_atk_boost * dmg_boosted + (1 - self.prob_atk_boost) * dmg_normal
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
+        # Geek父类没有特殊的普攻逻辑，直接使用阿的普攻计算
         return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # Geek父类没有特殊的技能伤害逻辑，直接使用阿的技能计算
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:

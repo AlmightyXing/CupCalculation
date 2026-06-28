@@ -12,11 +12,11 @@ def calculate_physical_damage(atk: float, enemy_def: float, def_ignore_ratio: fl
     
     return max(damage, min_damage)
 
-def calculate_arts_damage(atk: float, enemy_res: float, res_ignore_flat: float = 0.0) -> float:
+def calculate_arts_damage(atk: float, enemy_res: float, res_ignore_ratio: float = 0.0) -> float:
     """
     计算单次法术伤害（法抗减伤，保底伤害为攻击力的 5%）
     """
-    actual_res = max(0, enemy_res - res_ignore_flat)
+    actual_res = max(0, enemy_res - res_ignore_ratio)
     actual_res = min(actual_res, 100) # 法抗最高100对应100%减伤（不考虑特殊情况）
     
     damage_multiplier = max(1.0 - actual_res / 100.0, 0.0)

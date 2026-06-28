@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Thrower
+from backend.function.logic.professions import Flinger
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Re45迷迭香(Thrower):
+class Re45迷迭香(Flinger):
     """
     干员：迷迭香
     """
@@ -33,6 +33,7 @@ class Re45迷迭香(Thrower):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻：对小范围的地面敌人造成两次物理伤害（第一次为正常伤害，第二次为余震，伤害降低至攻击力的一半）
+        # 此处已包含投掷手特性 (100% + 50% 物理伤害)
         main_hit_damage = self._calc_physical_hit(self.final_base_atk, enemy)
         aftershock_damage = self._calc_physical_hit(self.final_base_atk * 0.5, enemy)
         
@@ -46,7 +47,7 @@ class Re45迷迭香(Thrower):
             # 技能 1 (思维膨大)：下次攻击额外造成一次相当于攻击力180%的法术伤害
             # 这是普攻触发的额外伤害，因此总伤包含普攻的物理伤害和额外的法术伤害。
             
-            # 普攻物理伤害部分
+            # 普攻物理伤害部分 (已包含投掷手特性和迷迭香天赋)
             normal_physical_damage = self.calculate_normal_hit(enemy)
             
             # 额外法术伤害部分

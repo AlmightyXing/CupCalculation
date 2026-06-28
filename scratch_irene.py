@@ -34,12 +34,10 @@ class Ii07艾丽妮(Swordmaster):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         """
         覆写基类普攻期望。
-        艾丽妮的普攻需要考虑其天赋的破甲计算，同时要保留剑豪职业的普攻两连击特性。
+        根据规则，忽略父类特性的连击描述，视为攻击一次。
+        引入了艾丽妮特殊的天赋破甲计算。
         """
-        # 先计算单次攻击的伤害（包含艾丽妮的天赋效果）
-        single_hit_damage = self._calc_hit(self.final_base_atk, enemy)
-        # 剑豪特性：普通攻击连续造成两次伤害
-        return single_hit_damage * 2.0
+        return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed

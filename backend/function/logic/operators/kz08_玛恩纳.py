@@ -42,9 +42,9 @@ class Kz08玛恩纳(Liberator):
         return calculate_physical_damage(final_atk_for_hit, enemy.current_def)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 普攻时，解放者特性视为已达到最大值 (+200% ATK)
-        atk_with_char = self.final_base_atk * self.liberator_char_atk_multiplier
-        return self._calc_hit(atk_with_char, enemy, target_count)
+        # 解放者特性：通常不攻击。因此普攻伤害为0。
+        # 玛恩纳的伤害主要通过技能体现。
+        return super().calculate_normal_hit(enemy, target_count)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 基础实际攻击间隔，用于计算技能期间的攻击次数

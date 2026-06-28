@@ -1,16 +1,14 @@
-from backend.function.logic.professions import UnknownProfession # 安洁莉娜是凝滞师，如果存在更具体的凝滞师基类，应替换此项
-from backend.function.logic.formulas import calculate_arts_damage # 安洁莉娜的攻击造成法术伤害
+from backend.function.logic.professions import DecelBinder
+from backend.function.logic.formulas import calculate_arts_damage
 
-class Sr02安洁莉娜(UnknownProfession):
+class Sr02安洁莉娜(DecelBinder):
     """
     干员：安洁莉娜
     """
     def __init__(self, data: dict):
         super().__init__(data)
         
-        # 获取信赖属性并加到基础面板上
-        self.trust_atk = self.raw_data.get("confidence_atk", 0)
-        self.final_base_atk = self.base_atk + self.trust_atk
+        # trust_atk 和 final_base_atk 的计算应由基类 Operator 处理，此处无需重复
         
         self.apply_talents()
         
@@ -23,11 +21,13 @@ class Sr02安洁莉娜(UnknownProfession):
         # 此天赋为生命回复效果，不直接影响安洁莉娜的伤害输出，因此不在此处进行数值修改。
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 安洁莉娜的攻击造成法术伤害
+        # 安洁莉娜作为凝滞师，其攻击造成法术伤害。
+        # DecelBinder 基类特性为“攻击造成法术伤害”，此覆写符合并实现了该特性。
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 计算受攻速影响后的基础攻击间隔
+        # 注意：self.attack_speed 已经包含了天赋1“加速力场”的加成
         base_actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:

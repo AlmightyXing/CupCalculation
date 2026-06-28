@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Juggernaut
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class R159泥岩(UnknownProfession):
+class R159泥岩(Juggernaut):
     """
     干员：泥岩
     """

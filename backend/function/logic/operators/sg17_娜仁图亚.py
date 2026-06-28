@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Loopshooter
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Sg17娜仁图亚(UnknownProfession):
+class Sg17娜仁图亚(Loopshooter):
     """
     干员：娜仁图亚
     """
@@ -36,6 +36,8 @@ class Sg17娜仁图亚(UnknownProfession):
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         """
         计算单次普攻命中时的期望伤害。
+        娜仁图亚的父类Loopshooter的calculate_normal_hit方法不增加额外伤害系数，
+        因此直接计算物理伤害并应用天赋效果即可。
         """
         modified_enemy_def = self._get_modified_enemy_def(enemy)
         return calculate_physical_damage(self.final_base_atk, modified_enemy_def)

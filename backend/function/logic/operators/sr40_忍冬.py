@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Vanguard
+from backend.function.logic.professions import Pioneer
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Sr40忍冬(Vanguard):
+class Sr40忍冬(Pioneer):
     """
     干员：忍冬
     """

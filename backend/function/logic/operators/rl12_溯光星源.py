@@ -1,7 +1,7 @@
-from backend.function.logic.professions import StasisSpecialist # 凝滞师 对应 StasisSpecialist
+from backend.function.logic.professions import DecelBinder
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Rl12溯光星源(StasisSpecialist):
+class Rl12溯光星源(DecelBinder):
     """
     干员：溯光星源
     """
@@ -35,6 +35,8 @@ class Rl12溯光星源(StasisSpecialist):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 溯光星源的普攻造成法术伤害，并考虑天赋脆弱效果
+        # 父类 DecelBinder 的特性是“攻击造成法术伤害”，但其本身并未覆写 calculate_normal_hit。
+        # 因此，此处直接实现法术伤害计算，而不是调用 super() 来获取物理伤害。
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

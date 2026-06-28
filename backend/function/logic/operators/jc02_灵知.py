@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Supporter # 灵知职业为“削弱者”，通常对应 Supporter
+from backend.function.logic.professions import Hexer
 from backend.function.logic.formulas import calculate_arts_damage
 
-class Jc02灵知(Supporter):
+class Jc02灵知(Hexer):
     """
     干员：灵知
     """
@@ -36,6 +36,7 @@ class Jc02灵知(Supporter):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 灵知普攻造成法术伤害，并享受天赋脆弱加成
+        # 父类Hexer的特性是“攻击造成法术伤害”，因此这里直接计算法术伤害是正确的。
         return self._calc_arts_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

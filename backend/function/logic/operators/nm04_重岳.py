@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Fighter  # "斗士" 对应 Fighter 职业
+from backend.function.logic.professions import Brawler
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Nm04重岳(Fighter):
+class Nm04重岳(Brawler):
     """
     干员：重岳
     """
@@ -40,6 +40,7 @@ class Nm04重岳(Fighter):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 普攻直接调用 _calc_hit，不保证天赋1触发
+        # Brawler 父类没有特殊的普攻逻辑，所以直接计算单次伤害即可
         return self._calc_hit(self.final_base_atk, enemy)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
@@ -75,14 +76,18 @@ class Nm04重岳(Fighter):
             # 2. 累计使用五次技能后：重岳攻击的范围扩大且攻击变为二连击，技能变为自动释放且造成额外一次伤害
             # 持续时间为null，且有“累计使用五次技能后”的描述，应按永续技能且最大层数（强化后）计算。
             # 永续技能 total_damage = 0，重点是返回正确的 dps。
-            # 强化后：“技能变为自动释放且造成额外一次伤害”，意味着每次攻击是技能伤害 (380% + 额外一次380%)。
-            # “攻击变为二连击”通常指普攻，但若技能自动释放并替代普攻，则技能的伤害模式即为强化后的普攻。
             
-            # 强化后的单次普攻伤害 (即自动释放的技能伤害)
-            # 技能本身造成 380% + 额外一次伤害 (通常也是380%)
-            enhanced_hit_atk_val = self.final_base_atk * 3.8 * 2
-            enhanced_hit_damage = self._calc_hit(enhanced_hit_atk_val, enemy)
+            # 强化后：
+            # "技能变为自动释放且造成额外一次伤害" -> 每次攻击造成 (380% + 额外一次380%) = 760% 攻击力伤害
+            # "攻击变为二连击" -> 最终伤害再乘以2
             
-            return {"total_damage": 0, "dps": enhanced_hit_damage / actual_atk_interval}
+            # 计算单次“技能攻击”的伤害（包含额外一次伤害）
+            skill_base_atk_multiplier = 3.8 * 2 # 380% + 额外一次380%
+            damage_per_skill_hit = self._calc_hit(self.final_base_atk * skill_base_atk_multiplier, enemy)
+            
+            # 考虑“二连击”特性
+            final_dps_damage = damage_per_skill_hit * 2
+            
+            return {"total_damage": 0, "dps": final_dps_damage / actual_atk_interval}
             
         return super().calculate_skill_damage(enemy, skill_index, target_count)

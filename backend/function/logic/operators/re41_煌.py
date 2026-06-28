@@ -1,7 +1,7 @@
-from backend.function.logic.professions import StrongAttacker # 煌的职业是“强攻手”，对应 StrongAttacker 类
+from backend.function.logic.professions import Centurion
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Re41煌(StrongAttacker):
+class Re41煌(Centurion):
     """
     干员：煌
     """
@@ -22,10 +22,11 @@ class Re41煌(StrongAttacker):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 煌作为强攻手，普攻同时攻击阻挡的所有敌人，但伤害计算只针对单个目标。
-        # 没有特殊破甲、连击或伤害类型转换天赋，直接计算物理伤害。
+        # 强攻手父类Centurion没有特殊的普攻伤害倍率，因此直接计算物理伤害。
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
+        # 攻速计算会使用父类Centurion设定的attack_interval (1.2)
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:

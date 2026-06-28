@@ -1,7 +1,7 @@
-from backend.function.logic.professions import Defender
+from backend.function.logic.professions import Guardian
 from backend.function.logic.formulas import calculate_physical_damage
 
-class Nm05黍(Defender):
+class Nm05黍(Guardian):
     """
     干员：黍
     """

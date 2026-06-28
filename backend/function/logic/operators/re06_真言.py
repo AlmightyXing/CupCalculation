@@ -1,7 +1,7 @@
-from backend.function.logic.professions import SourceCaster
+from backend.function.logic.professions import PrimalCaster
 from backend.function.logic.formulas import calculate_arts_damage, calculate_element_damage
 
-class Re06真言(SourceCaster):
+class Re06真言(PrimalCaster):
     """
     干员：真言
     """
@@ -26,6 +26,7 @@ class Re06真言(SourceCaster):
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 真言是本源术师，攻击造成法术伤害
+        # PrimalCaster特性：攻击造成法术伤害
         return calculate_arts_damage(self.final_base_atk, enemy.current_res)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:

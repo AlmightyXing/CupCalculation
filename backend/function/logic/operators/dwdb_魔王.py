@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Bard
 from backend.function.logic.formulas import calculate_true_damage
 
-class Dwdb魔王(UnknownProfession):
+class Dwdb魔王(Bard):
     """
     干员：魔王
     """
@@ -26,7 +26,7 @@ class Dwdb魔王(UnknownProfession):
         pass
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
-        # 魔王特性：不攻击，持续恢复范围内所有友军生命。
+        # 魔王特性（继承自吟游者）：不攻击，持续恢复范围内所有友军生命。
         # 因此，普攻对敌人不造成伤害。
         return 0.0
 

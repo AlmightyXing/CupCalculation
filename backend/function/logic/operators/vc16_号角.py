@@ -1,7 +1,7 @@
-from backend.function.logic.professions import UnknownProfession
+from backend.function.logic.professions import Fortress
 from backend.function.logic.formulas import calculate_physical_damage, calculate_arts_damage
 
-class Vc16号角(UnknownProfession):
+class Vc16号角(Fortress):
     """
     干员：号角
     """
@@ -25,10 +25,12 @@ class Vc16号角(UnknownProfession):
         
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 号角普攻为远程群体物理攻击，但计算时只考虑对单个目标的伤害
+        # Fortress特性：不阻挡敌人时优先远程群体物理攻击，此处假设为该情况
         return calculate_physical_damage(self.final_base_atk, enemy.current_def)
 
     def calculate_skill_damage(self, enemy, skill_index: int, target_count: int = 1) -> dict:
         # 获取实际攻击间隔，用于DPS计算
+        # self.attack_speed 默认为100，天赋会增加
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
         if skill_index == 0:
@@ -70,7 +72,7 @@ class Vc16号角(UnknownProfession):
             enhanced_atk = self.final_base_atk * skill_atk_multiplier
             
             # 攻击间隔缩短
-            # 注意：self.attack_interval 是基础攻击间隔，self.attack_speed 影响最终实际间隔
+            # Fortress的基础攻击间隔为2.8，缩短1.8后为1.0
             base_skill_attack_interval = self.attack_interval - 1.8
             if base_skill_attack_interval <= 0: # 避免攻击间隔为负或零
                 base_skill_attack_interval = 0.1 # 设定一个极小值
