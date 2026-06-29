@@ -93,3 +93,10 @@ class R172铃兰(DecelBinder):
             dps = 0.0
             
         return {"total_damage": total_damage, "dps": dps}
+
+    def get_team_buffs(self, skill_index: int = -1) -> dict:
+        buffs = {}
+        if skill_index == 2:
+            buffs['fragile'] = 0.4  # 三技能 40% 脆弱
+            buffs['is_cced'] = True # 三技能大范围停顿
+        return buffs

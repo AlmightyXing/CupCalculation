@@ -140,3 +140,9 @@ class Re03逻各斯(CoreCaster):
             return {"total_damage": total_damage, "dps": total_damage / duration}
             
         return super().calculate_skill_damage(enemy, skill_index, target_count)
+    def get_team_buffs(self, skill_index: int = -1) -> dict:
+        buffs = {}
+        # 逻各斯只要在场（不论技能），第二天赋剜魂具辞提供减抗和法强附加
+        buffs['res_shred'] = getattr(self, 'talent2_res_debuff', 10)
+        buffs['arts_flat_dmg'] = getattr(self, 'talent2_flat_dmg_bonus', 150)
+        return buffs

@@ -24,3 +24,9 @@ def calculate_arts_damage(atk: float, enemy_res: float, res_ignore_ratio: float 
     min_damage = atk * 0.05
     
     return max(damage, min_damage)
+
+def calculate_true_damage(atk: float, *args, **kwargs) -> float:
+    return atk
+
+def calculate_element_damage(atk: float, *args, **kwargs) -> float:
+    return atk

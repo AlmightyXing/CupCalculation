@@ -82,7 +82,7 @@ class Yd20仇白(Lord):
             base_atk_val=self.final_base_atk,
             enemy=enemy,
             is_ranged=True, # 普攻默认远程，受80%惩罚
-            is_enemy_cced=False, # 普攻时敌人不默认被CC，天赋1触发概率由天赋2决定
+            is_enemy_cced=getattr(enemy, 'is_cced', False), # 普攻时敌人不默认被CC，天赋1触发概率由天赋2决定
             talent_rift_multiplier=1.0,
             force_arts_damage=False
         )
@@ -170,7 +170,7 @@ class Yd20仇白(Lord):
                 base_atk_val=enhanced_base_atk,
                 enemy=enemy,
                 is_ranged=False, # 远程攻击不再降低伤害
-                is_enemy_cced=False, # 技能本身不提供CC，天赋1触发概率由天赋2决定
+                is_enemy_cced=getattr(enemy, 'is_cced', False), # 技能本身不提供CC，天赋1触发概率由天赋2决定
                 talent_rift_multiplier=2.0, # 天赋1伤害提升至2倍
                 force_arts_damage=True # 伤害类型变为法术
             )

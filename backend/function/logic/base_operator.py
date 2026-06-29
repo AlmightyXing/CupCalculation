@@ -125,5 +125,34 @@ class Operator:
             
         return {"total_damage": skill_dmg, "dps": skill_dps}
 
+    def get_team_buffs(self, skill_index: int = -1) -> Dict[str, Any]:
+        """
+        向环境暴露全队增益属性（包含四大类标准 Buff 协议）。
+        如果干员在对应技能开启时提供了团队增益，由子类重写此方法。
+        返回格式约定（仅返回提供的Buff，无需全写）：
+        {
+            # 1. 面向【干员面板】的增益
+            "inspire_atk": float,     # 鼓舞加攻（固定值，取全队最高，不叠加）
+            "inspire_def": float,     # 鼓舞加防（固定值，取全队最高，不叠加）
+            "aura_atk_ratio": float,  # 攻击力光环（按基础攻击力的比例加成，全队叠加）
+            "aura_aspd": float,       # 攻速光环（固定值，如+10攻速，全队叠加）
+            
+            # 2. 面向【敌人面板】的削弱
+            "flat_def_shred": float,  # 固定减防（如200，全队叠加）
+            "ratio_def_shred": float, # 比例减防（如0.4，全队叠乘）
+            "res_shred": float,       # 固定减抗（如10，全队叠加）
+            "ratio_res_shred": float, # 比例减抗（如0.4，全队叠乘）
+            
+            # 3. 面向【伤害结算】的乘区
+            "fragile": float,         # 脆弱倍率（如0.4，取全队最高，不叠加）
+            "arts_flat_dmg": float,   # 法术附加伤害（每次法伤附加点数，如150，全队叠加）
+            
+            # 4. 面向【机制条件】的标志位
+            "is_cced": bool,          # 是否施加了全覆盖控制（停顿、束缚等，只要有一人提供即为True）
+            "is_vigor": bool          # 是否提供了精力充沛（全队满血，只要有一人提供即为True）
+        }
+        """
+        return {}
+
     def __str__(self):
         return f"[{self.profession}] {self.name} (ATK: {self.base_atk})"
