@@ -1,6 +1,208 @@
-<navigation-bar title="干员详情 (建设中)" back="{{true}}"></navigation-bar>
+
 <view class="container">
-  <view class="msg">
-    <text>干员 {{name}} 的详情页将在阶段 4 完成建设</text>
+
+  <!-- 顶部自定义导航栏 -->
+  <view class="nav-bar" style="padding-top: {{statusBarHeight}}px; height: 44px;">
+    <view class="back-btn" bindtap="goBack">
+      <icon type="cancel" size="24" color="#333333"></icon>
+    </view>
+    <view class="nav-title">{{operator.name}} - 详细信息</view>
   </view>
+
+  <!-- 滚动区域 -->
+  <scroll-view scroll-y class="scroll-content" style="margin-top: {{statusBarHeight + 44}}px;">
+    
+    <!-- 主视觉图 Hero Section -->
+    <view class="hero-section">
+      <!-- 背景/立绘 -->
+      <view class="portrait-container">
+        <!-- 暂时使用纯色带文字占位代替立绘 -->
+        <view class="portrait-placeholder">
+          <text>{{showE2 ? '【精二立绘】' : '【初始立绘】'}}</text>
+        </view>
+        <!-- 切换按钮 -->
+        <view class="toggle-btn" bindtap="togglePortrait">
+          <text>切换立绘</text>
+        </view>
+      </view>
+
+      
+      <!-- 绝对定位的卡片信息层 -->
+      <view class="info-overlay">
+        <!-- 星级 (跨全列左对齐) -->
+        <view class="stars">★★★★★★</view>
+        
+        <!-- 英文名 (跨全列左对齐) -->
+        <view class="en-name">{{operator.enName}}</view>
+        
+        <!-- 中文名 (跨全列左对齐) -->
+        <view class="cn-name">{{operator.name}}</view>
+
+        <!-- 职业与标签合并区域 -->
+        <view class="class-and-tags-layout">
+          <!-- 大的方形职业图标 (跨两行) -->
+          <view class="main-class-icon">
+            <text class="icon-text">近卫</text>
+          </view>
+          
+          <view class="tags-column">
+            <!-- 子职业与部署位 (Top Row) -->
+            <view class="tags-row">
+              <view class="subclass-badge">
+                <view class="subclass-icon-square"><text>图标</text></view>
+                <view class="subclass-name">{{operator.character.character_type}}</view>
+              </view>
+              <view class="pos-tag">{{operator.position}}</view>
+            </view>
+            
+            <!-- 标签 (Bottom Row) -->
+            <view class="tags-row">
+              <view class="trait-tags">{{operator.tags}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 能力排名 -->
+    <view class="section">
+      <view class="h2-title">干员能力排名</view>
+      <view class="rank-board">
+        <view class="rank-item">
+          <view class="rank-label">总榜排名</view>
+          <view class="rank-value">#{{operator.ranks.total}}</view>
+        </view>
+        <view class="rank-item">
+          <view class="rank-label">挂机排名</view>
+          <view class="rank-value">#{{operator.ranks.idle}}</view>
+        </view>
+        <view class="rank-item">
+          <view class="rank-label">决战排名</view>
+          <view class="rank-value">#{{operator.ranks.burst}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 详细信息 -->
+    <view class="section">
+      <view class="h2-title">干员详细信息</view>
+      
+      <!-- 特性表 -->
+      <view class="h3-title">特性</view>
+      <view class="flex-table trait-table">
+        <!-- Row 1: 分支 (Col 1), 描述 (Col 2+3) -->
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;">分支</view>
+          <view class="ft-cell bg-60 center-content" style="flex: 8;">描述</view>
+        </view>
+        <!-- Row 2: 子职业图标 (Col 1), 描述内容 (Col 2+3) -->
+        <view class="ft-row">
+          <view class="ft-cell bg-20 no-border-bottom" style="flex: 2;">[子职业图标]</view>
+          <view class="ft-cell bg-20 center-content" style="flex: 8;">{{operator.character.character_description}}</view>
+        </view>
+        <!-- Row 3: 子职业中文 (Col 1), 攻击间隔 (Col 2), atk_time (Col 3) -->
+        <view class="ft-row">
+          <view class="ft-cell bg-20" style="flex: 2;">{{operator.character.character_type}}</view>
+          <view class="ft-cell bg-20" style="flex: 2;">攻击间隔</view>
+          <view class="ft-cell bg-20" style="flex: 6;">{{operator.atk_time}}</view>
+        </view>
+      </view>
+
+      <!-- 属性表 -->
+      <view class="h3-title">属性</view>
+      <view class="flex-table attr-table">
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;"></view>
+          <view class="ft-cell bg-60" style="flex: 4;">精英2 满级</view>
+          <view class="ft-cell bg-60" style="flex: 4;">信赖加成上限</view>
+        </view>
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;">生命上限</view>
+          <view class="ft-cell bg-20" style="flex: 4;">{{operator.base_hp}}</view>
+          <view class="ft-cell bg-20" style="flex: 4;">+{{operator.confidence_hp}}</view>
+        </view>
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;">攻击</view>
+          <view class="ft-cell bg-20" style="flex: 4;">{{operator.base_atk}}</view>
+          <view class="ft-cell bg-20" style="flex: 4;">+{{operator.confidence_atk}}</view>
+        </view>
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;">防御</view>
+          <view class="ft-cell bg-20" style="flex: 4;">{{operator.base_def}}</view>
+          <view class="ft-cell bg-20" style="flex: 4;">+{{operator.confidence_def}}</view>
+        </view>
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;">法术抗性</view>
+          <view class="ft-cell bg-20" style="flex: 4;">{{operator.base_res}}</view>
+          <view class="ft-cell bg-20" style="flex: 4;">+{{operator.confidence_res}}</view>
+        </view>
+      </view>
+
+      <!-- 天赋表 -->
+      <view class="h3-title">天赋</view>
+      <view class="flex-table talent-table">
+        <view class="ft-row">
+          <view class="ft-cell bg-60" style="flex: 2;">天赋</view>
+          <view class="ft-cell bg-60" style="flex: 3;">名称</view>
+          <view class="ft-cell bg-60" style="flex: 5;">描述</view>
+        </view>
+        <block wx:for="{{operator.talents}}" wx:key="talent_id">
+          <view class="ft-row">
+            <view class="ft-cell bg-60" style="flex: 2;">{{index === 0 ? '第一天赋' : '第二天赋'}}</view>
+            <view class="ft-cell bg-20" style="flex: 3;">{{item.talent_name}}</view>
+            <view class="ft-cell bg-20 align-left" style="flex: 5;">{{item.talent_decription}}</view>
+          </view>
+        </block>
+      </view>
+
+      <!-- 技能 -->
+      <view class="h3-title">技能</view>
+      <block wx:for="{{operator.skills}}" wx:key="skill_id" wx:for-index="sIdx">
+        <view class="h4-title">技能 {{sIdx + 1}}</view>
+        
+        <!-- 技能基础信息表 -->
+        <view class="flex-table skill-base-table">
+          <view class="ft-row">
+            <view class="ft-cell bg-20 center-content" style="flex: 7;">[图标] {{item.skill_name}}</view>
+            <view class="ft-cell bg-20 center-content" style="flex: 3;">{{item.skill_type}}</view>
+          </view>
+          <view class="ft-row">
+            <view class="ft-cell bg-60" style="flex: 2;">等级</view>
+            <view class="ft-cell bg-60" style="flex: 5;">描述</view>
+            <view class="ft-cell bg-60" style="flex: 1;">初始</view>
+            <view class="ft-cell bg-60" style="flex: 1;">消耗</view>
+            <view class="ft-cell bg-60" style="flex: 1;">持续</view>
+          </view>
+          <view class="ft-row">
+            <view class="ft-cell bg-20" style="flex: 2;">RANK III</view>
+            <view class="ft-cell bg-20 align-left" style="flex: 5; font-size: 20rpx;">{{item.description}}</view>
+            <view class="ft-cell bg-20" style="flex: 1;">{{item.start_sp}}</view>
+            <view class="ft-cell bg-20" style="flex: 1;">{{item.consume_sp}}</view>
+            <view class="ft-cell bg-20" style="flex: 1;">{{item.duration || '-'}}</view>
+          </view>
+        </view>
+
+        <!-- 技能伤害表 -->
+        <view class="h5-title">伤害</view>
+        <view class="flex-table dmg-table">
+          <view class="ft-row">
+            <view class="ft-cell bg-60" style="flex: 2;">DPS</view>
+            <view class="ft-cell bg-60" style="flex: 2;">排名</view>
+            <view class="ft-cell bg-60" style="flex: 2;">总伤</view>
+            <view class="ft-cell bg-60" style="flex: 2;">排名</view>
+            <view class="ft-cell bg-60" style="flex: 2;">综合排名</view>
+          </view>
+          <view class="ft-row">
+            <view class="ft-cell bg-20" style="flex: 2;">{{item.mockDps || '-'}}</view>
+            <view class="ft-cell bg-20" style="flex: 2;">{{item.mockDpsRank || '-'}}</view>
+            <view class="ft-cell bg-20" style="flex: 2;">{{item.mockTotalDmg || '-'}}</view>
+            <view class="ft-cell bg-20" style="flex: 2;">{{item.mockTotalRank || '-'}}</view>
+            <view class="ft-cell bg-20" style="flex: 2;">{{item.mockOverallRank || '-'}}</view>
+          </view>
+        </view>
+      </block>
+      
+    </view>
+    <view style="height: 60rpx;"></view>
+  </scroll-view>
 </view>
