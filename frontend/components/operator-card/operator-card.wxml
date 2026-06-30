@@ -1,4 +1,4 @@
-<view class="table-row {{isLast ? 'no-border' : ''}}">
+<view class="table-row {{isLast ? 'no-border' : ''}}" bindtap="goToDetail" data-name="{{item.name}}">
   <block wx:if="{{mode === 'total'}}">
     <!-- cup-col 已经被外层合并，这里不再渲染 -->
     <view class="col rank-col">{{item.rank}}</view>

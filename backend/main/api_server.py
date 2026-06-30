@@ -42,6 +42,16 @@ async def get_operators():
     op_list.sort(key=lambda x: (-(x.get('rarity') or 0), x['name']))
     return {"status": "success", "data": op_list}
 
+@app.get("/api/operator/{name}")
+async def get_operator_detail(name: str):
+    """获取指定名称干员的完整数据字典"""
+    # 考虑到干员中英文或URL编码等情况，需在repo的内存里找
+    op_data = repo.operator_data.get(name)
+    if not op_data:
+        raise HTTPException(status_code=404, detail=f"Operator '{name}' not found.")
+    return {"status": "success", "data": op_data}
+
+
 @app.get("/api/enemies")
 async def get_enemies():
     """获取预设敌人木桩的等级和属性说明"""
