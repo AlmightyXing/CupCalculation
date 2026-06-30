@@ -1,0 +1,33 @@
+.nav-bar {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--bg-color-primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1rpx solid var(--divider-color);
+}
+.nav-bar-inner {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.back-btn {
+  position: absolute;
+  left: 30rpx;
+  padding: 10rpx;
+}
+.back-icon {
+  color: var(--text-color-primary);
+  font-size: 40rpx;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--text-color-primary);
+}

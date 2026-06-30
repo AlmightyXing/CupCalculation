@@ -1,0 +1,6 @@
+<navigation-bar title="干员详情 (建设中)" back="{{true}}"></navigation-bar>
+<view class="container">
+  <view class="msg">
+    <text>干员 {{name}} 的详情页将在阶段 4 完成建设</text>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "@navTxtStyle",
+    "navigationBarTitleText": "杯级计算器",
+    "navigationBarBackgroundColor": "@navBgColor",
+    "backgroundColor": "@bgColor",
+    "navigationStyle": "custom"
+  },
+  "darkmode": true,
+  "themeLocation": "theme.json",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+.msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  color: var(--accent-color);
+  font-size: 32rpx;
+  font-weight: bold;
+}

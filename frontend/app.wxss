@@ -1,0 +1,25 @@
+/* 强制使用暗色主题作为主基调，模拟高级质感 */
+page {
+  --bg-color-primary: #121212;
+  --bg-color-secondary: #1E1E1E;
+  --bg-color-tertiary: #2C2C2C;
+  --text-color-primary: #FFFFFF;
+  --text-color-secondary: #AAAAAA;
+  --accent-color: #D32F2F; /* 示例突出版红色 */
+  --divider-color: #333333;
+
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  box-sizing: border-box;
+}
+
+view, text, scroll-view, image {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

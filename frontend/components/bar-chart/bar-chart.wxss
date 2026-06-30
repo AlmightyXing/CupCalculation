@@ -1,0 +1,9 @@
+.chart-container {
+  width: 100%;
+  height: 800rpx;
+  position: relative;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

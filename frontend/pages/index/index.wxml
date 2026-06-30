@@ -1,0 +1,60 @@
+<view class="container">
+  
+  <!-- 自定义头部区域 (使用户提供的图片作为背景) -->
+  <view class="custom-header">
+    <image class="header-bg" src="../../image/Background.png" mode="aspectFill"></image>
+    <view class="header-content" style="padding-top: {{statusBarHeight}}px;">
+      
+      <!-- 标题 -->
+      <view class="title-container">
+        <image class="header-title" src="../../image/Text_Title.png" mode="heightFix"></image>
+      </view>
+      
+      <!-- 搜索栏 -->
+      <view class="search-bar" bindtap="goToSearch">
+        <icon type="search" size="18" color="#AAAAAA"></icon>
+        <text class="search-text">搜索干员名或外号(如42)</text>
+      </view>
+      
+      <!-- 导航栏 (Tabs) -->
+      <view class="tabs">
+        <view class="tab-item {{currentTab === 'total' ? 'active' : ''}}" bindtap="switchTab" data-tab="total">
+          <image class="tab-icon" src="../../image/Navi_Bar_Cup.png" mode="aspectFit"></image>
+          <text>总杯级</text>
+        </view>
+        <view class="tab-item {{currentTab === 'idle' ? 'active' : ''}}" bindtap="switchTab" data-tab="idle">
+          <image class="tab-icon" src="../../image/Navi_Bar_Auto.png" mode="aspectFit"></image>
+          <text>挂机</text>
+        </view>
+        <view class="tab-item {{currentTab === 'burst' ? 'active' : ''}}" bindtap="switchTab" data-tab="burst">
+          <image class="tab-icon" src="../../image/Navi_Bar_Manual.png" mode="aspectFit"></image>
+          <text>决战</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 视图切换与内容区 -->
+  <view class="view-switch-bar">
+    <text class="title">{{currentTabName}} TOP 10</text>
+    <view class="switch-btn" bindtap="toggleViewMode">
+      <text>{{viewMode === 'list' ? '📊 图表模式' : '📋 列表模式'}}</text>
+    </view>
+  </view>
+
+  <scroll-view scroll-y class="content-scroll">
+    <block wx:if="{{viewMode === 'list'}}">
+      <view class="list-container">
+        <block wx:for="{{operators}}" wx:key="rank">
+          <operator-card item="{{item}}" scoreLabel="{{scoreLabel}}"></operator-card>
+        </block>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="chart-wrapper">
+        <bar-chart chartData="{{chartData}}"></bar-chart>
+      </view>
+    </block>
+  </scroll-view>
+
+</view>

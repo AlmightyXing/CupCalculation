@@ -1,0 +1,48 @@
+<navigation-bar title="搜索干员" back="{{true}}"></navigation-bar>
+<view class="container">
+  
+  <view class="search-box">
+    <icon type="search" size="18" color="#AAAAAA" class="search-icon"></icon>
+    <input placeholder="输入干员名或外号(如42、水陈)" placeholder-class="ph-color" focus="{{true}}" bindinput="onInput" value="{{keyword}}"/>
+    <icon type="clear" size="18" color="#AAAAAA" class="clear-icon" wx:if="{{keyword}}" bindtap="clearInput"></icon>
+  </view>
+
+  <!-- 搜索建议/历史区 -->
+  <view class="suggest-area" wx:if="{{!keyword}}">
+    <!-- 热门推荐 -->
+    <view class="section">
+      <view class="section-title">热门推荐</view>
+      <view class="tag-list">
+        <view class="tag" wx:for="{{hotTags}}" wx:key="*this" bindtap="useTag" data-tag="{{item}}">{{item}}</view>
+      </view>
+    </view>
+    
+    <!-- 历史记录 -->
+    <view class="section" wx:if="{{history.length > 0}}">
+      <view class="section-title">
+        <text>搜索历史</text>
+        <icon type="cancel" size="16" color="#666" bindtap="clearHistory"></icon>
+      </view>
+      <view class="tag-list">
+        <view class="tag" wx:for="{{history}}" wx:key="*this" bindtap="useTag" data-tag="{{item}}">{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索结果区 -->
+  <scroll-view scroll-y class="result-area" wx:if="{{keyword}}">
+    <block wx:if="{{results.length > 0}}">
+      <view class="list-container">
+        <block wx:for="{{results}}" wx:key="rank">
+          <view bindtap="goToDetail" data-id="{{item.name}}">
+            <operator-card item="{{item}}" scoreLabel="参考DPS"></operator-card>
+          </view>
+        </block>
+      </view>
+    </block>
+    <view class="empty-state" wx:else>
+      <text>暂无找到该干员，试试搜别名？</text>
+    </view>
+  </scroll-view>
+
+</view>
