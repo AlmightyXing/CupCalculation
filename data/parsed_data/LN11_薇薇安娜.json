@@ -33,21 +33,33 @@
             "skill_name": "光影迅捷剑",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击的攻击力提高至200%，并连续攻击两次；蓄力额外效果：攻击范围延长，改为连续攻击三次"
+            "description": "下次攻击的攻击力提高至200%，并连续攻击两次；蓄力额外效果：攻击范围延长，改为连续攻击三次",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "烛燃影息",
             "skill_type": "manual",
             "duration": 35,
-            "description": "攻击力+40%，防御力+160%，阻挡数+1，同时攻击阻挡的所有敌人。每次攻击有20%的概率变为150%攻击力的二连击，并偷取目标40点攻击速度（最多40点，持续至技能结束或薇薇安娜离场）"
+            "description": "攻击力+40%，防御力+160%，阻挡数+1，同时攻击阻挡的所有敌人。每次攻击有20%的概率变为150%攻击力的二连击，并偷取目标40点攻击速度（最多40点，持续至技能结束或薇薇安娜离场）",
+            "start_sp": 15,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "“明灭”",
             "skill_type": "manual",
-            "duration": 15,
-            "description": "攻击间隔延长(+0.5)，攻击力+110%，防御力+90%，法术抗性+25，攻击变为二连击，第二天赋的触发几率提升至2.5倍，优先攻击精英或领袖敌人。第二次及以后使用时，攻击范围延长，攻击变为三连击，持续时间延长至25秒"
+            "duration": 25,
+            "description": "攻击间隔延长(+0.5)，攻击力+110%，防御力+90%，法术抗性+25，攻击变为二连击，第二天赋的触发几率提升至2.5倍，优先攻击精英或领袖敌人。第二次及以后使用时，攻击范围延长，攻击变为三连击，持续时间延长至25秒",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         }
     ]
 }

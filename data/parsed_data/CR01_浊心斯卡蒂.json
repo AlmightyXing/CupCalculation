@@ -33,21 +33,33 @@
             "skill_name": "同归殊途之吟",
             "skill_type": "manual",
             "duration": 30,
-            "description": "立即回复自身所有生命值且生命上限+170%，特性效果提高至80%，攻击范围内我方所有单位受到伤害的50%直接转移给浊心斯卡蒂承担（同类效果取最高）"
+            "description": "立即回复自身所有生命值且生命上限+170%，特性效果提高至80%，攻击范围内我方所有单位受到伤害的50%直接转移给浊心斯卡蒂承担（同类效果取最高）",
+            "start_sp": 30,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "同葬无光之愿",
             "skill_type": "auto",
             "duration": null,
-            "description": "攻击范围内所有其他友方单位获得相当于浊心斯卡蒂60%攻击力与防御力的鼓舞效果，自身特性效果提高至20%"
+            "description": "攻击范围内所有其他友方单位获得相当于浊心斯卡蒂60%攻击力与防御力的鼓舞效果，自身特性效果提高至20%",
+            "start_sp": 0,
+            "consume_sp": 56,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "\"潮涌，潮枯\"",
             "skill_type": "manual",
             "duration": 20,
-            "description": "特性变为自身每秒流失5%生命，使范围内所有敌人每秒受到70%攻击力的真实伤害（自身与海嗣造成的伤害可叠加），范围内所有友方单位获得相当于浊心斯卡蒂110%攻击力的鼓舞效果"
+            "description": "特性变为自身每秒流失5%生命，使范围内所有敌人每秒受到70%攻击力的真实伤害（自身与海嗣造成的伤害可叠加），范围内所有友方单位获得相当于浊心斯卡蒂110%攻击力的鼓舞效果",
+            "start_sp": 15,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

@@ -33,21 +33,33 @@
             "skill_name": "破虏",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击的攻击力提升至200%，自身生命低于80%时额外攻击1次，低于50%时额外攻击2次，可充能3次"
+            "description": "下次攻击的攻击力提升至200%，自身生命低于80%时额外攻击1次，低于50%时额外攻击2次，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "行险",
             "skill_type": "manual",
             "duration": 12,
-            "description": "立即流失50%当前生命并获得相当于最大生命120%的屏障，攻击力+170%，阻挡数+1，同时攻击所有阻挡的敌人，屏障最高叠加至最大生命的2倍，技能结束后逐渐流失"
+            "description": "立即流失50%当前生命并获得相当于最大生命120%的屏障，攻击力+170%，阻挡数+1，同时攻击所有阻挡的敌人，屏障最高叠加至最大生命的2倍，技能结束后逐渐流失",
+            "start_sp": 0,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "佑序有炎",
             "skill_type": "manual",
             "duration": 15,
-            "description": "立刻对前方进行7次斩击，每次对最多3名敌人造成攻击力245%的物理伤害（最后一击系数加倍且使目标晕眩5秒），期间特性的生命回复改为获得相当于回复量3倍的屏障，屏障最高叠加至最大生命的2倍，持续15秒"
+            "description": "立刻对前方进行7次斩击，每次对最多3名敌人造成攻击力245%的物理伤害（最后一击系数加倍且使目标晕眩5秒），期间特性的生命回复改为获得相当于回复量3倍的屏障，屏障最高叠加至最大生命的2倍，持续15秒",
+            "start_sp": 0,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

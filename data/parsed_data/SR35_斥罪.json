@@ -33,21 +33,33 @@
             "skill_name": "一锤定音",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击额外造成相当于攻击力200%的法术伤害；蓄力额外效果：攻击时攻击力提升至200%并使目标晕眩5秒"
+            "description": "下次攻击额外造成相当于攻击力200%的法术伤害；蓄力额外效果：攻击时攻击力提升至200%并使目标晕眩5秒",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "坚心苦修",
             "skill_type": "manual",
             "duration": 20,
-            "description": "停止攻击，获得60%的庇护，每秒对周围所有地面敌人造成相当于攻击力140%的法术伤害，技能期间第一天赋的屏障获取效果提升100%"
+            "description": "停止攻击，获得60%的庇护，每秒对周围所有地面敌人造成相当于攻击力140%的法术伤害，技能期间第一天赋的屏障获取效果提升100%",
+            "start_sp": 0,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "披荆斩棘",
             "skill_type": "manual",
             "duration": 30,
-            "description": "立即获得相当于生命上限130%的屏障，攻击间隔增大(+0.9)，攻击力+400%，自身更容易受到敌人攻击"
+            "description": "立即获得相当于生命上限130%的屏障，攻击间隔增大(+0.9)，攻击力+400%，自身更容易受到敌人攻击",
+            "start_sp": 0,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

@@ -33,21 +33,33 @@
             "skill_name": "炮管敲击",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击会把目标往攻击方向较大力地推开，造成相当于攻击力150%的物理伤害并令其晕眩1.2秒"
+            "description": "下次攻击会把目标往攻击方向较大力地推开，造成相当于攻击力150%的物理伤害并令其晕眩1.2秒",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "水炮模式",
             "skill_type": "auto",
             "duration": null,
-            "description": "攻击间隔增大(+220%)，攻击力+200%，攻击距离+2格且切换为远程群体攻击，且会把击中目标中等力度地推开"
+            "description": "攻击间隔增大(+220%)，攻击力+200%，攻击距离+2格且切换为远程群体攻击，且会把击中目标中等力度地推开",
+            "start_sp": 0,
+            "consume_sp": 70,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "液氮大炮",
             "skill_type": "manual",
             "duration": null,
-            "description": "立即发射一个压缩液氮炮，造成相当于攻击力350%的群体法术伤害并将敌人大力地推开，令其8秒内移动时受到正比于距离的真实伤害；如果蓄水炮在周围4格内的话也会同样进行发射"
+            "description": "立即发射一个压缩液氮炮，造成相当于攻击力350%的群体法术伤害并将敌人大力地推开，令其8秒内移动时受到正比于距离的真实伤害；如果蓄水炮在周围4格内的话也会同样进行发射",
+            "start_sp": 18,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

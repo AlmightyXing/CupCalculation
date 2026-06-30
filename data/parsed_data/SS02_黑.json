@@ -33,21 +33,33 @@
             "skill_name": "强弩",
             "skill_type": "auto",
             "duration": null,
-            "description": "下一次攻击的攻击力提高至220%，且天赋发动概率提高至80%"
+            "description": "下一次攻击的攻击力提高至220%，且天赋发动概率提高至80%",
+            "start_sp": 0,
+            "consume_sp": 3,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "暮眼锐瞳",
             "skill_type": "manual",
             "duration": 40,
-            "description": "攻击力+130%，天赋的发动概率提高至50%"
+            "description": "攻击力+130%，天赋的发动概率提高至50%",
+            "start_sp": 20,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "战术的终结",
             "skill_type": "manual",
             "duration": 25,
-            "description": "攻击范围改为前方4格，攻击间隔略微增大(+0.4)，攻击力+180%，天赋的发动概率提高至100%"
+            "description": "攻击范围改为前方4格，攻击间隔略微增大(+0.4)，攻击力+180%，天赋的发动概率提高至100%",
+            "start_sp": 12,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

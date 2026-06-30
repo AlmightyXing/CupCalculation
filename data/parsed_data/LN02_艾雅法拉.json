@@ -33,21 +33,33 @@
             "skill_name": "二重咏唱",
             "skill_type": "manual",
             "duration": 25,
-            "description": "攻击速度+60，第二次及以后使用时追加攻击力+60%的效果"
+            "description": "攻击速度+60，第二次及以后使用时追加攻击力+60%的效果",
+            "start_sp": 25,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "点燃",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击造成相当于攻击力370%的法术伤害，命中目标周围的敌人受到一半的爆炸伤害且在6秒内法术抗性-25%，可充能3次"
+            "description": "下次攻击造成相当于攻击力370%的法术伤害，命中目标周围的敌人受到一半的爆炸伤害且在6秒内法术抗性-25%，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "火山",
             "skill_type": "manual",
             "duration": 15,
-            "description": "攻击力+130%，攻击范围增大，攻击间隔大幅度缩短(-1.1)，攻击变为随机对攻击范围内至多6个敌人发射熔岩"
+            "description": "攻击力+130%，攻击范围增大，攻击间隔大幅度缩短(-1.1)，攻击变为随机对攻击范围内至多6个敌人发射熔岩",
+            "start_sp": 55,
+            "consume_sp": 80,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

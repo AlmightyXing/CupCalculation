@@ -33,21 +33,33 @@
             "skill_name": "仗义疏财",
             "skill_type": "auto",
             "duration": null,
-            "description": "消耗一枚金币，下一次攻击会为周围八格内血量不足70%的一名友方单位恢复相当于攻击力80%的生命；携带此技能时金币上限为3"
+            "description": "消耗一枚金币，下一次攻击会为周围八格内血量不足70%的一名友方单位恢复相当于攻击力80%的生命；携带此技能时金币上限为3",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "“见面礼”",
             "skill_type": "auto",
             "duration": null,
-            "description": "消耗一枚金币在范围内一个可放置且可通行的地面放置香槟炸弹，香槟炸弹会对触碰到的首个敌人造成相当于攻击力200%的物理伤害，并使目标停顿2秒；香槟炸弹在场3秒后可额外造成一次伤害；携带此技能时金币上限为5"
+            "description": "消耗一枚金币在范围内一个可放置且可通行的地面放置香槟炸弹，香槟炸弹会对触碰到的首个敌人造成相当于攻击力200%的物理伤害，并使目标停顿2秒；香槟炸弹在场3秒后可额外造成一次伤害；携带此技能时金币上限为5",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 2,
             "skill_name": "千金一掷",
             "skill_type": "auto",
             "duration": null,
-            "description": "攻击变为二连击，击倒敌人时获得一枚金币；主动关闭技能时消耗所有金币对前方范围内敌人随机攻击，每消耗一枚金币造成一次相当于攻击力150%的物理伤害，并将目标中等力度地向前推开；持续时间无限，可随时主动关闭技能；携带此技能时金币上限为10"
+            "description": "攻击变为二连击，击倒敌人时获得一枚金币；主动关闭技能时消耗所有金币对前方范围内敌人随机攻击，每消耗一枚金币造成一次相当于攻击力150%的物理伤害，并将目标中等力度地向前推开；持续时间无限，可随时主动关闭技能；携带此技能时金币上限为10",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

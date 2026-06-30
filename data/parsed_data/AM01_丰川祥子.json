@@ -33,21 +33,33 @@
             "skill_name": "新月的苏醒",
             "skill_type": "manual",
             "duration": null,
-            "description": "依次演奏出造成攻击力100%/92%/75%/58%/42%/33%/17%/5%法术伤害的8个音符。可充能2次，充能至最大层数时自动释放一次"
+            "description": "依次演奏出造成攻击力100%/92%/75%/58%/42%/33%/17%/5%法术伤害的8个音符。可充能2次，充能至最大层数时自动释放一次",
+            "start_sp": 0,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "满月的舞会",
             "skill_type": "manual",
             "duration": null,
-            "description": "可以切换钢琴（初始）或风琴音色演奏：钢琴：攻击力+110%，音符飞行速度加快，命中目标后穿过敌人造成物理伤害；风琴：攻击速度+140，音符造成法术伤害且飞行速度减缓。Fever期间变为当前音色的二连击"
+            "description": "可以切换钢琴（初始）或风琴音色演奏：钢琴：攻击力+110%，音符飞行速度加快，命中目标后穿过敌人造成物理伤害；风琴：攻击速度+140，音符造成法术伤害且飞行速度减缓。Fever期间变为当前音色的二连击",
+            "start_sp": 0,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "残月的余响",
             "skill_type": "manual",
             "duration": 25,
-            "description": "攻击范围扩大，攻击同时使用钢琴和风琴音色演奏，各自演奏2个造成相当于攻击力220%物理和法术伤害的音符，且分别追踪法术抗性和防御力最高的敌人。Fever期间Ave Mujica成员受到致命伤害时不撤退，Fever结束后退场"
+            "description": "攻击范围扩大，攻击同时使用钢琴和风琴音色演奏，各自演奏2个造成相当于攻击力220%物理和法术伤害的音符，且分别追踪法术抗性和防御力最高的敌人。Fever期间Ave Mujica成员受到致命伤害时不撤退，Fever结束后退场",
+            "start_sp": 0,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

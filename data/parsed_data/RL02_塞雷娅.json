@@ -33,21 +33,33 @@
             "skill_name": "急救",
             "skill_type": "auto",
             "duration": null,
-            "description": "下一次攻击会为周围血量小于等于一半的一名友方单位恢复相当于攻击力180%的生命，可充能3次"
+            "description": "下一次攻击会为周围血量小于等于一半的一名友方单位恢复相当于攻击力180%的生命，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "药物配置",
             "skill_type": "auto",
             "duration": null,
-            "description": "治疗附近一定范围内的所有友军相当于塞雷娅攻击力140%的生命"
+            "description": "治疗附近一定范围内的所有友军相当于塞雷娅攻击力140%的生命",
+            "start_sp": 0,
+            "consume_sp": 7,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "钙质化",
             "skill_type": "manual",
             "duration": 30,
-            "description": "附近所有友军每秒回复相当于塞雷娅攻击力35%的生命，附近所有敌军受到的法术伤害+55%，移动速度-60%"
+            "description": "附近所有友军每秒回复相当于塞雷娅攻击力35%的生命，附近所有敌军受到的法术伤害+55%，移动速度-60%",
+            "start_sp": 70,
+            "consume_sp": 80,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

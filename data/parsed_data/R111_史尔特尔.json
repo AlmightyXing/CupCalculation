@@ -33,21 +33,33 @@
             "skill_name": "烈焰魔剑",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击的攻击力提升至310%，如果将目标击倒则立即恢复所有技力"
+            "description": "下次攻击的攻击力提升至310%，如果将目标击倒则立即恢复所有技力",
+            "start_sp": 0,
+            "consume_sp": 2,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "熔核巨影",
             "skill_type": "manual",
             "duration": 18,
-            "description": "攻击力+120%，攻击距离+1，攻击目标数+1，仅攻击到一个敌人时对其攻击力提升至160%"
+            "description": "攻击力+120%，攻击距离+1，攻击目标数+1，仅攻击到一个敌人时对其攻击力提升至160%",
+            "start_sp": 12,
+            "consume_sp": 18,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "黄昏",
             "skill_type": "manual",
             "duration": null,
-            "description": "立即恢复所有生命；攻击力+330%，攻击距离+2，攻击目标数+3，生命上限+5000，逐渐失去生命（60秒后到达最大生命20%/秒）；持续时间无限"
+            "description": "立即恢复所有生命；攻击力+330%，攻击距离+2，攻击目标数+3，生命上限+5000，逐渐失去生命（60秒后到达最大生命20%/秒）；持续时间无限",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

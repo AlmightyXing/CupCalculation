@@ -33,21 +33,33 @@
             "skill_name": "战意",
             "skill_type": "manual",
             "duration": 30,
-            "description": "防御力+80%，攻击力+40%"
+            "description": "防御力+80%，攻击力+40%",
+            "start_sp": 20,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "荆棘",
             "skill_type": "auto",
             "duration": null,
-            "description": "防御力+30%，每次受到攻击时对目标造成相当于星熊攻击力100%的物理伤害"
+            "description": "防御力+30%，每次受到攻击时对目标造成相当于星熊攻击力100%的物理伤害",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 2,
             "skill_name": "力之锯",
             "skill_type": "manual",
             "duration": 25,
-            "description": "攻击力+140%，防御力+90%，对前方一格的所有敌人使用盾牌进行切割"
+            "description": "攻击力+140%，防御力+90%，对前方一格的所有敌人使用盾牌进行切割",
+            "start_sp": 30,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

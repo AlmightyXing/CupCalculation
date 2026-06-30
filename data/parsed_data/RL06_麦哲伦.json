@@ -33,21 +33,33 @@
             "skill_name": "高效制冷模块",
             "skill_type": "manual",
             "duration": 15,
-            "description": "被动效果：使自身和无人机攻击范围内的敌方单位每3秒停顿1秒；主动开启：停顿变为束缚2.5秒，技能结束时回收所有无人机"
+            "description": "被动效果：使自身和无人机攻击范围内的敌方单位每3秒停顿1秒；主动开启：停顿变为束缚2.5秒，技能结束时回收所有无人机",
+            "start_sp": 20,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "激光开采模块",
             "skill_type": "manual",
             "duration": 15,
-            "description": "被动效果：无人机可以部署在近战位，进行单体法术攻击；主动开启：麦哲伦和她的无人机攻击速度+150，无人机变为群体攻击，技能结束时回收所有无人机"
+            "description": "被动效果：无人机可以部署在近战位，进行单体法术攻击；主动开启：麦哲伦和她的无人机攻击速度+150，无人机变为群体攻击，技能结束时回收所有无人机",
+            "start_sp": 25,
+            "consume_sp": 38,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "武装打击模块",
             "skill_type": "manual",
             "duration": 15,
-            "description": "被动效果：无人机可以部署在远程位，进行群体物理攻击；主动开启：麦哲伦和她的无人机攻击力+150%，无人机攻击的爆炸范围扩大，技能结束时回收所有无人机"
+            "description": "被动效果：无人机可以部署在远程位，进行群体物理攻击；主动开启：麦哲伦和她的无人机攻击力+150%，无人机攻击的爆炸范围扩大，技能结束时回收所有无人机",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

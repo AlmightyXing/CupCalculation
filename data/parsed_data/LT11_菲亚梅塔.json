@@ -33,21 +33,33 @@
             "skill_name": "“你须直面”",
             "skill_type": "manual",
             "duration": 30,
-            "description": "攻击距离+1，攻击力+100%"
+            "description": "攻击距离+1，攻击力+100%",
+            "start_sp": 5,
+            "consume_sp": 10,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "“你须愧悔”",
             "skill_type": "manual",
             "duration": null,
-            "description": "向前发射灼痕弹且每飞行一段距离在弹道上留下灼痕，到达攻击范围最远距离时爆炸造成400%的物理伤害；之后灼痕依次爆炸造成200%的物理伤害"
+            "description": "向前发射灼痕弹且每飞行一段距离在弹道上留下灼痕，到达攻击范围最远距离时爆炸造成400%的物理伤害；之后灼痕依次爆炸造成200%的物理伤害",
+            "start_sp": 0,
+            "consume_sp": 7,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 2,
             "skill_name": "“你须偿还”",
             "skill_type": "auto",
             "duration": null,
-            "description": "持续固定攻击范围内正前方最远一格，爆炸范围扩大，攻击力提升至125%，对目标位置附近小范围内的敌人攻击力额外提升至220%，持续时间无限，可主动关闭技能"
+            "description": "持续固定攻击范围内正前方最远一格，爆炸范围扩大，攻击力提升至125%，对目标位置附近小范围内的敌人攻击力额外提升至220%，持续时间无限，可主动关闭技能",
+            "start_sp": 0,
+            "consume_sp": 15,
+            "attack_supplement": true,
+            "auto_supplement": false
         }
     ]
 }

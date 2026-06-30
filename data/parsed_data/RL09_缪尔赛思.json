@@ -33,21 +33,33 @@
             "skill_name": "渐进性润化",
             "skill_type": "manual",
             "duration": 15,
-            "description": "期间逐渐回复13点费用，自身与流形攻击力+50%，攻击速度+50"
+            "description": "期间逐渐回复13点费用，自身与流形攻击力+50%，攻击速度+50",
+            "start_sp": 8,
+            "consume_sp": 28,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "生态耦合",
             "skill_type": "manual",
             "duration": 15,
-            "description": "立即获得15点费用，自身与流形攻击力+50%，若流形为近战复制体时，每秒回复5%的生命值，获得25%的庇护，若为远程复制体时，攻击变为二连击，随机攻击范围内的目标"
+            "description": "立即获得15点费用，自身与流形攻击力+50%，若流形为近战复制体时，每秒回复5%的生命值，获得25%的庇护，若为远程复制体时，攻击变为二连击，随机攻击范围内的目标",
+            "start_sp": 18,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "浅层非熵适应",
             "skill_type": "manual",
             "duration": 15,
-            "description": "立即获得15点费用，自身与流形攻击力+50%，若流形为近战复制体时每2秒对周围八格敌人向自己中心小力度地拖拽并使所有阻挡的单位持续晕眩，若为远程复制体时刷新所有流形且攻击附带持续1.5秒的束缚"
+            "description": "立即获得15点费用，自身与流形攻击力+50%，若流形为近战复制体时每2秒对周围八格敌人向自己中心小力度地拖拽并使所有阻挡的单位持续晕眩，若为远程复制体时刷新所有流形且攻击附带持续1.5秒的束缚",
+            "start_sp": 18,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

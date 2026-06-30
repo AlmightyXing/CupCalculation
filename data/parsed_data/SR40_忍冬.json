@@ -33,21 +33,33 @@
             "skill_name": "小施惩戒",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击额外造成攻击力290%的法术伤害，并获得1点部署费用，可充能3次"
+            "description": "下次攻击额外造成攻击力290%的法术伤害，并获得1点部署费用，可充能3次",
+            "start_sp": 8,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "坠刃拷问",
             "skill_type": "manual",
             "duration": null,
-            "description": "立即获得7点部署费用，对周围最多6名敌人造成相当于攻击力300%的法术伤害，并令击中目标停顿5秒；若敌人已经处于停顿状态，则额外使敌人晕眩5秒，可充能2次"
+            "description": "立即获得7点部署费用，对周围最多6名敌人造成相当于攻击力300%的法术伤害，并令击中目标停顿5秒；若敌人已经处于停顿状态，则额外使敌人晕眩5秒，可充能2次",
+            "start_sp": 20,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "隐狐之艺",
             "skill_type": "manual",
             "duration": 10,
-            "description": "技能开启时立即获得9点部署费用，攻击范围延长，攻击力+110%，攻击速度从+180逐渐衰减至+0，同时攻击阻挡的所有敌人，每次攻击晕眩敌人0.2秒；若技能期间击倒敌人，则技能结束时进入迷彩状态，直至下一次开启技能"
+            "description": "技能开启时立即获得9点部署费用，攻击范围延长，攻击力+110%，攻击速度从+180逐渐衰减至+0，同时攻击阻挡的所有敌人，每次攻击晕眩敌人0.2秒；若技能期间击倒敌人，则技能结束时进入迷彩状态，直至下一次开启技能",
+            "start_sp": 5,
+            "consume_sp": 22,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

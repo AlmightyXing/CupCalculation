@@ -33,21 +33,33 @@
             "skill_name": "迅捷打击·γ型",
             "skill_type": "manual",
             "duration": 35,
-            "description": "攻击力+45%，攻击速度+45"
+            "description": "攻击力+45%，攻击速度+45",
+            "start_sp": 15,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "枯荣共息",
             "skill_type": "manual",
             "duration": 20,
-            "description": "优先使两名部署在地面的干员获得三颗火球，效果如下：每1.5秒对一名敌人造成相当于焰影苇草240%攻击力的法术伤害并仅对该干员触发焰影苇草特性"
+            "description": "优先使两名部署在地面的干员获得三颗火球，效果如下：每1.5秒对一名敌人造成相当于焰影苇草240%攻击力的法术伤害并仅对该干员触发焰影苇草特性",
+            "start_sp": 18,
+            "consume_sp": 27,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "生命火种",
             "skill_type": "manual",
             "duration": 30,
-            "description": "同时攻击两名敌人，攻击力+60%，第一天赋触发几率提升至100%，技能期间附带灼痕效果的敌人每秒受到60%焰影苇草攻击力的法术伤害、被击倒时对周围敌人造成140%焰影苇草攻击力的法术伤害并施加灼痕效果，灼痕效果持续至技能结束"
+            "description": "同时攻击两名敌人，攻击力+60%，第一天赋触发几率提升至100%，技能期间附带灼痕效果的敌人每秒受到60%焰影苇草攻击力的法术伤害、被击倒时对周围敌人造成140%焰影苇草攻击力的法术伤害并施加灼痕效果，灼痕效果持续至技能结束",
+            "start_sp": 30,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

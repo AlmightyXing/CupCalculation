@@ -33,21 +33,33 @@
             "skill_name": "赤霄·奔夜",
             "skill_type": "manual",
             "duration": 18,
-            "description": "攻击力+120%，攻击变为二连击，攻击使目标敌人特殊能力失效持续至技能结束"
+            "description": "攻击力+120%，攻击变为二连击，攻击使目标敌人特殊能力失效持续至技能结束",
+            "start_sp": 0,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "赤霄·绝影-驰",
             "skill_type": "manual",
             "duration": 6,
-            "description": "对周围最近的1名敌人发动10次斩击，每次造成攻击力480%的法术伤害，敌人被击倒时转移至目标周围最近的其他敌人并使剩余攻击次数+1；斩击结束时，若目标未被击倒且其位置可部署则移动至该位置，否则返回原位置。接下来攻击力+300%，获得60%物理和法术闪避"
+            "description": "对周围最近的1名敌人发动10次斩击，每次造成攻击力480%的法术伤害，敌人被击倒时转移至目标周围最近的其他敌人并使剩余攻击次数+1；斩击结束时，若目标未被击倒且其位置可部署则移动至该位置，否则返回原位置。接下来攻击力+300%，获得60%物理和法术闪避",
+            "start_sp": 0,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "赤霄·天喟",
             "skill_type": "manual",
             "duration": 20,
-            "description": "技能开启时向前释放一道可转向的剑气，对穿过的敌人造成相当于其当前生命值6%的法术伤害（至少造成自身攻击力580%的法术伤害）；攻击范围扩大，每次攻击对最多4名地面敌人造成3次攻击力210%的法术伤害"
+            "description": "技能开启时向前释放一道可转向的剑气，对穿过的敌人造成相当于其当前生命值6%的法术伤害（至少造成自身攻击力580%的法术伤害）；攻击范围扩大，每次攻击对最多4名地面敌人造成3次攻击力210%的法术伤害",
+            "start_sp": 0,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

@@ -33,21 +33,33 @@
             "skill_name": "自呼号生发",
             "skill_type": "auto",
             "duration": 18,
-            "description": "攻击速度+100"
+            "description": "攻击速度+100",
+            "start_sp": 12,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "以鲜血洗去",
             "skill_type": "manual",
             "duration": 28,
-            "description": "攻击间隔小幅缩短(-0.5)，每次攻击或发射储存能量后，使自身后续攻击力+15%，攻击速度+8（至多叠加9层，发射转置能量可叠加3层），持续至技能结束"
+            "description": "攻击间隔小幅缩短(-0.5)，每次攻击或发射储存能量后，使自身后续攻击力+15%，攻击速度+8（至多叠加9层，发射转置能量可叠加3层），持续至技能结束",
+            "start_sp": 10,
+            "consume_sp": 32,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "用赤铁铭记",
             "skill_type": "manual",
             "duration": null,
-            "description": "攻击速度+180，储存的能量发射后会在敌人间（优先不同目标）跳跃一次，并造成相当于165%攻击力的法术伤害，转置能量改为跳跃3次；攻击装有27发弹药，仅在发射每个储存能量时消耗1发弹药，发射转置能量消耗3发弹药，弹药打完后结束（可随时停止技能）"
+            "description": "攻击速度+180，储存的能量发射后会在敌人间（优先不同目标）跳跃一次，并造成相当于165%攻击力的法术伤害，转置能量改为跳跃3次；攻击装有27发弹药，仅在发射每个储存能量时消耗1发弹药，发射转置能量消耗3发弹药，弹药打完后结束（可随时停止技能）",
+            "start_sp": 28,
+            "consume_sp": 45,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

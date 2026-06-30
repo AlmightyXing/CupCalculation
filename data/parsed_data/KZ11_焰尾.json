@@ -33,21 +33,33 @@
             "skill_name": "迅敏直觉",
             "skill_type": "auto",
             "duration": null,
-            "description": "立即获得6点部署费用，并闪避下次物理攻击"
+            "description": "立即获得6点部署费用，并闪避下次物理攻击",
+            "start_sp": 9,
+            "consume_sp": 18,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "“红松林”",
             "skill_type": "manual",
             "duration": 10,
-            "description": "立即获得13点部署费用；对周围最多6名敌人造成两次相当于攻击力240%的物理伤害，并令击中目标晕眩0.5秒；范围内友方单位获得50%的物理闪避，持续10秒"
+            "description": "立即获得13点部署费用；对周围最多6名敌人造成两次相当于攻击力240%的物理伤害，并令击中目标晕眩0.5秒；范围内友方单位获得50%的物理闪避，持续10秒",
+            "start_sp": 30,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "焰心",
             "skill_type": "manual",
             "duration": 8,
-            "description": "技能持续时间内逐渐获得8点部署费用，攻击间隔70%缩短(*70%)，攻击力+90%，阻挡数+1，获得80%的物理和法术闪避"
+            "description": "技能持续时间内逐渐获得8点部署费用，攻击间隔70%缩短(*70%)，攻击力+90%，阻挡数+1，获得80%的物理和法术闪避",
+            "start_sp": 6,
+            "consume_sp": 16,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

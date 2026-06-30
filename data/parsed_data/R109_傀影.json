@@ -33,21 +33,33 @@
             "skill_name": "暗夜魅影",
             "skill_type": "auto",
             "duration": null,
-            "description": "部署后立即获得50%的物理闪避和可吸收相当于自己最大生命80%物理伤害的屏障，持续10秒"
+            "description": "部署后立即获得50%的物理闪避和可吸收相当于自己最大生命80%物理伤害的屏障，持续10秒",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "血色乐章",
             "skill_type": "auto",
             "duration": null,
-            "description": "部署后立即获得10层可叠加的攻击力+20%的增益（每攻击一次消耗一层）"
+            "description": "部署后立即获得10层可叠加的攻击力+20%的增益（每攻击一次消耗一层）",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 2,
             "skill_name": "夜幕突袭",
             "skill_type": "auto",
             "duration": null,
-            "description": "部署后立即对周围所有敌人造成相当于攻击力300%的物理伤害，将其小力地推开并随机施加以下任意一个状态（停顿、束缚、晕眩）4.5秒"
+            "description": "部署后立即对周围所有敌人造成相当于攻击力300%的物理伤害，将其小力地推开并随机施加以下任意一个状态（停顿、束缚、晕眩）4.5秒",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         }
     ]
 }

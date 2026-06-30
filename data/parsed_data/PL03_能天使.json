@@ -33,21 +33,33 @@
             "skill_name": "冲锋模式",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击变为3连射，每次射击造成相当于攻击力145%的伤害"
+            "description": "下次攻击变为3连射，每次射击造成相当于攻击力145%的伤害",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "扫射模式",
             "skill_type": "manual",
             "duration": 15,
-            "description": "攻击变为4连射，每次射击造成相当于攻击力125%的伤害"
+            "description": "攻击变为4连射，每次射击造成相当于攻击力125%的伤害",
+            "start_sp": 25,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "过载模式",
             "skill_type": "auto",
             "duration": 15,
-            "description": "攻击变为5连射，攻击间隔一定程度缩短(-0.22)，攻击力提升至110%"
+            "description": "攻击变为5连射，攻击间隔一定程度缩短(-0.22)，攻击力提升至110%",
+            "start_sp": 20,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

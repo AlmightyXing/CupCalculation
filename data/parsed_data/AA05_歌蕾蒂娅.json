@@ -33,21 +33,33 @@
             "skill_name": "缺水的大洋裂断",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击会将目标较大力度地拖拽至面前，并对其造成相当于攻击力210%的物理伤害，可充能3次"
+            "description": "下次攻击会将目标较大力度地拖拽至面前，并对其造成相当于攻击力210%的物理伤害，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "缺水的掌握怒海",
             "skill_type": "manual",
             "duration": 20,
-            "description": "攻击间隔50%增大(+50%)，攻击范围扩大，每次攻击优先对被阻挡的两个目标造成相当于攻击力180%的物理伤害且以较大力度地拖拽至自己面前"
+            "description": "攻击间隔50%增大(+50%)，攻击范围扩大，每次攻击优先对被阻挡的两个目标造成相当于攻击力180%的物理伤害且以较大力度地拖拽至自己面前",
+            "start_sp": 20,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "缺水的碎漩狂舞",
             "skill_type": "manual",
             "duration": 8,
-            "description": "对一个远处目标束缚并制造一个龙卷风使周围敌人移动速度-50%，每1.5秒造成130%攻击力的法术伤害并较大力度地拖拽至中心。技能结束时把目标地点周围的敌人较大力度地拖拽至面前"
+            "description": "对一个远处目标束缚并制造一个龙卷风使周围敌人移动速度-50%，每1.5秒造成130%攻击力的法术伤害并较大力度地拖拽至中心。技能结束时把目标地点周围的敌人较大力度地拖拽至面前",
+            "start_sp": 26,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

@@ -33,21 +33,33 @@
             "skill_name": "迅捷打击·γ型",
             "skill_type": "manual",
             "duration": 35,
-            "description": "攻击力+45%，攻击速度+45"
+            "description": "攻击力+45%，攻击速度+45",
+            "start_sp": 15,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "冰原秩序",
             "skill_type": "manual",
-            "duration": 20,
-            "description": "攻击力+50%，每次攻击发射两支箭矢（优先攻击不同目标），并有40%概率晕眩目标1秒"
+            "duration": null,
+            "description": "攻击力+50%，每次攻击发射两支箭矢（优先攻击不同目标），并有40%概率晕眩目标1秒",
+            "start_sp": 42,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "“永恒狩猎”",
             "skill_type": "manual",
             "duration": null,
-            "description": "立刻标记攻击范围内的一名目标，攻击间隔大幅增大(+3.1)，攻击变为对标记目标发射一轮箭雨；箭雨会随机攻击标记目标周围的敌人，共造成5次相当于攻击力175%的物理伤害并使目标晕眩0.4秒；攻击装有10发弹药，打完后结束（可随时停止技能）"
+            "description": "立刻标记攻击范围内的一名目标，攻击间隔大幅增大(+3.1)，攻击变为对标记目标发射一轮箭雨；箭雨会随机攻击标记目标周围的敌人，共造成5次相当于攻击力175%的物理伤害并使目标晕眩0.4秒；攻击装有10发弹药，打完后结束（可随时停止技能）",
+            "start_sp": 25,
+            "consume_sp": 42,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

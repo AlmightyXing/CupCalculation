@@ -33,21 +33,33 @@
             "skill_name": "玫影觅迹",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击的攻击力提升至175%，并连续攻击两次"
+            "description": "下次攻击的攻击力提升至175%，并连续攻击两次",
+            "start_sp": 0,
+            "consume_sp": 2,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "绯红壁合",
             "skill_type": "manual",
             "duration": 12,
-            "description": "停止攻击，在自身及1名其他地面单位处召唤血镰，对周围所有敌人进行切割，每0.5秒造成相当于攻击力195%的物理伤害"
+            "description": "停止攻击，在自身及1名其他地面单位处召唤血镰，对周围所有敌人进行切割，每0.5秒造成相当于攻击力195%的物理伤害",
+            "start_sp": 15,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "灵与欲的惜别",
             "skill_type": "manual",
             "duration": 20,
-            "description": "攻击范围扩大，攻击力+135%，攻击速度+100，立刻为攻击范围内最多3名生命值最高的地面敌人召唤对应的心烛，每次攻击对心烛至少造成35%攻击力的伤害，心烛继承原敌人当前60%的生命值，被攻击时原敌人也会受到一次无视闪避/护盾/屏障/格挡且伤害量不会改变的无来源真实伤害"
+            "description": "攻击范围扩大，攻击力+135%，攻击速度+100，立刻为攻击范围内最多3名生命值最高的地面敌人召唤对应的心烛，每次攻击对心烛至少造成35%攻击力的伤害，心烛继承原敌人当前60%的生命值，被攻击时原敌人也会受到一次无视闪避/护盾/屏障/格挡且伤害量不会改变的无来源真实伤害",
+            "start_sp": 22,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

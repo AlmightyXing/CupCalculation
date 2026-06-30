@@ -33,21 +33,33 @@
             "skill_name": "沙暴守卫",
             "skill_type": "manual",
             "duration": 20,
-            "description": "攻击力+60%，防御力+100%；蓄力额外效果：特性效果在技能期间继续生效"
+            "description": "攻击力+60%，防御力+100%；蓄力额外效果：特性效果在技能期间继续生效",
+            "start_sp": 5,
+            "consume_sp": 18,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "沙缚镣锁",
             "skill_type": "manual",
             "duration": 25,
-            "description": "攻击间隔大幅度缩短(-1.1)，每次攻击对目标造成0.3秒停顿；蓄力额外效果：攻击力+20%且停顿变为束缚0.6秒"
+            "description": "攻击间隔大幅度缩短(-1.1)，每次攻击对目标造成0.3秒停顿；蓄力额外效果：攻击力+20%且停顿变为束缚0.6秒",
+            "start_sp": 8,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "食噬之印",
             "skill_type": "manual",
             "duration": 21,
-            "description": "攻击范围扩大，攻击力逐渐增至+280%；蓄力额外效果：每次攻击使目标受到来自卡涅利安的伤害提升20%（最多叠加5次），持续至技能结束"
+            "description": "攻击范围扩大，攻击力逐渐增至+280%；蓄力额外效果：每次攻击使目标受到来自卡涅利安的伤害提升20%（最多叠加5次），持续至技能结束",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         }
     ]
 }

@@ -33,21 +33,33 @@
             "skill_name": "电能之触",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击时攻击力提升至250%，最多在4个目标间跳跃，攻击造成的停顿时间延长至1.5秒"
+            "description": "下次攻击时攻击力提升至250%，最多在4个目标间跳跃，攻击造成的停顿时间延长至1.5秒",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "聚焦指令",
             "skill_type": "manual",
             "duration": 35,
-            "description": "攻击距离+1，攻击力+30%，攻击间隔较大幅度缩短(-50%)，攻击最大弹跳次数提升至5"
+            "description": "攻击距离+1，攻击力+30%，攻击间隔较大幅度缩短(-50%)，攻击最大弹跳次数提升至5",
+            "start_sp": 20,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "辉煌裂片",
             "skill_type": "manual",
             "duration": 4,
-            "description": "立即寻找大范围内生命值最高的目标，在其位置生成持续4秒的雷暴区域，期间每0.5秒以150%的攻击力对雷暴区域内的随机敌人进行一次额外攻击；可充能2次"
+            "description": "立即寻找大范围内生命值最高的目标，在其位置生成持续4秒的雷暴区域，期间每0.5秒以150%的攻击力对雷暴区域内的随机敌人进行一次额外攻击；可充能2次",
+            "start_sp": 0,
+            "consume_sp": 34,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

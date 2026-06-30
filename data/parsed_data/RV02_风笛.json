@@ -33,21 +33,33 @@
             "skill_name": "迅捷打击·γ型",
             "skill_type": "manual",
             "duration": 35,
-            "description": "攻击力+45%，攻击速度+45"
+            "description": "攻击力+45%，攻击速度+45",
+            "start_sp": 15,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "高效冲击",
             "skill_type": "auto",
             "duration": null,
-            "description": "下一次的攻击力提升至200%，且额外攻击一次，可充能3次"
+            "description": "下一次的攻击力提升至200%，且额外攻击一次，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "闭膛连发",
             "skill_type": "manual",
             "duration": 20,
-            "description": "攻击间隔增大(+70%)，阻挡数+1，攻击力和防御力+120%，攻击变为三连击"
+            "description": "攻击间隔增大(+70%)，阻挡数+1，攻击力和防御力+120%，攻击变为三连击",
+            "start_sp": 25,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

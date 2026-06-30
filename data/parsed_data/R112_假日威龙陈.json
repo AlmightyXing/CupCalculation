@@ -33,21 +33,33 @@
             "skill_name": "高压冲击",
             "skill_type": "auto",
             "duration": null,
-            "description": "攻击力+100%，攻击时对攻击范围内的所有敌人应用特性加成；攻击装有4发弹药，打完后结束（可随时停止技能）"
+            "description": "攻击力+100%，攻击时对攻击范围内的所有敌人应用特性加成；攻击装有4发弹药，打完后结束（可随时停止技能）",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "“堇青之夜”",
             "skill_type": "manual",
             "duration": null,
-            "description": "攻击力+80%，每次攻击在范围内生成持续5秒的粘液，地面敌人经过时移动速度-35%、防御力-170（不叠加），蓄力额外效果：改为20发弹药；攻击装有8发弹药，打完后结束（可随时停止技能）"
+            "description": "攻击力+80%，每次攻击在范围内生成持续5秒的粘液，地面敌人经过时移动速度-35%、防御力-170（不叠加），蓄力额外效果：改为20发弹药；攻击装有8发弹药，打完后结束（可随时停止技能）",
+            "start_sp": 12,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "“假日风暴”",
             "skill_type": "manual",
             "duration": null,
-            "description": "攻击范围扩大，攻击力+100%，攻击造成两次伤害，对攻击范围内的所有敌人应用特性加成，每次攻击在范围内生成持续5秒的粘液，地面敌人经过时移动速度-45%、防御力-220（不叠加）；攻击装有32发弹药，每次攻击消耗2发，打完后结束（可随时停止技能）"
+            "description": "攻击范围扩大，攻击力+100%，攻击造成两次伤害，对攻击范围内的所有敌人应用特性加成，每次攻击在范围内生成持续5秒的粘液，地面敌人经过时移动速度-45%、防御力-220（不叠加）；攻击装有32发弹药，每次攻击消耗2发，打完后结束（可随时停止技能）",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

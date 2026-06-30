@@ -33,21 +33,33 @@
             "skill_name": "鬼人化",
             "skill_type": "auto",
             "duration": 20,
-            "description": "攻击速度+100，攻击变为二连击，且技能期间对同一目标的第三次攻击变为六连击"
+            "description": "攻击速度+100，攻击变为二连击，且技能期间对同一目标的第三次攻击变为六连击",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 1,
             "skill_name": "乱舞",
             "skill_type": "auto",
             "duration": null,
-            "description": "第一天赋效果提升至2.5倍，攻击力提升至150%并对前方一格的所有敌人发动16次斩击，期间更容易受到敌人的攻击"
+            "description": "第一天赋效果提升至2.5倍，攻击力提升至150%并对前方一格的所有敌人发动16次斩击，期间更容易受到敌人的攻击",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         },
         {
             "skill_id": 2,
             "skill_name": "空中回旋乱舞",
             "skill_type": "auto",
             "duration": null,
-            "description": "向前突进2格，每突进一段距离都会对周围所有敌人发动攻击力300%的斩击；期间每攻击到一个敌人都会使突进距离延长（最多延长至5格，可以攻击空中单位）"
+            "description": "向前突进2格，每突进一段距离都会对周围所有敌人发动攻击力300%的斩击；期间每攻击到一个敌人都会使突进距离延长（最多延长至5格，可以攻击空中单位）",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
         }
     ]
 }

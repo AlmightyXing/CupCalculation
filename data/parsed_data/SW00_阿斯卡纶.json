@@ -33,21 +33,33 @@
             "skill_name": "追袭",
             "skill_type": "auto",
             "duration": null,
-            "description": "下次攻击的攻击力提升至210%，并连续攻击两次，可充能3次"
+            "description": "下次攻击的攻击力提升至210%，并连续攻击两次，可充能3次",
+            "start_sp": 4,
+            "consume_sp": 7,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "恩赐",
             "skill_type": "manual",
             "duration": 35,
-            "description": "攻击力+130%，使攻击范围内所有敌人移动速度-60%，并在地面敌人被击倒时对周围地面敌人施加一层第一天赋效果"
+            "description": "攻击力+130%，使攻击范围内所有敌人移动速度-60%，并在地面敌人被击倒时对周围地面敌人施加一层第一天赋效果",
+            "start_sp": 15,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "降临",
             "skill_type": "manual",
             "duration": 45,
-            "description": "攻击范围扩大，攻击力+50%，攻击间隔较大幅度缩短(-1.5)，使攻击范围内的地面敌人物理与法术命中率-50%。自身嘲讽等级2，敌人未命中自身或自身闪避时回复8%最大生命值"
+            "description": "攻击范围扩大，攻击力+50%，攻击间隔较大幅度缩短(-1.5)，使攻击范围内的地面敌人物理与法术命中率-50%。自身嘲讽等级2，敌人未命中自身或自身闪避时回复8%最大生命值",
+            "start_sp": 30,
+            "consume_sp": 49,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

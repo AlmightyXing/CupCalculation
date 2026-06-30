@@ -33,21 +33,33 @@
             "skill_name": "指令：结构加固",
             "skill_type": "manual",
             "duration": 40,
-            "description": "自身和Mon3tr的防御力+150%，且自身获得50%的物理格挡"
+            "description": "自身和Mon3tr的防御力+150%，且自身获得50%的物理格挡",
+            "start_sp": 10,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "指令：战术协同",
             "skill_type": "manual",
             "duration": 20,
-            "description": "自身的攻击速度+100，Mon3tr的攻击力+90%，Mon3tr可以攻击阻挡的所有敌人"
+            "description": "自身的攻击速度+100，Mon3tr的攻击力+90%，Mon3tr可以攻击阻挡的所有敌人",
+            "start_sp": 0,
+            "consume_sp": 8,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 2,
             "skill_name": "指令：熔毁",
             "skill_type": "manual",
             "duration": 20,
-            "description": "Mon3tr的防御力+200%，技能期间攻击力从+260%逐渐降低至+0%且伤害类型变为真实，此期间如果未击杀任何敌人则技能结束后流失最大生命的50%。"
+            "description": "Mon3tr的防御力+200%，技能期间攻击力从+260%逐渐降低至+0%且伤害类型变为真实，此期间如果未击杀任何敌人则技能结束后流失最大生命的50%。",
+            "start_sp": 0,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }

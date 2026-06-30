@@ -33,21 +33,33 @@
             "skill_name": "旋刃",
             "skill_type": "manual",
             "duration": null,
-            "description": "可以在下列状态和初始状态间切换：攻击距离-1，回旋投射物造成相当于攻击力190%的物理伤害，并且可以在敌人间重复弹射（最多弹跳3次）"
+            "description": "可以在下列状态和初始状态间切换：攻击距离-1，回旋投射物造成相当于攻击力190%的物理伤害，并且可以在敌人间重复弹射（最多弹跳3次）",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
         },
         {
             "skill_id": 1,
             "skill_name": "恶魇",
             "skill_type": "manual",
             "duration": 30,
-            "description": "每次攻击造成相当于攻击力250%的物理伤害并使目标停顿1秒，投射物命中目标后会在短暂突进后折返，返回时对穿过的所有敌人造成一次相当于攻击力200%的物理伤害"
+            "description": "每次攻击造成相当于攻击力250%的物理伤害并使目标停顿1秒，投射物命中目标后会在短暂突进后折返，返回时对穿过的所有敌人造成一次相当于攻击力200%的物理伤害",
+            "start_sp": 8,
+            "consume_sp": 15,
+            "attack_supplement": true,
+            "auto_supplement": false
         },
         {
             "skill_id": 2,
             "skill_name": "吞日",
             "skill_type": "manual",
             "duration": 20,
-            "description": "每次攻击发射3个回旋投射物（每个造成相当于攻击力175%的物理伤害），投射物全部回收时娜仁图亚对周围8格内至多3名敌人造成一次相当于攻击力160%的物理伤害并使其停顿1秒"
+            "description": "每次攻击发射3个回旋投射物（每个造成相当于攻击力175%的物理伤害），投射物全部回收时娜仁图亚对周围8格内至多3名敌人造成一次相当于攻击力160%的物理伤害并使其停顿1秒",
+            "start_sp": 20,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
         }
     ]
 }
