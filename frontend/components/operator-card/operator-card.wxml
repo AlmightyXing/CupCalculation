@@ -1,22 +1,24 @@
-<view class="card">
-  <view class="card-left">
-    <view class="rank">#{{item.rank}}</view>
-    <view class="avatar-container">
-      <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
-      <view class="cup-tag cup-{{item.cup_level_code}}">{{item.cup_level}}</view>
+<view class="table-row {{isLast ? 'no-border' : ''}}">
+  <block wx:if="{{mode === 'total'}}">
+    <!-- cup-col 已经被外层合并，这里不再渲染 -->
+    <view class="col rank-col">{{item.rank}}</view>
+    <view class="col avatar-col">
+      <view class="avatar-placeholder"></view>
     </view>
-  </view>
-  <view class="card-middle">
-    <view class="name-row">
-      <text class="name">{{item.name}}</text>
-      <text class="profession">{{item.profession}}</text>
+    <view class="col name-col">{{item.name}}</view>
+    <view class="col prof-col">{{item.profession}}</view>
+    <view class="col rank-col">{{item.idleRank || '-'}}</view>
+    <view class="col rank-col">{{item.burstRank || '-'}}</view>
+  </block>
+
+  <block wx:else>
+    <view class="col rank-col">{{item.rank}}</view>
+    <view class="col avatar-col">
+      <view class="avatar-placeholder"></view>
     </view>
-    <view class="tags-row" wx:if="{{item.tag}}">
-      <text class="tag">{{item.tag}}</text>
-    </view>
-  </view>
-  <view class="card-right">
-    <view class="score-label">{{scoreLabel}}</view>
-    <view class="score-value">{{item.score}}</view>
-  </view>
+    <view class="col name-col">{{item.name}}</view>
+    <view class="col prof-col">{{item.profession}}</view>
+    <view class="col num-col">{{item.dps || '-'}}</view>
+    <view class="col num-col">{{item.totalDmg || '-'}}</view>
+  </block>
 </view>

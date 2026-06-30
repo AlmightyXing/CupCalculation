@@ -1,12 +1,19 @@
 Page({
   data: {
     statusBarHeight: 20,
-    currentTab: 'burst',
-    currentTabName: '决战榜',
-    viewMode: 'list',
-    scoreLabel: '1000甲总伤',
+    currentTab: 'total',
+    currentTabName: '总杯榜 TOP 10',
+    enemyOptions: [
+      '0甲 0抗',
+      '500甲 20抗',
+      '1000甲 20抗',
+      '2000甲 50抗',
+      '3000甲 70抗',
+      '5000甲 100抗'
+    ],
+    enemyIndex: 2, 
     operators: [],
-    chartData: null
+    groupedOperators: [] // 用于总杯榜的合并视图
   },
 
   onLoad() {
@@ -15,6 +22,13 @@ Page({
       statusBarHeight: sysInfo.statusBarHeight
     });
     this.loadMockData();
+  },
+  
+  exitMiniProgram() {
+    wx.exitMiniProgram({
+      success: () => console.log('已退出小程序'),
+      fail: (err) => console.error(err)
+    });
   },
 
   goToSearch() {
@@ -25,34 +39,44 @@ Page({
 
   switchTab(e) {
     const tab = e.currentTarget.dataset.tab;
-    const tabNames = { 'total': '总杯级', 'idle': '挂机榜', 'burst': '决战榜' };
+    const tabNames = { 'total': '总杯榜', 'idle': '挂机榜', 'burst': '决战榜' };
     this.setData({ 
       currentTab: tab, 
-      currentTabName: tabNames[tab],
-      scoreLabel: tab === 'burst' ? '1000甲总伤' : '平均DPS'
+      currentTabName: tabNames[tab] + ' TOP 10'
     });
     this.loadMockData(); 
   },
 
-  toggleViewMode() {
-    this.setData({ viewMode: this.data.viewMode === 'list' ? 'chart' : 'list' });
+  onEnemyChange(e) {
+    this.setData({
+      enemyIndex: e.detail.value
+    });
+    this.loadMockData();
   },
 
   loadMockData() {
-    const mockOperators = [
-      { rank: 1, cup_level: '超大杯·上', cup_level_code: 'super-high', name: '玛恩纳', profession: '解放者', tag: 'NEW', score: 125430, avatar: 'https://cdn.jsdelivr.net/gh/Aceship/Arknight-Images/characters/char_325_mlynar_1.png' },
-      { rank: 2, cup_level: '超大杯·上', cup_level_code: 'super-high', name: '史尔特尔', profession: '阵法术师', tag: '↑1', score: 112000, avatar: 'https://cdn.jsdelivr.net/gh/Aceship/Arknight-Images/characters/char_350_surtr_1.png' },
-      { rank: 3, cup_level: '超大杯·中', cup_level_code: 'high', name: '水陈', profession: '散射手', tag: '', score: 108500, avatar: 'https://cdn.jsdelivr.net/gh/Aceship/Arknight-Images/characters/char_1013_chen2_1.png' },
-      { rank: 4, cup_level: '超大杯·中', cup_level_code: 'high', name: '银灰', profession: '领主', tag: '', score: 95400, avatar: 'https://cdn.jsdelivr.net/gh/Aceship/Arknight-Images/characters/char_172_svrash_1.png' },
-      { rank: 5, cup_level: '大杯', cup_level_code: 'mid', name: '艾雅法拉', profession: '中坚术师', tag: '↓2', score: 87000, avatar: 'https://cdn.jsdelivr.net/gh/Aceship/Arknight-Images/characters/char_180_amiy2_1.png' }
+    const mockData = [
+      { rank: 1, cup_level: '超大杯', name: '玛恩纳', profession: '解放者', idleRank: 10, burstRank: 1, dps: 3450, totalDmg: 125430 },
+      { rank: 2, cup_level: '超大杯', name: '史尔特尔', profession: '阵法术师', idleRank: 15, burstRank: 2, dps: 3100, totalDmg: 112000 },
+      { rank: 3, cup_level: '超大杯', name: '水陈', profession: '散射手', idleRank: 5, burstRank: 3, dps: 2800, totalDmg: 108500 },
+      { rank: 4, cup_level: '大杯', name: '银灰', profession: '领主', idleRank: 20, burstRank: 4, dps: 2500, totalDmg: 95400 },
+      { rank: 5, cup_level: '大杯', name: '艾雅法拉', profession: '中坚术师', idleRank: 4, burstRank: 7, dps: 2200, totalDmg: 87000 }
     ];
 
-    const categories = mockOperators.map(o => o.name).reverse();
-    const values = mockOperators.map(o => o.score).reverse();
+    // 分组逻辑
+    let grouped = [];
+    let currentGroup = null;
+    mockData.forEach(op => {
+      if (!currentGroup || currentGroup.cup_level !== op.cup_level) {
+        currentGroup = { cup_level: op.cup_level, list: [] };
+        grouped.push(currentGroup);
+      }
+      currentGroup.list.push(op);
+    });
 
     this.setData({
-      operators: mockOperators,
-      chartData: { categories, values }
+      operators: mockData,
+      groupedOperators: grouped
     });
   }
 });

@@ -1,60 +1,102 @@
 <view class="container">
   
-  <!-- 自定义头部区域 (使用户提供的图片作为背景) -->
-  <view class="custom-header">
-    <image class="header-bg" src="../../image/Background.png" mode="aspectFill"></image>
-    <view class="header-content" style="padding-top: {{statusBarHeight}}px;">
-      
-      <!-- 标题 -->
+  <view class="back-btn" style="top: {{statusBarHeight}}px;" bindtap="exitMiniProgram">
+    <icon type="cancel" size="24" color="#333333"></icon>
+  </view>
+
+  <view class="custom-header" style="margin-top: {{statusBarHeight + 44}}px;">
+    <image class="header-bg" src="../../image/Background.png" mode="widthFix"></image>
+    
+    <view class="header-content">
       <view class="title-container">
         <image class="header-title" src="../../image/Text_Title.png" mode="heightFix"></image>
       </view>
       
-      <!-- 搜索栏 -->
       <view class="search-bar" bindtap="goToSearch">
-        <icon type="search" size="18" color="#AAAAAA"></icon>
+        <icon type="search" size="18" color="#666666"></icon>
         <text class="search-text">搜索干员名或外号(如42)</text>
       </view>
       
-      <!-- 导航栏 (Tabs) -->
-      <view class="tabs">
-        <view class="tab-item {{currentTab === 'total' ? 'active' : ''}}" bindtap="switchTab" data-tab="total">
+      <view class="tabs-container">
+        <view class="tab-btn {{currentTab === 'total' ? 'active' : ''}}" bindtap="switchTab" data-tab="total">
           <image class="tab-icon" src="../../image/Navi_Bar_Cup.png" mode="aspectFit"></image>
-          <text>总杯级</text>
         </view>
-        <view class="tab-item {{currentTab === 'idle' ? 'active' : ''}}" bindtap="switchTab" data-tab="idle">
+        <view class="tab-btn {{currentTab === 'idle' ? 'active' : ''}}" bindtap="switchTab" data-tab="idle">
           <image class="tab-icon" src="../../image/Navi_Bar_Auto.png" mode="aspectFit"></image>
-          <text>挂机</text>
         </view>
-        <view class="tab-item {{currentTab === 'burst' ? 'active' : ''}}" bindtap="switchTab" data-tab="burst">
+        <view class="tab-btn {{currentTab === 'burst' ? 'active' : ''}}" bindtap="switchTab" data-tab="burst">
           <image class="tab-icon" src="../../image/Navi_Bar_Manual.png" mode="aspectFit"></image>
-          <text>决战</text>
         </view>
       </view>
     </view>
   </view>
 
-  <!-- 视图切换与内容区 -->
-  <view class="view-switch-bar">
-    <text class="title">{{currentTabName}} TOP 10</text>
-    <view class="switch-btn" bindtap="toggleViewMode">
-      <text>{{viewMode === 'list' ? '📊 图表模式' : '📋 列表模式'}}</text>
-    </view>
+  <view class="table-header-bar">
+    <text class="title">{{currentTabName}}</text>
+    
+    <picker bindchange="onEnemyChange" value="{{enemyIndex}}" range="{{enemyOptions}}">
+      <view class="picker-btn">
+        <text>{{enemyOptions[enemyIndex]}}</text>
+        <text class="dropdown-icon">▼</text>
+      </view>
+    </picker>
+  </view>
+
+  <!-- 表格表头 -->
+  <view class="table-header">
+    <block wx:if="{{currentTab === 'total'}}">
+      <view class="th cup-col">Cup</view>
+      <view class="th rank-col">Rank</view>
+      <view class="th avatar-col">头像</view>
+      <view class="th name-col">干员名称</view>
+      <view class="th prof-col">职业</view>
+      <view class="th rank-col">挂机</view>
+      <view class="th rank-col">决战</view>
+    </block>
+    <block wx:else>
+      <view class="th rank-col">Rank</view>
+      <view class="th avatar-col">头像</view>
+      <view class="th name-col">干员名称</view>
+      <view class="th prof-col">职业</view>
+      <view class="th num-col">DPS</view>
+      <view class="th num-col">总伤</view>
+    </block>
   </view>
 
   <scroll-view scroll-y class="content-scroll">
-    <block wx:if="{{viewMode === 'list'}}">
-      <view class="list-container">
-        <block wx:for="{{operators}}" wx:key="rank">
-          <operator-card item="{{item}}" scoreLabel="{{scoreLabel}}"></operator-card>
+    <view class="list-container">
+      
+      <!-- 总杯榜 合并视图 -->
+      <block wx:if="{{currentTab === 'total'}}">
+        <block wx:for="{{groupedOperators}}" wx:key="cup_level">
+          <view class="cup-group">
+            <view class="group-cup-col">
+              <text class="cup-text">{{item.cup_level}}</text>
+            </view>
+            <view class="group-rows">
+              <block wx:for="{{item.list}}" wx:for-item="op" wx:key="rank">
+                <operator-card item="{{op}}" mode="total" isLast="{{index === item.list.length - 1}}"></operator-card>
+              </block>
+            </view>
+          </view>
         </block>
+      </block>
+      
+      <!-- 挂机/决战榜 扁平视图 -->
+      <block wx:else>
+        <block wx:for="{{operators}}" wx:key="rank">
+          <operator-card item="{{item}}" mode="skill"></operator-card>
+        </block>
+      </block>
+      
+      <view class="damage-note">
+        <view class="note-title">* 伤害计算说明</view>
+        <view class="note-item">- 当前敌人抗性基准: {{enemyOptions[enemyIndex]}}</view>
+        <view class="note-item">- 仅计算理论最大值，不考虑实战中的实际覆盖率。</view>
+        <view class="note-item">- 计算公式: 理论DPS = (攻击力 - 护甲) × 攻速倍率 (不低于保底伤害)</view>
       </view>
-    </block>
-    <block wx:else>
-      <view class="chart-wrapper">
-        <bar-chart chartData="{{chartData}}"></bar-chart>
-      </view>
-    </block>
+
+    </view>
   </scroll-view>
 
 </view>

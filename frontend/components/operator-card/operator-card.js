@@ -1,6 +1,7 @@
 Component({
   properties: {
     item: { type: Object, value: {} },
-    scoreLabel: { type: String, value: '总伤' }
+    mode: { type: String, value: 'total' }, // 'total' 或 'skill'
+    isLast: { type: Boolean, value: false } // 用于去掉最后一行底部边框
   }
 });

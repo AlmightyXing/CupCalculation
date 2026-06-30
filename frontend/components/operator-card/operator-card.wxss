@@ -1,96 +1,33 @@
-.card {
-  display: flex;
-  background-color: var(--bg-color-secondary);
-  border-radius: 16rpx;
-  padding: 24rpx;
-  margin-bottom: 24rpx;
-  align-items: center;
-  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.2);
-}
-.card-left {
+.table-row {
   display: flex;
   align-items: center;
-  margin-right: 24rpx;
-}
-.rank {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: var(--text-color-secondary);
-  width: 60rpx;
-  text-align: center;
-  margin-right: 16rpx;
-}
-.avatar-container {
-  position: relative;
-}
-.avatar {
-  width: 96rpx;
-  height: 96rpx;
-  border-radius: 48rpx;
-  border: 4rpx solid var(--divider-color);
-}
-.cup-tag {
-  position: absolute;
-  bottom: -10rpx;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 18rpx;
-  padding: 4rpx 12rpx;
-  border-radius: 20rpx;
-  background-color: #555;
-  color: #fff;
-  white-space: nowrap;
-  font-weight: bold;
-}
-.cup-super-high { background-color: #ff9800; }
-.cup-high { background-color: #9c27b0; }
-.cup-mid { background-color: #2196f3; }
-
-.card-middle {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.name-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8rpx;
-}
-.name {
-  font-size: 32rpx;
-  font-weight: bold;
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid var(--divider-color);
+  font-size: 24rpx;
   color: var(--text-color-primary);
-  margin-right: 16rpx;
+  background-color: var(--bg-color-secondary);
 }
-.profession {
-  font-size: 20rpx;
-  color: var(--text-color-secondary);
-  background-color: var(--bg-color-tertiary);
-  padding: 2rpx 8rpx;
-  border-radius: 8rpx;
+.no-border {
+  border-bottom: none;
 }
-.tags-row {
+.col {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rpx;
+  text-align: center;
 }
-.tag {
-  font-size: 20rpx;
-  color: var(--accent-color);
-  border: 1rpx solid var(--accent-color);
-  padding: 2rpx 8rpx;
+
+/* 完美匹配外部 Flex 比例 */
+.rank-col { flex: 8; font-weight: bold; }
+.avatar-col { flex: 12; }
+.name-col { flex: 18; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.prof-col { flex: 16; color: var(--text-color-secondary); font-size: 20rpx; }
+.num-col { flex: 22; font-family: monospace; font-size: 22rpx; color: var(--accent-color); }
+
+.avatar-placeholder {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #CCC;
   border-radius: 8rpx;
-}
-.card-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.score-label {
-  font-size: 20rpx;
-  color: var(--text-color-secondary);
-  margin-bottom: 8rpx;
-}
-.score-value {
-  font-size: 36rpx;
-  font-weight: bold;
-  color: var(--accent-color);
 }

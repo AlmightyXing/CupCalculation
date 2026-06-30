@@ -1,12 +1,12 @@
-/* 强制使用暗色主题作为主基调，模拟高级质感 */
+/* 适配背景图片F3F3F3的主题色 */
 page {
-  --bg-color-primary: #121212;
-  --bg-color-secondary: #1E1E1E;
-  --bg-color-tertiary: #2C2C2C;
-  --text-color-primary: #FFFFFF;
-  --text-color-secondary: #AAAAAA;
-  --accent-color: #D32F2F; /* 示例突出版红色 */
-  --divider-color: #333333;
+  --bg-color-primary: #F3F3F3;
+  --bg-color-secondary: #FFFFFF;
+  --bg-color-tertiary: #E0E0E0;
+  --text-color-primary: #333333;
+  --text-color-secondary: #666666;
+  --accent-color: #D32F2F;
+  --divider-color: #DDDDDD;
 
   background-color: var(--bg-color-primary);
   color: var(--text-color-primary);
