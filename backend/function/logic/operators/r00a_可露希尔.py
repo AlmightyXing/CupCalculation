@@ -61,7 +61,7 @@ class R00a可露希尔(Tactician):
             single_hit_damage = calculate_physical_damage(enhanced_atk_for_damage, enemy.current_def)
             
             # 计算技能期间能打出的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             total_damage = num_hits * single_hit_damage
             dps = single_hit_damage / actual_atk_interval
@@ -92,7 +92,7 @@ class R00a可露希尔(Tactician):
             single_hit_damage = calculate_physical_damage(enhanced_atk_for_damage, enemy.current_def)
             
             # 计算技能期间能打出的普攻次数
-            num_hits = duration / actual_atk_interval_skill
+            num_hits = (duration or 0) / actual_atk_interval_skill
             
             total_damage = num_hits * single_hit_damage
             dps = single_hit_damage / actual_atk_interval_skill

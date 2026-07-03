@@ -75,7 +75,7 @@ class Hk15遥(Abjurer):
             damage_per_hit = calculate_arts_damage(damage_base_per_hit, enemy.current_res)
             
             # 攻击间隔不变，使用干员基础实际攻击间隔
-            hits = duration / actual_atk_interval
+            hits = (duration or 0) / actual_atk_interval
             
             total_damage = hits * damage_per_hit
             dps = damage_per_hit / actual_atk_interval

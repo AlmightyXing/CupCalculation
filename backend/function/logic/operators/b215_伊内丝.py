@@ -61,7 +61,7 @@ class B215伊内丝(IntelligenceOfficer):
             enhanced_hit_damage = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
             # 技能期间能打出的普攻次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = num_attacks * enhanced_hit_damage
             dps = enhanced_hit_damage / actual_atk_interval

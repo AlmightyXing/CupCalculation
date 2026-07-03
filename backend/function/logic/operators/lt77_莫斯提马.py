@@ -45,7 +45,7 @@ class Lt77莫斯提马(SplashCaster):
             damage_per_hit = calculate_arts_damage(enhanced_atk, enemy.current_res)
             
             # 技能期间能打出的普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = hits_during_skill * damage_per_hit
             dps = damage_per_hit / actual_atk_interval
@@ -81,7 +81,7 @@ class Lt77莫斯提马(SplashCaster):
             damage_per_hit = calculate_arts_damage(enhanced_atk, enemy.current_res)
             
             # 技能期间能打出的普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = hits_during_skill * damage_per_hit
             dps = damage_per_hit / actual_atk_interval

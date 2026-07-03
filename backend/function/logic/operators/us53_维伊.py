@@ -75,7 +75,7 @@ class Us53维伊(MysticCaster):
             duration = self.skills[skill_index]["duration"]
             
             # 技能期间普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = hits_during_skill * single_hit_damage
             dps = single_hit_damage / actual_atk_interval + base_dps_dot
@@ -107,7 +107,7 @@ class Us53维伊(MysticCaster):
             duration = self.skills[skill_index]["duration"]
             
             # 技能期间普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = hits_during_skill * single_hit_damage
             dps = single_hit_damage / actual_atk_interval + base_dps_dot

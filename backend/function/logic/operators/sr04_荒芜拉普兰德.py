@@ -95,7 +95,7 @@ class Sr04荒芜拉普兰德(MechAccordCaster):
             total_hit_damage = skill_floating_unit_count * single_unit_damage
             
             # 计算技能持续期间的总伤害
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = num_hits * total_hit_damage
             
             return {"total_damage": total_damage, "dps": total_hit_damage / actual_atk_interval}
@@ -120,7 +120,7 @@ class Sr04荒芜拉普兰德(MechAccordCaster):
             total_attack_damage_per_hit = skill_floating_unit_count * single_unit_attack_damage
             
             # 技能持续期间的总攻击伤害
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_attack_damage_over_duration = num_hits * total_attack_damage_per_hit
             
             # --- 2. 来自浮游单元AoE DoT的伤害 ---

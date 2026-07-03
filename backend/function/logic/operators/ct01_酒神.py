@@ -92,7 +92,7 @@ class Ct01酒神(IncantationMedic):
             single_hit_damage = calculate_arts_damage(buffed_atk, enemy.current_res)
             
             # 技能期间能打出的普攻次数
-            attacks_during_skill = duration / actual_atk_interval
+            attacks_during_skill = (duration or 0) / actual_atk_interval
             
             # 总伤害 = 单次强化普攻伤害 * 普攻次数
             total_damage = single_hit_damage * attacks_during_skill

@@ -70,7 +70,7 @@ class Yd06左乐(Fighter):
             
             # 技能持续期间能打出的普攻次数
             duration = 12
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             # 总伤害为技能期间普攻伤害的总和
             total_damage = single_hit_damage * hits_during_skill

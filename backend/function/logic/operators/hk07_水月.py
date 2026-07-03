@@ -107,7 +107,7 @@ class Hk07水月(Ambusher):
             
             # 4. 计算技能期间的总伤害和DPS
             # 技能期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = single_hit_damage * num_attacks
             dps = single_hit_damage / actual_atk_interval

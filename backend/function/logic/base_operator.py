@@ -25,6 +25,10 @@ class Operator:
         self.block_count = 1
         self.redeploy_time = 70
         
+        # 终态面板（考虑到信赖等加成，子类或基类需在此基础上运算）
+        self.final_base_atk = self.base_atk + data.get("confidence_atk", 0)
+        self.final_base_def = self.base_def + data.get("confidence_def", 0)
+        
         # 其他存储技能、天赋的信息
         self.skills = data.get("skills", [])
         self.raw_data = data
@@ -73,9 +77,11 @@ class Operator:
             
         skill_info = self.skills[skill_index]
         skill_type = skill_info.get("skill_type", "manual")
-        duration = skill_info.get("duration", 0)
+        duration = skill_info.get("duration")
         if duration is None:
-            duration = 0
+            duration = 0.0
+        else:
+            duration = float(duration)
             
         consume_sp = skill_info.get("consume_sp")
         

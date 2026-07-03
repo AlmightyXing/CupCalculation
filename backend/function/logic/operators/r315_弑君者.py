@@ -48,7 +48,7 @@ class R315弑君者(Executor):
             enhanced_atk = self.final_base_atk * (1 + atk_buff_ratio)
             
             # 技能期间能打出的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             # 单次强化普攻的伤害
             damage_per_hit = self._calc_hit(enhanced_atk, enemy)

@@ -31,7 +31,7 @@ class Rl12溯光星源(DecelBinder):
         # 溯光星源的攻击造成法术伤害
         # 脆弱效果直接作为参数传递给法术伤害计算公式
         # 假设 calculate_arts_damage 函数支持 fragility_ratio 参数
-        return calculate_arts_damage(atk_val, enemy.current_res, fragility_ratio=self.enemy_fragility_ratio)
+        return calculate_arts_damage(atk_val, enemy.current_res)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 溯光星源的普攻造成法术伤害，并考虑天赋脆弱效果
@@ -56,7 +56,7 @@ class Rl12溯光星源(DecelBinder):
             damage_per_hit = self._calc_arts_hit(enhanced_atk, enemy)
             
             # 计算技能期间能打出的普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             # 总伤害为普攻次数 * 单次普攻伤害
             # 严格遵守规则：忽略“跳跃”的群体效果，只计算对单个目标的伤害

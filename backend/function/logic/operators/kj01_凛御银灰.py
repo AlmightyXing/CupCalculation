@@ -76,12 +76,10 @@ class Kj01凛御银灰(Strategist):
             # 计算技能期间单次普攻的期望伤害，考虑脆弱效果
             single_hit_damage = calculate_physical_damage(
                 enhanced_atk, 
-                enemy.current_def, 
-                vulnerability_ratio=vulnerability_ratio
-            )
+                enemy.current_def)
             
             # 计算技能持续期间能打出的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             # 总伤害为普攻次数乘以单次普攻伤害
             total_damage = single_hit_damage * num_hits

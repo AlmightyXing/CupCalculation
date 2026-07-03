@@ -69,7 +69,7 @@ class Ln07止颂(Dreadnought):
             damage_per_attack = single_hit_damage * hits_per_attack
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             # 技能总伤害
             total_damage = num_attacks * damage_per_attack
@@ -94,7 +94,7 @@ class Ln07止颂(Dreadnought):
             single_hit_damage = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             # 技能总伤害
             total_damage = num_attacks * single_hit_damage

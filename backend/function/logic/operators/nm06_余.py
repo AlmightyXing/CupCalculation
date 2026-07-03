@@ -75,7 +75,7 @@ class Nm06余(PrimalProtector):
             talent_1_dps_component_skill = self._calc_talent_1_continuous_dps(enemy, current_atk)
             
             # 总伤害 = (普攻次数 * 单次普攻伤害) + (天赋1持续伤害DPS * 持续时间)
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = (normal_hit_dmg * num_hits) + (talent_1_dps_component_skill * duration)
             
             # DPS = (单次普攻伤害 / 实际攻击间隔) + 天赋1持续伤害DPS
@@ -105,7 +105,7 @@ class Nm06余(PrimalProtector):
             talent_1_dps_component_skill = self._calc_talent_1_continuous_dps(enemy, enhanced_atk)
             
             # 总伤害 = 爆发伤害 + (普攻次数 * 单次普攻伤害) + (天赋1持续伤害DPS * 持续时间)
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = burst_damage + (normal_hit_dmg * num_hits) + (talent_1_dps_component_skill * duration)
             
             # DPS = (强化后的单次普攻伤害 / 实际攻击间隔) + 天赋1持续伤害DPS
@@ -132,7 +132,7 @@ class Nm06余(PrimalProtector):
             talent_1_dps_component_skill = self._calc_talent_1_continuous_dps(enemy, enhanced_atk)
             
             # 总伤害 = (普攻次数 * 单次普攻伤害) + (天赋1持续伤害DPS * 持续时间)
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = (normal_hit_dmg * num_hits) + (talent_1_dps_component_skill * duration)
             
             # DPS = (强化后的单次普攻伤害 / 实际攻击间隔) + 天赋1持续伤害DPS

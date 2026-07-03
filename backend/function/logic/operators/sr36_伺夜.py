@@ -91,7 +91,7 @@ class Sr36伺夜(Tactician):
             enhanced_single_attack_damage = (physical_hit_damage * 3) + arts_hit_damage
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = num_attacks * enhanced_single_attack_damage
             dps = enhanced_single_attack_damage / actual_atk_interval

@@ -63,7 +63,7 @@ class Re41煌(Centurion):
             
             # 计算技能期间普攻造成的总伤害
             single_hit_damage_during_skill = calculate_physical_damage(enhanced_atk, enemy.current_def)
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             damage_from_attacks = num_attacks * single_hit_damage_during_skill
             
             # 计算技能结束时的爆发伤害

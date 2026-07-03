@@ -90,7 +90,7 @@ class Kj02圣聆初雪(PhalanxCaster):
             # 1. 应用技能增益
             atk_buff_ratio = 1.00 # 攻击力+100%
             atk_speed_buff = 30 # 攻击速度+30
-            res_ignore = 10 # 无视目标10点法术抗性
+            res_ignore_ratio= 10 # 无视目标10点法术抗性
             
             boosted_atk = self.final_base_atk * (1 + atk_buff_ratio)
             boosted_attack_speed = self.attack_speed + atk_speed_buff
@@ -100,7 +100,7 @@ class Kj02圣聆初雪(PhalanxCaster):
             
             # 2. 计算单次攻击伤害
             skill_hit_atk_val = boosted_atk * 2.60 # 260%攻击力
-            single_hit_damage = calculate_arts_damage(skill_hit_atk_val, enemy.current_res, res_ignore=res_ignore)
+            single_hit_damage = calculate_arts_damage(skill_hit_atk_val, enemy.current_res, res_ignore_ratio=10)
             
             # 3. 计算技能期间的攻击次数
             num_attacks = duration / boosted_actual_atk_interval

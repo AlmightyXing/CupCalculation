@@ -39,7 +39,7 @@ class Nm01年(Protector):
             # 技能期间普攻造成法术伤害
             single_hit_damage = calculate_arts_damage(enhanced_atk, enemy.current_res)
             
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             total_damage = num_attacks * single_hit_damage
             dps = single_hit_damage / actual_atk_interval
             
@@ -60,7 +60,7 @@ class Nm01年(Protector):
             # 技能期间普攻仍为物理伤害
             single_hit_damage = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             total_damage = num_attacks * single_hit_damage
             dps = single_hit_damage / actual_atk_interval
             

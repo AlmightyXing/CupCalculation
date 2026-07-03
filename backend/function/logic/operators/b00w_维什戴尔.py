@@ -123,7 +123,7 @@ class B00w维什戴尔(Flinger):
             damage_per_attack_cycle = single_hit_damage * 4
             
             # 计算技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval_skill2
+            num_attacks = (duration or 0) / actual_atk_interval_skill2
             
             total_damage = num_attacks * damage_per_attack_cycle
             dps = damage_per_attack_cycle / actual_atk_interval_skill2

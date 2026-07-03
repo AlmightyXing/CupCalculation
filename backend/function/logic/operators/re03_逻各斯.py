@@ -133,7 +133,7 @@ class Re03逻各斯(CoreCaster):
             total_hit_dmg_per_attack = enhanced_main_hit_dmg + expected_enhanced_extra_dmg
             
             # 技能期间攻击次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             total_damage = num_hits * total_hit_dmg_per_attack
             

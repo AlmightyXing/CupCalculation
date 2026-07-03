@@ -92,7 +92,7 @@ class Rf22百炼嘉维尔(Centurion):
         # 计算技能期间的总伤害和DPS
         if duration > 0:
             # 技能持续期间的普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             total_damage = single_hit_damage * hits_during_skill
             dps = single_hit_damage / actual_atk_interval
         else: 

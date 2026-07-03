@@ -6,6 +6,7 @@ from typing import List, Optional
 from backend.main.operator_repo import repo
 from backend.function.battle.enemy import Enemy
 from backend.function.battle.engine import BattleEnvironment
+from backend.function.battle.rank_engine import generate_ranking
 
 # --- Models ---
 class OperatorRequest(BaseModel):
@@ -58,15 +59,28 @@ async def get_enemies():
     return {
         "status": "success",
         "data": [
-            {"level": 0, "name": "0防0抗 纯沙包", "def": 0, "res": 0},
-            {"level": 1, "name": "低甲低抗 (500防 20抗)", "def": 500, "res": 20},
-            {"level": 2, "name": "中甲中抗 (1000防 30抗)", "def": 1000, "res": 30},
-            {"level": 3, "name": "高甲高抗 (2000防 40抗)", "def": 2000, "res": 40},
-            {"level": 4, "name": "超高甲超高抗 (3000防 60抗)", "def": 3000, "res": 60},
-            {"level": 5, "name": "神仙面板 (5000防 100抗)", "def": 5000, "res": 100},
-            {"level": 99, "name": "自定义 2000防 40抗", "def": 2000, "res": 40}
+            {"level": 0, "name": "0防0抗", "def": 0, "res": 0},
+            {"level": 1, "name": "1000防 20抗", "def": 1000, "res": 20},
+            {"level": 2, "name": "2000防 30抗", "def": 2000, "res": 40},
+            {"level": 3, "name": "3000防 40抗", "def": 3000, "res": 60},
+            {"level": 4, "name": "4000防 60抗", "def": 4000, "res": 80},
+            {"level": 5, "name": "5000甲 100抗", "def": 5000, "res": 100},
+            {"level": 99, "name": "专用测试木桩", "def": 2000, "res": 40}
         ]
     }
+
+@app.get("/api/rankings")
+async def get_rankings(enemy_def: int = 1000, enemy_res: int = 20):
+    """
+    根据给定的敌人防御和法抗，返回全服 130 名干员的实时 DPS/总伤排行榜
+    """
+    try:
+        res = generate_ranking(enemy_def, enemy_res)
+        return res
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Ranking calculation failed: {str(e)}")
 
 @app.post("/api/simulate")
 async def run_simulation(req: SimulateRequest):

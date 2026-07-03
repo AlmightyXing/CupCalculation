@@ -45,7 +45,7 @@ class Lt11菲亚梅塔(Artilleryman):
             damage_per_hit = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
             # 计算技能持续期间的普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             # 计算总伤害
             total_damage = hits_during_skill * damage_per_hit
             # 计算DPS

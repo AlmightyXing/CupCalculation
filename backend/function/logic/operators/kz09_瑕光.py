@@ -71,7 +71,7 @@ class Kz09瑕光(Guardian):
             
             single_hit_damage = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             total_damage = single_hit_damage * num_attacks
             
             return {"total_damage": total_damage, "dps": single_hit_damage / actual_atk_interval}
@@ -93,7 +93,7 @@ class Kz09瑕光(Guardian):
             
             single_hit_total_damage = physical_dmg_per_hit + arts_dmg_per_hit
             
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             total_damage = single_hit_total_damage * num_attacks
             
             return {"total_damage": total_damage, "dps": single_hit_total_damage / actual_atk_interval}

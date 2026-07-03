@@ -21,7 +21,7 @@ Page({
     this.setData({
       statusBarHeight: sysInfo.statusBarHeight
     });
-    this.loadMockData();
+    this.loadRealData();
   },
   
   exitMiniProgram() {
@@ -44,29 +44,76 @@ Page({
       currentTab: tab, 
       currentTabName: tabNames[tab] + ' TOP 10'
     });
-    this.loadMockData(); 
+    this.processListData(); // 重新处理并渲染
   },
 
   onEnemyChange(e) {
     this.setData({
       enemyIndex: e.detail.value
     });
-    this.loadMockData();
+    this.loadRealData();
   },
 
-  loadMockData() {
-    const mockData = [
-      { rank: 1, cup_level: '超大杯', name: '玛恩纳', profession: '解放者', idleRank: 10, burstRank: 1, dps: 3450, totalDmg: 125430 },
-      { rank: 2, cup_level: '超大杯', name: '史尔特尔', profession: '阵法术师', idleRank: 15, burstRank: 2, dps: 3100, totalDmg: 112000 },
-      { rank: 3, cup_level: '超大杯', name: '假日威龙陈', profession: '散射手', idleRank: 5, burstRank: 3, dps: 2800, totalDmg: 108500 },
-      { rank: 4, cup_level: '大杯', name: '凛御银灰', profession: '领主', idleRank: 20, burstRank: 4, dps: 2500, totalDmg: 95400 },
-      { rank: 5, cup_level: '大杯', name: '艾雅法拉', profession: '中坚术师', idleRank: 4, burstRank: 7, dps: 2200, totalDmg: 87000 }
-    ];
+  // 保存请求回来的所有全服干员排位
+  allOperators: [],
+
+  loadRealData() {
+    const enemyOptionsStr = this.data.enemyOptions[this.data.enemyIndex];
+    // 解析 '1000甲 20抗'
+    const defMatch = enemyOptionsStr.match(/(\d+)甲/);
+    const resMatch = enemyOptionsStr.match(/(\d+)抗/);
+    const enemyDef = defMatch ? parseInt(defMatch[1]) : 0;
+    const enemyRes = resMatch ? parseInt(resMatch[1]) : 0;
+
+    const request = require('../../utils/request.js');
+    request.get(`/api/rankings?enemy_def=${enemyDef}&enemy_res=${enemyRes}`)
+      .then(res => {
+        if (res.status === 'success') {
+          this.allOperators = res.data.operators;
+          this.processListData();
+        }
+      })
+      .catch(err => {
+        console.error('获取榜单失败', err);
+        wx.showToast({ title: '加载失败', icon: 'none' });
+      });
+  },
+
+  processListData() {
+    let list = [...this.allOperators];
+    
+    // 根据当前的 Tab 重置 rank
+    if (this.data.currentTab === 'idle') {
+      list.sort((a, b) => a.idleRank - b.idleRank);
+      list.forEach(op => {
+        op.rank = op.idleRank;
+        op.dps = Math.round(op.idle_score);
+        op.totalDmg = Math.round(op.best_total_dmg);
+      });
+    } else if (this.data.currentTab === 'burst') {
+      list.sort((a, b) => a.burstRank - b.burstRank);
+      list.forEach(op => {
+        op.rank = op.burstRank;
+        op.dps = Math.round(op.best_dps);
+        op.totalDmg = Math.round(op.burst_score);
+      });
+    } else {
+      // Total Cup
+      list.sort((a, b) => a.totalRank - b.totalRank);
+      list.forEach(op => {
+        op.rank = op.totalRank;
+        op.dps = Math.round(op.best_dps);
+        op.totalDmg = Math.round(op.best_total_dmg);
+      });
+    }
+
+    // 只取 Top 10 来避免前端卡顿
+    const top10 = list.slice(0, 10);
 
     // 分组逻辑
     let grouped = [];
     let currentGroup = null;
-    mockData.forEach(op => {
+    top10.forEach(op => {
       if (!currentGroup || currentGroup.cup_level !== op.cup_level) {
         currentGroup = { cup_level: op.cup_level, list: [] };
         grouped.push(currentGroup);
@@ -75,7 +122,7 @@ Page({
     });
 
     this.setData({
-      operators: mockData,
+      operators: top10,
       groupedOperators: grouped
     });
   }

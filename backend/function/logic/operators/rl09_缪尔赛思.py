@@ -79,7 +79,7 @@ class Rl09缪尔赛思(Tactician):
             damage_per_hit = calculate_physical_damage(base_skill_atk, enemy.current_def)
             
             # 计算技能期间的普攻次数 (使用缪尔赛思自身的攻击间隔，因为没有攻速加成)
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = hits_during_skill * damage_per_hit
             dps = damage_per_hit / actual_atk_interval
@@ -99,7 +99,7 @@ class Rl09缪尔赛思(Tactician):
             damage_per_hit = calculate_physical_damage(base_skill_atk, enemy.current_def)
             
             # 计算技能期间的普攻次数 (使用缪尔赛思自身的攻击间隔，因为没有攻速加成)
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = hits_during_skill * damage_per_hit
             dps = damage_per_hit / actual_atk_interval

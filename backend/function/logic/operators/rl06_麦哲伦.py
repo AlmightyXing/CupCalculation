@@ -47,7 +47,7 @@ class Rl06麦哲伦(Summoner):
             single_hit_damage = self.calculate_normal_hit(enemy)
             
             # 技能期间的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             total_damage = num_hits * single_hit_damage
             dps = single_hit_damage / actual_atk_interval
@@ -87,7 +87,7 @@ class Rl06麦哲伦(Summoner):
             single_hit_damage = calculate_physical_damage(skill_atk_val, enemy.current_def)
             
             # 技能期间的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             total_damage = num_hits * single_hit_damage
             dps = single_hit_damage / actual_atk_interval

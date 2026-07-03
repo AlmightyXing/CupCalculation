@@ -76,7 +76,7 @@ class Nm03令(Summoner):
             buffed_atk = self.final_base_atk * (1 + 1.00)
             
             # 技能持续期间的普攻次数 (令的攻速未受此技能影响，仍使用基础攻速)
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             # 单次普攻伤害
             dmg_per_hit = calculate_arts_damage(buffed_atk, enemy.current_res)

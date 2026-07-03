@@ -104,7 +104,7 @@ class Db02焰影苇草(CurseHealer):
                 prob_override=skill_talent_1_prob, 
                 res_fragility_override=self.talent_1_res_fragility
             )
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             normal_attack_total_dmg = num_hits * dmg_per_hit
             
             # 2. 计算技能期间附带的灼痕DoT伤害

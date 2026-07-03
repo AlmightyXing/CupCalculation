@@ -98,7 +98,7 @@ class Kz13远牙(Deadeye):
             # (self.attack_speed 在 apply_talents 中未被修改，所以这里用 actual_atk_interval 即可)
             
             # 计算技能期间的普攻次数
-            hits = duration / actual_atk_interval
+            hits = (duration or 0) / actual_atk_interval
             
             # 计算单次普攻伤害
             single_hit_damage = calculate_physical_damage(final_hit_atk_value, enemy.current_def)

@@ -35,7 +35,7 @@ class Lm05星熊(Protector):
             enhanced_atk = self.final_base_atk * atk_multiplier
             
             # 计算技能期间的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             # 计算单次强化普攻伤害
             dmg_per_hit = calculate_physical_damage(enhanced_atk, enemy.current_def)
@@ -63,7 +63,7 @@ class Lm05星熊(Protector):
             enhanced_atk = self.final_base_atk * atk_multiplier
             
             # 计算技能期间的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             # 计算单次强化普攻伤害 (即使是范围攻击，也只计算对单个目标的伤害)
             dmg_per_hit = calculate_physical_damage(enhanced_atk, enemy.current_def)

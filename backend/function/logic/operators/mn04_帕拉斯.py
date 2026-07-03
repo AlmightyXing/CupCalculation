@@ -91,7 +91,7 @@ class Mn04帕拉斯(Instructor):
             single_hit_damage = self._calc_hit(enemy, skill_atk_bonus_ratio=0.80)
             
             duration = 25.0
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = single_hit_damage * num_attacks
             dps = single_hit_damage / actual_atk_interval
@@ -111,7 +111,7 @@ class Mn04帕拉斯(Instructor):
             single_hit_damage = self._calc_hit(enemy, skill_atk_bonus_ratio=1.00, include_skill_3_self_buff=True)
             
             duration = 30.0
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = single_hit_damage * num_attacks
             dps = single_hit_damage / actual_atk_interval

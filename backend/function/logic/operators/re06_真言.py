@@ -110,7 +110,7 @@ class Re06真言(PrimalCaster):
             arts_dmg_per_hit = calculate_arts_damage(skill_enhanced_atk, enemy.current_res)
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             # 技能期间普攻总伤害
             skill_normal_attack_total_damage = num_attacks * arts_dmg_per_hit

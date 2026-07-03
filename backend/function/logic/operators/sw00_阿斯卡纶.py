@@ -80,7 +80,7 @@ class Sw00阿斯卡纶(Ambusher):
             enhanced_atk = self.final_base_atk * (1 + atk_buff_ratio)
             
             # 技能期间能打出的普攻次数
-            hits_during_skill = duration / actual_atk_interval
+            hits_during_skill = (duration or 0) / actual_atk_interval
             
             # 单次普攻的物理伤害 (强化后)
             physical_dmg_per_hit = calculate_physical_damage(enhanced_atk, enemy.current_def)
@@ -114,7 +114,7 @@ class Sw00阿斯卡纶(Ambusher):
             actual_atk_interval_skill3 = modified_base_attack_interval * 100 / self.attack_speed
             
             # 技能期间能打出的普攻次数
-            hits_during_skill = duration / actual_atk_interval_skill3
+            hits_during_skill = (duration or 0) / actual_atk_interval_skill3
             
             # 单次普攻的物理伤害 (强化后)
             physical_dmg_per_hit = calculate_physical_damage(enhanced_atk, enemy.current_def)

@@ -88,7 +88,7 @@ class Vc00维娜·维多利亚(ArtsFighter):
             single_hit_damage = calculate_true_damage(reinforced_atk, enemy)
             
             # 计算技能持续期间的攻击次数
-            num_hits = duration / actual_atk_interval_skill
+            num_hits = (duration or 0) / actual_atk_interval_skill
             
             total_damage = num_hits * single_hit_damage
             dps = single_hit_damage / actual_atk_interval_skill

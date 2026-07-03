@@ -45,7 +45,7 @@ class Rl11娜斯提(Artificer):
             single_hit_damage = calculate_physical_damage(enhanced_atk, enemy.current_def)
             
             # 计算技能持续期间的普攻次数
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             
             total_damage = num_hits * single_hit_damage
             dps = single_hit_damage / actual_atk_interval

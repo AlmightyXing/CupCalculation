@@ -62,7 +62,7 @@ class Re10电弧(Summoner):
             
             # 计算技能持续期间的攻击次数
             duration = 25
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = num_attacks * enhanced_single_hit_damage
             dps = enhanced_single_hit_damage / actual_atk_interval
@@ -85,7 +85,7 @@ class Re10电弧(Summoner):
             
             # 计算技能持续期间的攻击次数
             duration = 30
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = num_attacks * enhanced_single_hit_damage
             dps = enhanced_single_hit_damage / actual_atk_interval

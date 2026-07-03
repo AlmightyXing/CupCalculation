@@ -137,7 +137,7 @@ class Yd20仇白(Lord):
                 force_arts_damage=False # 伤害类型未改变
             )
             
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage += num_hits * single_hit_damage_during_skill
             
             # 3. 技能结束时的瞬发物理伤害

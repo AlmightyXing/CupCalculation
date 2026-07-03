@@ -80,7 +80,7 @@ class Aa00乌尔比安(Crusher):
             boosted_atk_during_duration = self.final_base_atk * (1 + 2.60)
             
             # 计算技能期间能打出的普攻次数
-            num_hits_during_duration = duration / actual_atk_interval
+            num_hits_during_duration = (duration or 0) / actual_atk_interval
             
             # 计算强化后的单次普攻伤害 (对一个目标)
             boosted_normal_hit_damage_per_target = calculate_physical_damage(boosted_atk_during_duration, enemy.current_def)

@@ -96,7 +96,7 @@ class Lm23斩业星熊(ArtsProtector):
             damage_per_attack_cycle = single_hit_damage * hits_per_attack
             
             # 计算技能持续期间的攻击次数
-            attacks_during_skill = duration / actual_atk_interval
+            attacks_during_skill = (duration or 0) / actual_atk_interval
             
             total_damage = damage_per_attack_cycle * attacks_during_skill
             dps = damage_per_attack_cycle / actual_atk_interval

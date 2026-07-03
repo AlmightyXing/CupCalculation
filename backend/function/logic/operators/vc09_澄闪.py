@@ -115,7 +115,7 @@ class Vc09澄闪(MechAccordCaster):
             
             # 技能期间总伤害 = (单次普攻伤害 + 天赋1期望伤害) * 攻击次数
             # 浮游单元的攻击间隔与干员自身攻击间隔一致
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = num_hits * (damage_per_hit + expected_talent_1_damage_per_hit)
             
             # DPS = (单次普攻伤害 + 天赋1期望伤害) / 实际攻击间隔 (无攻速加成)

@@ -82,7 +82,7 @@ class Ln11薇薇安娜(ArtsFighter):
             expected_dmg_per_attack = (1 - prob_double_hit) * normal_hit_dmg + prob_double_hit * double_hit_dmg
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = expected_dmg_per_attack * num_attacks
             dps = expected_dmg_per_attack / actual_atk_interval

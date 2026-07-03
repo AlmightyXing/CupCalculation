@@ -60,7 +60,7 @@ class Lt08空弦(Marksman):
             damage_per_attack_animation = damage_per_single_hit * hits_per_attack_animation
             
             # 计算技能持续期间的攻击次数
-            attacks_during_duration = duration / actual_atk_interval
+            attacks_during_duration = (duration or 0) / actual_atk_interval
             
             # 计算总伤害
             total_damage = damage_per_attack_animation * attacks_during_duration

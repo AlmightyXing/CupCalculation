@@ -32,7 +32,7 @@ class Yd30赤刃明霄陈(ArtsFighter):
         计算单次命中时的期望法术伤害（考虑形意洞照天赋的弱点伤害）
         """
         # 弱点伤害：无视固定数值的法术抗性
-        return calculate_arts_damage(atk_val, enemy.current_res, res_ignore_value=self.ignore_res_value)
+        return calculate_arts_damage(atk_val, enemy.current_res, res_ignore_ratio=self.ignore_res_value)
 
     def calculate_normal_hit(self, enemy, target_count: int = 1) -> float:
         # 赤刃明霄陈的普攻造成法术伤害
@@ -55,7 +55,7 @@ class Yd30赤刃明霄陈(ArtsFighter):
             single_hit_damage = self._calc_arts_hit(enhanced_atk, enemy) * 2
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             total_damage = num_attacks * single_hit_damage
             dps = single_hit_damage / actual_atk_interval
@@ -99,7 +99,7 @@ class Yd30赤刃明霄陈(ArtsFighter):
             single_sustained_hit_damage = self._calc_arts_hit(sustained_atk_value, enemy) * 3
             
             # 技能持续期间的攻击次数
-            num_attacks = duration / actual_atk_interval
+            num_attacks = (duration or 0) / actual_atk_interval
             
             damage_from_sustained_attacks = num_attacks * single_sustained_hit_damage
             

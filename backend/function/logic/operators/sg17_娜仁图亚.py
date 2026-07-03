@@ -69,7 +69,7 @@ class Sg17娜仁图亚(Loopshooter):
             damage_per_hit = calculate_physical_damage(atk_val, modified_enemy_def)
             
             duration = 30
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = damage_per_hit * num_hits
             
             return {"total_damage": total_damage, "dps": damage_per_hit / actual_atk_interval}
@@ -86,7 +86,7 @@ class Sg17娜仁图亚(Loopshooter):
             damage_per_hit = calculate_physical_damage(atk_val, modified_enemy_def)
             
             duration = 20
-            num_hits = duration / actual_atk_interval
+            num_hits = (duration or 0) / actual_atk_interval
             total_damage = damage_per_hit * num_hits
             
             return {"total_damage": total_damage, "dps": damage_per_hit / actual_atk_interval}

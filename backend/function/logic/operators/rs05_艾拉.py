@@ -86,7 +86,7 @@ class Rs05艾拉(Trapmaster):
                                              def_ignore_flat=def_ignore_flat)
             
             # 技能期间的攻击次数
-            hits = duration / actual_atk_interval
+            hits = (duration or 0) / actual_atk_interval
             
             total_damage = single_hit_dmg * hits
             dps = single_hit_dmg / actual_atk_interval

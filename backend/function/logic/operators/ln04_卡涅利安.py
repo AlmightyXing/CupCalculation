@@ -55,7 +55,7 @@ class Ln04卡涅利安(PhalanxCaster):
             duration = 20
             
             actual_atk_interval = base_atk_interval * 100 / current_attack_speed
-            num_hits = math.floor(duration / actual_atk_interval)
+            num_hits = math.floor((duration or 0) / actual_atk_interval)
             
             single_hit_damage = self._calc_arts_hit(skill_atk, enemy)
             total_damage = single_hit_damage * num_hits
@@ -71,7 +71,7 @@ class Ln04卡涅利安(PhalanxCaster):
             # 攻击间隔缩短
             modified_base_atk_interval = base_atk_interval - 1.1
             actual_atk_interval = modified_base_atk_interval * 100 / current_attack_speed
-            num_hits = math.floor(duration / actual_atk_interval)
+            num_hits = math.floor((duration or 0) / actual_atk_interval)
             
             single_hit_damage = self._calc_arts_hit(skill_atk, enemy)
             total_damage = single_hit_damage * num_hits
@@ -85,7 +85,7 @@ class Ln04卡涅利安(PhalanxCaster):
             duration = 21
             
             actual_atk_interval = base_atk_interval * 100 / current_attack_speed
-            num_hits = math.floor(duration / actual_atk_interval)
+            num_hits = math.floor((duration or 0) / actual_atk_interval)
             
             single_hit_base_damage = self._calc_arts_hit(skill_atk, enemy)
             

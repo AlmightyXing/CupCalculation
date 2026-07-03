@@ -115,4 +115,4 @@ class Sg15缇缇(CurseHealer):
         """
         if actual_atk_interval <= 0:
             return 0
-        return int(duration / actual_atk_interval)
+        return int((duration or 0) / actual_atk_interval)
