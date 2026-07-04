@@ -143,8 +143,38 @@ async def run_simulation(req: SimulateRequest):
     except Exception as e:
         import traceback
         traceback.print_exc()
-        raise HTTPException(status_code=500, detail=f"Simulation failed: {str(e)}")
+class SandboxSimulateRequest(BaseModel):
+    operator_name: str
+    skill_index: int = 0
+    enemy_def: int = 0
+    enemy_res: int = 0
+    buffs: Optional[List[str]] = None
 
+@app.post("/api/sandbox/simulate")
+async def sandbox_simulate(req: SandboxSimulateRequest):
+    """战斗环境（沙盒）接口，单干员实时演算"""
+    try:
+        op_instance = repo.instantiate_operator(req.operator_name)
+        enemy = Enemy("sandbox_target", "Target", 1000000, req.enemy_def, req.enemy_res)
+        
+        if not hasattr(op_instance, "final_base_atk"):
+            op_instance.final_base_atk = op_instance.base_atk
+            
+        result = op_instance.calculate_dps(enemy, req.skill_index)
+        
+        return {
+            "status": "success",
+            "data": {
+                "dps": round(result.get("dps", 0), 2),
+                "total_damage": round(result.get("total_damage", 0), 2),
+                "cycle_dps": round(result.get("cycle_dps", result.get("dps", 0)), 2)
+            }
+        }
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Sandbox simulation failed: {str(e)}")
+        
 if __name__ == "__main__":
     import uvicorn
     # 为了方便单独执行脚本也可以启动

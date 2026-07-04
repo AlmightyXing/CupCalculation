@@ -4,7 +4,7 @@ Page({
   data: {
     statusBarHeight: 20,
     currentTab: 'total',
-    currentTabName: '总杯榜 TOP 10',
+    currentTabName: '总杯榜',
     enemyOptions: [
       '0甲 0抗',
       '1000甲 20抗',
@@ -38,13 +38,19 @@ Page({
       url: '/pages/search/search'
     });
   },
+  
+  goToSandbox() {
+    wx.navigateTo({
+      url: '/pages/sandbox/sandbox'
+    });
+  },
 
   switchTab(e) {
     const tab = e.currentTarget.dataset.tab;
     const tabNames = { 'total': '总杯榜', 'idle': '挂机榜', 'burst': '决战榜' };
     this.setData({
       currentTab: tab,
-      currentTabName: tabNames[tab] + ' TOP 10'
+      currentTabName: tabNames[tab]
     });
     this.processListData(); // 重新处理并渲染
   },
@@ -108,13 +114,13 @@ Page({
       });
     }
 
-    // 只取 Top 10 来避免前端卡顿
-    const top10 = list.slice(0, 10);
+    // 依照用户要求：三个排行榜均应出现所有角色，而非只显示前10名
+    const allOps = list;
 
     // 分组逻辑
     let grouped = [];
     let currentGroup = null;
-    top10.forEach(op => {
+    allOps.forEach(op => {
       if (!currentGroup || currentGroup.cup_level !== op.cup_level) {
         currentGroup = { cup_level: op.cup_level, list: [] };
         grouped.push(currentGroup);
@@ -123,7 +129,7 @@ Page({
     });
 
     this.setData({
-      operators: top10,
+      operators: allOps,
       groupedOperators: grouped
     });
   }

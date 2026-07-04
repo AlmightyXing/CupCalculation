@@ -56,47 +56,17 @@ def generate_ranking(enemy_def: int, enemy_res: int) -> Dict[str, Any]:
     # In case we need an exact match, we can just create a custom Enemy object
     enemy = Enemy(f"target_{enemy_def}_{enemy_res}", "Target", 1000000, enemy_def, enemy_res)
     
-    dirty = False
-    
     for name in op_names:
         if name not in cached_data:
-            dirty = True
-            try:
-                op = repo.instantiate_operator(name)
-                # Ensure final_base_atk is set for safety
-                if not hasattr(op, "final_base_atk"):
-                    op.final_base_atk = op.base_atk
-                    
-                op_skills_data = []
-                for i, skill_info in enumerate(op.skills):
-                    try:
-                        res = op.calculate_dps(enemy, i)
-                        op_skills_data.append({
-                            "skill_idx": i,
-                            "skill_name": skill_info.get("name", f"技能 {i+1}"),
-                            "skill_type": skill_info.get("skill_type", "manual"),
-                            "dps": res.get("dps", 0),
-                            "total_dmg": res.get("total_damage", 0),
-                            "cycle_dps": res.get("cycle_dps", res.get("dps", 0))
-                        })
-                    except Exception as e:
-                        # Log error locally if interrupted/crashed
-                        error_log_path = os.path.join(DATA_DIR, "../../logs/phase6_errors.log")
-                        os.makedirs(os.path.dirname(error_log_path), exist_ok=True)
-                        with open(error_log_path, "a", encoding="utf-8") as lf:
-                            lf.write(f"Error calculating {name} skill {i}:\n{traceback.format_exc()}\n")
-                            
-                cached_data[name] = op_skills_data
-            except Exception as e:
-                error_log_path = os.path.join(DATA_DIR, "../../logs/phase6_errors.log")
-                os.makedirs(os.path.dirname(error_log_path), exist_ok=True)
-                with open(error_log_path, "a", encoding="utf-8") as lf:
-                    lf.write(f"Error instantiating {name}:\n{traceback.format_exc()}\n")
-    
-    if dirty:
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(cached_data, f, ensure_ascii=False, indent=2)
-            
+            # 依照用户要求：如果本地 JSON 中没有该干员，不再阻塞接口去动态演算，而是填充 N/A
+            cached_data[name] = [{
+                "skill_idx": 0,
+                "skill_name": "N/A",
+                "skill_type": "N/A",
+                "dps": 0,
+                "total_dmg": 0,
+                "cycle_dps": 0
+            }]
     # Now we have all performances, calculate rankings
     # Idle: auto skills, highest cycle_dps
     # Burst: manual skills, highest total_damage
@@ -110,17 +80,25 @@ def generate_ranking(enemy_def: int, enemy_res: int) -> Dict[str, Any]:
         best_overall_total = 0
         
         for sk in skills:
-            if sk.get("skill_type") == "auto":
-                if sk.get("cycle_dps", 0) > best_idle_dps:
-                    best_idle_dps = sk.get("cycle_dps", 0)
-            elif sk.get("skill_type") == "manual":
-                if sk.get("total_dmg", 0) > best_burst_dmg:
-                    best_burst_dmg = sk.get("total_dmg", 0)
+            cycle_dps = sk.get("cycle_dps", 0)
+            total_dmg = sk.get("total_dmg", 0)
+            dps = sk.get("dps", 0)
             
-            if sk.get("dps", 0) > best_overall_dps:
-                best_overall_dps = sk.get("dps", 0)
-            if sk.get("total_dmg", 0) > best_overall_total:
-                best_overall_total = sk.get("total_dmg", 0)
+            if cycle_dps == "N/A": cycle_dps = 0
+            if total_dmg == "N/A": total_dmg = 0
+            if dps == "N/A": dps = 0
+                
+            if sk.get("skill_type") == "auto":
+                if cycle_dps > best_idle_dps:
+                    best_idle_dps = cycle_dps
+            elif sk.get("skill_type") == "manual":
+                if total_dmg > best_burst_dmg:
+                    best_burst_dmg = total_dmg
+            
+            if dps > best_overall_dps:
+                best_overall_dps = dps
+            if total_dmg > best_overall_total:
+                best_overall_total = total_dmg
                 
         # Some operators only have auto skills, or only manual skills.
         # Fallbacks: if no auto skill, use highest manual DPS.

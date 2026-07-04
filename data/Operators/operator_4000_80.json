@@ -1,0 +1,3304 @@
+{
+  "乌尔比安": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 472.5200000000001,
+      "total_dmg": 1181.3000000000002,
+      "cycle_dps": 472.5200000000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 395.7600000000002,
+      "total_dmg": 0.0,
+      "cycle_dps": 395.7600000000002
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1445.4976000000004,
+      "total_dmg": 36137.44000000001,
+      "cycle_dps": 1445.4976000000004
+    }
+  ],
+  "斯卡蒂": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 87.48502500000001,
+      "total_dmg": 3061.975875,
+      "cycle_dps": 87.48502500000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 112.34700000000004,
+      "total_dmg": 3370.410000000001,
+      "cycle_dps": 112.34700000000004
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 95.70300000000002,
+      "total_dmg": 4785.150000000001,
+      "cycle_dps": 95.70300000000002
+    }
+  ],
+  "歌蕾蒂娅": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 49.64166666666667,
+      "total_dmg": 89.35500000000002,
+      "cycle_dps": 49.64166666666667
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 28.366666666666667,
+      "total_dmg": 567.3333333333333,
+      "cycle_dps": 28.366666666666667
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 147.50666666666663,
+      "total_dmg": 1180.0533333333328,
+      "cycle_dps": 147.50666666666663
+    }
+  ],
+  "丰川祥子": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 461.2093833846154,
+      "total_dmg": 535.3323200000001,
+      "cycle_dps": 461.2093833846154
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 113.61969230769229,
+      "total_dmg": 0,
+      "cycle_dps": 113.61969230769229
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 599.9119753846156,
+      "total_dmg": 14997.799384615391,
+      "cycle_dps": 599.9119753846156
+    }
+  ],
+  "赫拉格": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 242.66666666666666,
+      "total_dmg": 145.6,
+      "cycle_dps": 242.66666666666666
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 249.60000000000005,
+      "total_dmg": 3244.8000000000006,
+      "cycle_dps": 249.60000000000005
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 138.66666666666669,
+      "total_dmg": 2080.0,
+      "cycle_dps": 138.66666666666669
+    }
+  ],
+  "凯尔希": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 38.79166666666667,
+      "total_dmg": 775.8333333333335,
+      "cycle_dps": 38.79166666666667
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 939.1666666666667,
+      "total_dmg": 18783.333333333336,
+      "cycle_dps": 939.1666666666667
+    }
+  ],
+  "维什戴尔": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 102.651875,
+      "total_dmg": 215.5689375,
+      "cycle_dps": 102.651875
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 137.86200000000002,
+      "total_dmg": 3446.5500000000006,
+      "cycle_dps": 137.86200000000002
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1179.65534,
+      "total_dmg": 35389.6602,
+      "cycle_dps": 1179.65534
+    }
+  ],
+  "伊内丝": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 386.36999999999995,
+      "total_dmg": 386.36999999999995,
+      "cycle_dps": 386.36999999999995
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 76.545,
+      "total_dmg": 918.54,
+      "cycle_dps": 76.545
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 189.54000000000002,
+      "total_dmg": 189.54000000000002,
+      "cycle_dps": 189.54000000000002
+    }
+  ],
+  "赫德雷": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 811.1359999999997,
+      "total_dmg": 2027.8399999999992,
+      "cycle_dps": 811.1359999999997
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 54.096,
+      "total_dmg": 0,
+      "cycle_dps": 54.096
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 312.3040000000001,
+      "total_dmg": 21861.280000000006,
+      "cycle_dps": 312.3040000000001
+    }
+  ],
+  "涤火杰西卡": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 41.225,
+      "total_dmg": 0.0,
+      "cycle_dps": 41.225
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 169.75000000000006,
+      "total_dmg": 2546.250000000001,
+      "cycle_dps": 169.75000000000006
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 120.88055555555555,
+      "total_dmg": 4351.7,
+      "cycle_dps": 120.88055555555555
+    }
+  ],
+  "山": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 104.36102564102563,
+      "total_dmg": 81.4016,
+      "cycle_dps": 104.36102564102563
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 81.67384615384617,
+      "total_dmg": 0,
+      "cycle_dps": 81.67384615384617
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 138.22021116138762,
+      "total_dmg": 4146.606334841628,
+      "cycle_dps": 138.22021116138762
+    }
+  ],
+  "霍尔海雅": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 325.34999999999985,
+      "total_dmg": 520.5599999999998,
+      "cycle_dps": 325.34999999999985
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 439.2224999999999,
+      "total_dmg": 7027.559999999999,
+      "cycle_dps": 439.2224999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 242.9279999999999,
+      "total_dmg": 10931.759999999997,
+      "cycle_dps": 242.9279999999999
+    }
+  ],
+  "浊心斯卡蒂": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 336.48999999999995,
+      "total_dmg": 6729.799999999999,
+      "cycle_dps": 336.48999999999995
+    }
+  ],
+  "归溟幽灵鲨": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 85.10416666666667,
+      "total_dmg": 2127.604166666667,
+      "cycle_dps": 85.10416666666667
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 117.44375,
+      "total_dmg": 2348.875,
+      "cycle_dps": 117.44375
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 113.63727272727273,
+      "total_dmg": 2840.9318181818185,
+      "cycle_dps": 113.63727272727273
+    }
+  ],
+  "酒神": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 198.74999999999994,
+      "total_dmg": 317.99999999999994,
+      "cycle_dps": 198.74999999999994
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 89.43749999999999,
+      "total_dmg": 0,
+      "cycle_dps": 89.43749999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 149.06249999999994,
+      "total_dmg": 4471.874999999999,
+      "cycle_dps": 149.06249999999994
+    }
+  ],
+  "死芒": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 1601.7749999999994,
+      "total_dmg": 2562.8399999999992,
+      "cycle_dps": 1601.7749999999994
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 607.4879999999998,
+      "total_dmg": 7289.855999999998,
+      "cycle_dps": 607.4879999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 949.1999999999997,
+      "total_dmg": 1518.7199999999996,
+      "cycle_dps": 949.1999999999997
+    }
+  ],
+  "焰影苇草": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 171.87937499999998,
+      "total_dmg": 6015.778124999999,
+      "cycle_dps": 171.87937499999998
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 305.76,
+      "total_dmg": 9172.8,
+      "cycle_dps": 305.76
+    }
+  ],
+  "玛露西尔": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 217.46896551724132,
+      "total_dmg": 0.0,
+      "cycle_dps": 217.46896551724132
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 268.21172413793096,
+      "total_dmg": 0.0,
+      "cycle_dps": 268.21172413793096
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1060.1612068965517,
+      "total_dmg": 2459.5739999999996,
+      "cycle_dps": 1060.1612068965517
+    }
+  ],
+  "魔王": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 5064.2307692307695,
+      "total_dmg": 6583.5,
+      "cycle_dps": 5064.2307692307695
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "闪灵": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "夜莺": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "推进之王": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 100.54285714285714,
+      "total_dmg": 105.57000000000001,
+      "cycle_dps": 100.54285714285714
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 57.556097560975616,
+      "total_dmg": 1438.90243902439,
+      "cycle_dps": 57.556097560975616
+    }
+  ],
+  "水月": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 321.74999999999994,
+      "total_dmg": 1126.1249999999998,
+      "cycle_dps": 321.74999999999994
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 104.56875,
+      "total_dmg": 2195.94375,
+      "cycle_dps": 104.56875
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 114.91071428571426,
+      "total_dmg": 3447.321428571428,
+      "cycle_dps": 114.91071428571426
+    }
+  ],
+  "嵯峨": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 117.14285714285714,
+      "total_dmg": 123.0,
+      "cycle_dps": 117.14285714285714
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 91.25806451612904,
+      "total_dmg": 1825.1612903225807,
+      "cycle_dps": 91.25806451612904
+    }
+  ],
+  "遥": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 106.99999999999997,
+      "total_dmg": 2139.9999999999995,
+      "cycle_dps": 106.99999999999997
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 100.31249999999997,
+      "total_dmg": 0.0,
+      "cycle_dps": 100.31249999999997
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 298.5299999999999,
+      "total_dmg": 11941.199999999997,
+      "cycle_dps": 298.5299999999999
+    }
+  ],
+  "棘刺": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 103.29230769230769,
+      "total_dmg": 3098.769230769231,
+      "cycle_dps": 103.29230769230769
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 204.04,
+      "total_dmg": 8161.6,
+      "cycle_dps": 204.04
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 180.58846153846153,
+      "total_dmg": 0,
+      "cycle_dps": 180.58846153846153
+    }
+  ],
+  "引星棘刺": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 32.04384615384615
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 214.23599999999996,
+      "total_dmg": 3856.247999999999,
+      "cycle_dps": 214.23599999999996
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 411.6661471153845,
+      "total_dmg": 10703.319824999997,
+      "cycle_dps": 411.6661471153845
+    }
+  ],
+  "艾丽妮": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 127.25846153846156,
+      "total_dmg": 140.20000000000002,
+      "cycle_dps": 127.25846153846156
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 428.5215384615385,
+      "total_dmg": 472.1,
+      "cycle_dps": 428.5215384615385
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1049.882307692308,
+      "total_dmg": 1156.65,
+      "cycle_dps": 1049.882307692308
+    }
+  ],
+  "流明": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 564.4736842105262,
+      "total_dmg": 1608.75,
+      "cycle_dps": 244.0921052631579
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 533.6842105263157,
+      "total_dmg": 1521.0,
+      "cycle_dps": 533.6842105263157
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 827.2105263157894,
+      "total_dmg": 14508.0,
+      "cycle_dps": 827.2105263157894
+    }
+  ],
+  "灵知": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 341.0624999999999,
+      "total_dmg": 545.6999999999998,
+      "cycle_dps": 341.0624999999999
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 200.62499999999991,
+      "total_dmg": 320.9999999999999,
+      "cycle_dps": 200.62499999999991
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 304.795673076923,
+      "total_dmg": 3962.343749999999,
+      "cycle_dps": 304.795673076923
+    }
+  ],
+  "锏": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 122.87846153846155,
+      "total_dmg": 159.74200000000002,
+      "cycle_dps": 122.87846153846155
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 917.5384615384623,
+      "total_dmg": 1192.800000000001,
+      "cycle_dps": 917.5384615384623
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 63.48666666666668,
+      "total_dmg": 1904.6000000000004,
+      "cycle_dps": 63.48666666666668
+    }
+  ],
+  "凛御银灰": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 103.39166666666668,
+      "total_dmg": 124.07000000000001,
+      "cycle_dps": 103.39166666666668
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 54.416666666666664,
+      "total_dmg": 2612.0,
+      "cycle_dps": 54.416666666666664
+    }
+  ],
+  "圣聆初雪": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 476.3199999999999,
+      "total_dmg": 952.6399999999998,
+      "cycle_dps": 476.3199999999999
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 656.1890909090907,
+      "total_dmg": 0.0,
+      "cycle_dps": 656.1890909090907
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1178.6421818181818,
+      "total_dmg": 41252.47636363637,
+      "cycle_dps": 1178.6421818181818
+    }
+  ],
+  "耀骑士临光": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 97.665,
+      "total_dmg": 0,
+      "cycle_dps": 97.665
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 99.58,
+      "total_dmg": 0,
+      "cycle_dps": 99.58
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1959.7344,
+      "total_dmg": 48993.36,
+      "cycle_dps": 1959.7344
+    }
+  ],
+  "玛恩纳": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 105.87500000000001,
+      "total_dmg": 3176.2500000000005,
+      "cycle_dps": 105.87500000000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 160.93000000000004,
+      "total_dmg": 3218.600000000001,
+      "cycle_dps": 160.93000000000004
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 158.81250000000006,
+      "total_dmg": 4446.750000000002,
+      "cycle_dps": 158.81250000000006
+    }
+  ],
+  "瑕光": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 88.11833333333335,
+      "total_dmg": 105.74200000000002,
+      "cycle_dps": 88.11833333333335
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 71.17250000000001,
+      "total_dmg": 711.7250000000001,
+      "cycle_dps": 71.17250000000001
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 355.8625,
+      "total_dmg": 10675.875,
+      "cycle_dps": 355.8625
+    }
+  ],
+  "焰尾": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 279.3142857142857,
+      "total_dmg": 293.28,
+      "cycle_dps": 279.3142857142857
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 157.9455782312925,
+      "total_dmg": 1263.56462585034,
+      "cycle_dps": 157.9455782312925
+    }
+  ],
+  "远牙": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 58.029,
+      "total_dmg": 2031.015,
+      "cycle_dps": 58.029
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 57.959999999999994,
+      "total_dmg": 2028.6,
+      "cycle_dps": 57.959999999999994
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 373.2385185185184,
+      "total_dmg": 7464.770370370367,
+      "cycle_dps": 373.2385185185184
+    }
+  ],
+  "星熊": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 28.58333333333334,
+      "total_dmg": 857.5000000000001,
+      "cycle_dps": 28.58333333333334
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 20.416666666666668,
+      "total_dmg": 0.0,
+      "cycle_dps": 20.416666666666668
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 49.00000000000001,
+      "total_dmg": 1225.0000000000002,
+      "cycle_dps": 49.00000000000001
+    }
+  ],
+  "老鲤": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 86.42560000000002,
+      "total_dmg": 0,
+      "cycle_dps": 86.42560000000002
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 303.8399999999999,
+      "total_dmg": 1519.1999999999996,
+      "cycle_dps": 303.8399999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 81.024,
+      "total_dmg": 0,
+      "cycle_dps": 81.024
+    }
+  ],
+  "阿": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 65.16346153846153,
+      "total_dmg": 1954.903846153846,
+      "cycle_dps": 65.16346153846153
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 73.30889423076923,
+      "total_dmg": 1466.1778846153848,
+      "cycle_dps": 73.30889423076923
+    }
+  ],
+  "林": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 98.02666666666664,
+      "total_dmg": 0.0,
+      "cycle_dps": 98.02666666666664
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 275.69999999999993,
+      "total_dmg": 8270.999999999998,
+      "cycle_dps": 275.69999999999993
+    }
+  ],
+  "琳琅诗怀雅": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 567.1999999999998,
+      "total_dmg": 567.1999999999998,
+      "cycle_dps": 567.1999999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 114.18,
+      "total_dmg": 0.0,
+      "cycle_dps": 114.18
+    }
+  ],
+  "斩业星熊": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 153.42499999999993,
+      "total_dmg": 0,
+      "cycle_dps": 153.42499999999993
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 619.1149999999999,
+      "total_dmg": 0,
+      "cycle_dps": 619.1149999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 595.6499999999997,
+      "total_dmg": 19060.799999999996,
+      "cycle_dps": 595.6499999999997
+    }
+  ],
+  "艾雅法拉": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 268.128,
+      "total_dmg": 6703.2,
+      "cycle_dps": 268.128
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 387.52874999999995,
+      "total_dmg": 620.0459999999999,
+      "cycle_dps": 387.52874999999995
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 770.8679999999998,
+      "total_dmg": 11563.019999999997,
+      "cycle_dps": 770.8679999999998
+    }
+  ],
+  "卡涅利安": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 148.15999999999997,
+      "total_dmg": 2963.1999999999994,
+      "cycle_dps": 148.15999999999997
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 246.9333333333333,
+      "total_dmg": 6000.479999999999,
+      "cycle_dps": 246.9333333333333
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 703.7599999999998,
+      "total_dmg": 11963.919999999998,
+      "cycle_dps": 703.7599999999998
+    }
+  ],
+  "黑键": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 349.5098039215685,
+      "total_dmg": 1747.5490196078426,
+      "cycle_dps": 349.5098039215685
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 1455.708333333333,
+      "total_dmg": 4367.124999999999,
+      "cycle_dps": 1455.708333333333
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 2668.188599999999,
+      "total_dmg": 80045.65799999998,
+      "cycle_dps": 2668.188599999999
+    }
+  ],
+  "止颂": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 122.23306666666667,
+      "total_dmg": 183.3496,
+      "cycle_dps": 122.23306666666667
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 134.87786666666668,
+      "total_dmg": 3237.0688000000005,
+      "cycle_dps": 134.87786666666668
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 92.72853333333335,
+      "total_dmg": 1854.570666666667,
+      "cycle_dps": 92.72853333333335
+    }
+  ],
+  "纯烬艾雅法拉": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "薇薇安娜": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 830.7455999999999,
+      "total_dmg": 1038.4319999999998,
+      "cycle_dps": 830.7455999999999
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 271.37689599999993,
+      "total_dmg": 9498.191359999997,
+      "cycle_dps": 271.37689599999993
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 623.0591999999998,
+      "total_dmg": 15576.479999999996,
+      "cycle_dps": 623.0591999999998
+    }
+  ],
+  "空弦": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 71.07,
+      "total_dmg": 71.07,
+      "cycle_dps": 71.07
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 216.29999999999998,
+      "total_dmg": 216.29999999999998,
+      "cycle_dps": 216.29999999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 120.51,
+      "total_dmg": 2410.2000000000003,
+      "cycle_dps": 120.51
+    }
+  ],
+  "菲亚梅塔": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 65.38232142857143,
+      "total_dmg": 1961.4696428571428,
+      "cycle_dps": 65.38232142857143
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 866.3894642857143,
+      "total_dmg": 1910.15,
+      "cycle_dps": 866.3894642857143
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 71.92055357142858,
+      "total_dmg": 0,
+      "cycle_dps": 71.92055357142858
+    }
+  ],
+  "蕾缪安": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 64.00197222222222,
+      "total_dmg": 1209.637275,
+      "cycle_dps": 64.00197222222222
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 4860.434750000001,
+      "total_dmg": 58325.21700000001,
+      "cycle_dps": 4860.434750000001
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 935.3141666666669,
+      "total_dmg": 2805.9425000000006,
+      "cycle_dps": 935.3141666666669
+    }
+  ],
+  "塑心": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 630.0,
+      "total_dmg": 1008.0,
+      "cycle_dps": 630.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 325.5,
+      "total_dmg": 6510.0,
+      "cycle_dps": 325.5
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 220.5,
+      "total_dmg": 8820.0,
+      "cycle_dps": 220.5
+    }
+  ],
+  "信仰搅拌机": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 146.0055,
+      "total_dmg": 160.74,
+      "cycle_dps": 146.0055
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 64.0375,
+      "total_dmg": 3525.0,
+      "cycle_dps": 64.0375
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 819.6800000000001,
+      "total_dmg": 2707.2000000000003,
+      "cycle_dps": 819.6800000000001
+    }
+  ],
+  "圣约送葬人": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 66.11971153846154,
+      "total_dmg": 1031.4675000000002,
+      "cycle_dps": 66.11971153846154
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 84.72288461538461,
+      "total_dmg": 1762.236,
+      "cycle_dps": 84.72288461538461
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 223.3172430555555,
+      "total_dmg": 8039.420749999998,
+      "cycle_dps": 223.3172430555555
+    }
+  ],
+  "莫斯提马": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 129.51724137931032,
+      "total_dmg": 3885.5172413793093,
+      "cycle_dps": 129.51724137931032
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 262.9199999999999,
+      "total_dmg": 1840.4399999999994,
+      "cycle_dps": 262.9199999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 174.84827586206896,
+      "total_dmg": 4720.903448275862,
+      "cycle_dps": 174.84827586206896
+    }
+  ],
+  "焰狐龙梓兰": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 638.4699375,
+      "total_dmg": 1021.5519,
+      "cycle_dps": 638.4699375
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 957.7049062499999,
+      "total_dmg": 1532.32785,
+      "cycle_dps": 957.7049062499999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1189.4201249999983,
+      "total_dmg": 1903.0721999999973,
+      "cycle_dps": 1189.4201249999983
+    }
+  ],
+  "帕拉斯": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 184.25,
+      "total_dmg": 193.4625,
+      "cycle_dps": 184.25
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 94.75714285714285,
+      "total_dmg": 2368.9285714285716,
+      "cycle_dps": 94.75714285714285
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 157.92857142857144,
+      "total_dmg": 4737.857142857143,
+      "cycle_dps": 157.92857142857144
+    }
+  ],
+  "年": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 149.59166666666664,
+      "total_dmg": 4487.749999999999,
+      "cycle_dps": 149.59166666666664
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 56.74166666666668,
+      "total_dmg": 2553.3750000000005,
+      "cycle_dps": 56.74166666666668
+    }
+  ],
+  "夕": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 230.41379310344823,
+      "total_dmg": 668.1999999999998,
+      "cycle_dps": 230.41379310344823
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 287.8559517241379,
+      "total_dmg": 5757.119034482758,
+      "cycle_dps": 287.8559517241379
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 144.83152709359607,
+      "total_dmg": 8689.891625615763,
+      "cycle_dps": 144.83152709359607
+    }
+  ],
+  "令": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 164.30624999999998,
+      "total_dmg": 4107.656249999999,
+      "cycle_dps": 164.30624999999998
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 328.6124999999999,
+      "total_dmg": 525.7799999999999,
+      "cycle_dps": 328.6124999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 146.04999999999995,
+      "total_dmg": 4381.499999999998,
+      "cycle_dps": 146.04999999999995
+    }
+  ],
+  "重岳": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 574.75,
+      "total_dmg": 448.305,
+      "cycle_dps": 574.75
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 691.4927884615385,
+      "total_dmg": 539.364375,
+      "cycle_dps": 691.4927884615385
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 2770.5897435897436,
+      "total_dmg": 0,
+      "cycle_dps": 2770.5897435897436
+    }
+  ],
+  "黍": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 41.473600000000005,
+      "total_dmg": 1244.208,
+      "cycle_dps": 41.473600000000005
+    }
+  ],
+  "余": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 165.34375,
+      "total_dmg": 4960.3125,
+      "cycle_dps": 165.34375
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 906.2624999999998,
+      "total_dmg": 18682.949999999997,
+      "cycle_dps": 906.2624999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 347.22187499999995,
+      "total_dmg": 15624.984374999998,
+      "cycle_dps": 347.22187499999995
+    }
+  ],
+  "望": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 551.8246500000001,
+      "total_dmg": 3586.860225000001,
+      "cycle_dps": 551.8246500000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 2789.1790588235294,
+      "total_dmg": 2370.8022,
+      "cycle_dps": 2789.1790588235294
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1827.393176470588,
+      "total_dmg": 1553.2841999999998,
+      "cycle_dps": 1827.393176470588
+    }
+  ],
+  "能天使": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 139.43663999999998,
+      "total_dmg": 124.49699999999999,
+      "cycle_dps": 139.43663999999998
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 160.272,
+      "total_dmg": 2404.08,
+      "cycle_dps": 160.272
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 226.0246153846154,
+      "total_dmg": 3390.369230769231,
+      "cycle_dps": 96.71113846153845
+    }
+  ],
+  "缄默德克萨斯": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 478.0596129032258,
+      "total_dmg": 0,
+      "cycle_dps": 478.0596129032258
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 1423.4399999999998,
+      "total_dmg": 379.5839999999999,
+      "cycle_dps": 1423.4399999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 205.60799999999995,
+      "total_dmg": 521.9279999999999,
+      "cycle_dps": 205.60799999999995
+    }
+  ],
+  "新约能天使": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 74.8076923076923,
+      "total_dmg": 778.0,
+      "cycle_dps": 74.8076923076923
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 194.49999999999997,
+      "total_dmg": 4668.0,
+      "cycle_dps": 194.49999999999997
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 311.2000000000001,
+      "total_dmg": 4172.0250000000015,
+      "cycle_dps": 311.2000000000001
+    }
+  ],
+  "凯尔希·思衡托": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 25.500000000000004,
+      "total_dmg": 892.5000000000001,
+      "cycle_dps": 25.500000000000004
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 1384.2857142857142,
+      "total_dmg": 48450.0,
+      "cycle_dps": 1384.2857142857142
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 49.03846153846154,
+      "total_dmg": 1716.3461538461538,
+      "cycle_dps": 49.03846153846154
+    }
+  ],
+  "可露希尔": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 20.25
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 72.9,
+      "total_dmg": 2187.0,
+      "cycle_dps": 72.9
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 202.5,
+      "total_dmg": 6075.0,
+      "cycle_dps": 202.5
+    }
+  ],
+  "傀影": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 41.806451612903224,
+      "total_dmg": 388.8,
+      "cycle_dps": 41.806451612903224
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 104.51612903225806,
+      "total_dmg": 97.2,
+      "cycle_dps": 104.51612903225806
+    }
+  ],
+  "史尔特尔": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 765.8240000000002,
+      "total_dmg": 957.2800000000002,
+      "cycle_dps": 765.8240000000002
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 642.3040000000001,
+      "total_dmg": 11561.472000000002,
+      "cycle_dps": 642.3040000000001
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1062.2720000000002,
+      "total_dmg": 0,
+      "cycle_dps": 1062.2720000000002
+    }
+  ],
+  "假日威龙陈": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 60.0808695652174,
+      "total_dmg": 511.8,
+      "cycle_dps": 60.0808695652174
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 36.04852173913044,
+      "total_dmg": 614.1600000000001,
+      "cycle_dps": 36.04852173913044
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 120.1617391304348,
+      "total_dmg": 4094.4,
+      "cycle_dps": 120.1617391304348
+    }
+  ],
+  "温蒂": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 45.12500000000001,
+      "total_dmg": 54.150000000000006,
+      "cycle_dps": 45.12500000000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 28.203125000000004,
+      "total_dmg": 0,
+      "cycle_dps": 28.203125000000004
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 421.1666666666666,
+      "total_dmg": 505.39999999999986,
+      "cycle_dps": 421.1666666666666
+    }
+  ],
+  "鸿雪": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 70.95000000000002,
+      "total_dmg": 0,
+      "cycle_dps": 70.95000000000002
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 203.98125,
+      "total_dmg": 326.37,
+      "cycle_dps": 203.98125
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 120.615,
+      "total_dmg": 3618.45,
+      "cycle_dps": 120.615
+    }
+  ],
+  "刻俄柏": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 1311.77826,
+      "total_dmg": 1943.3752,
+      "cycle_dps": 1311.77826
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 3607.1836363636357,
+      "total_dmg": 144287.34545454543,
+      "cycle_dps": 3607.1836363636357
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 85.53721500000002,
+      "total_dmg": 5132.232900000001,
+      "cycle_dps": 85.53721500000002
+    }
+  ],
+  "泥岩": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 74.41875,
+      "total_dmg": 119.07000000000001,
+      "cycle_dps": 74.41875
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 94.5,
+      "total_dmg": 1889.9999999999998,
+      "cycle_dps": 94.5
+    }
+  ],
+  "隐德来希": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 408.6538461538461,
+      "total_dmg": 531.2499999999999,
+      "cycle_dps": 408.6538461538461
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 146.25,
+      "total_dmg": 1755.0,
+      "cycle_dps": 146.25
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1392.3076923076922,
+      "total_dmg": 27846.153846153844,
+      "cycle_dps": 1392.3076923076922
+    }
+  ],
+  "铃兰": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 176.1650526315789,
+      "total_dmg": 5284.951578947367,
+      "cycle_dps": 135.81271578947366
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 120.45473684210525,
+      "total_dmg": 0.0,
+      "cycle_dps": 120.45473684210525
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "妮芙": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 1572.3225,
+      "total_dmg": 31446.45,
+      "cycle_dps": 1572.3225
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 446.9999999999999,
+      "total_dmg": 715.1999999999998,
+      "cycle_dps": 446.9999999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 4005.1200000000003,
+      "total_dmg": 140179.2,
+      "cycle_dps": 4005.1200000000003
+    }
+  ],
+  "弑君者": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 70.3225806451613,
+      "total_dmg": 703.2258064516129,
+      "cycle_dps": 70.3225806451613
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 20.4375,
+      "total_dmg": 163.5,
+      "cycle_dps": 20.4375
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 81.75,
+      "total_dmg": 1308.0,
+      "cycle_dps": 81.75
+    }
+  ],
+  "莱伊": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 2861.7979999999993,
+      "total_dmg": 4578.876799999999,
+      "cycle_dps": 2861.7979999999993
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 140.23283999999998,
+      "total_dmg": 0,
+      "cycle_dps": 140.23283999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 5327.940799999998,
+      "total_dmg": 85247.05279999995,
+      "cycle_dps": 5327.940799999998
+    }
+  ],
+  "逻各斯": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 443.2650000000001,
+      "total_dmg": 0.0,
+      "cycle_dps": 443.2650000000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 1130.3624999999993,
+      "total_dmg": 22607.249999999985,
+      "cycle_dps": 1130.3624999999993
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 755.2800000000001,
+      "total_dmg": 22658.4,
+      "cycle_dps": 755.2800000000001
+    }
+  ],
+  "真言": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 1250.46875,
+      "total_dmg": 2000.75,
+      "cycle_dps": 1250.46875
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 1151.3749999999998,
+      "total_dmg": 28784.374999999993,
+      "cycle_dps": 1151.3749999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 535.1062499999998,
+      "total_dmg": 21404.249999999996,
+      "cycle_dps": 535.1062499999998
+    }
+  ],
+  "电弧": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 60.74999999999998,
+      "total_dmg": 0,
+      "cycle_dps": 60.74999999999998
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 109.34999999999998,
+      "total_dmg": 2733.7499999999995,
+      "cycle_dps": 109.34999999999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 364.49999999999994,
+      "total_dmg": 10934.999999999998,
+      "cycle_dps": 364.49999999999994
+    }
+  ],
+  "煌": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 99.6875,
+      "total_dmg": 119.625,
+      "cycle_dps": 99.6875
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 68.75,
+      "total_dmg": 0,
+      "cycle_dps": 68.75
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 255.875,
+      "total_dmg": 2558.75,
+      "cycle_dps": 255.875
+    }
+  ],
+  "迷迭香": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 167.3382857142857,
+      "total_dmg": 351.4104,
+      "cycle_dps": 167.3382857142857
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 49.68857142857142,
+      "total_dmg": 1987.5428571428572,
+      "cycle_dps": 49.68857142857142
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 100.98,
+      "total_dmg": 3029.4,
+      "cycle_dps": 100.98
+    }
+  ],
+  "烛煌": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 105.27999999999997,
+      "total_dmg": 2105.5999999999995,
+      "cycle_dps": 100.26666666666665
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 203.03999999999996,
+      "total_dmg": 7106.399999999999,
+      "cycle_dps": 203.03999999999996
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 3083.1999999999994,
+      "total_dmg": 0,
+      "cycle_dps": 3083.1999999999994
+    }
+  ],
+  "百炼嘉维尔": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 72.21600000000001,
+      "total_dmg": 1805.4,
+      "cycle_dps": 72.21600000000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 112.33600000000001,
+      "total_dmg": 4493.4400000000005,
+      "cycle_dps": 112.33600000000001
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 192.576,
+      "total_dmg": 4814.400000000001,
+      "cycle_dps": 192.576
+    }
+  ],
+  "塞雷娅": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 27.864583333333336,
+      "total_dmg": 0.0,
+      "cycle_dps": 27.864583333333336
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 27.864583333333336,
+      "total_dmg": 0.0,
+      "cycle_dps": 27.864583333333336
+    }
+  ],
+  "伊芙利特": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 336.96,
+      "total_dmg": 6739.2,
+      "cycle_dps": 336.96
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 390.0,
+      "total_dmg": 1131.0,
+      "cycle_dps": 390.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 876.9599999999999,
+      "total_dmg": 17539.199999999997,
+      "cycle_dps": 876.9599999999999
+    }
+  ],
+  "麦哲伦": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 63.624999999999986,
+      "total_dmg": 954.3749999999999,
+      "cycle_dps": 63.624999999999986
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 159.06249999999997,
+      "total_dmg": 2385.9374999999995,
+      "cycle_dps": 159.06249999999997
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 39.765625,
+      "total_dmg": 596.484375,
+      "cycle_dps": 39.765625
+    }
+  ],
+  "多萝西": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 1140.4705882352937,
+      "total_dmg": 969.3999999999996,
+      "cycle_dps": 1140.4705882352937
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 139.97647058823532,
+      "total_dmg": 118.98,
+      "cycle_dps": 139.97647058823532
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "auto",
+      "dps": 653.2235294117646,
+      "total_dmg": 555.2399999999999,
+      "cycle_dps": 653.2235294117646
+    }
+  ],
+  "缪尔赛思": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 90.61875,
+      "total_dmg": 1359.28125,
+      "cycle_dps": 90.61875
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 60.4125,
+      "total_dmg": 906.1875,
+      "cycle_dps": 60.4125
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 60.4125,
+      "total_dmg": 906.1875,
+      "cycle_dps": 60.4125
+    }
+  ],
+  "淬羽赫默": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "娜斯提": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 36.84,
+      "total_dmg": 1473.6000000000001,
+      "cycle_dps": 36.84
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "溯光星源": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 132.40842105263155,
+      "total_dmg": 2648.1684210526314,
+      "cycle_dps": 132.40842105263155
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 95.99610526315787,
+      "total_dmg": 154.56999999999996,
+      "cycle_dps": 95.99610526315787
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 222.74958333333333,
+      "total_dmg": 5568.739583333333,
+      "cycle_dps": 222.74958333333333
+    }
+  ],
+  "灰烬": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 71.75999999999999,
+      "total_dmg": 0,
+      "cycle_dps": 71.75999999999999
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 390.0,
+      "total_dmg": 2418.0,
+      "cycle_dps": 390.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 218.40000000000003,
+      "total_dmg": 218.40000000000003,
+      "cycle_dps": 218.40000000000003
+    }
+  ],
+  "艾拉": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 37.89075630252101
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 58.94117647058824,
+      "total_dmg": 1178.8235294117649,
+      "cycle_dps": 58.94117647058824
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 257.01300000000003,
+      "total_dmg": 5140.26,
+      "cycle_dps": 257.01300000000003
+    }
+  ],
+  "风笛": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 98.75442499999998,
+      "total_dmg": 3456.4048749999997,
+      "cycle_dps": 98.75442499999998
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 187.88000000000002,
+      "total_dmg": 187.88000000000002,
+      "cycle_dps": 187.88000000000002
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 182.35411764705884,
+      "total_dmg": 3647.082352941177,
+      "cycle_dps": 182.35411764705884
+    }
+  ],
+  "森蚺": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 48.38085937499999,
+      "total_dmg": 0.0,
+      "cycle_dps": 48.38085937499999
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 86.6985,
+      "total_dmg": 1560.5729999999999,
+      "cycle_dps": 86.6985
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 127.72546874999999,
+      "total_dmg": 4470.39140625,
+      "cycle_dps": 127.72546874999999
+    }
+  ],
+  "异客": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 218.06608695652173,
+      "total_dmg": 501.5519999999999,
+      "cycle_dps": 218.06608695652173
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 226.7887304347826,
+      "total_dmg": 7937.605565217392,
+      "cycle_dps": 226.7887304347826
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 601.8623999999999,
+      "total_dmg": 2407.4495999999995,
+      "cycle_dps": 601.8623999999999
+    }
+  ],
+  "佩佩": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 188.64444444444416,
+      "total_dmg": 339.5599999999995,
+      "cycle_dps": 188.64444444444416
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 205.33933333333331,
+      "total_dmg": 3696.1079999999997,
+      "cycle_dps": 205.33933333333331
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1292.08,
+      "total_dmg": 51683.2,
+      "cycle_dps": 1292.08
+    }
+  ],
+  "缇缇": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 206.30999999999995,
+      "total_dmg": 3300.959999999999,
+      "cycle_dps": 206.30999999999995
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 299.28703999999993,
+      "total_dmg": 7482.175999999998,
+      "cycle_dps": 299.28703999999993
+    }
+  ],
+  "娜仁图亚": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 72.675,
+      "total_dmg": 0,
+      "cycle_dps": 72.675
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 172.125,
+      "total_dmg": 5163.75,
+      "cycle_dps": 172.125
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1440.25,
+      "total_dmg": 28805.0,
+      "cycle_dps": 1440.25
+    }
+  ],
+  "提丰": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 50.591406250000006,
+      "total_dmg": 2366.56171875,
+      "cycle_dps": 50.591406250000006
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 72.1875,
+      "total_dmg": 2129.125,
+      "cycle_dps": 72.1875
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 112.47386363636363,
+      "total_dmg": 6186.0625,
+      "cycle_dps": 112.47386363636363
+    }
+  ],
+  "安洁莉娜": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 145.93673684210523,
+      "total_dmg": 5107.785789473683,
+      "cycle_dps": 120.2074542911752
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 208.48105263157893,
+      "total_dmg": 6254.4315789473685,
+      "cycle_dps": 208.48105263157893
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 173.73421052631576,
+      "total_dmg": 4343.355263157894,
+      "cycle_dps": 173.73421052631576
+    }
+  ],
+  "荒芜拉普兰德": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 300.5723076923077,
+      "total_dmg": 0,
+      "cycle_dps": 300.5723076923077
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 979.6430769230769,
+      "total_dmg": 21552.147692307695,
+      "cycle_dps": 979.6430769230769
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 841.6024615384615,
+      "total_dmg": 33664.09846153846,
+      "cycle_dps": 841.6024615384615
+    }
+  ],
+  "斥罪": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 286.24999999999994,
+      "total_dmg": 457.99999999999994,
+      "cycle_dps": 286.24999999999994
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 256.4799999999999,
+      "total_dmg": 5129.5999999999985,
+      "cycle_dps": 256.4799999999999
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 232.0,
+      "total_dmg": 6960.0,
+      "cycle_dps": 232.0
+    }
+  ],
+  "伺夜": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 173.24999999999997,
+      "total_dmg": 2598.7499999999995,
+      "cycle_dps": 173.24999999999997
+    }
+  ],
+  "忍冬": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 408.7428571428571,
+      "total_dmg": 429.17999999999995,
+      "cycle_dps": 408.7428571428571
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 355.42857142857133,
+      "total_dmg": 373.19999999999993,
+      "cycle_dps": 355.42857142857133
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 259.996,
+      "total_dmg": 2599.9599999999996,
+      "cycle_dps": 259.996
+    }
+  ],
+  "贝洛内": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 248.20512820512818,
+      "total_dmg": 193.6,
+      "cycle_dps": 248.20512820512818
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 178.7076923076923,
+      "total_dmg": 3931.56923076923,
+      "cycle_dps": 178.7076923076923
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1340.2769230769247,
+      "total_dmg": 40208.307692307746,
+      "cycle_dps": 1340.2769230769247
+    }
+  ],
+  "黑": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 200.71100000000018,
+      "total_dmg": 321.1376000000003,
+      "cycle_dps": 200.71100000000018
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 203.96375000000006,
+      "total_dmg": 8158.550000000003,
+      "cycle_dps": 203.96375000000006
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 674.0480000000002,
+      "total_dmg": 16851.200000000004,
+      "cycle_dps": 674.0480000000002
+    }
+  ],
+  "阿斯卡纶": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 1044.0575999999999,
+      "total_dmg": 3205.44,
+      "cycle_dps": 1044.0575999999999
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 1107.7575428571427,
+      "total_dmg": 38771.51399999999,
+      "cycle_dps": 1107.7575428571427
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1264.2884999999997,
+      "total_dmg": 56892.982499999984,
+      "cycle_dps": 1264.2884999999997
+    }
+  ],
+  "维伊": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 735.0799999999999,
+      "total_dmg": 8371.44,
+      "cycle_dps": 329.8823255813954
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 1397.9120159999998,
+      "total_dmg": 31581.53644799999,
+      "cycle_dps": 1397.9120159999998
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1804.7639999999997,
+      "total_dmg": 0,
+      "cycle_dps": 1804.7639999999997
+    }
+  ],
+  "怒潮凛冬": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 82.00000000000001,
+      "total_dmg": 2460.0,
+      "cycle_dps": 82.00000000000001
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 102.04444444444445,
+      "total_dmg": 0,
+      "cycle_dps": 102.04444444444445
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 775.3481481481482,
+      "total_dmg": 20934.4,
+      "cycle_dps": 775.3481481481482
+    }
+  ],
+  "早露": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    }
+  ],
+  "维娜·维多利亚": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 1668.8,
+      "total_dmg": 2086.0,
+      "cycle_dps": 1668.8
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 467.26399999999984,
+      "total_dmg": 0,
+      "cycle_dps": 467.26399999999984
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 3024.7,
+      "total_dmg": 75617.5,
+      "cycle_dps": 3024.7
+    }
+  ],
+  "澄闪": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 290.5430769230769,
+      "total_dmg": 7263.576923076923,
+      "cycle_dps": 290.5430769230769
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "auto",
+      "dps": 216.85461538461539,
+      "total_dmg": 0,
+      "cycle_dps": 216.85461538461539
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 240.01384615384617,
+      "total_dmg": 7200.415384615385,
+      "cycle_dps": 240.01384615384617
+    }
+  ],
+  "琴柳": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 0.0,
+      "total_dmg": 0.0,
+      "cycle_dps": 0.0
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 67.61538461538461,
+      "total_dmg": 87.9,
+      "cycle_dps": 67.61538461538461
+    }
+  ],
+  "号角": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 59.354000000000006,
+      "total_dmg": 140.84,
+      "cycle_dps": 59.354000000000006
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 101.74971428571429,
+      "total_dmg": 2414.4,
+      "cycle_dps": 101.74971428571429
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 142.44960000000006,
+      "total_dmg": 3418.7904000000012,
+      "cycle_dps": 142.44960000000006
+    }
+  ],
+  "白铁": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 42.2,
+      "total_dmg": 63.300000000000004,
+      "cycle_dps": 42.2
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 33.760000000000005,
+      "total_dmg": 1012.8000000000002,
+      "cycle_dps": 33.760000000000005
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 50.692750000000004,
+      "total_dmg": 1520.7825000000003,
+      "cycle_dps": 50.692750000000004
+    }
+  ],
+  "左乐": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 307.5,
+      "total_dmg": 246.0,
+      "cycle_dps": 307.5
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 138.375,
+      "total_dmg": 1660.5,
+      "cycle_dps": 138.375
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1004.5000000000001,
+      "total_dmg": 803.6000000000001,
+      "cycle_dps": 1004.5000000000001
+    }
+  ],
+  "仇白": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "auto",
+      "dps": 354.4615384615384,
+      "total_dmg": 460.7999999999999,
+      "cycle_dps": 354.4615384615384
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 262.65599999999995,
+      "total_dmg": 1313.2799999999997,
+      "cycle_dps": 262.65599999999995
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 433.3788553846153,
+      "total_dmg": 13001.365661538459,
+      "cycle_dps": 433.3788553846153
+    }
+  ],
+  "司霆惊蛰": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 130.203125,
+      "total_dmg": 156.24374999999998,
+      "cycle_dps": 130.203125
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 122.66204166666665,
+      "total_dmg": 4415.8335,
+      "cycle_dps": 122.66204166666665
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 130.5504827586207,
+      "total_dmg": 3133.2115862068963,
+      "cycle_dps": 130.5504827586207
+    }
+  ],
+  "赤刃明霄陈": [
+    {
+      "skill_idx": 0,
+      "skill_name": "技能 1",
+      "skill_type": "manual",
+      "dps": 1211.318416,
+      "total_dmg": 21803.731488,
+      "cycle_dps": 1211.318416
+    },
+    {
+      "skill_idx": 1,
+      "skill_name": "技能 2",
+      "skill_type": "manual",
+      "dps": 2436.2799999999997,
+      "total_dmg": 14617.679999999998,
+      "cycle_dps": 2436.2799999999997
+    },
+    {
+      "skill_idx": 2,
+      "skill_name": "技能 3",
+      "skill_type": "manual",
+      "dps": 1822.702882,
+      "total_dmg": 36454.05764,
+      "cycle_dps": 1822.702882
+    }
+  ]
+}

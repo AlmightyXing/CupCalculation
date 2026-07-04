@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="back-btn" style="top: {{statusBarHeight}}px;" bindtap="goBack">
+    <icon type="cancel" size="24" color="#ffffff"></icon>
+  </view>
+  <view class="header" style="margin-top: {{statusBarHeight + 44}}px;">
+    <text class="title">战斗环境模拟</text>
+  </view>
+  
+  <view class="form-container">
+    <view class="form-item">
+      <text class="label">指定干员 (输入拼音或名称)</text>
+      <input class="input" placeholder="例如：水陈" bindinput="onOpInput" value="{{operatorName}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">特定技能 (序号)</text>
+      <input class="input" type="number" placeholder="0/1/2" bindinput="onSkillInput" value="{{skillIndex}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">敌人护甲</text>
+      <input class="input" type="number" placeholder="如 1000" bindinput="onDefInput" value="{{enemyDef}}" />
+    </view>
+    <view class="form-item">
+      <text class="label">敌人法抗</text>
+      <input class="input" type="number" placeholder="如 20" bindinput="onResInput" value="{{enemyRes}}" />
+    </view>
+    
+    <button class="submit-btn" bindtap="startSimulation">开始演算</button>
+  </view>
+
+  <view class="result-container" wx:if="{{result}}">
+    <view class="result-title">战斗报告</view>
+    <view class="result-item">DPS: {{result.dps}}</view>
+    <view class="result-item">总伤: {{result.total_damage}}</view>
+    <view class="result-item">周期DPS: {{result.cycle_dps}}</view>
+  </view>
+</view>

@@ -27,6 +27,9 @@
         <view class="tab-btn {{currentTab === 'burst' ? 'active' : ''}}" bindtap="switchTab" data-tab="burst">
           <image class="tab-icon" src="../../image/Navi_Bar_Manual.png" mode="aspectFit"></image>
         </view>
+        <view class="tab-btn" bindtap="goToSandbox">
+          <view style="width: 60rpx; height: 60rpx; background-color: #888888; border-radius: 12rpx;"></view>
+        </view>
       </view>
     </view>
   </view>
