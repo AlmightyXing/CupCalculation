@@ -1,3 +1,5 @@
+import request from '../../utils/request.js';
+
 Page({
   data: {
     statusBarHeight: 20,
@@ -5,13 +7,13 @@ Page({
     currentTabName: '总杯榜 TOP 10',
     enemyOptions: [
       '0甲 0抗',
-      '500甲 20抗',
       '1000甲 20抗',
-      '2000甲 50抗',
-      '3000甲 70抗',
+      '2000甲 40抗',
+      '3000甲 60抗',
+      '4000甲 80抗',
       '5000甲 100抗'
     ],
-    enemyIndex: 2, 
+    enemyIndex: 2,
     operators: [],
     groupedOperators: [] // 用于总杯榜的合并视图
   },
@@ -23,7 +25,7 @@ Page({
     });
     this.loadRealData();
   },
-  
+
   exitMiniProgram() {
     wx.exitMiniProgram({
       success: () => console.log('已退出小程序'),
@@ -40,8 +42,8 @@ Page({
   switchTab(e) {
     const tab = e.currentTarget.dataset.tab;
     const tabNames = { 'total': '总杯榜', 'idle': '挂机榜', 'burst': '决战榜' };
-    this.setData({ 
-      currentTab: tab, 
+    this.setData({
+      currentTab: tab,
       currentTabName: tabNames[tab] + ' TOP 10'
     });
     this.processListData(); // 重新处理并渲染
@@ -65,7 +67,6 @@ Page({
     const enemyDef = defMatch ? parseInt(defMatch[1]) : 0;
     const enemyRes = resMatch ? parseInt(resMatch[1]) : 0;
 
-    const request = require('../../utils/request.js');
     request.get(`/api/rankings?enemy_def=${enemyDef}&enemy_res=${enemyRes}`)
       .then(res => {
         if (res.status === 'success') {
@@ -81,7 +82,7 @@ Page({
 
   processListData() {
     let list = [...this.allOperators];
-    
+
     // 根据当前的 Tab 重置 rank
     if (this.data.currentTab === 'idle') {
       list.sort((a, b) => a.idleRank - b.idleRank);
