@@ -25,20 +25,31 @@ function bindEvents() {
     btn.addEventListener('click', (e) => {
       const btnEl = e.currentTarget;
       const tab = btnEl.dataset.view;
+
+      navBtns.forEach(b => b.classList.remove('active'));
+      btnEl.classList.add('active');
+
       if (tab === 'sandbox') {
         switchView('sandbox');
       } else {
         switchView('leaderboard');
         state.currentTab = tab;
-        navBtns.forEach(b => b.classList.remove('active'));
-        btnEl.classList.add('active');
-        
+
         let title = "总杯榜";
         if (tab === "idle") title = "挂机榜";
         if (tab === "burst") title = "决战榜";
-        document.getElementById('leaderboard-title').innerText = title;
-        
+
+        const titleEl = document.getElementById('leaderboard-title-text');
+        if (titleEl) {
+          titleEl.innerText = title;
+        } else {
+          document.getElementById('leaderboard-title').innerText = title;
+        }
+
         renderList();
+        if (typeof isChartView !== 'undefined' && isChartView) {
+          if (typeof renderChart !== 'undefined') renderChart();
+        }
       }
     });
   });
@@ -62,6 +73,9 @@ function switchView(viewId) {
       sec.style.display = 'none';
     }
   });
+  if (viewId === 'sandbox') {
+    initSandboxForm();
+  }
 }
 
 async function loadRankings() {
@@ -81,11 +95,11 @@ async function loadRankings() {
 
 function renderList() {
   if (!state.allOperators || state.allOperators.length === 0) return;
-  
+
   let list = [...state.allOperators];
-  
+
   operatorListEl.innerHTML = '';
-  
+
   if (state.currentTab === 'total') {
     tableColumnsEl.innerHTML = `
       <div class="col col-cup">Cup</div>
@@ -97,7 +111,7 @@ function renderList() {
       <div class="col col-rank">决战</div>
     `;
     list.sort((a, b) => a.totalRank - b.totalRank);
-    
+
     // Group by cup_level
     const groups = [];
     let currentCup = null;
@@ -139,7 +153,7 @@ function renderList() {
       cupLabel.style.padding = '10px 0';
       // Override width to match col-cup in table-columns roughly, accounting for gap and padding
       cupLabel.style.flex = 'none';
-      cupLabel.style.width = '70px'; 
+      cupLabel.style.width = '70px';
       cupLabel.innerText = group.cup;
 
       const rowsDiv = document.createElement('div');
@@ -152,11 +166,11 @@ function renderList() {
         const div = document.createElement('div');
         div.className = 'op-card';
         div.style.marginBottom = '0'; // override default margin since we use gap
-        
+
         const avatarUrl = `/avatars/头像_${op.name}.png`;
         const fallbackUrl = `https://dummyimage.com/100x100/333/fff&text=${op.name[0]}`;
         const imgHtml = `<img src="${avatarUrl}" alt="${op.name}" onerror="this.onerror=null; this.src='${fallbackUrl}'">`;
-        
+
         div.innerHTML = `
           <div class="col col-rank">${op.totalRank}</div>
           <div class="col col-avatar">
@@ -190,20 +204,20 @@ function renderList() {
     } else {
       list.sort((a, b) => a.burstRank - b.burstRank);
     }
-    
+
     // Render normal cards
     list.forEach(op => {
       const div = document.createElement('div');
       div.className = 'op-card';
-      
+
       const avatarUrl = `/avatars/头像_${op.name}.png`;
       const fallbackUrl = `https://dummyimage.com/100x100/333/fff&text=${op.name[0]}`;
       const imgHtml = `<img src="${avatarUrl}" alt="${op.name}" onerror="this.onerror=null; this.src='${fallbackUrl}'">`;
-      
+
       const rank = state.currentTab === 'idle' ? op.idleRank : op.burstRank;
       const dps = state.currentTab === 'idle' ? Math.round(op.idle_score) : Math.round(op.best_dps);
       const total = state.currentTab === 'idle' ? Math.round(op.best_total_dmg) : Math.round(op.burst_score);
-      
+
       div.innerHTML = `
         <div class="col col-rank">${rank}</div>
         <div class="col col-avatar">
@@ -240,9 +254,9 @@ searchBackBtn.addEventListener('click', () => {
 searchBtn.addEventListener('click', async () => {
   const query = searchInput.value.trim();
   if (!query) return;
-  
+
   searchResults.innerHTML = '<div class="loading-state">搜索中...</div>';
-  
+
   try {
     const res = await fetch(`${API_BASE}/operators`);
     const data = await res.json();
@@ -253,7 +267,7 @@ searchBtn.addEventListener('click', async () => {
         searchResults.innerHTML = '<div class="loading-state">未找到结果</div>';
         return;
       }
-      
+
       filtered.forEach(op => {
         const div = document.createElement('div');
         div.className = 'op-card';
@@ -284,14 +298,14 @@ detailBackBtn.addEventListener('click', () => {
 async function openDetail(opName) {
   switchView('detail');
   detailContent.innerHTML = '<div class="loading-state">加载中...</div>';
-  
+
   try {
     const res = await fetch(`${API_BASE}/operator/${encodeURIComponent(opName)}`);
     const data = await res.json();
-    
+
     if (data.status === 'success') {
       const op = data.data;
-      
+
       let ranks = { total: '-', idle: '-', burst: '-' };
       let perfSkills = [];
       if (state.allOperators) {
@@ -305,7 +319,7 @@ async function openDetail(opName) {
           perfSkills = found.skills || [];
         }
       }
-      
+
       let skillsHtml = '';
       if (op.skills && op.skills.length > 0) {
         skillsHtml = op.skills.map((sk, idx) => {
@@ -353,11 +367,11 @@ async function openDetail(opName) {
           <div class="ft-row">
             <div class="ft-cell bg-60" style="flex: 2;">${idx === 0 ? '第一天赋' : '第二天赋'}</div>
             <div class="ft-cell bg-20" style="flex: 3;">${t.talent_name || '-'}</div>
-            <div class="ft-cell bg-20 align-left" style="flex: 5;">${t.talent_description || t.talent_decription || '-'}</div>
+            <div class="ft-cell bg-20 align-left" style="flex: 5; white-space: pre-wrap; word-break: break-word; line-height: 1.4;">${t.talent_description || t.talent_decription || '-'}</div>
           </div>
         `).join('');
       }
-      
+
       detailContent.innerHTML = `
         <div class="detail-header">
           <div class="detail-avatar"><img src="/avatars/头像_${op.name}.png" alt="${op.name}" style="width:100%;height:100%;border-radius:16px;object-fit:cover;" onerror="this.onerror=null; this.src='https://dummyimage.com/120x120/333/fff&text=${op.name[0]}'"></div>
@@ -467,19 +481,113 @@ const observer = new MutationObserver(() => {
 observer.observe(operatorListEl, { childList: true });
 
 // --- Sandbox Logic ---
+const majorClassMap = {
+  '先锋': ['先锋', '尖兵', '冲锋手', '战术家', '执旗手', '情报官', '策士'],
+  '近卫': ['近卫', '强攻手', '斗士', '教官', '领主', '术战者', '剑豪', '武者', '无畏者', '收割者', '解放者', '重剑手', '撼地者', '本源近卫', '佣兵'],
+  '重装': ['重装', '铁卫', '守护者', '不屈者', '驭法铁卫', '决战者', '要塞', '哨戒铁卫', '本源铁卫'],
+  '狙击': ['狙击', '速射手', '神射手', '炮手', '攻城射手', '散射手', '重射手', '投掷手', '猎手', '回环射手', '裂空炮手'],
+  '术师': ['术师', '中坚术师', '御械术师', '阵法术师', '秘术师', '链术师', '轰击术师', '扩散术师', '本源术师', '塑灵术师'],
+  '医疗': ['医疗', '医师', '群愈师', '疗养师', '行医', '咒愈师', '链愈师', '守望者'],
+  '辅助': ['辅助', '吟游者', '召唤师', '凝滞师', '削弱者', '护佑者', '巫役', '工匠'],
+  '特种': ['特种', '处决者', '推击手', '伏击客', '钩索师', '陷阱师', '行商', '傀儡师', '炼金师', '怪杰', '巡空者']
+};
+
+function getMajorClass(subProf) {
+  for (let major in majorClassMap) {
+    if (majorClassMap[major].includes(subProf) || subProf.includes(major)) return major;
+  }
+  return '其他';
+}
+
+const sbMajorProf = document.getElementById('sb-major-prof');
+const sbSubProf = document.getElementById('sb-sub-prof');
+const sbOpName = document.getElementById('sb-op-name');
+const sbEnemyPreset = document.getElementById('sb-enemy-preset');
 const sbSubmit = document.getElementById('sb-submit');
 const sbResult = document.getElementById('sandbox-result');
+const sbSkillGroup = document.getElementById('sb-skill-group');
+const sbSkillIdx = document.getElementById('sb-skill-idx');
+
+let isSandboxInitialized = false;
+
+function initSandboxForm() {
+  if (isSandboxInitialized) return;
+  const ops = state.allOperators || [];
+  if (ops.length === 0) return;
+
+  sbMajorProf.addEventListener('change', () => {
+    const major = sbMajorProf.value;
+    sbSubProf.innerHTML = '<option value="">全部小职业</option>';
+
+    let availableSubs = new Set();
+    ops.forEach(op => {
+      const opMajor = getMajorClass(op.profession);
+      if (!major || opMajor === major) {
+        availableSubs.add(op.profession);
+      }
+    });
+
+    Array.from(availableSubs).sort().forEach(sub => {
+      sbSubProf.innerHTML += `<option value="${sub}">${sub}</option>`;
+    });
+
+    sbSubProf.dispatchEvent(new Event('change'));
+  });
+
+  sbSubProf.addEventListener('change', () => {
+    const major = sbMajorProf.value;
+    const sub = sbSubProf.value;
+    sbOpName.innerHTML = '';
+
+    const filteredOps = ops.filter(op => {
+      const opMajor = getMajorClass(op.profession);
+      if (major && opMajor !== major) return false;
+      if (sub && op.profession !== sub) return false;
+      return true;
+    });
+
+    if (filteredOps.length === 0) {
+      sbOpName.innerHTML = '<option value="">无符合条件的干员</option>';
+    } else {
+      filteredOps.sort((a, b) => a.name.localeCompare(b.name)).forEach(op => {
+        sbOpName.innerHTML += `<option value="${op.name}">${op.name}</option>`;
+      });
+    }
+  });
+
+  if (sbSkillGroup) {
+    const btns = sbSkillGroup.querySelectorAll('.skill-btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active', 'btn-primary'));
+        btn.classList.add('active', 'btn-primary');
+        sbSkillIdx.value = btn.dataset.skill;
+      });
+    });
+    // Set default selected
+    const defaultBtn = sbSkillGroup.querySelector('[data-skill="0"]');
+    if (defaultBtn) defaultBtn.classList.add('btn-primary');
+  }
+
+  sbMajorProf.dispatchEvent(new Event('change'));
+  isSandboxInitialized = true;
+}
 
 sbSubmit.addEventListener('click', async () => {
-  const opName = document.getElementById('sb-op-name').value.trim();
-  const skillIdx = parseInt(document.getElementById('sb-skill-idx').value || 0);
-  const def = parseInt(document.getElementById('sb-def').value || 0);
-  const res = parseInt(document.getElementById('sb-res').value || 0);
-  
-  if (!opName) return alert('请输入干员名称');
-  
+  const opName = sbOpName.value;
+  const skillIdx = parseInt(sbSkillIdx.value || 0);
+  const presetVal = parseInt(sbEnemyPreset.value || 0);
+
+  const mapping = [
+    [0, 0], [1000, 20], [2000, 40], [3000, 60], [4000, 80], [5000, 100]
+  ];
+  const def = mapping[presetVal][0];
+  const res = mapping[presetVal][1];
+
+  if (!opName) return alert('请选择干员！');
+
   sbResult.innerHTML = '<div class="loading-state">演算中...</div>';
-  
+
   try {
     const payload = {
       operator_name: opName,
@@ -487,26 +595,41 @@ sbSubmit.addEventListener('click', async () => {
       enemy_def: def,
       enemy_res: res
     };
-    
+
     const response = await fetch(`${API_BASE}/sandbox/simulate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
+
     const data = await response.json();
-    
+
     if (data.status === 'success') {
-      const r = data.data;
+      const rep = data.data;
+      let logsHtml = (rep.combat_log || []).map(l => `<div>${l}</div>`).join('');
+      if (logsHtml) {
+        logsHtml = `
+          <h4 style="margin-top: 15px; color: #e5e7eb;">战斗日志：</h4>
+          <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-family: monospace; font-size: 0.85em; color: #d1d5db; max-height: 200px; overflow-y: auto;">
+            ${logsHtml}
+          </div>
+        `;
+      }
+
       sbResult.innerHTML = `
-        <div class="skill-card">
-          <div class="skill-name">演算完成</div>
-          <div class="skill-stats" style="margin-top:15px;">
-            <div class="stat-box">DPS<div class="stat-val">${r.dps}</div></div>
-            <div class="stat-box">总伤<div class="stat-val">${r.total_damage}</div></div>
+        <div class="detail-section" style="margin-top: 20px;">
+          <h3 style="color: var(--accent-primary); border-bottom: 1px solid var(--accent-primary); padding-bottom: 5px; margin-bottom: 15px;">演算结果</h3>
+          <div style="display: flex; gap: 20px; margin-bottom: 20px;">
+            <div class="glass-panel" style="flex: 1; text-align: center; padding: 15px;">
+              <div style="font-size: 14px; color: #9ca3af;">最终DPS</div>
+              <div style="font-size: 24px; font-weight: bold; color: #10b981;">${rep.dps}</div>
+            </div>
+            <div class="glass-panel" style="flex: 1; text-align: center; padding: 15px;">
+              <div style="font-size: 14px; color: #9ca3af;">技能总伤</div>
+              <div style="font-size: 24px; font-weight: bold; color: #f59e0b;">${rep.total_damage}</div>
+            </div>
           </div>
-          <div class="skill-stats" style="margin-top:15px;">
-            <div class="stat-box" style="flex:none;width:50%;">周期DPS<div class="stat-val">${r.cycle_dps}</div></div>
-          </div>
+          ${logsHtml}
         </div>
       `;
     } else {
@@ -517,3 +640,66 @@ sbSubmit.addEventListener('click', async () => {
     sbResult.innerHTML = `<div class="loading-state" style="color:red;">请求出错</div>`;
   }
 });
+
+let chartInstance = null;
+function renderChart() {
+  if (!state.allOperators || state.allOperators.length === 0) return;
+  const container = document.getElementById('chart-container');
+  if (!container) return;
+  if (!chartInstance) {
+    chartInstance = echarts.init(container);
+  }
+
+  let list = [...state.allOperators];
+  let titleText = '';
+  let yAxisName = '';
+  let dataKey = '';
+
+  if (state.currentTab === 'total') {
+    list.sort((a, b) => a.totalRank - b.totalRank);
+    titleText = '总杯榜 综合排位分布';
+    yAxisName = '综合排名 (越小越强)';
+    dataKey = 'totalRank';
+  } else if (state.currentTab === 'idle') {
+    list.sort((a, b) => a.idleRank - b.idleRank);
+    titleText = '挂机榜 前20名DPS分布';
+    yAxisName = '最佳挂机DPS';
+    dataKey = 'idle_score';
+  } else {
+    list.sort((a, b) => a.burstRank - b.burstRank);
+    titleText = '决战榜 前20名总伤分布';
+    yAxisName = '最佳决战总伤';
+    dataKey = 'burst_score';
+  }
+
+  const top20 = list.slice(0, 20);
+  const xData = top20.map(op => op.name);
+  let yData = top20.map(op => Math.round(op[dataKey] || 0));
+
+  const option = {
+    title: { text: titleText, left: 'center', textStyle: { color: '#e5e7eb' } },
+    tooltip: { trigger: 'axis' },
+    xAxis: {
+      type: 'category',
+      data: xData,
+      axisLabel: { color: '#9ca3af', interval: 0, rotate: 30 }
+    },
+    yAxis: {
+      type: 'value',
+      name: yAxisName,
+      nameTextStyle: { color: '#9ca3af' },
+      axisLabel: { color: '#9ca3af' },
+      inverse: state.currentTab === 'total'
+    },
+    series: [
+      {
+        data: yData,
+        type: 'bar',
+        itemStyle: { color: '#3b82f6', borderRadius: [4, 4, 0, 0] },
+        label: { show: true, position: 'top', color: '#e5e7eb' }
+      }
+    ]
+  };
+
+  chartInstance.setOption(option, true);
+}

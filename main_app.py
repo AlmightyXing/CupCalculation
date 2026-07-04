@@ -27,4 +27,4 @@ if __name__ == '__main__':
     
     # Create and start the desktop window
     window = webview.create_window('杯级计算器', f'http://127.0.0.1:{port}/app/', width=414, height=896)
-    webview.start()
+    webview.start(debug=False)
