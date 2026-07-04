@@ -29,10 +29,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi.staticfiles import StaticFiles
+
 @app.on_event("startup")
 async def startup_event():
     # 在启动时将干员数据载入内存
     repo.load_all()
+
+import os
+frontend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../frontend")
+app.mount("/app", StaticFiles(directory=frontend_dir, html=True), name="static")
+
 
 # --- Endpoints ---
 @app.get("/api/operators")

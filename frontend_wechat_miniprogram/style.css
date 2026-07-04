@@ -1,0 +1,213 @@
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --primary-color: #1a73e8;
+    --text-main: #1f2329;
+    --text-sub: #8f959e;
+    --border-color: #dee0e3;
+    
+    --cup-top: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);
+    --cup-mid: linear-gradient(135deg, #f12711 0%, #f5af19 100%);
+    --cup-low: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #e5e5e5;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#app {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: var(--card-bg);
+    padding: 20px 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f2f3f5;
+    font-size: 15px;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.3s ease;
+    margin-bottom: 16px;
+}
+
+.search-bar input:focus {
+    background-color: #e8ebf0;
+    box-shadow: 0 0 0 2px rgba(26,115,232,0.2);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-sub);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px 3px 0 0;
+}
+
+/* List Container */
+.list-container {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Card */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    animation: slideUp 0.4s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.card-rank {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-sub);
+    width: 32px;
+    text-align: center;
+    margin-right: 12px;
+}
+
+.card[data-rank="1"] .card-rank { color: #f5af19; font-size: 24px; }
+.card[data-rank="2"] .card-rank { color: #9e9e9e; font-size: 22px; }
+.card[data-rank="3"] .card-rank { color: #cd7f32; font-size: 22px; }
+
+.card-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #f2f3f5;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.card-stats {
+    font-size: 13px;
+    color: var(--text-sub);
+}
+
+.card-score {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cup-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.cup-top { background: var(--cup-top); }
+.cup-mid { background: var(--cup-mid); }
+.cup-low { background: var(--cup-low); }
+
+.score-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+}

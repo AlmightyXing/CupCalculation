@@ -60,7 +60,7 @@ Page({
         
         // 同时请求排行榜数据以填充真实DPS
         try {
-          const rankRes = await request.get(`/api/rankings?enemy_def=1000&enemy_res=20`);
+          const rankRes = await request.get(`/api/rankings?enemy_def=0&enemy_res=0`);
           if (rankRes && rankRes.data && rankRes.data.operators) {
             const myRankData = rankRes.data.operators.find(o => o.name === name);
             if (myRankData) {
