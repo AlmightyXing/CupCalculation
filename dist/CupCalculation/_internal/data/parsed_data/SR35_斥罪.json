@@ -1,0 +1,65 @@
+{
+    "character_id": "SR35",
+    "name": "斥罪",
+    "nickname": [],
+    "character": {
+        "character_type": "不屈者",
+        "character_description": "无法被友方角色治疗"
+    },
+    "base_hp": 4055,
+    "base_atk": 876,
+    "base_def": 616,
+    "base_res": 10,
+    "atk_time": 1.6,
+    "confidence_hp": 600,
+    "confidence_atk": 40,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "律法卫士",
+            "talent_decription": "部署后立即获得相当于生命上限50%的屏障，每击倒一名敌人时获得相当于生命上限10%的屏障（最多不超过生命上限300%）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "荆棘环身",
+            "talent_decription": "拥有来源于自身的屏障时，每次受到攻击对目标造成相当于斥罪攻击力50%的法术伤害"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "一锤定音",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击额外造成相当于攻击力200%的法术伤害；蓄力额外效果：攻击时攻击力提升至200%并使目标晕眩5秒",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "坚心苦修",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "停止攻击，获得60%的庇护，每秒对周围所有地面敌人造成相当于攻击力140%的法术伤害，技能期间第一天赋的屏障获取效果提升100%",
+            "start_sp": 0,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "披荆斩棘",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "立即获得相当于生命上限130%的屏障，攻击间隔增大(+0.9)，攻击力+400%，自身更容易受到敌人攻击",
+            "start_sp": 0,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

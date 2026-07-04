@@ -1,0 +1,65 @@
+{
+    "character_id": "YD20",
+    "name": "仇白",
+    "nickname": [],
+    "character": {
+        "character_type": "领主",
+        "character_description": "可以进行远程攻击，但此时攻击力降低至80%"
+    },
+    "base_hp": 2480,
+    "base_atk": 718,
+    "base_def": 402,
+    "base_res": 10,
+    "atk_time": 1.3,
+    "confidence_hp": 0,
+    "confidence_atk": 50,
+    "confidence_def": 50,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "入隙",
+            "talent_decription": "攻击处于停顿、束缚的敌人时，额外造成相当于攻击力40%的法术伤害"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "落英",
+            "talent_decription": "攻击时有20%的几率使目标束缚1.5秒"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "留羽",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击使目标束缚3秒，该次束缚结束时对目标和附近的所有敌人造成相当于攻击力300%的法术伤害",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "承影",
+            "skill_type": "manual",
+            "duration": 5,
+            "description": "对前方范围内的地面敌人造成攻击力300%的法术伤害；攻击范围改变，攻击力+140%，攻击范围内的地面敌人停顿；技能结束时对范围内的地面敌人造成攻击力300%的物理伤害",
+            "start_sp": 5,
+            "consume_sp": 10,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "问雪",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击范围扩大，攻击力+55%，伤害类型变为法术，额外攻击2个目标，第一天赋的伤害提升至2倍，远程攻击不再降低伤害，每次攻击使自身攻击速度+13（最多叠加8次）",
+            "start_sp": 40,
+            "consume_sp": 60,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

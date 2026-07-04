@@ -1,0 +1,65 @@
+{
+    "character_id": "NM01",
+    "name": "年",
+    "nickname": [],
+    "character": {
+        "character_type": "铁卫",
+        "character_description": "能够阻挡三个敌人"
+    },
+    "base_hp": 3699,
+    "base_atk": 619,
+    "base_def": 726,
+    "base_res": 0,
+    "atk_time": 1.5,
+    "confidence_hp": 400,
+    "confidence_atk": 0,
+    "confidence_def": 70,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "积甲成山",
+            "talent_decription": "编入队伍时，所有【重装】职业干员的生命上限+16%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "干明可鉴",
+            "talent_decription": "部署后立即获得3层护盾，每层护盾可以抵挡一次伤害"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "锡灼",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "防御力+70%，攻击力+45%，普通攻击造成法术伤害",
+            "start_sp": 10,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "铜印",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "停止攻击；防御力+130%，阻挡数+1，每次受到攻击时对目标造成相当于年攻击力90%的法术伤害并使其失去特殊能力5秒",
+            "start_sp": 35,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "铁御",
+            "skill_type": "manual",
+            "duration": 45,
+            "description": "攻击力+120%；周围其他友方干员的防御力+80%，阻挡数+1，并获得抵抗",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

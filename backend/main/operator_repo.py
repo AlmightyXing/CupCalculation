@@ -17,8 +17,15 @@ class OperatorRepository:
         # character_name -> Operator subclass
         self.operator_classes: Dict[str, Type[Operator]] = {}
         
-    def load_all(self, data_dir: str = "data/parsed_data", scripts_dir: str = "backend/function/logic/operators"):
+    def load_all(self, data_dir: str = None, scripts_dir: str = None):
         """加载所有数据和脚本到内存"""
+        from backend.utils.path_resolver import get_base_path
+        base_path = get_base_path()
+        if data_dir is None:
+            data_dir = os.path.join(base_path, "data/parsed_data")
+        if scripts_dir is None:
+            scripts_dir = os.path.join(base_path, "backend/function/logic/operators")
+            
         print("开始加载干员仓库...")
         
         # 1. 加载 JSON
@@ -58,7 +65,7 @@ class OperatorRepository:
                             # 提取名字，文件命名规范是 id_名字.py，所以分割后取最后一段
                             # 如果包含多个下划线，取最后一部分
                             op_name = module_name.split("_")[-1]
-                            self.operator_classes[op_name] = obj
+                            self.operator_classes[op_name.lower()] = obj
                             break # 一个文件通常只有一个主体类
                             
                 except Exception as e:
@@ -70,7 +77,7 @@ class OperatorRepository:
         """为前端返回轻量级的干员列表（仅包含在 python 脚本中有对应逻辑的干员）"""
         result = []
         for name, data in self.operator_data.items():
-            if name in self.operator_classes:
+            if name.lower() in self.operator_classes:
                 result.append({
                     "id": data.get("character_id"),
                     "name": name,
@@ -83,10 +90,10 @@ class OperatorRepository:
         
     def instantiate_operator(self, name: str) -> Operator:
         """根据名字实例化干员对象"""
-        if name not in self.operator_data or name not in self.operator_classes:
+        if name not in self.operator_data or name.lower() not in self.operator_classes:
             raise ValueError(f"未找到干员 {name} 的完整数据或逻辑代码。")
             
-        op_class = self.operator_classes[name]
+        op_class = self.operator_classes[name.lower()]
         op_data = self.operator_data[name]
         return op_class(op_data)
 

@@ -1,0 +1,65 @@
+{
+    "character_id": "R169",
+    "name": "隐德来希",
+    "nickname": [],
+    "character": {
+        "character_type": "收割者",
+        "character_description": "无法被友方角色治疗，攻击造成群体伤害，每攻击到一个敌人回复自身50生命，最大生效数等于阻挡数"
+    },
+    "base_hp": 2580,
+    "base_atk": 700,
+    "base_def": 452,
+    "base_res": 0,
+    "atk_time": 1.3,
+    "confidence_hp": 0,
+    "confidence_atk": 50,
+    "confidence_def": 50,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "萃血",
+            "talent_decription": "每次攻击敌人时偷取目标75点生命上限（最高1350）并使目标每秒受到200点法术伤害持续5秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "重盈",
+            "talent_decription": "生命值低于25%时，仅一次立刻回复50%最大生命值，且自身之后受到的物理伤害降低10%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "玫影觅迹",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提升至175%，并连续攻击两次",
+            "start_sp": 0,
+            "consume_sp": 2,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "绯红壁合",
+            "skill_type": "manual",
+            "duration": 12,
+            "description": "停止攻击，在自身及1名其他地面单位处召唤血镰，对周围所有敌人进行切割，每0.5秒造成相当于攻击力195%的物理伤害",
+            "start_sp": 15,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "灵与欲的惜别",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "攻击范围扩大，攻击力+135%，攻击速度+100，立刻为攻击范围内最多3名生命值最高的地面敌人召唤对应的心烛，每次攻击对心烛至少造成35%攻击力的伤害，心烛继承原敌人当前60%的生命值，被攻击时原敌人也会受到一次无视闪避/护盾/屏障/格挡且伤害量不会改变的无来源真实伤害",
+            "start_sp": 22,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

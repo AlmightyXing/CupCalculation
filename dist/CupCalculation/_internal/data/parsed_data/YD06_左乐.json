@@ -1,0 +1,65 @@
+{
+    "character_id": "YD06",
+    "name": "左乐",
+    "nickname": [],
+    "character": {
+        "character_type": "武者",
+        "character_description": "不成为其他角色的治疗目标，每次攻击到敌人后回复自身70生命"
+    },
+    "base_hp": 3858,
+    "base_atk": 780,
+    "base_def": 315,
+    "base_res": 0,
+    "atk_time": 1.2,
+    "confidence_hp": 340,
+    "confidence_atk": 40,
+    "confidence_def": 40,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "秉烛照影",
+            "talent_decription": "在场时，自身获得最高+50攻击速度和技力自然回复速度+2/秒的坚忍（损失70%生命值时达到最大加成）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "守正自明",
+            "talent_decription": "攻击时有20%的概率获得1点技力，生命低于50%时概率变为70%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "破虏",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提升至200%，自身生命低于80%时额外攻击1次，低于50%时额外攻击2次，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "行险",
+            "skill_type": "manual",
+            "duration": 12,
+            "description": "立即流失50%当前生命并获得相当于最大生命120%的屏障，攻击力+170%，阻挡数+1，同时攻击所有阻挡的敌人，屏障最高叠加至最大生命的2倍，技能结束后逐渐流失",
+            "start_sp": 0,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "佑序有炎",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "立刻对前方进行7次斩击，每次对最多3名敌人造成攻击力245%的物理伤害（最后一击系数加倍且使目标晕眩5秒），期间特性的生命回复改为获得相当于回复量3倍的屏障，屏障最高叠加至最大生命的2倍，持续15秒",
+            "start_sp": 0,
+            "consume_sp": 40,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

@@ -61,7 +61,7 @@ class Operator:
         target_count = 1
         actual_atk_interval = self.attack_interval * 100 / self.attack_speed
         
-        if skill_index == -1:
+        if skill_index == -1 or skill_index >= len(self.skills):
             total_damage = self.calculate_normal_hit(enemy, target_count)
             dps = total_damage / actual_atk_interval if actual_atk_interval > 0 else 0
             return {"dps": dps, "total_damage": total_damage}
@@ -72,9 +72,6 @@ class Operator:
         skill_dps = skill_res.get("dps", 0.0)
         
         # --- 全局周期 DPS 演算逻辑 ---
-        if skill_index >= len(self.skills):
-            return {"total_damage": skill_dmg, "dps": skill_dps}
-            
         skill_info = self.skills[skill_index]
         skill_type = skill_info.get("skill_type", "manual")
         duration = skill_info.get("duration")

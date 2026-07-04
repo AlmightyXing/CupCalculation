@@ -1,0 +1,65 @@
+{
+    "character_id": "YD25",
+    "name": "司霆惊蛰",
+    "nickname": [],
+    "character": {
+        "character_type": "解放者",
+        "character_description": "通常不攻击且阻挡数为0，技能未开启时40秒内攻击力逐渐提升至最高+200%且技能结束时重置攻击力"
+    },
+    "base_hp": 3863,
+    "base_atk": 360,
+    "base_def": 491,
+    "base_res": 15,
+    "atk_time": 1.2,
+    "confidence_hp": 360,
+    "confidence_atk": 30,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "明断",
+            "talent_decription": "攻击范围内每个地块每秒有10%的概率落雷对所有敌人造成相当于攻击力100%的法术伤害。未开启技能时起飞；技能期间攻击时攻击力提升至107%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "追责",
+            "talent_decription": "开启技能时，使攻击范围内所有地面地块落雷，对所有敌人造成相当于攻击力100%的法术伤害和2秒战栗"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "浩气长存",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "攻击范围朝前方和两侧扩大。对三个方向的地面敌人各造成相当于攻击力355%的物理伤害 可充能3次，充能耗尽前特性不重置",
+            "start_sp": 17,
+            "consume_sp": 11,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "正霆摄威",
+            "skill_type": "manual",
+            "duration": 36,
+            "description": "攻击范围沿近战地块扩展至最远三格，攻击对4个目标造成相当于攻击力150%的物理伤害。技能期间每次落雷使攻击力+10%（最多可叠加25次）",
+            "start_sp": 22,
+            "consume_sp": 43,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "天地通明",
+            "skill_type": "manual",
+            "duration": 24,
+            "description": "攻击范围扩大，攻击间隔大幅延长(+1.7)，攻击造成攻击力300%的范围物理伤害，目标位置产生朝四周流动三格的电流。电流碰到自身或高台时反弹，电流所在地块上所有敌人每0.6秒受到司霆惊蛰攻击力70%的法术伤害，且有15%概率战栗3秒",
+            "start_sp": 21,
+            "consume_sp": 36,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "character_id": "AZ01",
+    "name": "赫拉格",
+    "nickname": [],
+    "character": {
+        "character_type": "武者",
+        "character_description": "不成为其他角色的治疗目标，每次攻击到敌人后回复自身70生命"
+    },
+    "base_hp": 3825,
+    "base_atk": 762,
+    "base_def": 334,
+    "base_res": 0,
+    "atk_time": 1.2,
+    "confidence_hp": 400,
+    "confidence_atk": 70,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "月盈星亏",
+            "talent_description": "在场时，自身获得最高100攻击速度的坚忍（损失70%生命值时达到最大加成）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "运筹帷幄",
+            "talent_description": "未阻挡敌人时每秒回复60生命"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "新月",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击的攻击力提升至175%，并连续攻击两次",
+            "start_sp": 0,
+            "consume_sp": 2,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "弦月",
+            "skill_type": "manual",
+            "duration": 13,
+            "description": "攻击力+80%，攻击变为二连击，获得75%的物理闪避",
+            "start_sp": 15,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "满月",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "攻击力+100%，攻击范围+2格，最多可以同时攻击3个目标",
+            "start_sp": 15,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

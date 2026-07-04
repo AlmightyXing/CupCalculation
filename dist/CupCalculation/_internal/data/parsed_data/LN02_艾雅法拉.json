@@ -1,0 +1,65 @@
+{
+    "character_id": "LN02",
+    "name": "艾雅法拉",
+    "nickname": [],
+    "character": {
+        "character_type": "中坚术师",
+        "character_description": "攻击造成法术伤害"
+    },
+    "base_hp": 1743,
+    "base_atk": 645,
+    "base_def": 122,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 90,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "炎息",
+            "talent_decription": "在场时，所有友方【术师】职业干员的攻击力+14%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "乱火",
+            "talent_decription": "部署后立即随机获得7~15点技力"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "二重咏唱",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "攻击速度+60，第二次及以后使用时追加攻击力+60%的效果",
+            "start_sp": 25,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "点燃",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击造成相当于攻击力370%的法术伤害，命中目标周围的敌人受到一半的爆炸伤害且在6秒内法术抗性-25%，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "火山",
+            "skill_type": "manual",
+            "duration": 15,
+            "description": "攻击力+130%，攻击范围增大，攻击间隔大幅度缩短(-1.1)，攻击变为随机对攻击范围内至多6个敌人发射熔岩",
+            "start_sp": 55,
+            "consume_sp": 80,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

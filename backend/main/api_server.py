@@ -37,10 +37,13 @@ async def startup_event():
     repo.load_all()
 
 import os
-frontend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../frontend")
+from backend.utils.path_resolver import get_base_path
+
+base_path = get_base_path()
+frontend_dir = os.path.join(base_path, "frontend")
 app.mount("/app", StaticFiles(directory=frontend_dir, html=True), name="static")
 
-avatars_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/avatars_head_portrait")
+avatars_dir = os.path.join(base_path, "data/avatars_head_portrait")
 if os.path.exists(avatars_dir):
     app.mount("/avatars", StaticFiles(directory=avatars_dir), name="avatars")
 

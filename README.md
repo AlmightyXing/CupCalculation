@@ -8,10 +8,10 @@
 
 ## 技术架构
 
-- **计算引擎**：Python，实现完整的《明日方舟》属性修饰器公式（四种修饰器）和五种伤害公式
-- **LLM 解析**：DeepSeek API（兼容 OpenAI SDK），将技能文字描述解析为结构化参数
-- **前端**：微信小程序（Phase 2）
-- **后端**：微信云开发（Phase 3）
+- **前端**：HTML + Vanilla CSS + Vanilla JS，基于 `pywebview` 封装的桌面端应用，提供可视化展示与交互界面
+- **后端 API**：基于 FastAPI，构建本地轻量级计算服务端
+- **计算引擎**：Python，实现《明日方舟》完整的属性修饰器和伤害演算面向对象系统
+- **自动化流**：结合爬虫与大模型 API (DeepSeek/Gemini)，自动抓取并生成全干员业务逻辑代码
 
 ## 目录结构
 
@@ -120,3 +120,7 @@ python pipeline.py --input data/processed --output data/output/result.json --ski
 | 20%~30% | 超大杯·下 |
 | 30%~50% | 大杯 |
 | 50% 以下 | 中杯 |
+
+---
+> ⚠️ **声明**：干员技能逻辑代码实现未经校对，实际数据结果不准确
+

@@ -1,0 +1,65 @@
+{
+    "character_id": "LT11",
+    "name": "菲亚梅塔",
+    "nickname": [],
+    "character": {
+        "character_type": "炮手",
+        "character_description": "攻击造成群体物理伤害"
+    },
+    "base_hp": 1926,
+    "base_atk": 861,
+    "base_def": 156,
+    "base_res": 0,
+    "atk_time": 2.8,
+    "confidence_hp": 0,
+    "confidence_atk": 100,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "陈述苦难",
+            "talent_decription": "自身生命会不断流失（该效果不会使生命降至0）；生命值高于50%时获得25%攻击力的精力充沛；高于80%效果翻倍"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "宣告终局",
+            "talent_decription": "技能持续期间外，攻击速度+27"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "“你须直面”",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击距离+1，攻击力+100%",
+            "start_sp": 5,
+            "consume_sp": 10,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "“你须愧悔”",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "向前发射灼痕弹且每飞行一段距离在弹道上留下灼痕，到达攻击范围最远距离时爆炸造成400%的物理伤害；之后灼痕依次爆炸造成200%的物理伤害",
+            "start_sp": 0,
+            "consume_sp": 7,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "“你须偿还”",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "持续固定攻击范围内正前方最远一格，爆炸范围扩大，攻击力提升至125%，对目标位置附近小范围内的敌人攻击力额外提升至220%，持续时间无限，可主动关闭技能",
+            "start_sp": 0,
+            "consume_sp": 15,
+            "attack_supplement": true,
+            "auto_supplement": false
+        }
+    ]
+}

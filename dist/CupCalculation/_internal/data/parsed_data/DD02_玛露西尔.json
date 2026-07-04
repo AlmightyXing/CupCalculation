@@ -1,0 +1,65 @@
+{
+    "character_id": "DD02",
+    "name": "玛露西尔",
+    "nickname": [],
+    "character": {
+        "character_type": "扩散术师",
+        "character_description": "攻击造成群体法术伤害"
+    },
+    "base_hp": 1805,
+    "base_atk": 914,
+    "base_def": 130,
+    "base_res": 20,
+    "atk_time": 2.9,
+    "confidence_hp": 110,
+    "confidence_atk": 0,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "建校以来第一才女",
+            "talent_decription": "技能消耗魔力且可随时开启，魔力不自然回复，不在场时每秒回复1点；有魔力时，攻击力+15%，攻击溅射范围扩大"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "可靠的同伴",
+            "talent_decription": "初始魔力+25，编队中有4名【莱欧斯小队】干员时，所有【莱欧斯小队】干员攻击速度+25，防御力+35%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "才女的实力",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "短暂吟唱后开启技能，每次攻击消耗2点魔力，攻击力+140%，在找不到攻击目标时改为治疗友方干员，技能可随时主动关闭",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "召唤使魔",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "吟唱11秒后，消耗35点魔力制作并使用使魔攻击，攻击力+100%，攻击使所有命中目标停顿0.5秒；第二次使用时使魔升级，攻击距离+1，攻击速度+60，攻击晕眩主目标0.5秒；技能持续时间无限，第一次使用可随时停止",
+            "start_sp": 0,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "爆破魔法",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "吟唱5秒后，消耗8点魔力，在正前方位置造成爆炸，对周围敌人造成390%攻击力的法术伤害，炸到的高台会崩开碎片晕眩其周围敌人4秒；可追加吟唱10秒，完成后消耗剩余所有魔力，每额外消耗8点魔力，追加1次爆炸；追加吟唱可随时停止",
+            "start_sp": 0,
+            "consume_sp": 8,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "character_id": "LM21",
+    "name": "林",
+    "nickname": [],
+    "character": {
+        "character_type": "阵法术师",
+        "character_description": "通常时不攻击且防御力和法术抗性大幅度提升，技能开启时攻击造成群体法术伤害"
+    },
+    "base_hp": 2048,
+    "base_atk": 849,
+    "base_def": 242,
+    "base_res": 15,
+    "atk_time": 2.0,
+    "confidence_hp": 0,
+    "confidence_atk": 70,
+    "confidence_def": 40,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "计出万全",
+            "talent_description": "拥有可以抵挡所有伤害的琉璃璧；琉璃璧在受到单次超过200点伤害时破碎，对周围所有敌人造成相当于林攻击力100%的法术伤害、使其晕眩1秒，并在8秒后再次生成"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "韬光",
+            "talent_description": "受到攻击时，有50%几率回复1点技力"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "玲珑",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "可以在下列状态和初始状态间切换：攻击间隔略微增大(+1.0)，攻击力+60%，攻击使目标停顿1秒",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "荫庇",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "攻击速度+130，自身不容易受到敌人攻击，技能期间使攻击范围内所有友方单位享受第一天赋效果",
+            "start_sp": 25,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "流光乍裂",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击力+200%，攻击范围与琉璃璧的破碎伤害范围扩大，琉璃璧破碎的伤害阈值提升至3倍，每次攻击若击倒敌人则使身上的琉璃璧破碎并立刻生成，可主动关闭技能（期间可随时停止技能）",
+            "start_sp": 30,
+            "consume_sp": 50,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

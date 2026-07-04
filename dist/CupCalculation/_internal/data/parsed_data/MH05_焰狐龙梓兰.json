@@ -1,0 +1,65 @@
+{
+    "character_id": "MH05",
+    "name": "焰狐龙梓兰",
+    "nickname": [],
+    "character": {
+        "character_type": "重射手",
+        "character_description": "高精度的近距离射击"
+    },
+    "base_hp": 1788,
+    "base_atk": 842,
+    "base_def": 231,
+    "base_res": 0,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 100,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "强击瓶专家",
+            "talent_decription": "部署后首次开启技能时，接下来50次攻击的攻击力提升至115%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "翔虫机动",
+            "talent_decription": "再部署时间(-15)秒且不提高部署费用；部署至上次部署位置周围时，30秒内攻击力+15%并且可以部署在近战位"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "刚射",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "发射4支攻击力160%的箭矢，若还有充能则额外消耗1层施展刚连射：发射5支攻击力200%的箭矢，每支箭矢有20%概率使目标晕眩2秒；可充能4次，充能至最大层数时自动释放一次",
+            "start_sp": 14,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "飞翔瞪射",
+            "skill_type": "manual",
+            "duration": 4.2,
+            "description": "立刻起飞并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至180%的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力300%的物理伤害；可充能3次，部署后立即释放一次",
+            "start_sp": 17,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "龙之箭",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "蓄力3秒后射出直线飞行的贯穿箭矢，箭矢以较大力度推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力360%的物理伤害和攻击力60%的法术伤害，箭矢射程无限；可充能2次",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
+        }
+    ]
+}

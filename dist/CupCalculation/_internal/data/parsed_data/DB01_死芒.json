@@ -1,0 +1,65 @@
+{
+    "character_id": "DB01",
+    "name": "死芒",
+    "nickname": [],
+    "character": {
+        "character_type": "塑灵术师",
+        "character_description": "攻击造成法术伤害，可以通过击倒敌人生成召唤物，可攻击到自身召唤物阻挡的敌人"
+    },
+    "base_hp": 1924,
+    "base_atk": 633,
+    "base_def": 133,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 45,
+    "confidence_def": 45,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "复燃",
+            "talent_description": "攻击范围内敌人被击倒时生成一个悲叹的仆役，最多召唤3个，若无法再次召唤则使一个悲叹的仆役升级（提升阻挡数与更多的生命、攻击和防御）(升级后：生命值+100%，攻击力+100%，防御力+40%，阻挡数+1)"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "回光黯淡",
+            "talent_description": "自身和召唤物攻击生命低于50%的敌人时攻击力提升至140%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "噩愿",
+            "skill_type": "manual",
+            "duration": 13,
+            "description": "被动：每个悲叹的仆役生成和升级时对周围所有敌人造成相当于死芒攻击力450%的法术伤害\n开启：立刻重新召唤所有悲叹的仆役，若场上没有悲叹的仆役存在则召唤1个",
+            "start_sp": 8,
+            "consume_sp": 13,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "折朽",
+            "skill_type": "manual",
+            "duration": 12,
+            "description": "令最多2名攻击范围内的敌人陷入沉睡，每0.5秒对目标造成相当于攻击力160%的法术伤害；技能期间目标被击倒时额外召唤2个悲叹的仆役",
+            "start_sp": 14,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "冠死以冕",
+            "skill_type": "manual",
+            "duration": 16,
+            "description": "被动：最多1名悲叹的仆役变为特殊形态，此形态下只能通过技能升级，最多升级6次\n开启：立刻对范围内所有敌人造成攻击力800%的法术伤害，之后消耗一个悲叹的仆役使特殊仆役升级并回复20%生命（若悲叹的仆役已升级则翻倍），重复3次",
+            "start_sp": 5,
+            "consume_sp": 16,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

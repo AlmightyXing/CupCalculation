@@ -1,0 +1,65 @@
+{
+    "character_id": "LT22",
+    "name": "塑心",
+    "nickname": [],
+    "character": {
+        "character_type": "巫役",
+        "character_description": "攻击造成法术伤害，可以造成元素损伤"
+    },
+    "base_hp": 1201,
+    "base_atk": 485,
+    "base_def": 109,
+    "base_res": 15,
+    "atk_time": 1.6,
+    "confidence_hp": 300,
+    "confidence_atk": 40,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "无词哀歌",
+            "talent_decription": "使攻击范围内敌人每秒受到相当于攻击力10%的凋亡损伤并停顿0.2秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "精神逆构",
+            "talent_decription": "使攻击范围内敌人受到的凋亡损伤提高20%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "黄金的狂喜",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "对一个未处于损伤爆发期间的敌人造成相当于攻击力300%的法术伤害并附带110%攻击力的凋亡损伤，可充能3次，技能未开启时无法普通攻击",
+            "start_sp": 18,
+            "consume_sp": 6,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "安魂的弥撒",
+            "skill_type": "manual",
+            "duration": 20,
+            "description": "攻击速度+60，额外攻击1个目标，自身和攻击范围内攻击力最高的另一名友方干员对敌人造成伤害时附带自身25%攻击力的凋亡损伤",
+            "start_sp": 14,
+            "consume_sp": 26,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "自由的探戈",
+            "skill_type": "manual",
+            "duration": 40,
+            "description": "停止攻击，攻击范围扩大，攻击力+180%，第二天赋效果提升至2.5倍；技能期间使攻击范围内其他干员生命上限最高的生命上限+30%、攻击力最高的攻击力+30%、防御力最高的防御力+30%",
+            "start_sp": 0,
+            "consume_sp": 0,
+            "attack_supplement": false,
+            "auto_supplement": false
+        }
+    ]
+}

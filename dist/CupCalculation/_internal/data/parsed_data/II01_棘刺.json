@@ -1,0 +1,65 @@
+{
+    "character_id": "II01",
+    "name": "棘刺",
+    "nickname": [],
+    "character": {
+        "character_type": "领主",
+        "character_description": "可以进行远程攻击，但此时攻击力降低至80%"
+    },
+    "base_hp": 2612,
+    "base_atk": 711,
+    "base_def": 402,
+    "base_res": 10,
+    "atk_time": 1.3,
+    "confidence_hp": 0,
+    "confidence_atk": 30,
+    "confidence_def": 70,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "神经腐蚀",
+            "talent_decription": "攻击使目标中毒，在3秒内每秒受到125点法术伤害（对会远程攻击的目标伤害加倍）"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "故土潮声",
+            "talent_decription": "如果2秒内没有主动攻击过，每秒恢复最大生命3.5%的生命"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "攻击力强化·γ型",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击力+100%",
+            "start_sp": 15,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "护身尖刺",
+            "skill_type": "manual",
+            "duration": 40,
+            "description": "停止攻击，攻击力+60%，防御力+110%，受到敌人普通攻击时释放尖刺对前方最多4名敌人进行一次远程攻击（每0.6秒最多触发一次）",
+            "start_sp": 10,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "至高之术",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "攻击范围扩大，攻击力+60%，攻击速度+25，远程攻击不再降低攻击力，第二次及以后使用时能力加成变为最初的两倍，且持续时间无限",
+            "start_sp": 0,
+            "consume_sp": 15,
+            "attack_supplement": true,
+            "auto_supplement": false
+        }
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "character_id": "KJ01",
+    "name": "凛御银灰",
+    "nickname": [],
+    "character": {
+        "character_type": "策士",
+        "character_description": "能够阻挡两个敌人，可以支援待部署区的我方单位"
+    },
+    "base_hp": 2218,
+    "base_atk": 618,
+    "base_def": 397,
+    "base_res": 15,
+    "atk_time": 1.2,
+    "confidence_hp": 100,
+    "confidence_atk": 35,
+    "confidence_def": 40,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "开放性开局",
+            "talent_decription": "在场时向待部署区中加入“风雪之眼”，且使待部署区按照部署费用排列。位于“风雪之眼”左侧的干员与自身于部署时技力+4，下次再部署时间-20%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "雪境先驱",
+            "talent_decription": "在场时，【谢拉格】干员免疫冻结，防御力+60且每秒回复1.5%最大生命值；在场15秒后防御力和生命回复效果翻倍"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "周旋的谋略",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "立刻获得10点部署费用。待部署区中距离“风雪之眼”最近的1名干员费用-5（优先选择右侧近卫/术师/狙击干员），且部署后获得相当于凛御银灰最大生命值50%的屏障",
+            "start_sp": 19,
+            "consume_sp": 29,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "御敌的锋锐",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "对前方6名敌人造成攻击力380%的物理伤害，使其6秒内寒冷且隐匿失效；待部署区中距离“风雪之眼”最近的1名干员费用-11（优先选择右侧近卫/术师/狙击干员）；使“风雪之眼”左侧所有干员部署时以自身攻击力施放一次本技能的范围效果（最多叠加2次）可充能2次",
+            "start_sp": 9,
+            "consume_sp": 17,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "变革已至",
+            "skill_type": "manual",
+            "duration": 48,
+            "description": "攻击范围扩大并使敌人隐匿失效，攻击对直线范围造成攻击力200%的物理伤害和30%的脆弱；立即获得9点后持续获得24点部署费用；首次开启时交换待部署区中费用最高（优先选择近卫/术师/狙击干员）与最低干员的基础部署费用；技能期间“风雪之眼”变为可部署",
+            "start_sp": 46,
+            "consume_sp": 55,
+            "attack_supplement": false,
+            "auto_supplement": false
+        }
+    ]
+}

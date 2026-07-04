@@ -1,0 +1,65 @@
+{
+    "character_id": "CB88",
+    "name": "霍尔海雅",
+    "nickname": [],
+    "character": {
+        "character_type": "中坚术师",
+        "character_description": "攻击造成法术伤害"
+    },
+    "base_hp": 1770,
+    "base_atk": 633,
+    "base_def": 130,
+    "base_res": 20,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 90,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "传承终焉",
+            "talent_decription": "攻击空中目标时攻击力提升至120%，并使其特殊能力失效3秒"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "曾有羽翼",
+            "talent_decription": "攻击范围内所有生命值高于80%的敌人失重"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "但为求索",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击额外攻击一个目标并造成相当于攻击力300%的法术伤害，仅攻击到1名目标时使其浮空4秒，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 5,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "群星逶迤",
+            "skill_type": "manual",
+            "duration": 16,
+            "description": "攻击变为攻击力45%的9连发，随机攻击范围内的目标，每发有15%的概率使目标浮空1秒",
+            "start_sp": 0,
+            "consume_sp": 20,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "博览者的狂语",
+            "skill_type": "manual",
+            "duration": 45,
+            "description": "攻击范围扩大，攻击间隔延长(+1.4)，攻击变为向前吹出平行的旋风，旋风伤害随行进距离正比增强并在行进三格后达到最大，使命中的第一个目标浮空2.2秒，并造成最低280%、最高420%攻击力的法术伤害",
+            "start_sp": 0,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

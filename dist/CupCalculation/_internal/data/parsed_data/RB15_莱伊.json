@@ -1,0 +1,65 @@
+{
+    "character_id": "RB15",
+    "name": "莱伊",
+    "nickname": [],
+    "character": {
+        "character_type": "猎手",
+        "character_description": "攻击时需要消耗子弹且攻击力提升至120%，不攻击时会缓慢地装填子弹（最多8发）"
+    },
+    "base_hp": 1933,
+    "base_atk": 1072,
+    "base_def": 228,
+    "base_res": 0,
+    "atk_time": 1.6,
+    "confidence_hp": 0,
+    "confidence_atk": 120,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "巡哨伙伴",
+            "talent_decription": "可以在攻击范围内部署沙地兽于25秒内侦察一片区域延伸攻击范围，自身优先攻击该区域内的目标且对其造成的物理伤害提高15%"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "入神",
+            "talent_decription": "攻击相同目标时每次攻击提高自身攻击力8%，最多3层"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "脱身矢",
+            "skill_type": "manual",
+            "duration": null,
+            "description": "立即用额外特殊子弹攻击目标，造成相当于攻击力450%的物理伤害并将其较大力地推开，若将其击倒则使下次装填额外加装2发子弹，可充能2次",
+            "start_sp": 10,
+            "consume_sp": 10,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "广域警觉",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "被动效果：沙地兽撤退时回收命中该区域的子弹；自动开启：攻击范围扩大，攻击力+120%，沙地兽的再部署时间-40%，持续时间无限",
+            "start_sp": 0,
+            "consume_sp": 16,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "“得见光芒”",
+            "skill_type": "manual",
+            "duration": 16,
+            "description": "立即停止攻击直至子弹装满，装填间隔大幅缩短(-1.2)，攻击范围扩大，攻击造成相当于攻击力330%的物理伤害并使目标束缚2秒，技能期间若击倒敌人，技能结束时获得10点技力",
+            "start_sp": 20,
+            "consume_sp": 30,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

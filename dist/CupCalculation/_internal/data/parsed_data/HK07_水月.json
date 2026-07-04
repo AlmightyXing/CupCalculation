@@ -1,0 +1,65 @@
+{
+    "character_id": "HK07",
+    "name": "水月",
+    "nickname": [],
+    "character": {
+        "character_type": "伏击客",
+        "character_description": "对攻击范围内所有敌人造成伤害；拥有50%的物理和法术闪避且不容易成为敌人的攻击目标"
+    },
+    "base_hp": 1758,
+    "base_atk": 865,
+    "base_def": 356,
+    "base_res": 30,
+    "atk_time": 3.5,
+    "confidence_hp": 0,
+    "confidence_atk": 110,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "创伤性癔症",
+            "talent_description": "攻击时对攻击目标中生命值最少的敌人额外造成相当于攻击力50%的法术伤害"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "反移情",
+            "talent_description": "攻击范围内存在生命值低于一半的敌人时，攻击力+10%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "唤醒",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击造成相当于攻击力300%的物理伤害，且第一天赋伤害倍率提升至3倍；可充能3次",
+            "start_sp": 0,
+            "consume_sp": 7,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "囚徒困境",
+            "skill_type": "manual",
+            "duration": 21,
+            "description": "攻击间隔较大幅度缩短(-1.5s)，攻击力+30%，第一天赋额外攻击1个目标并附加1.3秒束缚",
+            "start_sp": 10,
+            "consume_sp": 15,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "镜花水月",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击范围扩大，攻击力+150%，第一天赋额外攻击2个目标并附加1秒晕眩；每次攻击命中目标少于3名敌人时，自身流失最大生命值的12%",
+            "start_sp": 30,
+            "consume_sp": 70,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

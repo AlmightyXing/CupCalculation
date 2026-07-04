@@ -1,0 +1,65 @@
+{
+    "character_id": "KZ09",
+    "name": "瑕光",
+    "nickname": [],
+    "character": {
+        "character_type": "守护者",
+        "character_description": "技能可以治疗友方单位"
+    },
+    "base_hp": 3242,
+    "base_atk": 491,
+    "base_def": 581,
+    "base_res": 10,
+    "atk_time": 1.2,
+    "confidence_hp": 0,
+    "confidence_atk": 90,
+    "confidence_def": 20,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "剑盾骑士",
+            "talent_decription": "在场时所有受击回复的技能在干员攻击时也回复1点技力"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "仁慈",
+            "talent_decription": "自身可以攻击并优先攻击沉睡的目标且攻击力提升至140%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "光芒涌动",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下次攻击造成相当于攻击力260%的物理伤害，且恢复周围一名友方单位相当于攻击力150%的生命\n可充能3次",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "慑敌辉光",
+            "skill_type": "manual",
+            "duration": 10,
+            "description": "攻击力+110%，立即使自身这格内的所有地面敌人陷入沉睡，且周围的所有友方单位每秒恢复相当于攻击力20%的生命值",
+            "start_sp": 0,
+            "consume_sp": 12,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "先贤化身",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击力+110%，防御力+60%，每次攻击额外造成相当于攻击力100%的法术伤害，并恢复周围一名其他友方单位相当于攻击力100%的生命",
+            "start_sp": 15,
+            "consume_sp": 27,
+            "attack_supplement": true,
+            "auto_supplement": false
+        }
+    ]
+}

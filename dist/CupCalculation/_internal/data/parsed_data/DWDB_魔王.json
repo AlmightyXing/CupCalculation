@@ -1,0 +1,65 @@
+{
+    "character_id": "DWDB",
+    "name": "魔王",
+    "nickname": [],
+    "character": {
+        "character_type": "吟游者",
+        "character_description": "不攻击，持续恢复范围内所有友军生命（每秒相当于自身攻击力10%的生命），自身不受鼓舞影响"
+    },
+    "base_hp": 1628,
+    "base_atk": 369,
+    "base_def": 236,
+    "base_res": 0,
+    "atk_time": 1.3,
+    "confidence_hp": 300,
+    "confidence_atk": 30,
+    "confidence_def": 0,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "过往尘埃",
+            "talent_decription": "魔王周围持续围绕3枚“微尘”，“微尘”碰撞友方干员时，消失并使该干员受到魔王特性效果提升至1.5倍，持续6秒，消失的“微尘”在6秒后重生"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "魔王残响",
+            "talent_decription": "在场时，所有友方单位受到【萨卡兹】敌人的伤害降低10%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "往昔萦绕身旁",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "自身特性效果提高至35%，“微尘”的重生速度加快，持续时间无限",
+            "start_sp": 0,
+            "consume_sp": 65,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "明日渺远不及",
+            "skill_type": "manual",
+            "duration": 35,
+            "description": "“微尘”上限+3，立刻获得6枚“微尘”，“微尘”旋转半径扩大，攻击范围内所有其他友方单位获得相当于魔王100%攻击力的鼓舞效果，“微尘”不再碰撞友方干员，“微尘”碰撞敌方单位时造成相当于魔王攻击力275%的真实伤害，并使目标束缚3.5秒",
+            "start_sp": 20,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "编织重构现世",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击范围扩大，自身特性效果提高至90%，“微尘”不再消失，攻击范围内所有其它友方单位获得相当于魔王100%的最大生命值的鼓舞效果，每隔2秒重新分配攻击范围内所有友方单位的生命",
+            "start_sp": 35,
+            "consume_sp": 75,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

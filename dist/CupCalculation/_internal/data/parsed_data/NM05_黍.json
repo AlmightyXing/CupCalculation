@@ -1,0 +1,65 @@
+{
+    "character_id": "NM05",
+    "name": "黍",
+    "nickname": [],
+    "character": {
+        "character_type": "守护者",
+        "character_description": "技能可以治疗友方单位"
+    },
+    "base_hp": 3213,
+    "base_atk": 479,
+    "base_def": 602,
+    "base_res": 10,
+    "atk_time": 1.2,
+    "confidence_hp": 0,
+    "confidence_atk": 50,
+    "confidence_def": 60,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "百谷长青",
+            "talent_decription": "治疗干员时对其与周围四格地块进行播种施加如下效果：每秒恢复70生命、获得10%庇护"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "天有四时",
+            "talent_decription": "在场时，场上有三名不同职业干员时所有干员生命上限+12%、三名相同职业干员时所有干员攻击速度+12，编入队伍且编队中有四名【岁】干员时所有干员攻击力+12%且4秒获得1点技力"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "化被草木",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "下一次攻击会为周围血量小于等于一半的一名友方单位恢复相当于攻击力180%的生命，可充能3次",
+            "start_sp": 0,
+            "consume_sp": 4,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "嘉禾盈仓",
+            "skill_type": "manual",
+            "duration": 25,
+            "description": "停止攻击专注治疗范围内至多两名我方单位，攻击力+120%，阻挡数+1，第一天赋效果提升至1.5倍，治疗拥有特殊间隔",
+            "start_sp": 20,
+            "consume_sp": 25,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "离离枯荣",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "治疗范围扩大，攻击同时可治疗我方干员，攻击力+50%，有地面敌人处于播种地块时技能范围内的我方单位攻击力+25%、攻击速度+25，敌人经过播种地块时获得如下效果：当远离该地块达到2格时被传送回该地块",
+            "start_sp": 25,
+            "consume_sp": 55,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}

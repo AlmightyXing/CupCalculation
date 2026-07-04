@@ -1,0 +1,65 @@
+{
+    "character_id": "R145",
+    "name": "鸿雪",
+    "nickname": [],
+    "character": {
+        "character_type": "重射手",
+        "character_description": "高精度的近距离射击"
+    },
+    "base_hp": 1802,
+    "base_atk": 876,
+    "base_def": 193,
+    "base_res": 0,
+    "atk_time": 1.6,
+    "confidence_hp": 70,
+    "confidence_atk": 70,
+    "confidence_def": 30,
+    "confidence_res": 0,
+    "talents": [
+        {
+            "talent_id": 0,
+            "talent_name": "自动打字机",
+            "talent_decription": "可使用一个持续25秒的“打字机”，“打字机”拥有和自己一样的技能，拥有独立的再部署时间"
+        },
+        {
+            "talent_id": 1,
+            "talent_name": "弱点速记",
+            "talent_decription": "“打字机”的攻击会使命中目标的防御力下降18%，持续4秒；若“打字机”放在鸿雪周围四格则效果提升至23%"
+        }
+    ],
+    "skills": [
+        {
+            "skill_id": 0,
+            "skill_name": "抑扬格",
+            "skill_type": "auto",
+            "duration": null,
+            "description": "攻击力+60%，攻击时，40%几率当次攻击的攻击力提升至225%",
+            "start_sp": 0,
+            "consume_sp": 20,
+            "attack_supplement": true,
+            "auto_supplement": false
+        },
+        {
+            "skill_id": 1,
+            "skill_name": "点题",
+            "skill_type": "manual",
+            "duration": 9,
+            "description": "被动效果：携带此技能时，“打字机”的再部署时间缩短至50%；主动开启：立即对前方进行3次攻击，每次造成自身攻击力230%的物理伤害；可充能2次",
+            "start_sp": 9,
+            "consume_sp": 9,
+            "attack_supplement": false,
+            "auto_supplement": true
+        },
+        {
+            "skill_id": 2,
+            "skill_name": "锐笔速写",
+            "skill_type": "manual",
+            "duration": 30,
+            "description": "攻击范围扩大，攻击间隔缩短(-0.6)，每次攻击的攻击力提升至200%（对正前方3格提升至255%）",
+            "start_sp": 23,
+            "consume_sp": 35,
+            "attack_supplement": false,
+            "auto_supplement": true
+        }
+    ]
+}
