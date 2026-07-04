@@ -112,7 +112,7 @@ def generate_ranking(enemy_def: int, enemy_res: int) -> Dict[str, Any]:
         
         operator_scores.append({
             "name": op_name,
-            "profession": op_info.get("character_type", "未知"),
+            "profession": op_info.get("character", {}).get("character_type", "未知"),
             "rarity": op_info.get("rarity", 6),
             "idle_score": best_idle_dps,
             "burst_score": best_burst_dmg,

@@ -2,8 +2,8 @@ const API_BASE = '/api';
 
 const state = {
   currentTab: 'total', // 'total', 'idle', 'burst', 'sandbox'
-  enemyDef: 2000,
-  enemyRes: 40,
+  enemyDef: 0,
+  enemyRes: 0,
   allOperators: []
 };
 
@@ -84,7 +84,8 @@ function renderList() {
   
   let list = [...state.allOperators];
   
-  // Set headers
+  operatorListEl.innerHTML = '';
+  
   if (state.currentTab === 'total') {
     tableColumnsEl.innerHTML = `
       <div class="col col-cup">Cup</div>
@@ -96,6 +97,85 @@ function renderList() {
       <div class="col col-rank">决战</div>
     `;
     list.sort((a, b) => a.totalRank - b.totalRank);
+    
+    // Group by cup_level
+    const groups = [];
+    let currentCup = null;
+    let currentGroup = [];
+    list.forEach(op => {
+      if (op.cup_level !== currentCup) {
+        if (currentGroup.length > 0) {
+          groups.push({ cup: currentCup, ops: currentGroup });
+        }
+        currentCup = op.cup_level;
+        currentGroup = [];
+      }
+      currentGroup.push(op);
+    });
+    if (currentGroup.length > 0) {
+      groups.push({ cup: currentCup, ops: currentGroup });
+    }
+
+    groups.forEach(group => {
+      const groupDiv = document.createElement('div');
+      groupDiv.style.display = 'flex';
+      groupDiv.style.alignItems = 'stretch';
+      groupDiv.style.marginBottom = '10px';
+      groupDiv.style.gap = '10px'; // Space between cup label and cards
+
+      const cupLabel = document.createElement('div');
+      cupLabel.className = 'col-cup';
+      cupLabel.style.display = 'flex';
+      cupLabel.style.alignItems = 'center';
+      cupLabel.style.justifyContent = 'center';
+      cupLabel.style.fontWeight = 'bold';
+      cupLabel.style.color = 'var(--accent-primary)';
+      cupLabel.style.backgroundColor = 'var(--bg-tertiary)';
+      cupLabel.style.borderRadius = '12px';
+      cupLabel.style.border = '1px solid var(--border-color)';
+      cupLabel.style.writingMode = 'vertical-rl';
+      cupLabel.style.textOrientation = 'upright';
+      cupLabel.style.letterSpacing = '4px';
+      cupLabel.style.padding = '10px 0';
+      // Override width to match col-cup in table-columns roughly, accounting for gap and padding
+      cupLabel.style.flex = 'none';
+      cupLabel.style.width = '70px'; 
+      cupLabel.innerText = group.cup;
+
+      const rowsDiv = document.createElement('div');
+      rowsDiv.style.flex = '1';
+      rowsDiv.style.display = 'flex';
+      rowsDiv.style.flexDirection = 'column';
+      rowsDiv.style.gap = '10px';
+
+      group.ops.forEach(op => {
+        const div = document.createElement('div');
+        div.className = 'op-card';
+        div.style.marginBottom = '0'; // override default margin since we use gap
+        
+        const avatarUrl = `/avatars/头像_${op.name}.png`;
+        const fallbackUrl = `https://dummyimage.com/100x100/333/fff&text=${op.name[0]}`;
+        const imgHtml = `<img src="${avatarUrl}" alt="${op.name}" onerror="this.onerror=null; this.src='${fallbackUrl}'">`;
+        
+        div.innerHTML = `
+          <div class="col col-rank">${op.totalRank}</div>
+          <div class="col col-avatar">
+            <div class="avatar-wrapper">${imgHtml}</div>
+          </div>
+          <div class="col col-name op-name">${op.name}</div>
+          <div class="col col-prof op-prof">${op.profession}</div>
+          <div class="col col-rank">${op.idleRank}</div>
+          <div class="col col-rank">${op.burstRank}</div>
+        `;
+        div.addEventListener('click', () => openDetail(op.name));
+        rowsDiv.appendChild(div);
+      });
+
+      groupDiv.appendChild(cupLabel);
+      groupDiv.appendChild(rowsDiv);
+      operatorListEl.appendChild(groupDiv);
+    });
+
   } else {
     tableColumnsEl.innerHTML = `
       <div class="col col-rank">Rank</div>
@@ -110,31 +190,16 @@ function renderList() {
     } else {
       list.sort((a, b) => a.burstRank - b.burstRank);
     }
-  }
-
-  operatorListEl.innerHTML = '';
-  
-  // Render cards
-  list.forEach(op => {
-    const div = document.createElement('div');
-    div.className = 'op-card';
     
-    // Avatar placeholder for now
-    const avatarUrl = `https://dummyimage.com/100x100/333/fff&text=${op.name[0]}`;
-    
-    if (state.currentTab === 'total') {
-      div.innerHTML = `
-        <div class="col col-cup" style="color:var(--accent-primary);font-weight:bold;">${op.cup_level}</div>
-        <div class="col col-rank">${op.totalRank}</div>
-        <div class="col col-avatar">
-          <div class="avatar-wrapper"><img src="${avatarUrl}" alt="${op.name}"></div>
-        </div>
-        <div class="col col-name op-name">${op.name}</div>
-        <div class="col col-prof op-prof">${op.profession}</div>
-        <div class="col col-rank">${op.idleRank}</div>
-        <div class="col col-rank">${op.burstRank}</div>
-      `;
-    } else {
+    // Render normal cards
+    list.forEach(op => {
+      const div = document.createElement('div');
+      div.className = 'op-card';
+      
+      const avatarUrl = `/avatars/头像_${op.name}.png`;
+      const fallbackUrl = `https://dummyimage.com/100x100/333/fff&text=${op.name[0]}`;
+      const imgHtml = `<img src="${avatarUrl}" alt="${op.name}" onerror="this.onerror=null; this.src='${fallbackUrl}'">`;
+      
       const rank = state.currentTab === 'idle' ? op.idleRank : op.burstRank;
       const dps = state.currentTab === 'idle' ? Math.round(op.idle_score) : Math.round(op.best_dps);
       const total = state.currentTab === 'idle' ? Math.round(op.best_total_dmg) : Math.round(op.burst_score);
@@ -142,17 +207,17 @@ function renderList() {
       div.innerHTML = `
         <div class="col col-rank">${rank}</div>
         <div class="col col-avatar">
-          <div class="avatar-wrapper"><img src="${avatarUrl}" alt="${op.name}"></div>
+          <div class="avatar-wrapper">${imgHtml}</div>
         </div>
         <div class="col col-name op-name">${op.name}</div>
         <div class="col col-prof op-prof">${op.profession}</div>
         <div class="col col-num op-num">${dps}</div>
         <div class="col col-num op-num">${total}</div>
       `;
-    }
-    
-    operatorListEl.appendChild(div);
-  });
+      div.addEventListener('click', () => openDetail(op.name));
+      operatorListEl.appendChild(div);
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);
@@ -194,7 +259,7 @@ searchBtn.addEventListener('click', async () => {
         div.className = 'op-card';
         div.innerHTML = `
           <div class="col col-avatar">
-            <div class="avatar-wrapper"><img src="https://dummyimage.com/100x100/333/fff&text=${op.name[0]}" alt="${op.name}"></div>
+            <div class="avatar-wrapper"><img src="/avatars/头像_${op.name}.png" alt="${op.name}" onerror="this.onerror=null; this.src='https://dummyimage.com/100x100/333/fff&text=${op.name[0]}'"></div>
           </div>
           <div class="col col-name op-name">${op.name}</div>
           <div class="col col-prof op-prof">${op.character_type}</div>
@@ -228,6 +293,7 @@ async function openDetail(opName) {
       const op = data.data;
       
       let ranks = { total: '-', idle: '-', burst: '-' };
+      let perfSkills = [];
       if (state.allOperators) {
         const found = state.allOperators.find(o => o.name === op.name);
         if (found) {
@@ -236,12 +302,21 @@ async function openDetail(opName) {
             idle: found.idleRank || '-',
             burst: found.burstRank || '-'
           };
+          perfSkills = found.skills || [];
         }
       }
       
       let skillsHtml = '';
       if (op.skills && op.skills.length > 0) {
-        skillsHtml = op.skills.map((sk, idx) => `
+        skillsHtml = op.skills.map((sk, idx) => {
+          let dpsText = 'N/A';
+          let totalDmgText = 'N/A';
+          if (perfSkills && perfSkills.length > idx) {
+            const perf = perfSkills[idx];
+            if (perf && perf.dps > 0) dpsText = Math.round(perf.dps);
+            if (perf && perf.total_dmg > 0) totalDmgText = Math.round(perf.total_dmg);
+          }
+          return `
           <div class="h4-title">技能 ${idx + 1}</div>
           <div class="flex-table skill-base-table">
             <div class="ft-row">
@@ -262,8 +337,14 @@ async function openDetail(opName) {
               <div class="ft-cell bg-20" style="flex: 1;">${sk.consume_sp || 0}</div>
               <div class="ft-cell bg-20" style="flex: 1;">${sk.duration || '-'}</div>
             </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">DPS结论</div>
+              <div class="ft-cell bg-20" style="flex: 3; font-weight:bold; color:var(--accent-primary);">${dpsText}</div>
+              <div class="ft-cell bg-60" style="flex: 2;">总伤结论</div>
+              <div class="ft-cell bg-20" style="flex: 3; font-weight:bold; color:var(--accent-primary);">${totalDmgText}</div>
+            </div>
           </div>
-        `).join('');
+        `}).join('');
       }
 
       let talentsHtml = '';
@@ -272,14 +353,14 @@ async function openDetail(opName) {
           <div class="ft-row">
             <div class="ft-cell bg-60" style="flex: 2;">${idx === 0 ? '第一天赋' : '第二天赋'}</div>
             <div class="ft-cell bg-20" style="flex: 3;">${t.talent_name || '-'}</div>
-            <div class="ft-cell bg-20 align-left" style="flex: 5;">${t.talent_description || '-'}</div>
+            <div class="ft-cell bg-20 align-left" style="flex: 5;">${t.talent_description || t.talent_decription || '-'}</div>
           </div>
         `).join('');
       }
       
       detailContent.innerHTML = `
         <div class="detail-header">
-          <div class="detail-avatar"><img src="https://dummyimage.com/120x120/333/fff&text=${op.name[0]}" alt="${op.name}" style="width:100%;height:100%;border-radius:16px;"></div>
+          <div class="detail-avatar"><img src="/avatars/头像_${op.name}.png" alt="${op.name}" style="width:100%;height:100%;border-radius:16px;object-fit:cover;" onerror="this.onerror=null; this.src='https://dummyimage.com/120x120/333/fff&text=${op.name[0]}'"></div>
           <div class="detail-info">
             <div class="detail-name">${op.name}</div>
             <div class="op-prof" style="font-size:16px;">${(op.character && op.character.character_type) ? op.character.character_type : '未知'} | ★${op.rarity || 6}</div>

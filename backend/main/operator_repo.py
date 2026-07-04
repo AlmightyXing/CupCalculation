@@ -74,7 +74,7 @@ class OperatorRepository:
                 result.append({
                     "id": data.get("character_id"),
                     "name": name,
-                    "profession": data.get("character_type"),
+                    "profession": data.get("character", {}).get("character_type", "未知"),
                     "subProfessionId": data.get("subProfessionId"),
                     "rarity": data.get("rarity"),
                     "skills": [s.get("skill_name") for s in data.get("skills", [])]

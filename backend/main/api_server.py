@@ -40,6 +40,10 @@ import os
 frontend_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../frontend")
 app.mount("/app", StaticFiles(directory=frontend_dir, html=True), name="static")
 
+avatars_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/avatars_head_portrait")
+if os.path.exists(avatars_dir):
+    app.mount("/avatars", StaticFiles(directory=avatars_dir), name="avatars")
+
 
 # --- Endpoints ---
 @app.get("/api/operators")
