@@ -227,15 +227,52 @@ async function openDetail(opName) {
     if (data.status === 'success') {
       const op = data.data;
       
+      let ranks = { total: '-', idle: '-', burst: '-' };
+      if (state.allOperators) {
+        const found = state.allOperators.find(o => o.name === op.name);
+        if (found) {
+          ranks = {
+            total: found.totalRank || '-',
+            idle: found.idleRank || '-',
+            burst: found.burstRank || '-'
+          };
+        }
+      }
+      
       let skillsHtml = '';
       if (op.skills && op.skills.length > 0) {
         skillsHtml = op.skills.map((sk, idx) => `
-          <div class="skill-card">
-            <div class="skill-name">技能 ${idx + 1}: ${sk.name || 'N/A'}</div>
-            <div class="skill-stats">
-              <div class="stat-box">SP消耗<div class="stat-val">${sk.sp_cost || 0}</div></div>
-              <div class="stat-box">持续时间<div class="stat-val">${sk.duration || 0}s</div></div>
+          <div class="h4-title">技能 ${idx + 1}</div>
+          <div class="flex-table skill-base-table">
+            <div class="ft-row">
+              <div class="ft-cell bg-20 center-content" style="flex: 7; font-weight:bold;">${sk.skill_name || 'N/A'}</div>
+              <div class="ft-cell bg-20 center-content" style="flex: 3;">${sk.skill_type === 'auto' ? '自动' : '手动'}</div>
             </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">等级</div>
+              <div class="ft-cell bg-60" style="flex: 5;">描述</div>
+              <div class="ft-cell bg-60" style="flex: 1;">初始</div>
+              <div class="ft-cell bg-60" style="flex: 1;">消耗</div>
+              <div class="ft-cell bg-60" style="flex: 1;">持续</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-20" style="flex: 2;">RANK III</div>
+              <div class="ft-cell bg-20 align-left" style="flex: 5; font-size: 11px;">${sk.description || '-'}</div>
+              <div class="ft-cell bg-20" style="flex: 1;">${sk.start_sp || 0}</div>
+              <div class="ft-cell bg-20" style="flex: 1;">${sk.consume_sp || 0}</div>
+              <div class="ft-cell bg-20" style="flex: 1;">${sk.duration || '-'}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      let talentsHtml = '';
+      if (op.talents && op.talents.length > 0) {
+        talentsHtml = op.talents.map((t, idx) => `
+          <div class="ft-row">
+            <div class="ft-cell bg-60" style="flex: 2;">${idx === 0 ? '第一天赋' : '第二天赋'}</div>
+            <div class="ft-cell bg-20" style="flex: 3;">${t.talent_name || '-'}</div>
+            <div class="ft-cell bg-20 align-left" style="flex: 5;">${t.talent_description || '-'}</div>
           </div>
         `).join('');
       }
@@ -245,10 +282,88 @@ async function openDetail(opName) {
           <div class="detail-avatar"><img src="https://dummyimage.com/120x120/333/fff&text=${op.name[0]}" alt="${op.name}" style="width:100%;height:100%;border-radius:16px;"></div>
           <div class="detail-info">
             <div class="detail-name">${op.name}</div>
-            <div class="op-prof" style="font-size:16px;">${op.character_type || '未知'} | ★${op.rarity || 6}</div>
+            <div class="op-prof" style="font-size:16px;">${(op.character && op.character.character_type) ? op.character.character_type : '未知'} | ★${op.rarity || 6}</div>
           </div>
         </div>
-        <div class="detail-skills">
+        
+        <div class="section">
+          <div class="h2-title">干员能力排名</div>
+          <div class="rank-board">
+            <div class="rank-item">
+              <div class="rank-label">总榜排名</div>
+              <div class="rank-value">#${ranks.total}</div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-label">挂机排名</div>
+              <div class="rank-value">#${ranks.idle}</div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-label">决战排名</div>
+              <div class="rank-value">#${ranks.burst}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="h2-title">干员详细信息</div>
+          
+          <div class="h3-title">特性</div>
+          <div class="flex-table trait-table">
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">分支</div>
+              <div class="ft-cell bg-60 center-content" style="flex: 8;">描述</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-20 no-border-bottom" style="flex: 2;">${(op.character && op.character.character_type) ? op.character.character_type : '-'}</div>
+              <div class="ft-cell bg-20 center-content" style="flex: 8; font-size: 12px; padding: 10px;">${(op.character && op.character.character_description) ? op.character.character_description : '-'}</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-20" style="flex: 2;"></div>
+              <div class="ft-cell bg-60" style="flex: 2;">攻击间隔</div>
+              <div class="ft-cell bg-20" style="flex: 6;">${op.atk_time || '-'}</div>
+            </div>
+          </div>
+
+          <div class="h3-title">属性</div>
+          <div class="flex-table attr-table">
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;"></div>
+              <div class="ft-cell bg-60" style="flex: 4;">精英2 满级</div>
+              <div class="ft-cell bg-60" style="flex: 4;">信赖加成上限</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">生命上限</div>
+              <div class="ft-cell bg-20" style="flex: 4;">${op.base_hp || 0}</div>
+              <div class="ft-cell bg-20" style="flex: 4;">+${op.confidence_hp || 0}</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">攻击</div>
+              <div class="ft-cell bg-20" style="flex: 4;">${op.base_atk || 0}</div>
+              <div class="ft-cell bg-20" style="flex: 4;">+${op.confidence_atk || 0}</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">防御</div>
+              <div class="ft-cell bg-20" style="flex: 4;">${op.base_def || 0}</div>
+              <div class="ft-cell bg-20" style="flex: 4;">+${op.confidence_def || 0}</div>
+            </div>
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">法术抗性</div>
+              <div class="ft-cell bg-20" style="flex: 4;">${op.base_res || 0}</div>
+              <div class="ft-cell bg-20" style="flex: 4;">+${op.confidence_res || 0}</div>
+            </div>
+          </div>
+
+          <div class="h3-title">天赋</div>
+          <div class="flex-table talent-table">
+            <div class="ft-row">
+              <div class="ft-cell bg-60" style="flex: 2;">天赋</div>
+              <div class="ft-cell bg-60" style="flex: 3;">名称</div>
+              <div class="ft-cell bg-60" style="flex: 5;">描述</div>
+            </div>
+            ${talentsHtml}
+          </div>
+
+          <div class="h3-title">技能</div>
           ${skillsHtml}
         </div>
       `;
