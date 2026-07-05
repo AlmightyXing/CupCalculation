@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "律动线",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "被动：召唤物可部署在近战位\n开启：自身和召唤物防御力+80%并获得100%最大生命值的屏障，持续至技能结束\n技能开启时获得1个召唤物",
             "start_sp": 15,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "环形鳞地",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "被动：召唤物可部署在近战位，会持续向前方发射子弹\n开启：自身和召唤物攻击力+80%，召唤物攻击额外创造出2颗子弹且子弹飞行距离+2\n技能开启时获得1个召唤物",
             "start_sp": 16,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "手牵手",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "被动：召唤物可部署在远程位，召唤物找不到攻击目标且可攻击时，可以与其自身范围内其他电弧的召唤物协同攻击\n开启：自身和召唤物攻击力+150%，对敌人造成伤害时，使敌人受到停顿与35％法术脆弱效果，持续2秒\n技能开启时获得1个召唤物",
             "start_sp": 20,

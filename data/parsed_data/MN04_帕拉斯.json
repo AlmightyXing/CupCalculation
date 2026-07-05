@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "信念的长鞭",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "攻击范围向前延伸一格，攻击力+80%，每次攻击有85%几率使目标晕眩0.2秒",
             "start_sp": 10,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "英勇的祝福",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "攻击力+100%，额外攻击两个目标，身前一格为近战位并部署我方干员时使其获得以下增益：生命值高于80%获得+50%攻击力的精力充沛、防御力+35%、阻挡数+1（若身前一格不存在干员或不为近战位时，该效果由自身获得）",
             "start_sp": 30,

@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "攻击力强化·γ型",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "攻击力+100%",
             "start_sp": 15,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "荒时之锁",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 7,
             "description": "攻击范围内的敌人全部晕眩，且每秒受到攻击力140%的法术伤害",
             "start_sp": 30,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "序时之匙",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 27,
             "description": "攻击范围扩大，攻击变为向外扩散的波纹，攻击力+170%，第二天赋的效果提升至3倍，小力度地击退攻击目标",
             "start_sp": 80,

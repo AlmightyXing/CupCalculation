@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "重进酒",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "被动：召唤物可部署在近战位\n开启：自身与召唤物攻击力+50%，攻击速度+50，召唤物伤害类型变为法术\n技能开启时获得1个召唤物",
             "start_sp": 15,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "笑鸣瑟",
-            "skill_type": "manual",
+            "skill_type": "instant",
             "duration": null,
             "description": "被动：召唤物可部署在远程位，攻击造成法术伤害\n开启：令与召唤物对攻击范围内两名敌人造成450%攻击力的法术伤害并束缚3秒\n技能结束时回收生命值低于一半的召唤物。可充能2次",
             "start_sp": 5,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "宁作吾",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "被动：召唤物可部署在近战位且攻击范围内存在其他召唤物时与其合并为高级形态\n开启：自身与召唤物攻击力+100%，防御力+100%，召唤物每0.5秒对周围四格敌人造成20%令攻击力的法术伤害\n技能结束时获得1个召唤物",
             "start_sp": 10,

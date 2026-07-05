@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "坚心苦修",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 20,
             "description": "停止攻击，获得60%的庇护，每秒对周围所有地面敌人造成相当于攻击力140%的法术伤害，技能期间第一天赋的屏障获取效果提升100%",
             "start_sp": 0,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "披荆斩棘",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "立即获得相当于生命上限130%的屏障，攻击间隔增大(+0.9)，攻击力+400%，自身更容易受到敌人攻击",
             "start_sp": 0,

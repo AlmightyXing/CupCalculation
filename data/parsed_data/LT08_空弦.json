@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "箭矢·追猎",
-            "skill_type": "manual",
+            "skill_type": "instant",
             "duration": null,
             "description": "立即发射箭矢对目标进行攻击力140%的5次攻击，可弹射至目标周围的下一个未选择过的敌人（每次弹射减少1次攻击次数）；可充能3次",
             "start_sp": 0,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "箭矢·暴风",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 20,
             "description": "攻击力+30%，攻击距离+1，攻击变为3连击，每次可以攻击2个敌人",
             "start_sp": 15,

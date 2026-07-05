@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "抑扬格",
-            "skill_type": "auto",
+            "skill_type": "permanent",
             "duration": null,
             "description": "攻击力+60%，攻击时，40%几率当次攻击的攻击力提升至225%",
             "start_sp": 0,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "点题",
-            "skill_type": "manual",
+            "skill_type": "instant",
             "duration": 9,
             "description": "被动效果：携带此技能时，“打字机”的再部署时间缩短至50%；主动开启：立即对前方进行3次攻击，每次造成自身攻击力230%的物理伤害；可充能2次",
             "start_sp": 9,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "锐笔速写",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "攻击范围扩大，攻击间隔缩短(-0.6)，每次攻击的攻击力提升至200%（对正前方3格提升至255%）",
             "start_sp": 23,

@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "锡灼",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "防御力+70%，攻击力+45%，普通攻击造成法术伤害",
             "start_sp": 10,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "铜印",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 35,
             "description": "停止攻击；防御力+130%，阻挡数+1，每次受到攻击时对目标造成相当于年攻击力90%的法术伤害并使其失去特殊能力5秒",
             "start_sp": 35,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "铁御",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 45,
             "description": "攻击力+120%；周围其他友方干员的防御力+80%，阻挡数+1，并获得抵抗",
             "start_sp": 0,

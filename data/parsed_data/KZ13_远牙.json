@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "迅捷打击·γ型",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 35,
             "description": "攻击力+45%，攻击速度+45",
             "start_sp": 15,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "同盟支援",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 35,
             "description": "可以攻击到范围外被阻挡的敌方单位，攻击速度+110",
             "start_sp": 25,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "光羽箭",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 20,
             "description": "攻击范围改为前方无限长的直线，攻击力+140%，攻击原本范围以外的目标时，造成的伤害提高至140%",
             "start_sp": 10,

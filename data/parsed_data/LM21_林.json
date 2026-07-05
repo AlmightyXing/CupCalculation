@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "玲珑",
-            "skill_type": "manual",
+            "skill_type": "permanent",
             "duration": null,
             "description": "可以在下列状态和初始状态间切换：攻击间隔略微增大(+1.0)，攻击力+60%，攻击使目标停顿1秒",
             "start_sp": 0,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "荫庇",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "攻击速度+130，自身不容易受到敌人攻击，技能期间使攻击范围内所有友方单位享受第一天赋效果",
             "start_sp": 25,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "流光乍裂",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "攻击力+200%，攻击范围与琉璃璧的破碎伤害范围扩大，琉璃璧破碎的伤害阈值提升至3倍，每次攻击若击倒敌人则使身上的琉璃璧破碎并立刻生成，可主动关闭技能（期间可随时停止技能）",
             "start_sp": 30,

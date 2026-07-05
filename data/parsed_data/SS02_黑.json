@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "暮眼锐瞳",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 40,
             "description": "攻击力+130%，天赋的发动概率提高至50%",
             "start_sp": 20,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "战术的终结",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "攻击范围改为前方4格，攻击间隔略微增大(+0.4)，攻击力+180%，天赋的发动概率提高至100%",
             "start_sp": 12,

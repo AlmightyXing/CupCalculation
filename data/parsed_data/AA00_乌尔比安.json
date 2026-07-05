@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "必须维系的界限",
-            "skill_type": "auto",
+            "skill_type": "permanent",
             "duration": null,
             "description": "第一天赋的效果提升至2倍，阻挡数+1，生命上限+60%，攻击力+160%",
             "start_sp": 0,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "必须开辟的通路",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "最大生命值+80%，攻击力+260%，立即朝面前扔出一个船锚，撞击到目标或达到最远距离时停止，并对周围所有敌人造成攻击力160%的物理伤害和6秒晕眩。若船锚停留的位置可以部署，乌尔比安会移动到该位置。可以手动结束技能，技能结束时乌尔比安会返回到初始的位置",
             "start_sp": 16,

@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "拱卫",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 40,
             "description": "携带此技能时：装置使前方干员防御力提升攻击力+80%，防御力+80%，同时攻击阻挡的所有敌人；装置效果改为使前方干员阻挡数+1，防御力+55%，装置每秒流失2%最大生命值技能开启时获得一个装置",
             "start_sp": 28,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "执行",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 4,
             "description": "携带此技能时：装置部署后逐渐回复自身生命值，激活后每0.5秒流失1点生命值，使前方干员获得1点技力和相当于娜斯提生命上限5%的屏障立即激活场上装置，停止攻击，每0.5秒获得相当于生命上限10%的屏障（最多不超过生命上限80%）技能结束时获得一个装置",
             "start_sp": 23,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "栖脚地",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 15,
             "description": "携带此技能时：装置可建造并升级一个可以放置远程干员并为其提供增益的特殊高台攻击力+160%，防御力+160%；小工程师装置为高台装置回复技力和生命的效果翻倍技能开启时获得一个装置",
             "start_sp": 0,

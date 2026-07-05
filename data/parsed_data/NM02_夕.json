@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "泼墨淋漓",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 20,
             "description": "攻击范围扩大，攻击力+55%，攻击速度+55，攻击范围内的所有敌人且对生命值低于一半的敌人造成的法术伤害提升至130%",
             "start_sp": 25,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "写意胜形",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 60,
             "description": "攻击间隔增大(+40%)，优先攻击未阻挡的敌人，攻击范围与溅射范围扩大，攻击力+120%，每次攻击时在目标位置（可部署地面）召唤/刷新一个\"小自在\"（持续25秒）",
             "start_sp": 70,

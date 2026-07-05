@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "恩赐",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 35,
             "description": "攻击力+130%，使攻击范围内所有敌人移动速度-60%，并在地面敌人被击倒时对周围地面敌人施加一层第一天赋效果",
             "start_sp": 15,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "降临",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 45,
             "description": "攻击范围扩大，攻击力+50%，攻击间隔较大幅度缩短(-1.5)，使攻击范围内的地面敌人物理与法术命中率-50%。自身嘲讽等级2，敌人未命中自身或自身闪避时回复8%最大生命值",
             "start_sp": 30,

@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "快速射击",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "攻击速度+100",
             "start_sp": 20,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "爆发剂·γ型",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 30,
             "description": "立即对前方最近（优先选取正前方）的一名友方单位用500的攻击力攻击15次，之后持续时间内使自身和目标防御力和生命上限+80%",
             "start_sp": 25,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "爆发剂·榴莲味",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 20,
             "description": "立即对前方最近（优先选取正前方）的一名友方单位用500的攻击力攻击15次，之后持续时间内使自身和目标攻击力+50%，攻击速度+50",
             "start_sp": 30,

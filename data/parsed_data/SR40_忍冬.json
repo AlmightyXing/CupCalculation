@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "坠刃拷问",
-            "skill_type": "manual",
+            "skill_type": "instant",
             "duration": null,
             "description": "立即获得7点部署费用，对周围最多6名敌人造成相当于攻击力300%的法术伤害，并令击中目标停顿5秒；若敌人已经处于停顿状态，则额外使敌人晕眩5秒，可充能2次",
             "start_sp": 20,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "隐狐之艺",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 10,
             "description": "技能开启时立即获得9点部署费用，攻击范围延长，攻击力+110%，攻击速度从+180逐渐衰减至+0，同时攻击阻挡的所有敌人，每次攻击晕眩敌人0.2秒；若技能期间击倒敌人，则技能结束时进入迷彩状态，直至下一次开启技能",
             "start_sp": 5,

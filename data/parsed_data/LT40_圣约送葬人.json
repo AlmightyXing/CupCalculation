@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "近身铳斗",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": null,
             "description": "攻击力+80%，防御力+80%，阻挡数+1，受到敌人的近战攻击时有40%几率闪避并补充1颗弹药，攻击装有12发弹药，打完后结束（可随时停止技能）",
             "start_sp": 6,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "圣约决裁",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": null,
             "description": "攻击间隔略微增大(+0.5)，攻击范围扩大，攻击力+180%，每消耗1颗弹药攻击力额外+6%（最多30层），特性的回复生命效果提高至3倍；技能结束时，对技能期间攻击过的目标造成相当于攻击力250%的物理伤害，攻击装有16发弹药，打完后结束（可随时停止技能）",
             "start_sp": 12,

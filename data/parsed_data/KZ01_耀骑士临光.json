@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "灿焰长刃",
-            "skill_type": "auto",
+            "skill_type": "permanent",
             "duration": null,
             "description": "攻击范围扩大，攻击力+70%，攻击速度+50，持续时间无限",
             "start_sp": 0,
@@ -42,8 +42,8 @@
         {
             "skill_id": 1,
             "skill_name": "逐夜烁光",
-            "skill_type": "auto",
-            "duration": null,
+            "skill_type": "continuous",
+            "duration": 27,
             "description": "被动效果：部署不消耗部署位。部署后攻击力+160%，获得4层护盾。技能结束后自动撤退，本次再部署时间延长25%，上一名部署干员势力为【卡西米尔】时本次再部署时间不再延长",
             "start_sp": 0,
             "consume_sp": 0,
@@ -53,11 +53,11 @@
         {
             "skill_id": 2,
             "skill_name": "耀阳颔首",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 25,
             "description": "在周围四格可部署地面召唤一把\"耀阳\"对周围敌人造成110%耀骑士临光攻击力的真实伤害并晕眩3秒，自身攻击范围扩大，攻击力+140%、防御力+100%，攻击自身与\"耀阳\"阻挡的单位时伤害类型变为真实",
-            "start_sp": 0,
-            "consume_sp": 0,
+            "start_sp": 25,
+            "consume_sp": 40,
             "attack_supplement": false,
             "auto_supplement": false
         }

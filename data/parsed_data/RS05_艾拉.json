@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "眩目阻滞",
-            "skill_type": "auto",
+            "skill_type": "instant",
             "duration": 10,
             "description": "被动效果：陷阱触发时使周围所有目标停顿，移动速度降低80%且物理与法术命中率60%-40%，持续10秒；主动效果：立即获得一个陷阱",
             "start_sp": 0,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "震荡坚守",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 20,
             "description": "被动效果：陷阱触发时使周围所有目标晕眩，持续5秒；主动效果：架设机动护盾使自身防御力+300%，攻击范围缩小，攻击对目标周围造成溅射物理伤害且无视其800的防御力，技能结束时获得一个陷阱",
             "start_sp": 12,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "“博萨克风暴”",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": null,
             "description": "被动效果：陷阱触发时使周围所有目标停顿，移动速度降低80%并获得35%的脆弱效果，持续7秒；主动效果：攻击间隔缩短(-0.35)，攻击力+90%，优先攻击受到雷鸣地雷效果影响的敌人，攻击装有40发子弹，打完后技能结束（期间可随时停止技能），技能结束时获得两个陷阱",
             "start_sp": 0,

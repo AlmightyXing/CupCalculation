@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "群星逶迤",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 16,
             "description": "攻击变为攻击力45%的9连发，随机攻击范围内的目标，每发有15%的概率使目标浮空1秒",
             "start_sp": 0,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "博览者的狂语",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 45,
             "description": "攻击范围扩大，攻击间隔延长(+1.4)，攻击变为向前吹出平行的旋风，旋风伤害随行进距离正比增强并在行进三格后达到最大，使命中的第一个目标浮空2.2秒，并造成最低280%、最高420%攻击力的法术伤害",
             "start_sp": 0,

@@ -31,7 +31,7 @@
         {
             "skill_id": 0,
             "skill_name": "周旋的谋略",
-            "skill_type": "auto",
+            "skill_type": "instant",
             "duration": null,
             "description": "立刻获得10点部署费用。待部署区中距离“风雪之眼”最近的1名干员费用-5（优先选择右侧近卫/术师/狙击干员），且部署后获得相当于凛御银灰最大生命值50%的屏障",
             "start_sp": 19,
@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "御敌的锋锐",
-            "skill_type": "manual",
+            "skill_type": "instant",
             "duration": null,
             "description": "对前方6名敌人造成攻击力380%的物理伤害，使其6秒内寒冷且隐匿失效；待部署区中距离“风雪之眼”最近的1名干员费用-11（优先选择右侧近卫/术师/狙击干员）；使“风雪之眼”左侧所有干员部署时以自身攻击力施放一次本技能的范围效果（最多叠加2次）可充能2次",
             "start_sp": 9,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "变革已至",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 48,
             "description": "攻击范围扩大并使敌人隐匿失效，攻击对直线范围造成攻击力200%的物理伤害和30%的脆弱；立即获得9点后持续获得24点部署费用；首次开启时交换待部署区中费用最高（优先选择近卫/术师/狙击干员）与最低干员的基础部署费用；技能期间“风雪之眼”变为可部署",
             "start_sp": 46,

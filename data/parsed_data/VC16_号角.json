@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "暴风号令",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": null,
             "description": "每次攻击造成240%攻击力的物理溅射伤害，过载：每次攻击额外造成60%攻击力的法术溅射伤害，主动关闭时发射剩余全部弹药并流失60%生命值，技能拥有10枚弹药，可随时主动关闭",
             "start_sp": 18,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "终极防线",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 24,
             "description": "攻击力+70%，攻击间隔大幅缩短(-1.8)，过载：攻击力改为+140%，逐渐流失生命（12秒后到达最大生命12%/秒），该技能可随时主动关闭",
             "start_sp": 0,

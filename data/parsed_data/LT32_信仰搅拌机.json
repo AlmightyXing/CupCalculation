@@ -42,7 +42,7 @@
         {
             "skill_id": 1,
             "skill_name": "八臂电锯侠",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 50,
             "description": "攻击力+150%，防御力+130%，技能期间若受到致命伤害，立即消耗20发弹药抵挡这次伤害；攻击装有50发弹药，打完后结束（可随时停止技能）",
             "start_sp": 35,
@@ -53,7 +53,7 @@
         {
             "skill_id": 2,
             "skill_name": "退休前布道",
-            "skill_type": "manual",
+            "skill_type": "continuous",
             "duration": 35,
             "description": "技能开启时为所有其他【拉特兰】干员补弹4发；攻击范围扩大，生命上限+80%，攻击力+220%，防御力+80%，停止主动攻击敌人，受到攻击时立即向攻击范围内最多3个敌人进行1次反击，反击最小间隔为实际攻击间隔的10%；攻击装有30发弹药，打完后结束（可随时停止技能）",
             "start_sp": 25,
