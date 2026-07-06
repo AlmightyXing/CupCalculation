@@ -3,3 +3,15 @@
 .venv
 __pycache__/
 list.txt
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# WeChat Miniprogram
+project.private.config.json
+
+# Build artifacts
+build/
+dist/
+*.spec
