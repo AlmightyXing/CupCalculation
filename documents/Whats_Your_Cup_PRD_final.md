@@ -9,7 +9,7 @@
 |v1.2|2026-06-24|cxy|新增项目演示地址并调整了项目路径图||
 |v1.3|2026-06-29|AI|同步后端重构架构设计与任务流||
 
-### 项目地址
+### 原型展示地址
 
 请访问网址：<https://modao.cc/proto/Zke7kT0Rtetazg078Xqpky/sharing?view_mode=device&screen=rbpVJCfgrLCxO9S2G>
 
