@@ -8,7 +8,7 @@
 
 ## 2. 技术架构
 
-- **前端层 (Frontend)**：基于 `HTML + Vanilla CSS + Vanilla JS` 构建的现代暗黑风格界面，通过原生技术栈实现高性能渲染，并利用 ECharts 提供数据可视化图表。
+- **前端层 (Frontend)**：基于 `HTML + Vanilla CSS + Vanilla JS` 构建的现代风格界面，通过原生技术栈实现高性能渲染，并利用 ECharts 提供数据可视化图表。
 - **本地计算服务 (Backend)**：基于 `FastAPI` 搭建轻量级本地引擎，提供 `/api/operators` 和 `/api/sandbox/simulate` 等核心 RESTful 接口。
 - **运算逻辑层 (Engine)**：完全面向对象建模的 Python 后端（四大属性修饰器和五大伤害类型），支持动态拦截与群体协同Buff演算机制。
 - **跨平台桌面封装**：利用 `pywebview` 框架拉起客户端 Web 窗口与 FastAPI 进程双边守护，最后通过 `PyInstaller` 构建可直接独立运行的 `.exe` 应用。
