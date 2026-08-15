@@ -63,8 +63,8 @@
   </thead>
   <tbody>
     <tr>
-      <td><img src="./图片库/CupCalculation_原型1.png" width="100%"></td>
-      <td><img src="./图片库/CupCalculation_原型2.png" width="100%"></td>
+      <td><img src="./图片库/CupCalculation_原型1.png" width="80%"></td>
+      <td><img src="./图片库/CupCalculation_原型2.png" width="80%"></td>
       <td><img src="./图片库/CupCalculation_原型3.png" width="100%"></td>
     </tr>
     <tr>
