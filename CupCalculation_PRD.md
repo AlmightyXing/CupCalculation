@@ -127,7 +127,7 @@
 
 ### 核心流程图
 
-![核心流程图](图片库/CupCalculation_原型1.png)
+<img src="./图片库/CupCalculation_核心流程图.png" width="80%">
 
 ### 项目数据管理
 
